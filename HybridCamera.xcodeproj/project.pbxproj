@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */; };
+		F1ABBED620D07A12008B13B5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEA920D07A11008B13B5 /* MainVC.swift */; };
+		F1ABBED720D07A12008B13B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEAA20D07A11008B13B5 /* Info.plist */; };
+		F1ABBED820D07A12008B13B5 /* CamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */; };
+		F1ABBED920D07A12008B13B5 /* CamBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAE20D07A11008B13B5 /* CamBlocks.swift */; };
+		F1ABBEDA20D07A12008B13B5 /* CamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAF20D07A11008B13B5 /* CamError.swift */; };
+		F1ABBEDB20D07A12008B13B5 /* CamUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB020D07A11008B13B5 /* CamUtil.swift */; };
+		F1ABBEDC20D07A12008B13B5 /* HybridCamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB120D07A11008B13B5 /* HybridCamView.swift */; };
+		F1ABBEDD20D07A12008B13B5 /* RecordButton+Extension+Anim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB620D07A11008B13B5 /* RecordButton+Extension+Anim.swift */; };
+		F1ABBEDE20D07A12008B13B5 /* RecordButton+Extension+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB720D07A11008B13B5 /* RecordButton+Extension+Circle.swift */; };
+		F1ABBEDF20D07A12008B13B5 /* RecordButton+Extension+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB820D07A11008B13B5 /* RecordButton+Extension+Const.swift */; };
+		F1ABBEE020D07A12008B13B5 /* RecordButton+Extension+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB920D07A11008B13B5 /* RecordButton+Extension+Event.swift */; };
+		F1ABBEE120D07A12008B13B5 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEBA20D07A11008B13B5 /* RecordButton.swift */; };
+		F1ABBEE220D07A12008B13B5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEBC20D07A11008B13B5 /* RoundButton.swift */; };
+		F1ABBEE320D07A12008B13B5 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEBD20D07A11008B13B5 /* ToggleButton.swift */; };
+		F1ABBEE420D07A12008B13B5 /* ClickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEBE20D07A11008B13B5 /* ClickButton.swift */; };
+		F1ABBEE520D07A12008B13B5 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEBF20D07A11008B13B5 /* ShareButton.swift */; };
+		F1ABBEE620D07A12008B13B5 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC120D07A11008B13B5 /* TopBar.swift */; };
+		F1ABBEE720D07A12008B13B5 /* ExitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC320D07A11008B13B5 /* ExitButton.swift */; };
+		F1ABBEE820D07A12008B13B5 /* FlipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC420D07A11008B13B5 /* FlipButton.swift */; };
+		F1ABBEE920D07A12008B13B5 /* FlashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC520D07A11008B13B5 /* FlashButton.swift */; };
+		F1ABBEEA20D07A12008B13B5 /* CamView+Extension+Action+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC720D07A11008B13B5 /* CamView+Extension+Action+Extra.swift */; };
+		F1ABBEEB20D07A12008B13B5 /* CamView+Extension+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC820D07A11008B13B5 /* CamView+Extension+Delegate.swift */; };
+		F1ABBEEC20D07A12008B13B5 /* CamView+Extension+Accessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC920D07A11008B13B5 /* CamView+Extension+Accessor.swift */; };
+		F1ABBEED20D07A12008B13B5 /* CamView+Extension+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECA20D07A11008B13B5 /* CamView+Extension+Create.swift */; };
+		F1ABBEEE20D07A12008B13B5 /* CamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECB20D07A11008B13B5 /* CamView.swift */; };
+		F1ABBEEF20D07A12008B13B5 /* CamView+Extension+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECC20D07A11008B13B5 /* CamView+Extension+Setup.swift */; };
+		F1ABBEF020D07A12008B13B5 /* CamView+Extension+Action+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECD20D07A11008B13B5 /* CamView+Extension+Action+Core.swift */; };
+		F1ABBEF120D07A12008B13B5 /* CamView+Extension+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECE20D07A11008B13B5 /* CamView+Extension+Gesture.swift */; };
+		F1ABBEF220D07A12008B13B5 /* ProcessMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBED020D07A11008B13B5 /* ProcessMediaView.swift */; };
+		F1ABBEF320D07A12008B13B5 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBED120D07A11008B13B5 /* VideoPlayerView.swift */; };
+		F1ABBEF420D07A12008B13B5 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBED220D07A11008B13B5 /* ImageView.swift */; };
+		F1ABBEF520D07A12008B13B5 /* ProcessMediaView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBED320D07A11008B13B5 /* ProcessMediaView+Extension.swift */; };
+		F1ABBEF620D07A12008B13B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBED420D07A11008B13B5 /* AppDelegate.swift */; };
+		F1ABBEF720D07A12008B13B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBED520D07A12008B13B5 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F1ABBE9420D0798A008B13B5 /* HybridCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1ABBEA120D0798B008B13B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1ABBEA920D07A11008B13B5 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		F1ABBEAA20D07A11008B13B5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamPreviewView.swift; sourceTree = "<group>"; };
+		F1ABBEAE20D07A11008B13B5 /* CamBlocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamBlocks.swift; sourceTree = "<group>"; };
+		F1ABBEAF20D07A11008B13B5 /* CamError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamError.swift; sourceTree = "<group>"; };
+		F1ABBEB020D07A11008B13B5 /* CamUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamUtil.swift; sourceTree = "<group>"; };
+		F1ABBEB120D07A11008B13B5 /* HybridCamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HybridCamView.swift; sourceTree = "<group>"; };
+		F1ABBEB620D07A11008B13B5 /* RecordButton+Extension+Anim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Extension+Anim.swift"; sourceTree = "<group>"; };
+		F1ABBEB720D07A11008B13B5 /* RecordButton+Extension+Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Extension+Circle.swift"; sourceTree = "<group>"; };
+		F1ABBEB820D07A11008B13B5 /* RecordButton+Extension+Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Extension+Const.swift"; sourceTree = "<group>"; };
+		F1ABBEB920D07A11008B13B5 /* RecordButton+Extension+Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Extension+Event.swift"; sourceTree = "<group>"; };
+		F1ABBEBA20D07A11008B13B5 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		F1ABBEBC20D07A11008B13B5 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		F1ABBEBD20D07A11008B13B5 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		F1ABBEBE20D07A11008B13B5 /* ClickButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickButton.swift; sourceTree = "<group>"; };
+		F1ABBEBF20D07A11008B13B5 /* ShareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
+		F1ABBEC120D07A11008B13B5 /* TopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		F1ABBEC320D07A11008B13B5 /* ExitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitButton.swift; sourceTree = "<group>"; };
+		F1ABBEC420D07A11008B13B5 /* FlipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipButton.swift; sourceTree = "<group>"; };
+		F1ABBEC520D07A11008B13B5 /* FlashButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashButton.swift; sourceTree = "<group>"; };
+		F1ABBEC720D07A11008B13B5 /* CamView+Extension+Action+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Extension+Action+Extra.swift"; sourceTree = "<group>"; };
+		F1ABBEC820D07A11008B13B5 /* CamView+Extension+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Extension+Delegate.swift"; sourceTree = "<group>"; };
+		F1ABBEC920D07A11008B13B5 /* CamView+Extension+Accessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Extension+Accessor.swift"; sourceTree = "<group>"; };
+		F1ABBECA20D07A11008B13B5 /* CamView+Extension+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Extension+Create.swift"; sourceTree = "<group>"; };
+		F1ABBECB20D07A11008B13B5 /* CamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamView.swift; sourceTree = "<group>"; };
+		F1ABBECC20D07A11008B13B5 /* CamView+Extension+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Extension+Setup.swift"; sourceTree = "<group>"; };
+		F1ABBECD20D07A11008B13B5 /* CamView+Extension+Action+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Extension+Action+Core.swift"; sourceTree = "<group>"; };
+		F1ABBECE20D07A11008B13B5 /* CamView+Extension+Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Extension+Gesture.swift"; sourceTree = "<group>"; };
+		F1ABBED020D07A11008B13B5 /* ProcessMediaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessMediaView.swift; sourceTree = "<group>"; };
+		F1ABBED120D07A11008B13B5 /* VideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		F1ABBED220D07A11008B13B5 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		F1ABBED320D07A11008B13B5 /* ProcessMediaView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProcessMediaView+Extension.swift"; sourceTree = "<group>"; };
+		F1ABBED420D07A11008B13B5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1ABBED520D07A12008B13B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1ABBE9120D0798A008B13B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F1ABBE8B20D0798A008B13B5 = {
+			isa = PBXGroup;
+			children = (
+				F1ABBE9620D0798A008B13B5 /* HybridCamera */,
+				F1ABBE9520D0798A008B13B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1ABBE9520D0798A008B13B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBE9420D0798A008B13B5 /* HybridCamera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1ABBE9620D0798A008B13B5 /* HybridCamera */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */,
+				F1ABBED420D07A11008B13B5 /* AppDelegate.swift */,
+				F1ABBED520D07A12008B13B5 /* Assets.xcassets */,
+				F1ABBEAB20D07A11008B13B5 /* src */,
+				F1ABBEAA20D07A11008B13B5 /* Info.plist */,
+				F1ABBEA920D07A11008B13B5 /* MainVC.swift */,
+			);
+			path = HybridCamera;
+			sourceTree = "<group>";
+		};
+		F1ABBEAB20D07A11008B13B5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEAC20D07A11008B13B5 /* util */,
+				F1ABBEB120D07A11008B13B5 /* HybridCamView.swift */,
+				F1ABBEB220D07A11008B13B5 /* view */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F1ABBEAC20D07A11008B13B5 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */,
+				F1ABBEAE20D07A11008B13B5 /* CamBlocks.swift */,
+				F1ABBEAF20D07A11008B13B5 /* CamError.swift */,
+				F1ABBEB020D07A11008B13B5 /* CamUtil.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		F1ABBEB220D07A11008B13B5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEB320D07A11008B13B5 /* ui */,
+				F1ABBEC620D07A11008B13B5 /* cam */,
+				F1ABBECF20D07A11008B13B5 /* process */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F1ABBEB320D07A11008B13B5 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEB420D07A11008B13B5 /* button */,
+				F1ABBEC020D07A11008B13B5 /* topbar */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		F1ABBEB420D07A11008B13B5 /* button */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEB520D07A11008B13B5 /* record */,
+				F1ABBEBB20D07A11008B13B5 /* util */,
+				F1ABBEBF20D07A11008B13B5 /* ShareButton.swift */,
+			);
+			path = button;
+			sourceTree = "<group>";
+		};
+		F1ABBEB520D07A11008B13B5 /* record */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEB620D07A11008B13B5 /* RecordButton+Extension+Anim.swift */,
+				F1ABBEB720D07A11008B13B5 /* RecordButton+Extension+Circle.swift */,
+				F1ABBEB820D07A11008B13B5 /* RecordButton+Extension+Const.swift */,
+				F1ABBEB920D07A11008B13B5 /* RecordButton+Extension+Event.swift */,
+				F1ABBEBA20D07A11008B13B5 /* RecordButton.swift */,
+			);
+			path = record;
+			sourceTree = "<group>";
+		};
+		F1ABBEBB20D07A11008B13B5 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEBC20D07A11008B13B5 /* RoundButton.swift */,
+				F1ABBEBD20D07A11008B13B5 /* ToggleButton.swift */,
+				F1ABBEBE20D07A11008B13B5 /* ClickButton.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		F1ABBEC020D07A11008B13B5 /* topbar */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEC120D07A11008B13B5 /* TopBar.swift */,
+				F1ABBEC220D07A11008B13B5 /* button */,
+			);
+			path = topbar;
+			sourceTree = "<group>";
+		};
+		F1ABBEC220D07A11008B13B5 /* button */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEC320D07A11008B13B5 /* ExitButton.swift */,
+				F1ABBEC420D07A11008B13B5 /* FlipButton.swift */,
+				F1ABBEC520D07A11008B13B5 /* FlashButton.swift */,
+			);
+			path = button;
+			sourceTree = "<group>";
+		};
+		F1ABBEC620D07A11008B13B5 /* cam */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEC720D07A11008B13B5 /* CamView+Extension+Action+Extra.swift */,
+				F1ABBEC820D07A11008B13B5 /* CamView+Extension+Delegate.swift */,
+				F1ABBEC920D07A11008B13B5 /* CamView+Extension+Accessor.swift */,
+				F1ABBECA20D07A11008B13B5 /* CamView+Extension+Create.swift */,
+				F1ABBECB20D07A11008B13B5 /* CamView.swift */,
+				F1ABBECC20D07A11008B13B5 /* CamView+Extension+Setup.swift */,
+				F1ABBECD20D07A11008B13B5 /* CamView+Extension+Action+Core.swift */,
+				F1ABBECE20D07A11008B13B5 /* CamView+Extension+Gesture.swift */,
+			);
+			path = cam;
+			sourceTree = "<group>";
+		};
+		F1ABBECF20D07A11008B13B5 /* process */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBED020D07A11008B13B5 /* ProcessMediaView.swift */,
+				F1ABBED120D07A11008B13B5 /* VideoPlayerView.swift */,
+				F1ABBED220D07A11008B13B5 /* ImageView.swift */,
+				F1ABBED320D07A11008B13B5 /* ProcessMediaView+Extension.swift */,
+			);
+			path = process;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1ABBE9320D0798A008B13B5 /* HybridCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1ABBEA620D0798B008B13B5 /* Build configuration list for PBXNativeTarget "HybridCamera" */;
+			buildPhases = (
+				F1ABBE9020D0798A008B13B5 /* Sources */,
+				F1ABBE9120D0798A008B13B5 /* Frameworks */,
+				F1ABBE9220D0798A008B13B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HybridCamera;
+			productName = HybridCamera;
+			productReference = F1ABBE9420D0798A008B13B5 /* HybridCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1ABBE8C20D0798A008B13B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = eon;
+				TargetAttributes = {
+					F1ABBE9320D0798A008B13B5 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+				};
+			};
+			buildConfigurationList = F1ABBE8F20D0798A008B13B5 /* Build configuration list for PBXProject "HybridCamera" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1ABBE8B20D0798A008B13B5;
+			productRefGroup = F1ABBE9520D0798A008B13B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1ABBE9320D0798A008B13B5 /* HybridCamera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1ABBE9220D0798A008B13B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1ABBED720D07A12008B13B5 /* Info.plist in Resources */,
+				F1ABBEF720D07A12008B13B5 /* Assets.xcassets in Resources */,
+				F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1ABBE9020D0798A008B13B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1ABBEF420D07A12008B13B5 /* ImageView.swift in Sources */,
+				F1ABBEE220D07A12008B13B5 /* RoundButton.swift in Sources */,
+				F1ABBEDB20D07A12008B13B5 /* CamUtil.swift in Sources */,
+				F1ABBEE420D07A12008B13B5 /* ClickButton.swift in Sources */,
+				F1ABBEEA20D07A12008B13B5 /* CamView+Extension+Action+Extra.swift in Sources */,
+				F1ABBEEE20D07A12008B13B5 /* CamView.swift in Sources */,
+				F1ABBEEC20D07A12008B13B5 /* CamView+Extension+Accessor.swift in Sources */,
+				F1ABBEEF20D07A12008B13B5 /* CamView+Extension+Setup.swift in Sources */,
+				F1ABBEF620D07A12008B13B5 /* AppDelegate.swift in Sources */,
+				F1ABBEF020D07A12008B13B5 /* CamView+Extension+Action+Core.swift in Sources */,
+				F1ABBEF120D07A12008B13B5 /* CamView+Extension+Gesture.swift in Sources */,
+				F1ABBEDA20D07A12008B13B5 /* CamError.swift in Sources */,
+				F1ABBEE320D07A12008B13B5 /* ToggleButton.swift in Sources */,
+				F1ABBEF220D07A12008B13B5 /* ProcessMediaView.swift in Sources */,
+				F1ABBEDC20D07A12008B13B5 /* HybridCamView.swift in Sources */,
+				F1ABBEE820D07A12008B13B5 /* FlipButton.swift in Sources */,
+				F1ABBED620D07A12008B13B5 /* MainVC.swift in Sources */,
+				F1ABBEEB20D07A12008B13B5 /* CamView+Extension+Delegate.swift in Sources */,
+				F1ABBEDD20D07A12008B13B5 /* RecordButton+Extension+Anim.swift in Sources */,
+				F1ABBEDF20D07A12008B13B5 /* RecordButton+Extension+Const.swift in Sources */,
+				F1ABBEE920D07A12008B13B5 /* FlashButton.swift in Sources */,
+				F1ABBEE520D07A12008B13B5 /* ShareButton.swift in Sources */,
+				F1ABBEE120D07A12008B13B5 /* RecordButton.swift in Sources */,
+				F1ABBEF520D07A12008B13B5 /* ProcessMediaView+Extension.swift in Sources */,
+				F1ABBED920D07A12008B13B5 /* CamBlocks.swift in Sources */,
+				F1ABBEDE20D07A12008B13B5 /* RecordButton+Extension+Circle.swift in Sources */,
+				F1ABBEF320D07A12008B13B5 /* VideoPlayerView.swift in Sources */,
+				F1ABBEED20D07A12008B13B5 /* CamView+Extension+Create.swift in Sources */,
+				F1ABBED820D07A12008B13B5 /* CamPreviewView.swift in Sources */,
+				F1ABBEE020D07A12008B13B5 /* RecordButton+Extension+Event.swift in Sources */,
+				F1ABBEE620D07A12008B13B5 /* TopBar.swift in Sources */,
+				F1ABBEE720D07A12008B13B5 /* ExitButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1ABBEA120D0798B008B13B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1ABBEA420D0798B008B13B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1ABBEA520D0798B008B13B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1ABBEA720D0798B008B13B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B5CC9TD7P7;
+				INFOPLIST_FILE = HybridCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = codes.eon.HybridCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1ABBEA820D0798B008B13B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B5CC9TD7P7;
+				INFOPLIST_FILE = HybridCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = codes.eon.HybridCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1ABBE8F20D0798A008B13B5 /* Build configuration list for PBXProject "HybridCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1ABBEA420D0798B008B13B5 /* Debug */,
+				F1ABBEA520D0798B008B13B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1ABBEA620D0798B008B13B5 /* Build configuration list for PBXNativeTarget "HybridCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1ABBEA720D0798B008B13B5 /* Debug */,
+				F1ABBEA820D0798B008B13B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1ABBE8C20D0798A008B13B5 /* Project object */;
+}
