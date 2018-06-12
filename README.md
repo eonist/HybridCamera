@@ -1,4 +1,4 @@
-[![codebeat badge](https://img.shields.io/badge/Version-1.0-blue.svg?longCache=true)](https://img.shields.io/badge/SDK-0.1-blue.svg?longCache=true) [![codebeat badge](https://codebeat.co/assets/svg/badges/B-66bd63-dcc2e015f60fd0645631f8e7891440fb04fff8acc238aa755faf7de8c0ff7e2b.svg)](https://codebeat.co/assets/svg/badges/B-66bd63-dcc2e015f60fd0645631f8e7891440fb04fff8acc238aa755faf7de8c0ff7e2b.svg) ![Lang](https://img.shields.io/badge/Language-Swift%204.2-orange.svg) ![platform](https://img.shields.io/badge/Platform-iOS_11.4-blue.svg)
+[![version badge](https://img.shields.io/badge/Version-1.0-blue.svg?longCache=true)](https://img.shields.io/badge/SDK-0.1-blue.svg?longCache=true) [![codebeat badge](https://codebeat.co/badges/d8d0fcdb-096c-41c0-ac20-b063051b752b)](https://codebeat.co/projects/github-com-eonist-hybridcamera-master) ![Lang](https://img.shields.io/badge/Language-Swift%204.2-orange.svg) ![platform](https://img.shields.io/badge/Platform-iOS_11.4-blue.svg)
 
 
 <img width="320" alt="img" src="https://rawgit.com/stylekit/img/master/Image from iOS.jpg">
@@ -21,7 +21,7 @@
 - Animated record button (white to red transition)
 
 ### Why use this camera framework
-- High codebeat score (Low code complexity)
+- Pretty high [codebeat GPA](https://codebeat.co/projects/github-com-eonist-hybridcamera-master) 
 - Few class scoped variables (In order to better handle state)
 - Setup errors can be handled from the POV of the initiator
 - Operation errors is handled in the onCapture completion block 
