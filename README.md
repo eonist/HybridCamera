@@ -13,7 +13,7 @@
 - Pinch to zoom
 - Looping video/photo preview with share button
 - Callback based (Great for RX)
-- View based (Great for animation rich UI/UX)”
+- View based (Great for animation rich UI/UX)
 - Supports background music (Doesn't pause spotify etc)
 - Stores photo/video in temp dir 
 - Throw oriented code (allows external handling of errors)
