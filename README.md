@@ -14,7 +14,7 @@
 - Looping video/photo preview with share button
 - Callback based (Great for RX)
 - View based (Great for animation rich UI/UX)
-- Supports background music (Doesn't pause spotify etc)
+- Supports background music (Doesn't pause Spotify etc)
 - Stores photo/video in temp dir 
 - Throw oriented code (allows external handling of errors)
 - Persistent app authorization
@@ -26,13 +26,13 @@
 - Setup errors can be handled from the POV of the initiator
 - Operation errors is handled in the onCapture completion block 
 - Callback based (as oppose to delegate based)
-- Easily styleable. (The camera view are separate from the UI view)
+- Easily styleable (The camera view is separate from the UI view)
 - Entirely programatic (No storyboard)
 - Thoroughly documented (Artifacts and sideEffects etc)
 - Uses [Linkdin style guide](https://github.com/linkedin/swift-style-guide)
 
 ### Notes:
-- In order to keep things simple, The UI is CGrect based. Use your own Autolayout distro like SnapKit etc when adding additional UI
+- In order to keep things simple, The UI is CGRect based. Use your own Autolayout distro like SnapKit etc when adding additional UI
 
 ### Install
 Open the .xcodeproj file and cmd + r  
