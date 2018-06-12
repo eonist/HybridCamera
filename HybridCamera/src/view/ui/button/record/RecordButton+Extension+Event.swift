@@ -14,7 +14,6 @@ extension RecordButton:UIGestureRecognizerDelegate{
      * NOTE: should be called when views are animating between states, where all interaction should be disabled
      */
     func removeCallBacks(){
-        Swift.print("RecordButton.removeCallBacks()")
         onShortPressRelease = RecordButton.defaultShortPressReleased
         onLongPressBegan = RecordButton.defaultLongPressBegan
         onLongPressRelease = RecordButton.defaultLongPressReleased
@@ -38,7 +37,6 @@ extension RecordButton:UIGestureRecognizerDelegate{
      * Long press
      */
     @objc func handleLongPress(sender : UITapGestureRecognizer){
-        //        Swift.print("handleLongPress")
         if [.ended,.cancelled,.failed].contains(sender.state)  {//long tap release
             handleLongPressRelease()
         }else if case .began = sender.state{//long tap just began
@@ -49,7 +47,6 @@ extension RecordButton:UIGestureRecognizerDelegate{
      * Normal tap
      */
     @objc func handleTap(sender : UITapGestureRecognizer) {
-        Swift.print("handleTap")
         if [.ended,.cancelled,.failed].contains(sender.state)  {//short tap release
             handleShorPressRelease()
         }

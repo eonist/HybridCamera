@@ -18,7 +18,6 @@ extension CamView{
      * Ref: https://stackoverflow.com/a/50450425/5389500
      */
     func focusWithMode(focusMode:AVCaptureDevice.FocusMode, exposureMode:AVCaptureDevice.ExposureMode, point:CGPoint, monitorSubjectAreaChange:Bool){
-        //Swift.print("focusWithMode")
         guard let device:AVCaptureDevice = self.deviceInput?.device else {Swift.print("device unavailable 🚫");return}
         do {
             try device.lockForConfiguration()

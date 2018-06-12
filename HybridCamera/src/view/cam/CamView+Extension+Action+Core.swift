@@ -9,7 +9,6 @@ extension CamView{
      * Stops the camera preview
      */
     func stopPreview(){
-        Swift.print("CamViewController.stop()")
         if captureSession.isRunning {
             captureSession.stopRunning()
         }else {
@@ -20,7 +19,6 @@ extension CamView{
      * Starts the camera preview
      */
     func startPreview(){
-        Swift.print("CamViewController.start()")
         if !captureSession.isRunning {
             captureSession.startRunning()
         }else {
@@ -36,7 +34,6 @@ extension CamView{
      * Starts recording video
      */
     func startRecording() {
-//        Swift.print("startRecording 🎥 \(videoOutput.isRecording)")
         guard videoOutput.isRecording == false else {onVideoCaptureComplete(nil,CaptureError.alreadyRecording); return}
         guard let connection = videoOutput.connection(with: .video) else {onVideoCaptureComplete(nil,CaptureError.noVideoConnection);return}
         if connection.isVideoOrientationSupported {
@@ -59,7 +56,6 @@ extension CamView{
      * Stops recording video
      */
     func stopRecording() {
-//        Swift.print("stopRecording 🚫 \(videoOutput.isRecording)")
         guard  videoOutput.isRecording else { onVideoCaptureComplete(nil,CaptureError.alreadyStoppedRecording);return}
         videoOutput.stopRecording()
     }
@@ -73,8 +69,6 @@ extension CamView{
      * NOTE: it's also possible to use: stillImageOutput.captureStillImageAsynchronously to take a picture
      */
     func takePhoto() {
-//        Swift.print("takePhoto")
-//        guard let capturePhotoOutput = self.capturePhotoOutput else { return }// Make sure capturePhotoOutput is valid
         let photoSettings:AVCapturePhotoSettings = {// Get an instance of AVCapturePhotoSettings class
             let photoSettings = AVCapturePhotoSettings()
             photoSettings.isAutoStillImageStabilizationEnabled = true// Set photo settings for our need
