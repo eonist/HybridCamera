@@ -21,12 +21,13 @@
 - Animated record button (white to red transition)
 
 ### Why use this camera framework
-- [codebeat GPA](https://codebeat.co/projects/github-com-eonist-hybridcamera-master) 
-- Few class scoped variables (In order to better handle state)
+- High [codebeat GPA](https://codebeat.co/projects/github-com-eonist-hybridcamera-master) 
+- Low class scoped variable count (In order to better handle overall state)
 - Setup errors can be handled from the POV of the initiator
 - Operation errors is handled in the onCapture completion block 
 - Callback based (as oppose to delegate based)
 - Easily styleable (The camera view is separate from the UI view)
+- No thirdparty libraries or Sugar
 - Entirely programatic (No storyboard)
 - Thoroughly documented (Artifacts and sideEffects etc)
 - Uses [Linkdin style guide](https://github.com/linkedin/swift-style-guide)
