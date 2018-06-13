@@ -21,7 +21,7 @@
 - Animated record button (white to red transition)
 
 ### Why use this camera framework
-- Pretty high [codebeat GPA](https://codebeat.co/projects/github-com-eonist-hybridcamera-master) 
+- [codebeat GPA](https://codebeat.co/projects/github-com-eonist-hybridcamera-master) 
 - Few class scoped variables (In order to better handle state)
 - Setup errors can be handled from the POV of the initiator
 - Operation errors is handled in the onCapture completion block 
