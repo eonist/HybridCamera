@@ -17,7 +17,7 @@ extension CamView{
             try setupPhotoCamera()
             try setupBackgroundAudioSupport()
         } catch {
-            Swift.print("error:  \(error.localizedDescription)")
+            Swift.print("setupDevice error:  \((error as? SetupError)?.description ?? error.localizedDescription)")
         }
     }
     /**

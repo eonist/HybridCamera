@@ -17,6 +17,7 @@ extension CamView{
     }
     /**
      * Starts the camera preview
+     * NOTE: You might want to call this on a background thread if You have UI that animates after/before it's called
      */
     func startPreview(){
         if !captureSession.isRunning {

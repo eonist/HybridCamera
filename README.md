@@ -38,8 +38,8 @@
 ### Install:
 Open the .xcodeproj file and `cmd + r`   
 To use in other projects:   
-1. Copy the src folder into your project:
-2. Make sure info.plist has these variables: 
+1. Copy the src folder into your project  (If you don't want the UI, just copy the `cam/` folder)
+2. Make sure info.plist has these variables  
  ```
 Privacy - Microphone Usage Description   
 Privacy - Camera Usage Description  
