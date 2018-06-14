@@ -35,7 +35,7 @@
 ### Notes:
 - In order to keep things simple, The UI is CGRect based. Use your own Autolayout distro like SnapKit etc when adding additional UI
 
-### Install
+### Install:
 Open the .xcodeproj file and cmd + r  
 To use in other projects:   
 1. Copy the src folder into your project:
@@ -44,4 +44,15 @@ To use in other projects:
 Privacy - Microphone Usage Description   
 Privacy - Camera Usage Description  
 Privacy - Photo Library Additions Usage Description  
+```
+
+### Example code:   
+```swift
+self.view = HybridCamView()
+view.camView.onPhotoCaptureComplete = { (image:UIImage?,url:URL?,error:Error?) in
+      Swift.print("On photo capture complete \(url)")
+}
+hybridCamView.camView.onVideoCaptureComplete = { (url:URL?,error:Error?) in
+      Swift.print("On Video capture complete \(url)")
+}
 ```

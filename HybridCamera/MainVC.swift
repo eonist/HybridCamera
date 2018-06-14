@@ -16,7 +16,7 @@ class MainVC:UIViewController{
             }
         }
     }
-    override var shouldAutorotate: Bool  {return false} // Lock autorotate
+    override var shouldAutorotate: Bool  {return false}/*Locks autorotate*/
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 }
 /**
@@ -29,7 +29,6 @@ extension MainVC{
     func initiate(){
         let hybridCamView = HybridCamView()
         self.view = hybridCamView
-        hybridCamView.isUserInteractionEnabled = true
         hybridCamView.camView.onPhotoCaptureComplete = onCapture
         hybridCamView.camView.onVideoCaptureComplete = {(url:URL?,error:Error?)in self.onCapture(nil,url,error)}
     }

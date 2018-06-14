@@ -1,8 +1,8 @@
 import UIKit
 /**
  * Main view
- * NOTE: Merge videos: https://www.raywenderlich.com/188034/how-to-play-record-and-merge-videos-in-ios-and-swift
- * To support: overlays on videos: https://www.lynda.com/Swift-tutorials/AVFoundation-Essentials-iOS-Swift/504183-2.html
+ * NOTE: To support merging video segments: https://www.raywenderlich.com/188034/how-to-play-record-and-merge-videos-in-ios-and-swift
+ * NOTE: To support overlays on videos: https://www.lynda.com/Swift-tutorials/AVFoundation-Essentials-iOS-Swift/504183-2.html
  */
 class HybridCamView:UIView{
     lazy var camView:CamView = createCamView()
@@ -59,8 +59,8 @@ extension HybridCamView{
      * Creates camview
      */
     func createCamView() -> CamView{
-        let rect = CGRect.init(origin: .init(), size: UIScreen.main.bounds.size)
-        let camView = CamView(frame: rect)/*TopLeft orientation*/
+        let rect = CGRect.init(origin: .zero, size: UIScreen.main.bounds.size)
+        let camView = CamView(frame: rect)
         self.addSubview(camView)
         return camView
     }
