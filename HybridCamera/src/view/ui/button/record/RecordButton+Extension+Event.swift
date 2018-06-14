@@ -37,9 +37,9 @@ extension RecordButton:UIGestureRecognizerDelegate{
      * Long press
      */
     @objc func handleLongPress(sender : UITapGestureRecognizer){
-        if [.ended,.cancelled,.failed].contains(sender.state)  {//long tap release
+        if [.ended,.cancelled,.failed].contains(sender.state)  {/*long tap release*/
             handleLongPressRelease()
-        }else if case .began = sender.state{//long tap just began
+        }else if case .began = sender.state{/*long tap just began*/
             handleLongPressBegan()
         }
     }
@@ -47,7 +47,7 @@ extension RecordButton:UIGestureRecognizerDelegate{
      * Normal tap
      */
     @objc func handleTap(sender : UITapGestureRecognizer) {
-        if [.ended,.cancelled,.failed].contains(sender.state)  {//short tap release
+        if [.ended,.cancelled,.failed].contains(sender.state) {/*short tap release*/
             handleShorPressRelease()
         }
     }

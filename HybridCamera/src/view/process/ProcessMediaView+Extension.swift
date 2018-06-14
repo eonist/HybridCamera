@@ -7,7 +7,7 @@ import AVFoundation
  */
 extension ProcessMediaView{
     /**
-     * New
+     * Creates video view
      */
     func createVideoView() -> VideoPlayerView{
         let view = VideoPlayerView(frame: UIScreen.main.bounds)
@@ -15,18 +15,24 @@ extension ProcessMediaView{
         return view
     }
     /**
-     * New
+     * Creates Image view
      */
     func  createImageView() -> ImageView{
         let view = ImageView.init(frame: UIScreen.main.bounds)
         addSubview(view)
         return view
     }
+    /**
+     * Creates exit button
+     */
     func createExitButton() -> ExitButton{
         let btn = ExitButton()
         self.addSubview(btn)
         return btn
     }
+    /**
+     * Creates share button
+     */
     func createShareButton() -> ShareButton{
         let s = CGSize.init(width: 180, height: 40)
         let margin:CGFloat = 40
@@ -41,14 +47,13 @@ extension ProcessMediaView{
  */
 extension ProcessMediaView{
     /**
-     * attachCallBacks
+     * AttachCallBacks
      */
     func attachCallBacks(){
         exitButton.onClick = {
             self.onExit()
         }
-        shareButton.onClick = {
-            //launch share AlertDialog
+        shareButton.onClick = {/*launch share AlertDialog*/
             if let imageURL = self.imageView.url {
                 self.onShare(imageURL)
             }else if let videoURL = (self.videoPlayerView.avPlayer.currentItem?.asset as? AVURLAsset)?.url {
@@ -75,11 +80,11 @@ extension ProcessMediaView{
     }
 }
 /**
- * Uril
+ * Util
  */
 extension ProcessMediaView{
     /**
-     * New
+     * Prompts the save file dialog
      */
     static func promptSaveFile(vc:UIViewController,url:URL,onComplete:@escaping ()->Void){
         let activitycontroller = UIActivityViewController(activityItems: [url], applicationActivities: nil)
@@ -89,7 +94,7 @@ extension ProcessMediaView{
         vc.present(activitycontroller, animated: true, completion: nil)
     }
     /**
-     * New
+     * Prompts the error dilog
      */
     static func promtErrorDialog(vc:UIViewController,error:Swift.Error,onComplete:@escaping ()->Void){
         let alert: UIAlertController = UIAlertController(title: "Error",message: error.localizedDescription ,preferredStyle: .alert)

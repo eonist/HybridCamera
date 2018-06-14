@@ -6,11 +6,11 @@ import AVFoundation
  */
 extension CamView{
     /**
-     * Temp
+     * Accessor to get captureSession
      */
     var captureSession:AVCaptureSession { return previewView.captureSession }
     /**
-     * New
+     * NOTE: ⚠️️ for now HybridCamerea only supports .portrait
      */
     static var currentVideoOrientation:AVCaptureVideoOrientation {
 //        let  orientation:AVCaptureVideoOrientation = {
@@ -28,5 +28,4 @@ extension CamView{
 //        _ = orientation
         return .portrait
     }
-    
 }

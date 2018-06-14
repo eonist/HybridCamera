@@ -18,7 +18,6 @@ class TopBar:UIView{
         fatalError("init(coder:) has not been implemented")
     }
 }
-
 extension TopBar{
     func createExitButton() -> ExitButton{
         let btn = ExitButton()

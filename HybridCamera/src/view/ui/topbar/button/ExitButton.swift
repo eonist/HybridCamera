@@ -10,7 +10,6 @@ class ExitButton:ClickButton{
         backgroundColor = .clear
         self.setImage(#imageLiteral(resourceName: "cancel"), for: .normal)
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

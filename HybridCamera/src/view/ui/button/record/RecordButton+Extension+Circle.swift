@@ -33,7 +33,7 @@ extension RecordButton.Circle{
         let length = self.frame.width - (padding * 2)
         let frame = CGRect.init(origin: CGPoint.init(x: padding, y: padding), size: CGSize.init(width: length, height: length))
         let circle = UIView.init(frame: frame)
-        circle.backgroundColor = .white//RecordButton.blue
+        circle.backgroundColor = .white
         circle.layer.cornerRadius = length/2
         addSubview(circle)
         return circle

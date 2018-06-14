@@ -27,11 +27,11 @@ extension MainVC{
      * Common init
      */
     func initiate(){
-        let snapCamView = HybridCamView()
-        self.view = snapCamView
-        snapCamView.isUserInteractionEnabled = true
-        snapCamView.camView.onPhotoCaptureComplete = onCapture
-        snapCamView.camView.onVideoCaptureComplete = {(url:URL?,error:Error?)in self.onCapture(nil,url,error)}
+        let hybridCamView = HybridCamView()
+        self.view = hybridCamView
+        hybridCamView.isUserInteractionEnabled = true
+        hybridCamView.camView.onPhotoCaptureComplete = onCapture
+        hybridCamView.camView.onVideoCaptureComplete = {(url:URL?,error:Error?)in self.onCapture(nil,url,error)}
     }
     /**
      * When camera onCapture is called

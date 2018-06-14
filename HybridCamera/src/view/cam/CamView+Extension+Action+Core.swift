@@ -46,7 +46,7 @@ extension CamView{
                 device.isSmoothAutoFocusEnabled = false
                 device.unlockForConfiguration()
             } catch {
-                Swift.print("Error setting configuration: \(error)")
+                onVideoCaptureComplete(nil,error)
             }
         }
         guard let outputURL:URL = CamUtil.tempURL() else {  onVideoCaptureComplete(nil,CaptureError.noTempFolderAccess);return}
@@ -69,14 +69,14 @@ extension CamView{
      * NOTE: it's also possible to use: stillImageOutput.captureStillImageAsynchronously to take a picture
      */
     func takePhoto() {
-        let photoSettings:AVCapturePhotoSettings = {// Get an instance of AVCapturePhotoSettings class
+        let photoSettings:AVCapturePhotoSettings = {/*Get an instance of AVCapturePhotoSettings class*/
             let photoSettings = AVCapturePhotoSettings()
-            photoSettings.isAutoStillImageStabilizationEnabled = true// Set photo settings for our need
+            photoSettings.isAutoStillImageStabilizationEnabled = true/*Set photo settings for our need*/
             photoSettings.isHighResolutionPhotoEnabled = true
             photoSettings.flashMode = self.flashMode
             return photoSettings
         }()
-        photoOutput.capturePhoto(with: photoSettings, delegate: self)// Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate
+        photoOutput.capturePhoto(with: photoSettings, delegate: self)/*Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate*/
     }
 }
 

@@ -28,7 +28,7 @@ class CamUtil{
         }
     }
     /**
-     * New
+     * Returns camera (.front .back)
      */
     static func camera(type:AVCaptureDevice.Position) -> AVCaptureDevice? {
         let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
@@ -47,7 +47,7 @@ class CamUtil{
         }
     }
     /**
-     * Video
+     * Asserts video access
      */
     private static func assertVideoAccess(vc:UIViewController, onComplete:@escaping (_ success:Bool)->Void){
         AVCaptureDevice.requestAccess(for: AVMediaType.video) { (granted: Bool) in
@@ -64,16 +64,16 @@ class CamUtil{
         }
     }
     /**
-     * Microphone
+     * Asserts microphone access
      */
     private static func assertMicrophoneAccess(vc:UIViewController, onComplete:@escaping (_ success:Bool)->Void){
         let micStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.audio)
         switch micStatus {
-        case .authorized://got access
+        case .authorized:/*Got access*/
             onComplete(true)
-        case .denied,.restricted:// Microphone disabled in settings, No access granted
+        case .denied,.restricted:/*Microphone disabled in settings, No access granted*/
             onComplete(false)
-        case .notDetermined:// Didn't request access yet
+        case .notDetermined:/*Didn't request access yet*/
             AVAudioSession.sharedInstance().requestRecordPermission({ (granted) in
                 if granted {
                     onComplete(true)

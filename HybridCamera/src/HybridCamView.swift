@@ -2,9 +2,7 @@ import UIKit
 /**
  * Main view
  * NOTE: Merge videos: https://www.raywenderlich.com/188034/how-to-play-record-and-merge-videos-in-ios-and-swift
- * overlays on videos: https://www.lynda.com/Swift-tutorials/AVFoundation-Essentials-iOS-Swift/504183-2.html
- * backround audio support: https://github.com/Awalz/SwiftyCam
- * disable allowAutoRotate: https://github.com/Awalz/SwiftyCam/blob/master/Source/SwiftyCamViewController.swift
+ * To support: overlays on videos: https://www.lynda.com/Swift-tutorials/AVFoundation-Essentials-iOS-Swift/504183-2.html
  */
 class HybridCamView:UIView{
     lazy var camView:CamView = createCamView()
@@ -46,11 +44,9 @@ extension HybridCamView{
              self.camView.stopRecording()
         }
         topBar.flipButton.onToggle = { toggle in
-//            Swift.print("flipButton: \(toggle)")
             self.camView.setCamera(cameraType: toggle ? .front : .back)
         }
         topBar.flashButton.onToggle = { toggle in
-//            Swift.print("flashButton: \(toggle)")
             self.camView.setFlashMode(flashMode:  toggle ? .on : .off)
         }
         topBar.exitButton.onClick = {
@@ -60,7 +56,7 @@ extension HybridCamView{
 }
 extension HybridCamView{
     /**
-     * New
+     * Creates camview
      */
     func createCamView() -> CamView{
         let rect = CGRect.init(origin: .init(), size: UIScreen.main.bounds.size)
@@ -69,7 +65,7 @@ extension HybridCamView{
         return camView
     }
     /**
-     * New
+     * Creates topbar
      */
     func createTopBar()->TopBar {
         let rect = CGRect.init(origin: .init(), size: CGSize.init(width: UIScreen.main.bounds.size.width, height: 120))

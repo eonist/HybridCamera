@@ -1,8 +1,6 @@
 import UIKit
 import AVFoundation
 
-
-
 class ProcessMediaView:UIView{
     /*UI*/
     lazy var imageView:ImageView = createImageView()

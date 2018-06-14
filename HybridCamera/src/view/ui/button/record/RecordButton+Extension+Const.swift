@@ -1,8 +1,5 @@
 import UIKit
 
-/**
- * Styling constants
- */
 extension RecordButton{
     /**
      * Utility

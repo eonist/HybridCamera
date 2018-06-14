@@ -27,12 +27,14 @@ extension VideoPlayerView{
         avPlayer.play()
     }
     @objc func finishVideo(){
-        print("Video Finished")
         avPlayer.seek(to: kCMTimeZero)
         avPlayer.play()
     }
+    /**
+     * Setting object to nil makes the observer work on the 
+     */
     func deInitiate(){
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil/*player.currentItem*/)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
     }
     /**
      * New
