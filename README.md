@@ -27,7 +27,7 @@
 - Operation errors is handled in the onCapture completion block 
 - Callback based (as oppose to delegate based)
 - Easily styleable (The camera view is separate from the UI view)
-- No thirdparty libraries or Sugar
+- No third-party libraries or Sugar
 - Entirely programatic (No storyboard)
 - Thoroughly documented (Artifacts and sideEffects etc)
 - Uses [Linkdin style guide](https://github.com/linkedin/swift-style-guide)
@@ -36,7 +36,7 @@
 - In order to keep things simple, The UI is CGRect based. Use your own Autolayout distro like SnapKit etc when adding additional UI
 
 ### Install:
-Open the .xcodeproj file and cmd + r  
+Open the .xcodeproj file and `cmd + r`   
 To use in other projects:   
 1. Copy the src folder into your project:
 2. Make sure info.plist has these variables: 
@@ -50,9 +50,9 @@ Privacy - Photo Library Additions Usage Description
 ```swift
 self.view = HybridCamView()
 view.camView.onPhotoCaptureComplete = { (image:UIImage?,url:URL?,error:Error?) in
-      Swift.print("On photo capture complete \(url)")
+   Swift.print("On photo capture complete \(url)")
 }
 hybridCamView.camView.onVideoCaptureComplete = { (url:URL?,error:Error?) in
-      Swift.print("On Video capture complete \(url)")
+   Swift.print("On Video capture complete \(url)")
 }
 ```

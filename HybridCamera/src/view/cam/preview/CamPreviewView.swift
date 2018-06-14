@@ -1,8 +1,6 @@
 import UIKit
 import AVFoundation
 
-//figure out how to get callbacks and remove the glitch in the begining of the recording ✅
-
 class CamPreviewView:UIView{
     lazy var previewLayer:AVCaptureVideoPreviewLayer = createPreviewLayer()
     lazy var captureSession:AVCaptureSession = createCaptureSession()

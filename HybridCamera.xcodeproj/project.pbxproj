@@ -94,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1151D2620D2B1E400860CD9 /* preview */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */,
+			);
+			path = preview;
+			sourceTree = "<group>";
+		};
 		F1ABBE8B20D0798A008B13B5 = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +134,6 @@
 		F1ABBEAB20D07A11008B13B5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABBEAC20D07A11008B13B5 /* util */,
 				F1ABBEB120D07A11008B13B5 /* HybridCamView.swift */,
 				F1ABBEB220D07A11008B13B5 /* view */,
 			);
@@ -136,7 +143,6 @@
 		F1ABBEAC20D07A11008B13B5 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */,
 				F1ABBEAE20D07A11008B13B5 /* CamBlocks.swift */,
 				F1ABBEAF20D07A11008B13B5 /* CamError.swift */,
 				F1ABBEB020D07A11008B13B5 /* CamUtil.swift */,
@@ -217,6 +223,8 @@
 		F1ABBEC620D07A11008B13B5 /* cam */ = {
 			isa = PBXGroup;
 			children = (
+				F1ABBEAC20D07A11008B13B5 /* util */,
+				F1151D2620D2B1E400860CD9 /* preview */,
 				F1ABBEC720D07A11008B13B5 /* CamView+Extension+Action+Extra.swift */,
 				F1ABBEC820D07A11008B13B5 /* CamView+Extension+Delegate.swift */,
 				F1ABBEC920D07A11008B13B5 /* CamView+Extension+Accessor.swift */,
