@@ -35,13 +35,13 @@ extension MainVC{
     /**
      * When camera onCapture is called
      */
-    private func onCapture (_ image:UIImage?,_ url:URL?,_ error:Error?) {
+    private func onCapture(_ image:UIImage?,_ url:URL?,_ error:Error?) {
         let processMediaView = ProcessMediaView.init(frame: UIScreen.main.bounds)
         processMediaView.onExit = {processMediaView.deInitiate()}
         processMediaView.onShare = { (url:URL?) in if let url = url {ProcessMediaView.promptSaveFile(vc: self, url: url, onComplete: {processMediaView.deInitiate()})}}
         self.view.addSubview(processMediaView)
         if let error = error{
-            ProcessMediaView.promtErrorDialog(vc: self, error: error, onComplete: {processMediaView.deInitiate()});return
+            ProcessMediaView.promptErrorDialog(vc: self, error: error, onComplete: {processMediaView.deInitiate()});return
         }else {
             processMediaView.present(image: image, url: url)
         }

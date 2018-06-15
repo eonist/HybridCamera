@@ -1,4 +1,3 @@
-
 import UIKit
 import AVFoundation
 
@@ -17,7 +16,7 @@ extension ProcessMediaView{
     /**
      * Creates Image view
      */
-    func  createImageView() -> ImageView{
+    func createImageView() -> ImageView{
         let view = ImageView.init(frame: UIScreen.main.bounds)
         addSubview(view)
         return view
@@ -96,7 +95,7 @@ extension ProcessMediaView{
     /**
      * Prompts the error dilog
      */
-    static func promtErrorDialog(vc:UIViewController,error:Swift.Error,onComplete:@escaping ()->Void){
+    static func promptErrorDialog(vc:UIViewController,error:Swift.Error,onComplete:@escaping ()->Void){
         let alert: UIAlertController = UIAlertController(title: "Error",message: error.localizedDescription ,preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default) { _ in onComplete()}
         alert.addAction(action)
