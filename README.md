@@ -47,7 +47,7 @@ Privacy - Photo Library Additions Usage Description
 ```
 
 ### Video:
-<img width="103" alt="img" src="https://rawgit.com/stylekit/img/master/vid_edited_2_8mb.gif">
+<img width="206" alt="img" src="https://rawgit.com/stylekit/img/master/vid_edited_2_8mb.gif">
 
 ### Example code:   
 ```swift
