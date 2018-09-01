@@ -25,7 +25,7 @@
 - Low class scoped variable count (In order to better handle overall state)
 - Setup errors can be handled from the POV of the initiator
 - Operation errors is handled in the onCapture completion block 
-- Callback based (as oppose to delegate based)
+- Callback based (as oppose to delegate based) [More info](https://medium.cobeisfresh.com/why-you-shouldn-t-use-delegates-in-swift-7ef808a7f16b) 
 - Easily styleable (The camera view is separate from the UI view)
 - No third-party libraries or Sugar
 - Entirely programatic (No storyboard)
