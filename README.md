@@ -12,7 +12,7 @@
 - Tap to focus / set exposure
 - Pinch to zoom
 - Looping video/photo preview with share button
-- Callback based (Great for RX)
+- [Callback based (Great for RX)](https://medium.cobeisfresh.com/why-you-shouldn-t-use-delegates-in-swift-7ef808a7f16b) 
 - View based (Great for animation rich UI/UX)
 - Supports background music (Doesn't pause Spotify etc)
 - Stores photo/video in temp dir 
