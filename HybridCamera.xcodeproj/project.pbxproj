@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */; };
 		F1ABBED620D07A12008B13B5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEA920D07A11008B13B5 /* MainVC.swift */; };
-		F1ABBED720D07A12008B13B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEAA20D07A11008B13B5 /* Info.plist */; };
 		F1ABBED820D07A12008B13B5 /* CamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */; };
 		F1ABBED920D07A12008B13B5 /* CamBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAE20D07A11008B13B5 /* CamBlocks.swift */; };
 		F1ABBEDA20D07A12008B13B5 /* CamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAF20D07A11008B13B5 /* CamError.swift */; };
@@ -94,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F114AD9321A074D200942A28 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBED220D07A11008B13B5 /* ImageView.swift */,
+				F1ABBED120D07A11008B13B5 /* VideoPlayerView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		F1151D2620D2B1E400860CD9 /* preview */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,9 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				F1ABBED020D07A11008B13B5 /* ProcessMediaView.swift */,
-				F1ABBED120D07A11008B13B5 /* VideoPlayerView.swift */,
-				F1ABBED220D07A11008B13B5 /* ImageView.swift */,
 				F1ABBED320D07A11008B13B5 /* ProcessMediaView+Extension.swift */,
+				F114AD9321A074D200942A28 /* view */,
 			);
 			path = process;
 			sourceTree = "<group>";
@@ -307,7 +314,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1ABBED720D07A12008B13B5 /* Info.plist in Resources */,
 				F1ABBEF720D07A12008B13B5 /* Assets.xcassets in Resources */,
 				F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -496,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codes.eon.HybridCamera;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.eon.HybridCam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -517,7 +523,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codes.eon.HybridCamera;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.eon.HybridCam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

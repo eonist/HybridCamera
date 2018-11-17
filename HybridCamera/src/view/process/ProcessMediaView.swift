@@ -1,15 +1,15 @@
 import UIKit
 import AVFoundation
 
-class ProcessMediaView:UIView{
+open class ProcessMediaView:UIView{
     /*UI*/
     lazy var imageView:ImageView = createImageView()
     lazy var videoPlayerView:VideoPlayerView = createVideoView()
     lazy var exitButton:ExitButton = createExitButton()
     lazy var shareButton:ShareButton = createShareButton()
     /*CallBacks*/
-    var onShare:(_ url:URL?) -> Void = { _ in Swift.print("default onShare")}
-    var onExit:()->Void = {Swift.print("default onExit")}
+    var onShare:OnShare = ProcessMediaView.defaultOnShare
+    var onExit:OnExit = ProcessMediaView.defaultOnExit
     override init(frame:CGRect) {
         super.init(frame:frame)
         self.backgroundColor = .black
@@ -22,16 +22,23 @@ class ProcessMediaView:UIView{
     /**
      * Boilerplate
      */
-    required init?(coder aDecoder: NSCoder) {
+   required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     /**
      * deInitiate
      */
-    func deInitiate(){
-        videoPlayerView.deInitiate()
-        self.removeFromSuperview()
+    open func deInitiate(){
+        videoPlayerView.deInitiate()/*Removes observer*/
+        self.removeFromSuperview()/*Removes it self from the view hierarchy*/
     }
 }
-
-
+/**
+ * Callback signatures
+ */
+extension ProcessMediaView {
+   typealias OnShare = (_ url:URL?) -> Void
+   typealias OnExit = () -> Void
+   static let defaultOnShare:OnShare = { _ in Swift.print("default onShare")}
+   static let defaultOnExit = { Swift.print("default onExit") }
+}
