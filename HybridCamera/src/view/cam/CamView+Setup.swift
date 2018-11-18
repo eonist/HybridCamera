@@ -43,7 +43,7 @@ extension CamView{
    }
 }
 /**
- * Private 
+ * Private methods
  */
 extension CamView{
    /**

@@ -63,3 +63,6 @@ hybridCamView.camView.onVideoCaptureComplete = { (url:URL?,error:Error?) in
 ### Todo:
 - Add support for more orientation modes (Currently only supports portrait)
 - Add support for error resolution from the POV of initiating the camera
+- Make Record button etc with AutoLayout
+- Make lib carthage support
+- Add Spatial, Chaplin, Popsicle to HybridCam

@@ -12,7 +12,7 @@ open class RoundButton:UIButton{
       self.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
    }
    @objc open func buttonTouched(sender:UIButton) {
-      /*override in subclass*/
+      Swift.print("RoundButton - override in subclass")
    }
    /**
     * Boilerplate

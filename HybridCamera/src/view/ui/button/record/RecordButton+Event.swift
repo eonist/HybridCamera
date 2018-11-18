@@ -4,10 +4,10 @@ import UIKit
  */
 extension RecordButton:UIGestureRecognizerDelegate{
     /**
-     * Used to reset callbacks
+     * Used to reset previously attached callbacks
      * NOTE: should be called when views are animating between states, where all interaction should be disabled
      */
-    @objc open func removeCallBacks(){
+    @objc open func clearCallBacks(){
         onShortPressRelease = RecordButton.defaultShortPressReleased
         onLongPressBegan = RecordButton.defaultLongPressBegan
         onLongPressRelease = RecordButton.defaultLongPressReleased

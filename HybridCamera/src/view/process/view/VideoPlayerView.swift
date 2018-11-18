@@ -3,7 +3,7 @@ import AVFoundation
 
 open class VideoPlayerView:UIView{
    open var avPlayer = AVPlayer()
-   lazy var avPlayerLayer: AVPlayerLayer = createAvPlayerLayer()
+   public lazy var avPlayerLayer: AVPlayerLayer = createAvPlayerLayer()
    /*Init*/
    override public init(frame: CGRect) {
       super.init(frame: frame)
@@ -11,9 +11,20 @@ open class VideoPlayerView:UIView{
       NotificationCenter.default.addObserver(self, selector: #selector(onVideoFinished), name: .AVPlayerItemDidPlayToEndTime, object: nil)
    }
    /**
+    * Boilerplate
+    */
+   required public init?(coder aDecoder: NSCoder) {
+      fatalError("init(coder:) has not been implemented")
+   }
+}
+/**
+ * Extension
+ */
+extension VideoPlayerView{
+   /**
     * Creates the video player layer
     */
-   open func createAvPlayerLayer() -> AVPlayerLayer{
+   @objc open func createAvPlayerLayer() -> AVPlayerLayer{
       let avPlayerLayer = AVPlayerLayer(player: avPlayer)
       avPlayerLayer.frame = frame
       avPlayerLayer.videoGravity = .resizeAspectFill
@@ -23,7 +34,7 @@ open class VideoPlayerView:UIView{
    /**
     * Play video
     */
-   open func play(videoURL:URL){
+   @objc open func play(videoURL:URL){
       let playerItem = AVPlayerItem(url: videoURL as URL)
       avPlayer.replaceCurrentItem(with: playerItem)
       avPlayer.play()
@@ -38,14 +49,7 @@ open class VideoPlayerView:UIView{
    /**
     * Setting object to nil makes the observer work on the
     */
-   open func deInitiate(){
+   @objc open func deInitiate(){
       NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
    }
-   /**
-    * Boilerplate
-    */
-   required public init?(coder aDecoder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
-   }
 }
-

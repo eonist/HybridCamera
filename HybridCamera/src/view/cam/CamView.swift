@@ -9,16 +9,16 @@ import AVFoundation
  */
 open class CamView:UIView {
    /*UI*/
-   lazy var previewView:CamPreviewView = createPreviewView()/*Has the view Finder Preview*/
+   public lazy var previewView:CamPreviewView = createPreviewView()/*Has the view Finder Preview*/
    /*AV*/
-   var deviceInput:AVCaptureDeviceInput?
-   let videoOutput = AVCaptureMovieFileOutput()
-   let photoOutput:AVCapturePhotoOutput = AVCapturePhotoOutput()
+   public var deviceInput:AVCaptureDeviceInput?
+   public let videoOutput = AVCaptureMovieFileOutput()
+   public let photoOutput:AVCapturePhotoOutput = AVCapturePhotoOutput()
    /*State*/
-   var flashMode:AVCaptureDevice.FlashMode = .off
+   public var flashMode:AVCaptureDevice.FlashMode = .off
    /*Callbacks*/
-   var onVideoCaptureComplete:VideoCaptureComplete = defaultVideoCaptureComplete
-   var onPhotoCaptureComplete:PhotoCaptureComplete = defaultPhotoCaptureComplete
+   public var onVideoCaptureComplete:VideoCaptureComplete = defaultVideoCaptureComplete
+   public var onPhotoCaptureComplete:PhotoCaptureComplete = defaultPhotoCaptureComplete
    
    override init(frame: CGRect) {
       super.init(frame: frame)
