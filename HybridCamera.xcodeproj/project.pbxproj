@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F114AD9521A197AA00942A28 /* HybridCamView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114AD9421A197AA00942A28 /* HybridCamView+Extension.swift */; };
+		F114AD9821A1A4DE00942A28 /* TopBarKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114AD9721A1A4DE00942A28 /* TopBarKind.swift */; };
+		F114AD9A21A1A5D000942A28 /* RecordButtonKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114AD9921A1A5D000942A28 /* RecordButtonKind.swift */; };
+		F114AD9E21A1B94000942A28 /* ToggleButtonKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114AD9D21A1B94000942A28 /* ToggleButtonKind.swift */; };
+		F114ADA021A1BF5600942A28 /* ClickButtonKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114AD9F21A1BF5600942A28 /* ClickButtonKind.swift */; };
 		F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */; };
 		F1ABBED620D07A12008B13B5 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEA920D07A11008B13B5 /* VC.swift */; };
 		F1ABBED820D07A12008B13B5 /* CamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */; };
@@ -46,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		F114AD9421A197AA00942A28 /* HybridCamView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Extension.swift"; sourceTree = "<group>"; };
+		F114AD9721A1A4DE00942A28 /* TopBarKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarKind.swift; sourceTree = "<group>"; };
+		F114AD9921A1A5D000942A28 /* RecordButtonKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonKind.swift; sourceTree = "<group>"; };
+		F114AD9D21A1B94000942A28 /* ToggleButtonKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonKind.swift; sourceTree = "<group>"; };
+		F114AD9F21A1BF5600942A28 /* ClickButtonKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickButtonKind.swift; sourceTree = "<group>"; };
 		F1ABBE9420D0798A008B13B5 /* HybridCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1ABBEA120D0798B008B13B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1ABBEA920D07A11008B13B5 /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
@@ -104,6 +112,37 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		F114AD9621A1A0CF00942A28 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEB120D07A11008B13B5 /* HybridCamView.swift */,
+				F114AD9421A197AA00942A28 /* HybridCamView+Extension.swift */,
+				F114AD9B21A1B7C600942A28 /* ui */,
+				F1ABBEC620D07A11008B13B5 /* cam */,
+				F1ABBECF20D07A11008B13B5 /* process */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		F114AD9B21A1B7C600942A28 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				F114AD9921A1A5D000942A28 /* RecordButtonKind.swift */,
+				F114AD9721A1A4DE00942A28 /* TopBarKind.swift */,
+				F114AD9C21A1B92100942A28 /* button */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		F114AD9C21A1B92100942A28 /* button */ = {
+			isa = PBXGroup;
+			children = (
+				F114AD9D21A1B94000942A28 /* ToggleButtonKind.swift */,
+				F114AD9F21A1BF5600942A28 /* ClickButtonKind.swift */,
+			);
+			path = button;
+			sourceTree = "<group>";
+		};
 		F1151D2620D2B1E400860CD9 /* preview */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,9 +183,8 @@
 		F1ABBEAB20D07A11008B13B5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABBEB120D07A11008B13B5 /* HybridCamView.swift */,
-				F114AD9421A197AA00942A28 /* HybridCamView+Extension.swift */,
-				F1ABBEB220D07A11008B13B5 /* view */,
+				F114AD9621A1A0CF00942A28 /* core */,
+				F1ABBEB320D07A11008B13B5 /* ui */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -159,16 +197,6 @@
 				F1ABBEB020D07A11008B13B5 /* CamUtil.swift */,
 			);
 			path = util;
-			sourceTree = "<group>";
-		};
-		F1ABBEB220D07A11008B13B5 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				F1ABBEB320D07A11008B13B5 /* ui */,
-				F1ABBEC620D07A11008B13B5 /* cam */,
-				F1ABBECF20D07A11008B13B5 /* process */,
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		F1ABBEB320D07A11008B13B5 /* ui */ = {
@@ -333,9 +361,13 @@
 				F1ABBEE220D07A12008B13B5 /* RoundButton.swift in Sources */,
 				F1ABBEDB20D07A12008B13B5 /* CamUtil.swift in Sources */,
 				F1ABBEE420D07A12008B13B5 /* ClickButton.swift in Sources */,
+				F114ADA021A1BF5600942A28 /* ClickButtonKind.swift in Sources */,
 				F1ABBEEA20D07A12008B13B5 /* CamView+Action.swift in Sources */,
+				F114AD9E21A1B94000942A28 /* ToggleButtonKind.swift in Sources */,
 				F1ABBEEE20D07A12008B13B5 /* CamView.swift in Sources */,
+				F114AD9821A1A4DE00942A28 /* TopBarKind.swift in Sources */,
 				F1ABBEEC20D07A12008B13B5 /* CamView+Accessor.swift in Sources */,
+				F114AD9A21A1A5D000942A28 /* RecordButtonKind.swift in Sources */,
 				F114AD9521A197AA00942A28 /* HybridCamView+Extension.swift in Sources */,
 				F1ABBEEF20D07A12008B13B5 /* CamView+Setup.swift in Sources */,
 				F1ABBEF620D07A12008B13B5 /* AppDelegate.swift in Sources */,

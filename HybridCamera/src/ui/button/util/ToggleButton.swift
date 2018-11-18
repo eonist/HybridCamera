@@ -1,8 +1,8 @@
 import UIKit
 
-open class ToggleButton:RoundButton{
+open class ToggleButton:RoundButton,ToggleButtonKind{
    open var toggle:Bool = false
-   var onToggle:OnToggle = defaultOnToggle
+   public var onToggle:OnToggle = defaultOnToggle
    override public init(frame: CGRect) {
       super.init(frame: frame)
    }
@@ -16,12 +16,5 @@ open class ToggleButton:RoundButton{
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
-}
-/**
- * CallBack related
- */
-extension ToggleButton{
-   public typealias OnToggle = (_ toggle:Bool) -> Void
-   public static let defaultOnToggle:OnToggle = { toggle in Swift.print("Default onToggle: \(toggle)")}
 }
 

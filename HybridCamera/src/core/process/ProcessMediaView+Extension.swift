@@ -80,7 +80,7 @@ extension ProcessMediaView{
    @objc open func present(image:UIImage?,url:URL?){
       if let image = image, let url = url{
          imageView.setImage(url: url, image: image)
-      }else if let url = url {
+      } else if let url = url {
          videoPlayerView.play(videoURL: url)
       }
    }
@@ -92,7 +92,7 @@ extension ProcessMediaView{
    /**
     * Prompts the save file dialog
     */
-   open class func promptSaveFileDialog(vc:UIViewController,url:URL,onComplete:@escaping OnSaveDialogComplete){
+   @objc open class func promptSaveFileDialog(vc:UIViewController,url:URL,onComplete:@escaping OnSaveDialogComplete){
       let activitycontroller = UIActivityViewController(activityItems: [url], applicationActivities: nil)
       activitycontroller.excludedActivityTypes = [UIActivityType.airDrop]
       activitycontroller.popoverPresentationController?.sourceView = vc.view
@@ -102,11 +102,18 @@ extension ProcessMediaView{
    /**
     * Prompts the error dilog
     */
-   open class func promptErrorDialog(vc:UIViewController,error:Swift.Error,onComplete:@escaping OnErrorDialogComplete){
+   @objc open class func promptErrorDialog(vc:UIViewController,error:Swift.Error,onComplete:@escaping OnErrorDialogComplete){
       let alert: UIAlertController = UIAlertController(title: "Error",message: error.localizedDescription ,preferredStyle: .alert)
       let action = UIAlertAction(title: "OK", style: .default) { _ in onComplete()}
       alert.addAction(action)
       vc.present(alert, animated: true, completion:nil)
+   }
+   /**
+    * deInitiate
+    */
+   @objc open func deInitiate(){
+      videoPlayerView.deInitiate()/*Removes observer*/
+      self.removeFromSuperview()/*Removes it self from the view hierarchy*/
    }
 }
 /**
@@ -115,5 +122,8 @@ extension ProcessMediaView{
 extension ProcessMediaView {
    public typealias OnErrorDialogComplete = () -> Void
    public typealias OnSaveDialogComplete = () -> Void
+   public typealias OnShare = (_ url:URL?) -> Void
+   public typealias OnExit = () -> Void
+   public static let defaultOnShare:OnShare = { url in Swift.print("default onShare url:\(String(describing: url))")}
+   public static let defaultOnExit:OnExit = { Swift.print("default onExit") }
 }
-

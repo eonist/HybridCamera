@@ -1,10 +1,10 @@
 import UIKit
 
-open class RecordButton:UIView{
+open class RecordButton:UIView,RecordButtonKind{
    /*Interaction Callbacks*/
-   open var onShortPressRelease:ShortPressReleased = RecordButton.defaultShortPressReleased
-   open var onLongPressBegan:LongPressBegan = RecordButton.defaultLongPressBegan
-   open var onLongPressRelease:LongPressReleased = RecordButton.defaultLongPressReleased
+   open var onShortPressRelease:ShortPressReleased = defaultShortPressReleased
+   open var onLongPressBegan:LongPressBegan = defaultLongPressBegan
+   open var onLongPressRelease:LongPressReleased = defaultLongPressReleased
    /*UI*/
    open lazy var circle:Circle = createCircle()
    override init(frame: CGRect) {

@@ -6,8 +6,8 @@ import UIKit
  */
 open class HybridCamView:UIView{
    public lazy var camView:CamView = createCamView()
-   public lazy var topBar:TopBar = createTopBar()
-   public lazy var recordButton:RecordButton = createRecordButton()
+   public lazy var topBar:TopBarViewKind = createTopBar()
+   public lazy var recordButton:RecordButtonViewKind = createRecordButton()
    public var onCameraExit:OnCameraExit = defaultOnCameraExit
    /**
     * Adds UI, eventHandlers and then starts the Camera preview view

@@ -1,6 +1,6 @@
 import UIKit
 
-open class ClickButton:RoundButton{
+open class ClickButton:RoundButton,ClickButtonKind{
    public var onClick:OnClick = defaultOnClick
    override init(frame: CGRect) {
       super.init(frame: frame)
@@ -11,11 +11,4 @@ open class ClickButton:RoundButton{
    override open func buttonTouched(sender: UIButton) {
       onClick()
    }
-}
-/**
- * CallBack related
- */
-extension ClickButton{
-   public typealias OnClick = () -> Void
-   public static let defaultOnClick:OnClick = { Swift.print("Default onClick()")}
 }

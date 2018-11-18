@@ -66,14 +66,3 @@ extension RecordButton:UIGestureRecognizerDelegate{
       onLongPressRelease()
    }
 }
-/**
- * Callback signatures
- */
-extension RecordButton {
-   public typealias ShortPressReleased = () -> Void
-   public typealias LongPressBegan = () -> Void
-   public typealias LongPressReleased = () -> Void
-   public static let defaultShortPressReleased:ShortPressReleased  = { Swift.print("RecordButton.onShortPressRelease - no call back attached")}
-   public static let defaultLongPressBegan:LongPressBegan = { Swift.print("RecordButton.onLongPressBegan - no call back attached")}
-   public static let defaultLongPressReleased:LongPressReleased = { Swift.print("RecordButton.onLongPressRelease - no call back attached")}
-}

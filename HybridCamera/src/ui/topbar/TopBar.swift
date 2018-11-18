@@ -1,6 +1,6 @@
 import UIKit
 
-open class TopBar:UIView{
+open class TopBar:TopBarViewKind{
    open lazy var exitButton:ExitButton = createExitButton()
    open lazy var flipButton:FlipButton = createFlipButton()
    open lazy var flashButton:FlashButton = createFlashButton()

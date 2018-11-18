@@ -25,20 +25,4 @@ open class ProcessMediaView:UIView{
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
-   /**
-    * deInitiate
-    */
-   open func deInitiate(){
-      videoPlayerView.deInitiate()/*Removes observer*/
-      self.removeFromSuperview()/*Removes it self from the view hierarchy*/
-   }
-}
-/**
- * Callback signatures
- */
-extension ProcessMediaView {
-   public typealias OnShare = (_ url:URL?) -> Void
-   public typealias OnExit = () -> Void
-   public static let defaultOnShare:OnShare = { url in Swift.print("default onShare url:\(String(describing: url))")}
-   public static let defaultOnExit:OnExit = { Swift.print("default onExit") }
 }

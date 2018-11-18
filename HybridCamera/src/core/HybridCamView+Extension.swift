@@ -1,5 +1,4 @@
 import UIKit
-
 /**
  * Events
  */
@@ -44,7 +43,7 @@ extension HybridCamView{
    /**
     * Creates topbar
     */
-   @objc open func createTopBar() -> TopBar {
+   @objc open func createTopBar() -> TopBarViewKind {
       let rect = CGRect.init(origin: .init(), size: CGSize.init(width: UIScreen.main.bounds.size.width, height: 120))
       let topBar = TopBar.init(frame: rect)
       self.addSubview(topBar)
@@ -67,5 +66,3 @@ extension HybridCamView{
    public typealias OnCameraExit = () -> Void
    public static let defaultOnCameraExit:OnCameraExit = {Swift.print("default onCameraExit")}
 }
-
-
