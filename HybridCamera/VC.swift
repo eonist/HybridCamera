@@ -1,4 +1,6 @@
 import UIKit
+import HybridCamLib
+
 /**
  * Main view controller
  */
@@ -29,7 +31,7 @@ extension VC{
     * When camera accesses is granted proced to initiate the camera
     */
    func initiate(){
-      let hybridCamView = HybridCamView()
+      let hybridCamView = CustomCamView()
       self.view = hybridCamView /*Add HybridCamView as the main view*/
       hybridCamView.camView.onPhotoCaptureComplete = onCapture
       hybridCamView.camView.onVideoCaptureComplete = { (url:URL?,error:Error?) in self.onCapture(nil,url,error)}
@@ -38,12 +40,12 @@ extension VC{
     * When camera onCapture is called
     */
    private func onCapture(_ image:UIImage?,_ url:URL?,_ error:Error?) {
-      let processMediaView = ProcessMediaView.init(frame: UIScreen.main.bounds)
+      let processMediaView = CustomProcessView.init(frame: UIScreen.main.bounds)
       processMediaView.onExit = {processMediaView.deInitiate()}
-      processMediaView.onShare = { (url:URL?) in if let url = url {ProcessMediaView.promptSaveFileDialog(vc: self, url: url, onComplete: {processMediaView.deInitiate()})}}
+      processMediaView.onShare = { (url:URL?) in if let url = url {CustomProcessView.promptSaveFileDialog(vc: self, url: url, onComplete: {processMediaView.deInitiate()})}}
       self.view.addSubview(processMediaView)
       if let error = error{
-         ProcessMediaView.promptErrorDialog(vc: self, error: error, onComplete: {processMediaView.deInitiate()});return
+         CustomProcessView.promptErrorDialog(vc: self, error: error, onComplete: {processMediaView.deInitiate()});return
       }else {
          processMediaView.present(image: image, url: url)
       }

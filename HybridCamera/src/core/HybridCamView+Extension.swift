@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 /**
  * Events
  */
@@ -6,7 +6,7 @@ extension HybridCamView{
    /**
     * Attach CallBacks
     */
-   @objc public func addEventHandlers(){
+   @objc public func addEventHandlers() {
       recordButton.onShortPressRelease = {
          self.camView.takePhoto()
       }
@@ -44,25 +44,19 @@ extension HybridCamView{
     * Creates topbar
     */
    @objc open func createTopBar() -> TopBarViewKind {
-      let rect = CGRect.init(origin: .init(), size: CGSize.init(width: UIScreen.main.bounds.size.width, height: 120))
-      let topBar = TopBar.init(frame: rect)
-      self.addSubview(topBar)
-      return topBar
+      fatalError("must be overriden in subclass")
    }
    /**
     * Creates Record button
     */
-   @objc open func createRecordButton() -> RecordButton{
-      let btn = RecordButton()
-      self.addSubview(btn)
-      btn.setPosition()
-      return btn
+   @objc open func createRecordButton() -> RecordButtonViewKind{
+      fatalError("must be overriden in subclass")
    }
 }
 /**
  * CallBack signature
  */
-extension HybridCamView{
+extension HybridCamView {
    public typealias OnCameraExit = () -> Void
-   public static let defaultOnCameraExit:OnCameraExit = {Swift.print("default onCameraExit")}
+   public static var defaultOnCameraExit:OnCameraExit {return {Swift.print("default onCameraExit")}}
 }

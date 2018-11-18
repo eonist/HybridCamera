@@ -1,4 +1,5 @@
 import UIKit
+import HybridCamLib
 
 open class RecordButton:UIView,RecordButtonKind{
    /*Interaction Callbacks*/

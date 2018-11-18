@@ -4,7 +4,7 @@ import AVFoundation
 /**
  * Create
  */
-extension ProcessMediaView{
+extension ProcessView{
    /**
     * Creates video view
     */
@@ -24,27 +24,20 @@ extension ProcessMediaView{
    /**
     * Creates exit button
     */
-   @objc open func createExitButton() -> ExitButton{
-      let btn = ExitButton()
-      self.addSubview(btn)
-      return btn
+   @objc open func createExitButton() -> ClickButtonKind{
+      fatalError("must be overriden in subclass")
    }
    /**
     * Creates share button
     */
-   @objc open func createShareButton() -> ShareButton{
-      let s = CGSize.init(width: 180, height: 40)
-      let margin:CGFloat = 40
-      let p = CGPoint.init(x: UIScreen.main.bounds.width/2 - s.width/2, y: UIScreen.main.bounds.height - margin - s.height)
-      let btn = ShareButton.init(frame: CGRect.init(origin: p, size: s))
-      self.addSubview(btn)
-      return btn
+   @objc open func createShareButton() -> ClickButtonKind{
+      fatalError("must be overriden in subclass")
    }
 }
 /**
  * Event
  */
-extension ProcessMediaView{
+extension ProcessView{
    /**
     * AttachCallBacks
     */
@@ -65,15 +58,15 @@ extension ProcessMediaView{
    /**
     * Reset callbacks
     */
-   @objc open func clearEventListeners(){
-      exitButton.onClick = ExitButton.defaultOnClick
-      shareButton.onClick = ShareButton.defaultOnClick
-   }
+//   @objc open func clearEventListeners(){
+//      exitButton.onClick = {ClickButtonKind.defaultOnClick}
+//      shareButton.onClick = {ClickButtonKind.defaultOnClick}
+//   }
 }
 /**
  * Action
  */
-extension ProcessMediaView{
+extension ProcessView{
    /**
     * Presents either image or video
     */
@@ -88,15 +81,15 @@ extension ProcessMediaView{
 /**
  * Util
  */
-extension ProcessMediaView{
+extension ProcessView{
    /**
     * Prompts the save file dialog
     */
    @objc open class func promptSaveFileDialog(vc:UIViewController,url:URL,onComplete:@escaping OnSaveDialogComplete){
       let activitycontroller = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-      activitycontroller.excludedActivityTypes = [UIActivityType.airDrop]
+      activitycontroller.excludedActivityTypes = [UIActivity.ActivityType.airDrop]
       activitycontroller.popoverPresentationController?.sourceView = vc.view
-      activitycontroller.completionWithItemsHandler = { (_ type:UIActivityType?, _ flag:Bool, _ vals:[Any]?, _ error:Error?) in onComplete() }
+      activitycontroller.completionWithItemsHandler = { (_ type:UIActivity.ActivityType?, _ flag:Bool, _ vals:[Any]?, _ error:Error?) in onComplete() }
       vc.present(activitycontroller, animated: true, completion: nil)
    }
    /**
@@ -119,7 +112,7 @@ extension ProcessMediaView{
 /**
  * Callback signatures
  */
-extension ProcessMediaView {
+extension ProcessView {
    public typealias OnErrorDialogComplete = () -> Void
    public typealias OnSaveDialogComplete = () -> Void
    public typealias OnShare = (_ url:URL?) -> Void

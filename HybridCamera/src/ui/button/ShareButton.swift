@@ -1,6 +1,7 @@
 import UIKit
+import HybridCamLib
 
-open class ShareButton:UIButton{
+open class ShareButton:UIButton,ClickButtonKind{
    open var onClick:OnClick = ShareButton.defaultOnClick
    override public init(frame: CGRect) {
       super.init(frame: frame)
@@ -23,10 +24,10 @@ open class ShareButton:UIButton{
 /**
  * CallBack related
  */
-extension ShareButton{
-   public typealias OnClick = () -> Void
-   public static let defaultOnClick = { Swift.print("Default onClick()") }
-}
+//extension ShareButton{
+//   public typealias OnClick = () -> Void
+//   public static let defaultOnClick = { Swift.print("Default onClick()") }
+//}
 /**
  * Style related
  */

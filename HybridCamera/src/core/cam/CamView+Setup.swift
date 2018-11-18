@@ -92,7 +92,9 @@ extension CamView{
     */
    private func setupBackgroundAudioSupport(allowBackgroundAudio:Bool = true) throws{
       do{
-         try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
+//         try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
+         try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default)
+         try AVAudioSession.sharedInstance().setActive(true)/*👈 new ref: https://stackoverflow.com/questions/51010390/avaudiosession-setcategory-swift-4-2-ios-12-play-sound-on-silent*/
          captureSession.automaticallyConfiguresApplicationAudioSession = false
       }
       catch {

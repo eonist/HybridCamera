@@ -1,16 +1,16 @@
 import UIKit
 import AVFoundation
 
-open class ProcessMediaView:UIView{
+open class ProcessView:UIView{
    /*UI*/
    public lazy var imageView:ImageView = createImageView()
    public lazy var videoPlayerView:VideoPlayerView = createVideoView()
-   public lazy var exitButton:ExitButton = createExitButton()
-   public lazy var shareButton:ShareButton = createShareButton()
+   public lazy var exitButton:ClickButtonKind = createExitButton()
+   public lazy var shareButton:ClickButtonKind = createShareButton()
    /*CallBacks*/
-   public var onShare:OnShare = ProcessMediaView.defaultOnShare
-   public var onExit:OnExit = ProcessMediaView.defaultOnExit
-   override init(frame:CGRect) {
+   public var onShare:OnShare = ProcessView.defaultOnShare
+   public var onExit:OnExit = ProcessView.defaultOnExit
+   override public init(frame:CGRect) {
       super.init(frame:frame)
       self.backgroundColor = .black
       _ = imageView
