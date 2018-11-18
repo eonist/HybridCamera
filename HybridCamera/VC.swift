@@ -1,9 +1,8 @@
 import UIKit
-
 /**
  * Main view controller
  */
-class MainVC:UIViewController{
+class VC:UIViewController{
     /**
      * We add the Camera view in the viewDidAppear so that its tricggered again after user changes the app prefs to allow video use
      */
@@ -22,7 +21,7 @@ class MainVC:UIViewController{
 /**
  * Extension
  */
-extension MainVC{
+extension VC{
     /**
      * Common init
      */
@@ -47,7 +46,3 @@ extension MainVC{
         }
     }
 }
-
-
-
-

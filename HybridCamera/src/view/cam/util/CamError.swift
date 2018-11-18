@@ -2,16 +2,17 @@
 import Foundation
 
 /**
+ * Capture
  * TODO: ⚠️️ Possibly scope to CamView
  */
-enum CaptureError: Swift.Error,CustomStringConvertible {
+public enum CaptureError: Swift.Error, CustomStringConvertible {
     case noTempFolderAccess
     case malformedImageData
     case noVideoConnection
     case noInputDevice
     case alreadyRecording
     case alreadyStoppedRecording
-    var description: String {
+    public var description: String {
         switch self {
         case .noTempFolderAccess:
             return "couldn't access temp folder on device"
@@ -28,14 +29,17 @@ enum CaptureError: Swift.Error,CustomStringConvertible {
         }
     }
 }
-enum SetupError: Swift.Error,CustomStringConvertible {
+/**
+ * Setup
+ */
+public enum SetupError: Swift.Error,CustomStringConvertible {
     case unableToAddPhotoOutput
     case unableToAddVideoOutput
     case unableToGetAudioCaptureDevice
     case unableToGetVideoCaptureDevice
     case unableToCreateVideoConnection
     case unableToActivateBackgroundAudio
-    var description: String {
+    public var description: String {
         switch self {
         case .unableToAddPhotoOutput:
             return "unable to add output: capturePhotoOutput"

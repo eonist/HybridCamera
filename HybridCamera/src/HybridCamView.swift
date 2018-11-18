@@ -1,10 +1,10 @@
 import UIKit
 /**
- * Main view
+ * Main view of HybridCam
  * NOTE: To support merging video segments: https://www.raywenderlich.com/188034/how-to-play-record-and-merge-videos-in-ios-and-swift
  * NOTE: To support overlays on videos: https://www.lynda.com/Swift-tutorials/AVFoundation-Essentials-iOS-Swift/504183-2.html
  */
-class HybridCamView:UIView{
+open class HybridCamView:UIView{
     lazy var camView:CamView = createCamView()
     lazy var topBar:TopBar = createTopBar()
     lazy var recordButton:RecordButton = createRecordButton()
@@ -22,7 +22,7 @@ class HybridCamView:UIView{
     /**
      * Boilerplate
      */
-    required init?(coder aDecoder: NSCoder) {
+   required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
@@ -33,7 +33,7 @@ extension HybridCamView{
     /**
      * Attach CallBacks
      */
-    func attachCallBacks(){
+    @objc public func attachCallBacks(){
         recordButton.onShortPressRelease = {
             self.camView.takePhoto()
         }
@@ -54,11 +54,14 @@ extension HybridCamView{
         }
     }
 }
+/**
+ * Create
+ */
 extension HybridCamView{
     /**
      * Creates camview
      */
-    func createCamView() -> CamView{
+    @objc open func createCamView() -> CamView{
         let rect = CGRect.init(origin: .zero, size: UIScreen.main.bounds.size)
         let camView = CamView(frame: rect)
         self.addSubview(camView)
@@ -67,7 +70,7 @@ extension HybridCamView{
     /**
      * Creates topbar
      */
-    func createTopBar()->TopBar {
+    @objc open func createTopBar() -> TopBar {
         let rect = CGRect.init(origin: .init(), size: CGSize.init(width: UIScreen.main.bounds.size.width, height: 120))
         let topBar = TopBar.init(frame: rect)
         self.addSubview(topBar)
@@ -76,7 +79,7 @@ extension HybridCamView{
     /**
      * Creates Record button
      */
-    func createRecordButton() -> RecordButton{
+    @objc open func createRecordButton() -> RecordButton{
         let btn = RecordButton()
         self.addSubview(btn)
         btn.setPosition()

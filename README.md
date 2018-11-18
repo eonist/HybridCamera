@@ -5,27 +5,27 @@
 
 ### Features
 - Records video and takes photos
-- Flash on/off 
+- Flash on/off
 - Front / Back camera
-- Hold to recordVideo 
+- Hold to recordVideo
 - Tap to take photo
 - Tap to focus / set exposure
 - Pinch to zoom
 - Looping video/photo preview with share button
-- [Callback based (Great for RX)](https://medium.cobeisfresh.com/why-you-shouldn-t-use-delegates-in-swift-7ef808a7f16b) 
+- [Callback based (Great for RX)](https://medium.cobeisfresh.com/why-you-shouldn-t-use-delegates-in-swift-7ef808a7f16b)
 - View based (Great for animation rich UI/UX)
 - Supports background music (Doesn't pause Spotify etc)
-- Stores photo/video in temp dir 
+- Stores photo/video in temp dir
 - Throw oriented code (allows external handling of errors)
 - Persistent app authorization
 - Animated record button (white to red transition)
 
 ### Why use this camera framework
-- High [codebeat GPA](https://codebeat.co/projects/github-com-eonist-hybridcamera-master) 
+- High [codebeat GPA](https://codebeat.co/projects/github-com-eonist-hybridcamera-master)
 - Low class scoped variable count (In order to better handle overall state)
 - Setup errors can be handled from the POV of the initiator
-- Operation errors is handled in the onCapture completion block 
-- Callback based (as oppose to delegate based) [More info](https://medium.cobeisfresh.com/why-you-shouldn-t-use-delegates-in-swift-7ef808a7f16b) 
+- Operation errors is handled in the onCapture completion block
+- Callback based (as oppose to delegate based) [More info](https://medium.cobeisfresh.com/why-you-shouldn-t-use-delegates-in-swift-7ef808a7f16b)
 - Easily styleable (The camera view is separate from the UI view)
 - No third-party libraries or Sugar
 - Entirely programatic (No storyboard)
@@ -60,3 +60,6 @@ hybridCamView.camView.onVideoCaptureComplete = { (url:URL?,error:Error?) in
    Swift.print("On Video capture complete \(url)")
 }
 ```
+### Todo:
+- Add support for more orientation modes (Currently only supports portrait)
+- Add support for error resolution from the POV of initiating the camera

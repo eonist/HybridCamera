@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */; };
-		F1ABBED620D07A12008B13B5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEA920D07A11008B13B5 /* MainVC.swift */; };
+		F1ABBED620D07A12008B13B5 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEA920D07A11008B13B5 /* VC.swift */; };
 		F1ABBED820D07A12008B13B5 /* CamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */; };
 		F1ABBED920D07A12008B13B5 /* CamBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAE20D07A11008B13B5 /* CamBlocks.swift */; };
 		F1ABBEDA20D07A12008B13B5 /* CamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAF20D07A11008B13B5 /* CamError.swift */; };
 		F1ABBEDB20D07A12008B13B5 /* CamUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB020D07A11008B13B5 /* CamUtil.swift */; };
 		F1ABBEDC20D07A12008B13B5 /* HybridCamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB120D07A11008B13B5 /* HybridCamView.swift */; };
-		F1ABBEDD20D07A12008B13B5 /* RecordButton+Extension+Anim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB620D07A11008B13B5 /* RecordButton+Extension+Anim.swift */; };
-		F1ABBEDE20D07A12008B13B5 /* RecordButton+Extension+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB720D07A11008B13B5 /* RecordButton+Extension+Circle.swift */; };
-		F1ABBEDF20D07A12008B13B5 /* RecordButton+Extension+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB820D07A11008B13B5 /* RecordButton+Extension+Const.swift */; };
-		F1ABBEE020D07A12008B13B5 /* RecordButton+Extension+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB920D07A11008B13B5 /* RecordButton+Extension+Event.swift */; };
+		F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB620D07A11008B13B5 /* RecordButton+Anim.swift */; };
+		F1ABBEDE20D07A12008B13B5 /* RecordButton+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB720D07A11008B13B5 /* RecordButton+Circle.swift */; };
+		F1ABBEDF20D07A12008B13B5 /* RecordButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB820D07A11008B13B5 /* RecordButton+Const.swift */; };
+		F1ABBEE020D07A12008B13B5 /* RecordButton+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB920D07A11008B13B5 /* RecordButton+Event.swift */; };
 		F1ABBEE120D07A12008B13B5 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEBA20D07A11008B13B5 /* RecordButton.swift */; };
 		F1ABBEE220D07A12008B13B5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEBC20D07A11008B13B5 /* RoundButton.swift */; };
 		F1ABBEE320D07A12008B13B5 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEBD20D07A11008B13B5 /* ToggleButton.swift */; };
@@ -46,17 +46,17 @@
 /* Begin PBXFileReference section */
 		F1ABBE9420D0798A008B13B5 /* HybridCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1ABBEA120D0798B008B13B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F1ABBEA920D07A11008B13B5 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		F1ABBEA920D07A11008B13B5 /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		F1ABBEAA20D07A11008B13B5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamPreviewView.swift; sourceTree = "<group>"; };
 		F1ABBEAE20D07A11008B13B5 /* CamBlocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamBlocks.swift; sourceTree = "<group>"; };
 		F1ABBEAF20D07A11008B13B5 /* CamError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamError.swift; sourceTree = "<group>"; };
 		F1ABBEB020D07A11008B13B5 /* CamUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamUtil.swift; sourceTree = "<group>"; };
 		F1ABBEB120D07A11008B13B5 /* HybridCamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HybridCamView.swift; sourceTree = "<group>"; };
-		F1ABBEB620D07A11008B13B5 /* RecordButton+Extension+Anim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Extension+Anim.swift"; sourceTree = "<group>"; };
-		F1ABBEB720D07A11008B13B5 /* RecordButton+Extension+Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Extension+Circle.swift"; sourceTree = "<group>"; };
-		F1ABBEB820D07A11008B13B5 /* RecordButton+Extension+Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Extension+Const.swift"; sourceTree = "<group>"; };
-		F1ABBEB920D07A11008B13B5 /* RecordButton+Extension+Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Extension+Event.swift"; sourceTree = "<group>"; };
+		F1ABBEB620D07A11008B13B5 /* RecordButton+Anim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Anim.swift"; sourceTree = "<group>"; };
+		F1ABBEB720D07A11008B13B5 /* RecordButton+Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Circle.swift"; sourceTree = "<group>"; };
+		F1ABBEB820D07A11008B13B5 /* RecordButton+Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Const.swift"; sourceTree = "<group>"; };
+		F1ABBEB920D07A11008B13B5 /* RecordButton+Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Event.swift"; sourceTree = "<group>"; };
 		F1ABBEBA20D07A11008B13B5 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		F1ABBEBC20D07A11008B13B5 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		F1ABBEBD20D07A11008B13B5 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
@@ -131,10 +131,10 @@
 			children = (
 				F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */,
 				F1ABBED420D07A11008B13B5 /* AppDelegate.swift */,
+				F1ABBEA920D07A11008B13B5 /* VC.swift */,
 				F1ABBED520D07A12008B13B5 /* Assets.xcassets */,
 				F1ABBEAB20D07A11008B13B5 /* src */,
 				F1ABBEAA20D07A11008B13B5 /* Info.plist */,
-				F1ABBEA920D07A11008B13B5 /* MainVC.swift */,
 			);
 			path = HybridCamera;
 			sourceTree = "<group>";
@@ -190,11 +190,11 @@
 		F1ABBEB520D07A11008B13B5 /* record */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABBEB620D07A11008B13B5 /* RecordButton+Extension+Anim.swift */,
-				F1ABBEB720D07A11008B13B5 /* RecordButton+Extension+Circle.swift */,
-				F1ABBEB820D07A11008B13B5 /* RecordButton+Extension+Const.swift */,
-				F1ABBEB920D07A11008B13B5 /* RecordButton+Extension+Event.swift */,
 				F1ABBEBA20D07A11008B13B5 /* RecordButton.swift */,
+				F1ABBEB620D07A11008B13B5 /* RecordButton+Anim.swift */,
+				F1ABBEB720D07A11008B13B5 /* RecordButton+Circle.swift */,
+				F1ABBEB820D07A11008B13B5 /* RecordButton+Const.swift */,
+				F1ABBEB920D07A11008B13B5 /* RecordButton+Event.swift */,
 			);
 			path = record;
 			sourceTree = "<group>";
@@ -233,11 +233,11 @@
 			children = (
 				F1ABBEAC20D07A11008B13B5 /* util */,
 				F1151D2620D2B1E400860CD9 /* preview */,
+				F1ABBECB20D07A11008B13B5 /* CamView.swift */,
 				F1ABBEC720D07A11008B13B5 /* CamView+Extension+Action+Extra.swift */,
 				F1ABBEC820D07A11008B13B5 /* CamView+Extension+Delegate.swift */,
 				F1ABBEC920D07A11008B13B5 /* CamView+Extension+Accessor.swift */,
 				F1ABBECA20D07A11008B13B5 /* CamView+Extension+Create.swift */,
-				F1ABBECB20D07A11008B13B5 /* CamView.swift */,
 				F1ABBECC20D07A11008B13B5 /* CamView+Extension+Setup.swift */,
 				F1ABBECD20D07A11008B13B5 /* CamView+Extension+Action+Core.swift */,
 				F1ABBECE20D07A11008B13B5 /* CamView+Extension+Gesture.swift */,
@@ -342,20 +342,20 @@
 				F1ABBEF220D07A12008B13B5 /* ProcessMediaView.swift in Sources */,
 				F1ABBEDC20D07A12008B13B5 /* HybridCamView.swift in Sources */,
 				F1ABBEE820D07A12008B13B5 /* FlipButton.swift in Sources */,
-				F1ABBED620D07A12008B13B5 /* MainVC.swift in Sources */,
+				F1ABBED620D07A12008B13B5 /* VC.swift in Sources */,
 				F1ABBEEB20D07A12008B13B5 /* CamView+Extension+Delegate.swift in Sources */,
-				F1ABBEDD20D07A12008B13B5 /* RecordButton+Extension+Anim.swift in Sources */,
-				F1ABBEDF20D07A12008B13B5 /* RecordButton+Extension+Const.swift in Sources */,
+				F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */,
+				F1ABBEDF20D07A12008B13B5 /* RecordButton+Const.swift in Sources */,
 				F1ABBEE920D07A12008B13B5 /* FlashButton.swift in Sources */,
 				F1ABBEE520D07A12008B13B5 /* ShareButton.swift in Sources */,
 				F1ABBEE120D07A12008B13B5 /* RecordButton.swift in Sources */,
 				F1ABBEF520D07A12008B13B5 /* ProcessMediaView+Extension.swift in Sources */,
 				F1ABBED920D07A12008B13B5 /* CamBlocks.swift in Sources */,
-				F1ABBEDE20D07A12008B13B5 /* RecordButton+Extension+Circle.swift in Sources */,
+				F1ABBEDE20D07A12008B13B5 /* RecordButton+Circle.swift in Sources */,
 				F1ABBEF320D07A12008B13B5 /* VideoPlayerView.swift in Sources */,
 				F1ABBEED20D07A12008B13B5 /* CamView+Extension+Create.swift in Sources */,
 				F1ABBED820D07A12008B13B5 /* CamPreviewView.swift in Sources */,
-				F1ABBEE020D07A12008B13B5 /* RecordButton+Extension+Event.swift in Sources */,
+				F1ABBEE020D07A12008B13B5 /* RecordButton+Event.swift in Sources */,
 				F1ABBEE620D07A12008B13B5 /* TopBar.swift in Sources */,
 				F1ABBEE720D07A12008B13B5 /* ExitButton.swift in Sources */,
 			);
