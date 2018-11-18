@@ -1,0 +1,11 @@
+framework module HybridCamLib {
+  umbrella header "HybridCamLib.h"
+
+  export *
+  module * { export * }
+}
+
+module HybridCamLib.Swift {
+    header "HybridCamLib-Swift.h"
+    requires objc
+}

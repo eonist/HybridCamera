@@ -154,18 +154,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		F114AD9621A1A0CF00942A28 /* core */ = {
-			isa = PBXGroup;
-			children = (
-				F114ADC921A1C73E00942A28 /* HybridCamView.swift */,
-				F114ADCC21A1CA3F00942A28 /* HybridCamView+Extension.swift */,
-				F114AD9B21A1B7C600942A28 /* ui */,
-				F1ABBEC620D07A11008B13B5 /* cam */,
-				F1ABBECF20D07A11008B13B5 /* process */,
-			);
-			path = core;
-			sourceTree = "<group>";
-		};
 		F114AD9B21A1B7C600942A28 /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,10 +176,23 @@
 		F114ADA721A1C27F00942A28 /* HybridCamLib */ = {
 			isa = PBXGroup;
 			children = (
+				F114ADDD21A1E31C00942A28 /* src */,
 				F114ADA821A1C27F00942A28 /* HybridCamLib.h */,
 				F114ADA921A1C27F00942A28 /* Info.plist */,
 			);
 			path = HybridCamLib;
+			sourceTree = "<group>";
+		};
+		F114ADDD21A1E31C00942A28 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F114ADC921A1C73E00942A28 /* HybridCamView.swift */,
+				F114ADCC21A1CA3F00942A28 /* HybridCamView+Extension.swift */,
+				F114AD9B21A1B7C600942A28 /* ui */,
+				F1ABBEC620D07A11008B13B5 /* cam */,
+				F1ABBECF20D07A11008B13B5 /* process */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		F1151D2620D2B1E400860CD9 /* preview */ = {
@@ -236,7 +237,6 @@
 		F1ABBEAB20D07A11008B13B5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F114AD9621A1A0CF00942A28 /* core */,
 				F1ABBEB320D07A11008B13B5 /* ui */,
 			);
 			path = src;

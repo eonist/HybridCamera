@@ -10,6 +10,7 @@ extension CamView{
     */
    @objc open func setCamera(cameraType:AVCaptureDevice.Position){
       try? setupCaptureDeviceInput(cameraType:cameraType)
+      try? setupMicrophone()
    }
    /**
     * TODO: ⚠️️ Rename to toggleFlashMode?

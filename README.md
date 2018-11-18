@@ -1,5 +1,5 @@
-[![version badge](https://img.shields.io/badge/Version-1.0-blue.svg?longCache=true)](https://img.shields.io/badge/SDK-0.1-blue.svg?longCache=true) [![codebeat badge](https://codebeat.co/badges/d8d0fcdb-096c-41c0-ac20-b063051b752b)](https://codebeat.co/projects/github-com-eonist-hybridcamera-master) ![Lang](https://img.shields.io/badge/Language-Swift%204.2-orange.svg) ![platform](https://img.shields.io/badge/Platform-iOS_11.4-blue.svg)
-
+[![version badge](https://img.shields.io/badge/Version-1.0-blue.svg?longCache=true)](https://img.shields.io/badge/SDK-0.1-blue.svg?longCache=true) [![codebeat badge](https://codebeat.co/badges/d8d0fcdb-096c-41c0-ac20-b063051b752b)](https://codebeat.co/projects/github-com-eonist-hybridcamera-master) ![Lang](https://img.shields.io/badge/Language-Swift%204.2-orange.svg) ![platform](https://img.shields.io/badge/Platform-iOS_12.0-blue.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 <img width="320" alt="img" src="https://rawgit.com/stylekit/img/master/Image from iOS.jpg">
 
@@ -36,10 +36,11 @@
 - In order to keep things simple, The UI is CGRect based. Use your own Autolayout distro like SnapKit etc when adding additional UI
 
 ### Install:
-Open the .xcodeproj file and `cmd + r`   
-To use in other projects:   
-1. Copy the src folder into your project  (If you don't want the UI, just copy the `cam/` folder)
-2. Make sure info.plist has these variables  
+- Carthage: `github "eonist/HybridCam" "master"`
+- Manual: Open `HybridCamera.xcodeproj`
+- CocoaPod (Coming soon)  
+
+**IMPORTANT:** Make sure info.plist has these variables  
  ```
 Privacy - Microphone Usage Description   
 Privacy - Camera Usage Description  
@@ -63,6 +64,6 @@ hybridCamView.camView.onVideoCaptureComplete = { (url:URL?,error:Error?) in
 ### Todo:
 - Add support for more orientation modes (Currently only supports portrait)
 - Add support for error resolution from the POV of initiating the camera
-- Make Record button etc with AutoLayout
-- Make lib carthage support
-- Add Spatial, Chaplin, Popsicle to HybridCam
+- Make UI with AutoLayout 👈
+- Make lib carthage support ✅
+- Add Spatial, Chaplin, Popsicle as an option to HybridCam 👈

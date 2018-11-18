@@ -74,7 +74,7 @@ extension CamView{
    /**
     * Adds microphone
     */
-   private func setupMicrophone() throws{
+   func setupMicrophone() throws{
       guard let microphone = AVCaptureDevice.default(for:.audio) else {
          throw SetupError.unableToGetAudioCaptureDevice
       }
