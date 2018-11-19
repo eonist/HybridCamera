@@ -34,6 +34,7 @@
 		F114ADDA21A1D56300942A28 /* CustomProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBED020D07A11008B13B5 /* CustomProcessView.swift */; };
 		F114ADDB21A1D57A00942A28 /* ProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD621A1D35A00942A28 /* ProcessView.swift */; };
 		F114ADDC21A1D57A00942A28 /* ProcessView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD821A1D40300942A28 /* ProcessView+Extension.swift */; };
+		F114ADE521A1EF0A00942A28 /* HybridCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */; };
 		F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */; };
 		F1ABBED620D07A12008B13B5 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEA920D07A11008B13B5 /* VC.swift */; };
 		F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB620D07A11008B13B5 /* RecordButton+Anim.swift */; };
@@ -60,6 +61,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F114ADA521A1C27E00942A28;
 			remoteInfo = HybridCamLib;
+		};
+		F114ADE721A1EF0A00942A28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1ABBE8C20D0798A008B13B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1ABBE9320D0798A008B13B5;
+			remoteInfo = HybridCamera;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -89,6 +97,9 @@
 		F114ADCC21A1CA3F00942A28 /* HybridCamView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Extension.swift"; sourceTree = "<group>"; };
 		F114ADD621A1D35A00942A28 /* ProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessView.swift; sourceTree = "<group>"; };
 		F114ADD821A1D40300942A28 /* ProcessView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Extension.swift"; sourceTree = "<group>"; };
+		F114ADE221A1EF0A00942A28 /* HybridCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HybridCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridCameraTests.swift; sourceTree = "<group>"; };
+		F114ADE621A1EF0A00942A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1ABBE9420D0798A008B13B5 /* HybridCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1ABBEA120D0798B008B13B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1ABBEA920D07A11008B13B5 /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
@@ -128,6 +139,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		F114ADA321A1C27E00942A28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F114ADDF21A1EF0A00942A28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,6 +213,15 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		F114ADE321A1EF0A00942A28 /* HybridCameraTests */ = {
+			isa = PBXGroup;
+			children = (
+				F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */,
+				F114ADE621A1EF0A00942A28 /* Info.plist */,
+			);
+			path = HybridCameraTests;
+			sourceTree = "<group>";
+		};
 		F1151D2620D2B1E400860CD9 /* preview */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +235,7 @@
 			children = (
 				F1ABBE9620D0798A008B13B5 /* HybridCamera */,
 				F114ADA721A1C27F00942A28 /* HybridCamLib */,
+				F114ADE321A1EF0A00942A28 /* HybridCameraTests */,
 				F1ABBE9520D0798A008B13B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -217,6 +245,7 @@
 			children = (
 				F1ABBE9420D0798A008B13B5 /* HybridCamera.app */,
 				F114ADA621A1C27E00942A28 /* HybridCamLib.framework */,
+				F114ADE221A1EF0A00942A28 /* HybridCameraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -373,6 +402,24 @@
 			productReference = F114ADA621A1C27E00942A28 /* HybridCamLib.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F114ADE121A1EF0A00942A28 /* HybridCameraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F114ADE921A1EF0A00942A28 /* Build configuration list for PBXNativeTarget "HybridCameraTests" */;
+			buildPhases = (
+				F114ADDE21A1EF0A00942A28 /* Sources */,
+				F114ADDF21A1EF0A00942A28 /* Frameworks */,
+				F114ADE021A1EF0A00942A28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F114ADE821A1EF0A00942A28 /* PBXTargetDependency */,
+			);
+			name = HybridCameraTests;
+			productName = HybridCameraTests;
+			productReference = F114ADE221A1EF0A00942A28 /* HybridCameraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F1ABBE9320D0798A008B13B5 /* HybridCamera */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1ABBEA620D0798B008B13B5 /* Build configuration list for PBXNativeTarget "HybridCamera" */;
@@ -398,12 +445,16 @@
 		F1ABBE8C20D0798A008B13B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = eon;
 				TargetAttributes = {
 					F114ADA521A1C27E00942A28 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					F114ADE121A1EF0A00942A28 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F1ABBE9320D0798A008B13B5;
 					};
 					F1ABBE9320D0798A008B13B5 = {
 						CreatedOnToolsVersion = 9.3;
@@ -426,12 +477,20 @@
 			targets = (
 				F1ABBE9320D0798A008B13B5 /* HybridCamera */,
 				F114ADA521A1C27E00942A28 /* HybridCamLib */,
+				F114ADE121A1EF0A00942A28 /* HybridCameraTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F114ADA421A1C27E00942A28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F114ADE021A1EF0A00942A28 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -479,6 +538,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F114ADDE21A1EF0A00942A28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F114ADE521A1EF0A00942A28 /* HybridCameraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1ABBE9020D0798A008B13B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -510,6 +577,11 @@
 			isa = PBXTargetDependency;
 			target = F114ADA521A1C27E00942A28 /* HybridCamLib */;
 			targetProxy = F114ADAB21A1C27F00942A28 /* PBXContainerItemProxy */;
+		};
+		F114ADE821A1EF0A00942A28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1ABBE9320D0798A008B13B5 /* HybridCamera */;
+			targetProxy = F114ADE721A1EF0A00942A28 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -583,6 +655,47 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F114ADEA21A1EF0A00942A28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HybridCameraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.HybridCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HybridCamera.app/HybridCamera";
+			};
+			name = Debug;
+		};
+		F114ADEB21A1EF0A00942A28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HybridCameraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.HybridCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HybridCamera.app/HybridCamera";
 			};
 			name = Release;
 		};
@@ -751,6 +864,15 @@
 			buildConfigurations = (
 				F114ADB021A1C27F00942A28 /* Debug */,
 				F114ADB121A1C27F00942A28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F114ADE921A1EF0A00942A28 /* Build configuration list for PBXNativeTarget "HybridCameraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F114ADEA21A1EF0A00942A28 /* Debug */,
+				F114ADEB21A1EF0A00942A28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
