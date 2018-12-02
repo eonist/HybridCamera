@@ -1,5 +1,3 @@
-
-
 import XCTest
 import HybridCamLib
 
