@@ -6,13 +6,7 @@ open class ShareButton:UIButton,ClickButtonKind{
    override public init(frame: CGRect) {
       super.init(frame: frame)
       configButton()
-      self.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
-   }
-   /**
-    * Called from touchUpInside
-    */
-   @objc open func buttonTouched(sender:UIButton) {
-      onClick()
+      self.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)/*Attach button action*/
    }
    /**
     * Boilerplate
@@ -22,14 +16,19 @@ open class ShareButton:UIButton,ClickButtonKind{
    }
 }
 /**
- * CallBack related
+ * Interaction
  */
-//extension ShareButton{
-//   public typealias OnClick = () -> Void
-//   public static let defaultOnClick = { Swift.print("Default onClick()") }
-//}
+extension ClickButton{
+   /**
+    * Called from touchUpInside
+    */
+   @objc open func buttonTouched(sender:UIButton) {
+      onClick()
+   }
+}
+
 /**
- * Style related
+ * Style
  */
 extension ShareButton{
    /**

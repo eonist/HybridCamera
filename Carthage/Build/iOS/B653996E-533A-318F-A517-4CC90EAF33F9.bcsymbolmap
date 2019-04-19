@@ -1,0 +1,21 @@
+BCSymbolMap Version: 2.0
+__swift_FORCE_LOAD_$_swiftFoundation_$_With
+__swift_FORCE_LOAD_$_swiftDarwin_$_With
+__swift_FORCE_LOAD_$_swiftObjectiveC_$_With
+__swift_FORCE_LOAD_$_swiftCoreFoundation_$_With
+__swift_FORCE_LOAD_$_swiftDispatch_$_With
+__swift_FORCE_LOAD_$_swiftCoreGraphics_$_With
+__swift_FORCE_LOAD_$_swiftUIKit_$_With
+__swift_FORCE_LOAD_$_swiftCoreImage_$_With
+__swift_FORCE_LOAD_$_swiftMetal_$_With
+__swift_FORCE_LOAD_$_swiftQuartzCore_$_With
+___swift_reflection_version
+Apple LLVM version 10.0.1 (clang-1001.0.46.3)
+<swift-imported-modules>
+/Users/eon/Documents/dev/_modules/HybridCamera/Carthage/Checkouts/With
+Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)
+/Users/eon/Documents/dev/_modules/HybridCamera/Carthage/Checkouts/With/src/With.swift
+with
+With.swift
+/Users/eon/Documents/dev/_modules/HybridCamera/Carthage/Checkouts/With/src
+/Users/eon/Library/Caches/org.carthage.CarthageKit/DerivedData/10.2_10E125/With/3b7491e346bbe735c8890f39499ead162649ff22/Build/Intermediates.noindex/ArchiveIntermediates/With/IntermediateBuildFilesPath/WithExample.build/Release-iphoneos/With.build/DerivedSources/With_vers.c

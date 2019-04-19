@@ -18,7 +18,7 @@ extension RecordButton{
  * Size/Alignment
  */
 extension RecordButton{
-   open class var size:CGSize { return CGSize.init(width:80,height:80) }
+   open class var size:CGSize { return .init(width:80,height:80) }
    open class var cornerRadius:CGFloat {return RecordButton.size.width/2}
    /**
     * Positions the RecordButton center bottom of the screen
@@ -32,11 +32,11 @@ extension RecordButton{
    open class var rect:CGRect {
       let btnWidth:CGFloat = RecordButton.size.width
       let bottomCenter:CGPoint = {
-         let rect = UIScreen.main.bounds
+         let rect:CGRect = UIScreen.main.bounds
          let bottomMargin:CGFloat = 20
-         return CGPoint.init(x: rect.midX-(btnWidth/2), y: rect.height - btnWidth - bottomMargin)
+         return .init(x: rect.midX-(btnWidth/2), y: rect.height - btnWidth - bottomMargin)
       }()
-      let rect = CGRect(x:bottomCenter.x, y:bottomCenter.y, width:btnWidth, height:btnWidth)
+      let rect:CGRect = .init(x:bottomCenter.x, y:bottomCenter.y, width:btnWidth, height:btnWidth)
       return rect
    }
 }

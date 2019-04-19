@@ -4,13 +4,12 @@ open class ExitButton:ClickButton{
    override public init(frame: CGRect) {
       let rect = ExitButton.rect
       super.init(frame: rect)
-      backgroundColor = .clear
+      self.backgroundColor = .clear
       self.setImage(#imageLiteral(resourceName: "cancel"), for: .normal)
    }
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
-   
 }
 extension ExitButton{
    /**
@@ -22,7 +21,6 @@ extension ExitButton{
          let margin:CGFloat = 40
          return CGPoint.init(x: margin, y: margin)
       }()
-      let rect = CGRect(x:topLeft.x, y:topLeft.y, width:btnWidth, height:btnWidth)
-      return rect
+      return .init(x:topLeft.x, y:topLeft.y, width:btnWidth, height:btnWidth)
    }
 }

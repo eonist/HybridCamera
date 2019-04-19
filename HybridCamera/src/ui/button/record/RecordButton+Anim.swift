@@ -1,5 +1,4 @@
 import UIKit
-
 /**
  * Animation
  */
@@ -14,7 +13,7 @@ extension RecordButton{
         anim.startAnimation()
     }
     /**
-     * Shrink the button  (Animation)
+     * Shrink the button (Animation)
      */
     @objc func shrink(){
         let anim = UIViewPropertyAnimator.init(duration: 0.15, curve: .linear){

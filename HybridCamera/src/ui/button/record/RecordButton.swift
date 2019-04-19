@@ -2,7 +2,9 @@ import UIKit
 import HybridCamLib
 
 open class RecordButton:UIView,RecordButtonKind{
-   /*Interaction Callbacks*/
+   /**
+    * Interaction call-back variables
+    */
    open var onShortPressRelease:ShortPressReleased = defaultShortPressReleased
    open var onLongPressBegan:LongPressBegan = defaultLongPressBegan
    open var onLongPressRelease:LongPressReleased = defaultLongPressReleased

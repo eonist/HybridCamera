@@ -1,11 +1,11 @@
 import UIKit
 /**
- * Gesture recognizer for StoryVCView
+ * Gesture recognizer
  */
 extension RecordButton:UIGestureRecognizerDelegate{
     /**
      * Used to reset previously attached callbacks
-     * NOTE: should be called when views are animating between states, where all interaction should be disabled
+     * - Note: should be called when views are animating between states, where all interaction should be disabled
      */
     @objc open func clearCallBacks(){
         onShortPressRelease = RecordButton.defaultShortPressReleased

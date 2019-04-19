@@ -24,7 +24,6 @@ extension FlashButton{
          let margin:CGFloat = 40
          return CGPoint.init(x: rect.width-(btnWidth)-margin, y: 0 + margin)
       }()
-      let rect = CGRect(x:topRight.x, y:topRight.y, width:btnWidth, height:btnWidth)
-      return rect
+      return .init(x:topRight.x, y:topRight.y, width:btnWidth, height:btnWidth)
    }
 }
