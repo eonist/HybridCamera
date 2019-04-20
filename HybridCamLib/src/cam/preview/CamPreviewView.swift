@@ -1,11 +1,10 @@
 import UIKit
 import AVFoundation
+import With
 
 open class CamPreviewView:UIView{
-   /*Camera view finder*/
-   public lazy var previewLayer:AVCaptureVideoPreviewLayer = createPreviewLayer()
-   /*Capture session*/
-   public lazy var captureSession:AVCaptureSession = createCaptureSession()
+   public lazy var previewLayer: AVCaptureVideoPreviewLayer = createPreviewLayer()/* Camera view finder */
+   public lazy var captureSession: AVCaptureSession = createCaptureSession()/* Capture session */
    override public init(frame: CGRect) {
       super.init(frame:frame)
       _ = captureSession
@@ -14,6 +13,7 @@ open class CamPreviewView:UIView{
    /**
     * Boilerplate
     */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
@@ -25,19 +25,19 @@ extension CamPreviewView{
    /**
     * Shows the camera view finder
     */
-   @objc open func createPreviewLayer() -> AVCaptureVideoPreviewLayer{
-      let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-      previewLayer.videoGravity = .resizeAspectFill
-      previewLayer.frame = self.layer.bounds
-      self.layer.insertSublayer(previewLayer, at: 0)
-      return previewLayer
+   @objc open func createPreviewLayer() -> AVCaptureVideoPreviewLayer {
+      return with(.init(session: captureSession)){
+         $0.videoGravity = .resizeAspectFill
+         $0.frame = self.layer.bounds
+         self.layer.insertSublayer($0, at: 0)
+      }
    }
    /**
     * Initialize the captureSession object
     */
-   @objc open func createCaptureSession() -> AVCaptureSession{
-      let captureSession = AVCaptureSession()
-      captureSession.sessionPreset = .high
-      return captureSession
+   @objc open func createCaptureSession() -> AVCaptureSession {
+      return with(AVCaptureSession.init()) {
+         $0.sessionPreset = .high
+      }
    }
 }

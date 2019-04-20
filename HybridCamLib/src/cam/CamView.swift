@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 /**
- * EXAMPLE:
+ * ## Examples:
  * let camView = CamView(frame: UISCreen.bounds)
  * addSubView(camView)
  * camView.startRecording()//start capturing
@@ -11,15 +11,15 @@ open class CamView:UIView {
    /*UI*/
    public lazy var previewView:CamPreviewView = createPreviewView()/*Has the view Finder Preview*/
    /*AV*/
-   public var deviceInput:AVCaptureDeviceInput?
+   public var deviceInput: AVCaptureDeviceInput?
    public let videoOutput = AVCaptureMovieFileOutput()
-   public let photoOutput:AVCapturePhotoOutput = AVCapturePhotoOutput()
+   public let photoOutput: AVCapturePhotoOutput = AVCapturePhotoOutput()
    /*State*/
    public var flashMode:AVCaptureDevice.FlashMode = .off
    /*Callbacks*/
    public var onVideoCaptureComplete:VideoCaptureComplete = defaultVideoCaptureComplete
    public var onPhotoCaptureComplete:PhotoCaptureComplete = defaultPhotoCaptureComplete
-   
+
    override init(frame: CGRect) {
       super.init(frame: frame)
       self.backgroundColor = .black
@@ -30,6 +30,7 @@ open class CamView:UIView {
    /**
     * Boilerplate
     */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }

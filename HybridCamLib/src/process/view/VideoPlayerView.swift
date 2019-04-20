@@ -1,5 +1,6 @@
 import UIKit
 import AVFoundation
+import With
 
 open class VideoPlayerView:UIView{
    open var avPlayer = AVPlayer()
@@ -13,6 +14,7 @@ open class VideoPlayerView:UIView{
    /**
     * Boilerplate
     */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
@@ -24,20 +26,21 @@ extension VideoPlayerView{
    /**
     * Creates the video player layer
     */
-   @objc open func createAvPlayerLayer() -> AVPlayerLayer{
-      let avPlayerLayer = AVPlayerLayer(player: avPlayer)
-      avPlayerLayer.frame = frame
-      avPlayerLayer.videoGravity = .resizeAspectFill
-      self.layer.insertSublayer(avPlayerLayer, at: 0)
-      return avPlayerLayer
+   @objc open func createAvPlayerLayer() -> AVPlayerLayer {
+      return with(AVPlayerLayer(player: avPlayer)){
+         $0.frame = frame
+         $0.videoGravity = .resizeAspectFill
+         self.layer.insertSublayer($0, at: 0)
+      }
    }
    /**
     * Play video
     */
    @objc open func play(videoURL:URL){
-      let playerItem = AVPlayerItem(url: videoURL as URL)
-      avPlayer.replaceCurrentItem(with: playerItem)
-      avPlayer.play()
+      with(AVPlayerItem(url: videoURL as URL)){
+         avPlayer.replaceCurrentItem(with: $0)
+         avPlayer.play()
+      }
    }
    /**
     * Callback when video finish playing

@@ -1,6 +1,6 @@
 import UIKit
 import AVFoundation
-
+import With
 /**
  * ViewFinder actions
  */
@@ -17,7 +17,7 @@ extension CamView{
    }
    /**
     * Starts the camera preview
-    * NOTE: You might want to call this on a background thread if You have UI that animates after/before it's called
+    * - Note: You might want to call this on a background thread if You have UI that animates after/before it's called
     */
    @objc open func startPreview(){
       if !captureSession.isRunning {
@@ -67,16 +67,14 @@ extension CamView{
 extension CamView{
    /**
     * Initiates capturing a photo, eventually calls: photoOutput() in the AVCapturePhotoCaptureDelegate class
-    * NOTE: it's also possible to use: stillImageOutput.captureStillImageAsynchronously to take a picture
+    * - Note: it's also possible to use: stillImageOutput.captureStillImageAsynchronously to take a picture
     */
    @objc open func takePhoto() {
-      let photoSettings:AVCapturePhotoSettings = {/*Get an instance of AVCapturePhotoSettings class*/
-         let photoSettings = AVCapturePhotoSettings()
-         photoSettings.isAutoStillImageStabilizationEnabled = true/*Set photo settings for our need*/
-         photoSettings.isHighResolutionPhotoEnabled = true
-         photoSettings.flashMode = self.flashMode
-         return photoSettings
-      }()
-      photoOutput.capturePhoto(with: photoSettings, delegate: self)/*Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate*/
+      with(AVCapturePhotoSettings()){/*Get an instance of AVCapturePhotoSettings class*/
+         $0.isAutoStillImageStabilizationEnabled = true/*Set photo settings for our need*/
+         $0.isHighResolutionPhotoEnabled = true
+         $0.flashMode = self.flashMode
+         photoOutput.capturePhoto(with: $0, delegate: self)/*Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate*/
+      }
    }
 }

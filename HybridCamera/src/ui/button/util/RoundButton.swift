@@ -17,6 +17,7 @@ open class RoundButton: UIButton{
    /**
     * Boilerplate
     */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
@@ -25,6 +26,9 @@ open class RoundButton: UIButton{
  * Interaction
  */
 extension ClickButton{
+   /**
+    * This is fired then the user presses the button
+    */
    @objc open func buttonTouched(sender:UIButton) {
       Swift.print("RoundButton - override in subclass")
    }

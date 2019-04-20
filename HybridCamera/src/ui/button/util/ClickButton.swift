@@ -6,6 +6,10 @@ open class ClickButton: RoundButton, ClickButtonKind{
    override init(frame: CGRect) {
       super.init(frame: frame)
    }
+   /**
+    * Boilerplate
+    */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
@@ -14,6 +18,9 @@ open class ClickButton: RoundButton, ClickButtonKind{
  * Interaction
  */
 extension ClickButton{
+   /**
+    * This is fired then the user presses the button
+    */
    override open func buttonTouched(sender: UIButton) {
       onClick()
    }

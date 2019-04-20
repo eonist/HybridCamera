@@ -13,34 +13,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }()
       return true
    }
-   /**
-    * Boilerplate
-    */
-   func applicationWillResignActive(_ application: UIApplication) {}
-   func applicationDidEnterBackground(_ application: UIApplication) { }
-   func applicationWillEnterForeground(_ application: UIApplication) { }
-   func applicationDidBecomeActive(_ application: UIApplication) { }
-   func applicationWillTerminate(_ application: UIApplication) { }
 }
-//class Temp:UIView{
-//
-//}
-
-
-//      Swift.print("")
-//      let temp = Wrapper()
-//      temp.test()
-
-//extension Temp {
-//   /**
-//    *
-//    */
-//   @objc func test(){
-//      Swift.print("test")
-//   }
-//}
-//class Wrapper:Temp{
-//    override func test() {
-//      Swift.print("wrapper.test")
-//   }
-//}

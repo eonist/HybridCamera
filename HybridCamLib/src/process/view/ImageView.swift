@@ -1,6 +1,6 @@
 import UIKit
 
-open class ImageView:UIImageView{
+open class ImageView:UIImageView {
    open var url:URL?
    override init(frame: CGRect) {
       super.init(frame: frame)
@@ -9,6 +9,7 @@ open class ImageView:UIImageView{
    /**
     * Boilerplate
     */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
@@ -16,7 +17,7 @@ open class ImageView:UIImageView{
 /**
  * Extension
  */
-extension ImageView{
+extension ImageView {
    /**
     * TODO: ⚠️️ override image with didSet instead ? it's more swifty?
     */

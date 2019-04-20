@@ -10,6 +10,7 @@ open class ToggleButton: RoundButton, ToggleButtonKind{
    /**
     * Boilerplate
     */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
@@ -18,6 +19,9 @@ open class ToggleButton: RoundButton, ToggleButtonKind{
  * Interaction
  */
 extension ClickButton{
+   /**
+    * This is fired then the user presses the button
+    */
    override open func buttonTouched(sender: UIButton) {
       toggle = !toggle
       onToggle(toggle)

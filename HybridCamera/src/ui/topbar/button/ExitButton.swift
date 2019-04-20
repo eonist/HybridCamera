@@ -7,10 +7,17 @@ open class ExitButton:ClickButton{
       self.backgroundColor = .clear
       self.setImage(#imageLiteral(resourceName: "cancel"), for: .normal)
    }
+   /**
+    * Boilerplate
+    */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
 }
+/**
+ * Constants
+ */
 extension ExitButton{
    /**
     * Metrics of Exit button (Not using AutoLayout)
@@ -19,7 +26,7 @@ extension ExitButton{
       let btnWidth:CGFloat = 30
       let topLeft:CGPoint = {
          let margin:CGFloat = 40
-         return CGPoint.init(x: margin, y: margin)
+         return .init(x: margin, y: margin)
       }()
       return .init(x:topLeft.x, y:topLeft.y, width:btnWidth, height:btnWidth)
    }

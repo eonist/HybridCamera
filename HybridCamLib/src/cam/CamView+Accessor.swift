@@ -10,7 +10,7 @@ extension CamView{
      */
     var captureSession:AVCaptureSession { return previewView.captureSession }
     /**
-     * NOTE: ⚠️️ for now HybridCamerea only supports .portrait
+     * - NOTE: ⚠️️ for now HybridCamerea only supports .portrait
      */
     static var currentVideoOrientation:AVCaptureVideoOrientation {
 //        let  orientation:AVCaptureVideoOrientation = {

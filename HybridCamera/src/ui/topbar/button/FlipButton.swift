@@ -6,10 +6,17 @@ open class FlipButton:ToggleButton{
       backgroundColor = .clear
       self.setImage(#imageLiteral(resourceName: "flipCamera"), for: .normal)
    }
+   /**
+    * Boilerplate
+    */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
 }
+/**
+ * Constants
+ */
 extension FlipButton{
    /**
     * Size and position

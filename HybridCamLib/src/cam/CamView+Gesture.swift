@@ -1,17 +1,18 @@
 import UIKit
+import With
 
-extension CamView:UIGestureRecognizerDelegate{
+extension CamView: UIGestureRecognizerDelegate {
    /**
     * Adds gesture event
     */
-   @objc open func addGestureRecognizer(){
-      /*Focus*/
-      let tap = UITapGestureRecognizer(target: self, action:#selector(onPreviewViewTap))
-      self.previewView.addGestureRecognizer(tap)
-      /*Zoom*/
-      let pinchRecognizer = UIPinchGestureRecognizer(target: self, action:#selector(onPreviewViewPinch))
-      pinchRecognizer.delegate = self
-      self.previewView.addGestureRecognizer(pinchRecognizer)
+   @objc open func addGestureRecognizer() {
+      with(UITapGestureRecognizer(target: self, action:#selector(onPreviewViewTap))){
+         self.previewView.addGestureRecognizer( $0 )
+      }
+      with(UIPinchGestureRecognizer(target: self, action:#selector(onPreviewViewPinch))){
+         $0.delegate = self
+         self.previewView.addGestureRecognizer( $0 )
+      }
    }
    /**
     * Normal tap
@@ -19,11 +20,11 @@ extension CamView:UIGestureRecognizerDelegate{
    @objc open func onPreviewViewTap(sender: UIGestureRecognizer) {
       guard [.ended,.cancelled,.failed].contains(sender.state) else { return }/*ensures that the tap isnt a swipe tap etc*/
       let devicePoint:CGPoint = (self.previewView.previewLayer).captureDevicePointConverted(fromLayerPoint: sender.location(in: sender.view))
-      Swift.print(devicePoint)
+      Swift.print( devicePoint )
       self.focusWithMode(focusMode: .continuousAutoFocus, exposureMode: .continuousAutoExposure, point: devicePoint, monitorSubjectAreaChange: true)
    }
    /**
-    * TODO: ⚠️️ move this code into action
+    * - Todo: ⚠️️ move this code into action
     */
    @objc open func onPreviewViewPinch(_ sender: UIPinchGestureRecognizer) {
       guard let device = self.deviceInput?.device else {Swift.print("device not available"); return }

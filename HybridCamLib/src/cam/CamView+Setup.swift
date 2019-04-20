@@ -1,13 +1,12 @@
 import UIKit
 import AVFoundation
-
 /**
  * Setup
  */
 extension CamView{
    /**
     * NOTE: Setting device.focusMode = .continuousAutoFocus, device.exposureMode = .continuousAutoExposure could make the app better
-    * TODO: ⚠️️ create a callback you can attach in init, to popup a alertdialog etc.
+    * - TODO: ⚠️️ create a callback you can attach in init, to popup a alertdialog etc.
     */
    @objc open func setupDevice(){
       do {
@@ -22,16 +21,16 @@ extension CamView{
    }
    /**
     * Setup camera
-    * IMPORTANT: setCamera(cameraType) calls this method, so it can't be private
-    * TODO: ⚠️️ pass session as a var, and make it static
-    * TODO: ⚠️️ pass cameraType as var, avides additional global vars in class
+    * - Import: setCamera(cameraType) calls this method, so it can't be private
+    * - TODO: ⚠️️ pass session as a var, and make it static
+    * - TODO: ⚠️️ pass cameraType as var, avides additional global vars in class
     */
-   @objc open func setupCaptureDeviceInput(cameraType:AVCaptureDevice.Position) throws {
+   @objc open func setupCaptureDeviceInput(cameraType: AVCaptureDevice.Position) throws {
       guard let captureDevice:AVCaptureDevice = CamUtil.camera(type: cameraType) else {/*Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.*/
          throw SetupError.unableToGetVideoCaptureDevice
       }
       do {
-         captureSession.inputs.forEach {captureSession.removeInput($0)}/*Removes previous inputs*/
+         captureSession.inputs.forEach { captureSession.removeInput($0) }/*Removes previous inputs*/
          let input = try AVCaptureDeviceInput(device: captureDevice)/*Get an instance of the AVCaptureDeviceInput class using the previous device object.*/
          if captureSession.canAddInput(input) {
             captureSession.addInput(input)/*attatch the input device to the capture session.*/
@@ -49,10 +48,10 @@ extension CamView{
    /**
     * Adds Video capabilities
     */
-   private func setupVideoCamera() throws{
-      if captureSession.canAddOutput(videoOutput) {
+   private func setupVideoCamera() throws {
+      if captureSession.canAddOutput( videoOutput ) {
          captureSession.addOutput(videoOutput)
-         guard let connection = videoOutput.connection(with: .video) else {throw SetupError.unableToCreateVideoConnection}
+         guard let connection = videoOutput.connection(with: .video) else { throw SetupError.unableToCreateVideoConnection }
          if connection.isVideoStabilizationSupported {/*Causes a glitch on enabled*/
             connection.preferredVideoStabilizationMode = .auto
          }
@@ -63,7 +62,7 @@ extension CamView{
    /**
     * Adds Photo capabilities
     */
-   private func setupPhotoCamera() throws{
+   private func setupPhotoCamera() throws {
       photoOutput.isHighResolutionCaptureEnabled = true
       if captureSession.canAddOutput(photoOutput) {
          captureSession.addOutput(photoOutput)// Set the output on the capture session

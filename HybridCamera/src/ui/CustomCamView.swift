@@ -9,10 +9,11 @@ open class CustomCamView:HybridCamView {}
 extension CustomCamView{
    /**
     * Creates topbar
+    * - Remark: Basically overrides the default design
     */
    @objc open override func createTopBar() -> TopBarViewKind {
-      let rect = CGRect.init(origin: .init(), size: CGSize.init(width: UIScreen.main.bounds.size.width, height: 120))
-      let topBar = TopBar.init(frame: rect)
+      let rect:CGRect = .init(origin: .init(), size: CGSize.init(width: UIScreen.main.bounds.size.width, height: 120))
+      let topBar:TopBar = .init(frame: rect)
       self.addSubview(topBar)
       return topBar
    }

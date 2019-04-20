@@ -20,7 +20,7 @@ class VC:UIViewController{
    /**
     * TODO: ⚠️️ add support for orientaion later
     */
-   override var shouldAutorotate: Bool  {return false}/*Locks autorotate*/
+   override var shouldAutorotate: Bool  { return false }/*Locks autorotate*/
    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 }
 /**
@@ -31,7 +31,7 @@ extension VC{
     * When camera accesses is granted proced to initiate the camera
     */
    func initiate(){
-      let hybridCamView = CustomCamView()
+      let hybridCamView:CustomCamView = .init()
       self.view = hybridCamView /*Add HybridCamView as the main view*/
       hybridCamView.camView.onPhotoCaptureComplete = onCapture
       hybridCamView.camView.onVideoCaptureComplete = { (url:URL?,error:Error?) in self.onCapture(nil,url,error)}
@@ -40,12 +40,13 @@ extension VC{
     * When camera onCapture is called
     */
    private func onCapture(_ image:UIImage?,_ url:URL?,_ error:Error?) {
-      let processMediaView = CustomProcessView.init(frame: UIScreen.main.bounds)
-      processMediaView.onExit = {processMediaView.deInitiate()}
-      processMediaView.onShare = { (url:URL?) in if let url = url {CustomProcessView.promptSaveFileDialog(vc: self, url: url, onComplete: {processMediaView.deInitiate()})}}
-      self.view.addSubview(processMediaView)
-      if let error = error{
-         CustomProcessView.promptErrorDialog(vc: self, error: error, onComplete: {processMediaView.deInitiate()});return
+      let processMediaView = with(CustomProcessView.init(frame: UIScreen.main.bounds)) {
+         $0.onExit = { processMediaView.deInitiate() }
+         $0.onShare = { (url:URL?) in if let url = url { CustomProcessView.promptSaveFileDialog(vc: self, url: url, onComplete: {processMediaView.deInitiate()})} }
+         self.view.addSubview($0)
+      }
+      if let error = error {
+         CustomProcessView.promptErrorDialog(vc: self, error: error, onComplete: { processMediaView.deInitiate() }); return
       }else {
          processMediaView.present(image: image, url: url)
       }

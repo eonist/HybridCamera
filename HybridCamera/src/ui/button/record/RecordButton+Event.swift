@@ -1,4 +1,5 @@
 import UIKit
+import With
 /**
  * Gesture recognizer
  */
@@ -18,14 +19,13 @@ extension RecordButton:UIGestureRecognizerDelegate{
     @objc open func addGestureRecognizer(){
         let tap = UITapGestureRecognizer(target: self, action:#selector(handleTap))
         self.addGestureRecognizer(tap)
-        _ = {
-            let holdGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))//holdGesture.delegate = self
-            holdGesture.cancelsTouchesInView = false
-            holdGesture.minimumPressDuration = 0.25
-            holdGesture.allowableMovement = 500
-            self.addGestureRecognizer(holdGesture)
-            tap.require(toFail: holdGesture)/*cancels the shortTap from ever firing*/
-        }()
+        with(UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))) {//holdGesture.delegate = self
+           $0.cancelsTouchesInView = false
+           $0.minimumPressDuration = 0.25
+           $0.allowableMovement = 500
+           self.addGestureRecognizer($0)
+           tap.require(toFail: $0)/*cancels the shortTap from ever firing*/
+        }
     }
     /**
      * Long press

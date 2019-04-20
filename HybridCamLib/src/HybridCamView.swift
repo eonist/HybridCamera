@@ -19,11 +19,12 @@ open class HybridCamView:UIView {//TODO: ⚠️️ Rename to HybridCamView
       _ = topBar
       _ = recordButton
       addEventHandlers()
-      camView.startPreview()/*starts preview session*/
+      camView.startPreview() /* Starts preview session */
    }
    /**
     * Boilerplate
     */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }

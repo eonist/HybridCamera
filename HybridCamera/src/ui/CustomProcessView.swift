@@ -1,6 +1,7 @@
 import UIKit
 import AVFoundation
 import HybridCamLib
+import With
 
 open class CustomProcessView:ProcessView {}//TODO: ⚠️️ Rename to CustomProcessMediaView
 /**
@@ -19,15 +20,15 @@ extension CustomProcessView{
     * Creates share button
     */
    @objc open override func createShareButton() -> ClickButtonKind{
-      let s = CGSize.init(width: 180, height: 40)
+      let s:CGSize = .init(width: 180, height: 40)
       let margin:CGFloat = 40
-      let p = CGPoint.init(x: UIScreen.main.bounds.width/2 - s.width/2, y: UIScreen.main.bounds.height - margin - s.height)
-      let btn = ShareButton.init(frame: CGRect.init(origin: p, size: s))
-      self.addSubview(btn)
-      return btn
+      let p:CGPoint = .init(x: UIScreen.main.bounds.width/2 - s.width/2, y: UIScreen.main.bounds.height - margin - s.height)
+      return with(ShareButton.init(frame: CGRect.init(origin: p, size: s))) {
+         self.addSubview(btn)
+      }
    }
 }
-//
+
 ///**
 // * Create
 // */

@@ -1,6 +1,6 @@
 import UIKit
 import AVFoundation
-
+import With
 /**
  * Create
  */
@@ -9,17 +9,17 @@ extension ProcessView{
     * Creates video view
     */
    @objc open func createVideoView() -> VideoPlayerView{
-      let view = VideoPlayerView(frame: UIScreen.main.bounds)
-      addSubview(view)
-      return view
+      return with(.init(frame: UIScreen.main.bounds)) {
+         addSubview($0)
+      }
    }
    /**
     * Creates Image view
     */
    @objc open func createImageView() -> ImageView{
-      let view = ImageView.init(frame: UIScreen.main.bounds)
-      addSubview(view)
-      return view
+      return with(.init(frame: UIScreen.main.bounds)) {
+         addSubview($0)
+      }
    }
    /**
     * Creates exit button
@@ -47,10 +47,10 @@ extension ProcessView{
       }
       shareButton.onClick = {/*launch share AlertDialog*/
          if let imageURL = self.imageView.url {
-            self.onShare(imageURL)
-         }else if let videoURL = (self.videoPlayerView.avPlayer.currentItem?.asset as? AVURLAsset)?.url {
+            self.onShare( imageURL )
+         } else if let videoURL = (self.videoPlayerView.avPlayer.currentItem?.asset as? AVURLAsset)?.url {
             self.onShare(videoURL)
-         }else{
+         } else {
             self.onShare(nil)
          }
       }
@@ -70,7 +70,7 @@ extension ProcessView{
    /**
     * Presents either image or video
     */
-   @objc open func present(image:UIImage?,url:URL?){
+   @objc open func present(image: UIImage?, url: URL?){
       if let image = image, let url = url{
          imageView.setImage(url: url, image: image)
       } else if let url = url {
@@ -85,28 +85,30 @@ extension ProcessView{
    /**
     * Prompts the save file dialog
     */
-   @objc open class func promptSaveFileDialog(vc:UIViewController,url:URL,onComplete:@escaping OnSaveDialogComplete){
-      let activitycontroller = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-      activitycontroller.excludedActivityTypes = [UIActivity.ActivityType.airDrop]
-      activitycontroller.popoverPresentationController?.sourceView = vc.view
-      activitycontroller.completionWithItemsHandler = { (_ type:UIActivity.ActivityType?, _ flag:Bool, _ vals:[Any]?, _ error:Error?) in onComplete() }
-      vc.present(activitycontroller, animated: true, completion: nil)
+   @objc open class func promptSaveFileDialog(vc: UIViewController, url: URL, onComplete:@escaping OnSaveDialogComplete){
+      with(UIActivityViewController(activityItems: [url], applicationActivities: nil)) {
+         $0.excludedActivityTypes = [UIActivity.ActivityType.airDrop]
+         $0.popoverPresentationController?.sourceView = vc.view
+         $0.completionWithItemsHandler = { (_ type:UIActivity.ActivityType?, _ flag:Bool, _ vals:[Any]?, _ error:Error?) in onComplete() }
+         vc.present($0, animated: true, completion: nil)
+      }
    }
    /**
     * Prompts the error dilog
     */
    @objc open class func promptErrorDialog(vc:UIViewController, error:Swift.Error, onComplete:@escaping OnErrorDialogComplete){
-      let alert: UIAlertController = UIAlertController(title: "Error",message: error.localizedDescription ,preferredStyle: .alert)
-      let action = UIAlertAction(title: "OK", style: .default) { _ in onComplete()}
-      alert.addAction(action)
-      vc.present(alert, animated: true, completion:nil)
+      with(UIAlertController(title: "Error",message: error.localizedDescription ,preferredStyle: .alert)){
+         let action: UIAlertAction = .init(title: "OK", style: .default) { _ in onComplete()}
+         $0.addAction(action)
+         vc.present($0, animated: true, completion: nil)
+      }
    }
    /**
     * deInitiate
     */
-   @objc open func deInitiate(){
-      videoPlayerView.deInitiate()/*Removes observer*/
-      self.removeFromSuperview()/*Removes it self from the view hierarchy*/
+   @objc open func deInitiate() {
+      videoPlayerView.deInitiate()/* Removes observer */
+      self.removeFromSuperview()/* Removes it self from the view hierarchy */
    }
 }
 /**

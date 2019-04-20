@@ -1,6 +1,6 @@
 import UIKit
 import HybridCamLib
-
+import With
 open class ShareButton:UIButton,ClickButtonKind{
    open var onClick:OnClick = ShareButton.defaultOnClick
    override public init(frame: CGRect) {
@@ -11,6 +11,7 @@ open class ShareButton:UIButton,ClickButtonKind{
    /**
     * Boilerplate
     */
+   @available(*, unavailable)
    required public init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
@@ -35,10 +36,12 @@ extension ShareButton{
     * Config the button
     */
    @objc open func configButton(){
-      self.backgroundColor = .white
-      self.setTitleColor(.black, for: .normal)
-      self.titleLabel?.font =  .systemFont(ofSize: 14)
-      self.setTitle("Share", for: .normal)
-      self.layer.cornerRadius = frame.height/2
+      with($0){
+         $0.backgroundColor = .white
+         $0.setTitleColor(.black, for: .normal)
+         $0.titleLabel?.font =  .systemFont(ofSize: 14)
+         $0.setTitle("Share", for: .normal)
+         $0.layer.cornerRadius = frame.height/2
+      }
    }
 }
