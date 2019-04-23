@@ -42,14 +42,14 @@ extension CamView{
    }
 }
 /**
- * Private methods
+ * Helper methods (Private)
  */
 extension CamView{
    /**
     * Adds Video capabilities
     */
    private func setupVideoCamera() throws {
-      if captureSession.canAddOutput( videoOutput ) {
+      if captureSession.canAddOutput(videoOutput) {
          captureSession.addOutput(videoOutput)
          guard let connection = videoOutput.connection(with: .video) else { throw SetupError.unableToCreateVideoConnection }
          if connection.isVideoStabilizationSupported {/*Causes a glitch on enabled*/
@@ -65,7 +65,7 @@ extension CamView{
    private func setupPhotoCamera() throws {
       photoOutput.isHighResolutionCaptureEnabled = true
       if captureSession.canAddOutput(photoOutput) {
-         captureSession.addOutput(photoOutput)// Set the output on the capture session
+         captureSession.addOutput(photoOutput) /*Set the output on the capture session*/
       }else {
          throw SetupError.unableToAddPhotoOutput
       }
@@ -73,7 +73,7 @@ extension CamView{
    /**
     * Adds microphone
     */
-   func setupMicrophone() throws{
+   func setupMicrophone() throws {
       guard let microphone = AVCaptureDevice.default(for:.audio) else {
          throw SetupError.unableToGetAudioCaptureDevice
       }
@@ -88,12 +88,12 @@ extension CamView{
    }
    /**
     * Adds support for background audio from other applications
+    * - TODO: ⚠️️ forward the error mesage from the try clause
     */
    private func setupBackgroundAudioSupport(allowBackgroundAudio:Bool = true) throws{
       do{
-//         try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
-         try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default)
-         try AVAudioSession.sharedInstance().setActive(true)/*👈 new ref: https://stackoverflow.com/questions/51010390/avaudiosession-setcategory-swift-4-2-ios-12-play-sound-on-silent*/
+         try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default)//try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
+         try AVAudioSession.sharedInstance().setActive(true)/*👈 ref: https://stackoverflow.com/questions/51010390/avaudiosession-setcategory-swift-4-2-ios-12-play-sound-on-silent*/
          captureSession.automaticallyConfiguresApplicationAudioSession = false
       }
       catch {

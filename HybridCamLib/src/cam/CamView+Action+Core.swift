@@ -50,7 +50,7 @@ extension CamView{
             onVideoCaptureComplete(nil,error)
          }
       }
-      guard let outputURL:URL = CamUtil.tempURL() else {  onVideoCaptureComplete(nil,CaptureError.noTempFolderAccess);return}
+      guard let outputURL: URL = CamUtil.tempURL() else {  onVideoCaptureComplete(nil,CaptureError.noTempFolderAccess);return}
       videoOutput.startRecording(to: outputURL, recordingDelegate: self)
    }
    /**

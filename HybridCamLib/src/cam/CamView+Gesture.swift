@@ -30,7 +30,7 @@ extension CamView: UIGestureRecognizerDelegate {
       guard let device = self.deviceInput?.device else {Swift.print("device not available"); return }
       if sender.state == .changed {
          let pinchVelocityDividerFactor: CGFloat = 1.0/*was 5.0, which was a bit too fast*/
-         let desiredZoomFactor = device.videoZoomFactor + atan2(sender.velocity, pinchVelocityDividerFactor)
+         let desiredZoomFactor: CGFloat = device.videoZoomFactor + atan2(sender.velocity, pinchVelocityDividerFactor)
          setZoom(zoomFactor: desiredZoomFactor)
       }
    }

@@ -9,10 +9,10 @@ open class FlashButton:ToggleButton{
    /**
     * Boilerplate
     */
-   @available(*, unavailable)
-   required public init?(coder aDecoder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
-   }
+//   @available(*, unavailable)
+//   required public init?(coder aDecoder: NSCoder) {
+//      fatalError("init(coder:) has not been implemented")
+//   }
 }
 /**
  * Constants (Size and position)

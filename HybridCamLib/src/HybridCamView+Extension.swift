@@ -8,12 +8,16 @@ extension HybridCamView{
     * Attach CallBacks
     */
    @objc public func addEventHandlers() {
-      recordButton.onShortPressRelease = { self.camView.takePhoto() }
-      recordButton.onLongPressBegan = { self.camView.startRecording() }
-      recordButton.onLongPressRelease = { self.camView.stopRecording() }
-      topBar.flipButton.onToggle = { toggle in self.camView.setCamera(cameraType: toggle ? .front : .back) }
-      topBar.flashButton.onToggle = { toggle in self.camView.setFlashMode(flashMode:  toggle ? .on : .off) }
-      topBar.exitButton.onClick = { self.onCameraExit() }
+      with( recordButton ){
+         $0.onShortPressRelease = { self.camView.takePhoto() }
+         $0.onLongPressBegan = { self.camView.startRecording() }
+         $0.onLongPressRelease = { self.camView.stopRecording() }
+      }
+      with( topBar ){
+         $0.flipButton.onToggle = { toggle in self.camView.setCamera(cameraType: toggle ? .front : .back) }
+         $0.flashButton.onToggle = { toggle in self.camView.setFlashMode(flashMode:  toggle ? .on : .off) }
+         $0.exitButton.onClick = { self.onCameraExit() }
+      }
    }
 }
 /**
@@ -21,7 +25,7 @@ extension HybridCamView{
  */
 extension HybridCamView{
    /**
-    * Creates camview
+    * Creates camView
     */
    @objc open func createCamView() -> CamView{
       let rect:CGRect = .init(origin: .zero, size: UIScreen.main.bounds.size)
@@ -30,7 +34,7 @@ extension HybridCamView{
       }
    }
    /**
-    * Creates topbar
+    * Creates topBar
     */
    @objc open func createTopBar() -> TopBarViewKind {
       fatalError("must be overriden in subclass")

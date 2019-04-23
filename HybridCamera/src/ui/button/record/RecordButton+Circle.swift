@@ -1,7 +1,7 @@
 import UIKit
 import With
 /*
- * TODO: move Circle out of RecordButton scope
+ * - TODO: ⚠️️ move Circle out of RecordButton scope
  */
 extension RecordButton{
    /**
@@ -33,10 +33,11 @@ extension RecordButton.Circle{
     * Creates inner circle
     */
    @objc open func createInnerCircle() -> UIView{
-      let frame:CGRect = {
+      let (frame,length):(CGRect,CGFloat) = {
          let padding = self.frame.width/12
          let length = self.frame.width - (padding * 2)
-         return .init(origin: .init(x: padding, y: padding), size: .init(width: length, height: length))
+         let rect:CGRect = .init(origin: .init(x: padding, y: padding), size: .init(width: length, height: length))
+         return (rect,length)
       }()
       return with(.init(frame: frame)) {
          $0.backgroundColor = .white
@@ -55,6 +56,8 @@ extension RecordButton.Circle{
          addSubview($0)
       }
    }
+}
+extension RecordButton{
    /**
     * Creates circle
     */
@@ -62,7 +65,7 @@ extension RecordButton.Circle{
       return with(.init(frame: RecordButton.Circle.rect)) {
          RecordButton.addShadowToView($0)
          addSubview($0)
-      }()
+      }
    }
 }
 /**

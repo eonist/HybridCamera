@@ -8,22 +8,22 @@ extension CamView{
     * Switches between front and back cam
     * - TODO: ⚠️️ Possibly rename to setCameraPosition, or toggleCamera?
     */
-   @objc open func setCamera(cameraType:AVCaptureDevice.Position){
+   @objc open func setCamera(cameraType: AVCaptureDevice.Position){
       try? setupCaptureDeviceInput(cameraType:cameraType)
       try? setupMicrophone()
    }
    /**
     * - TODO: ⚠️️ Rename to toggleFlashMode?
-    * Options are: .on, .off, .auto
+    * - Options: .on, .off, .auto
     */
-   @objc open func setFlashMode(flashMode:AVCaptureDevice.FlashMode){//AVCaptureDevice.FlashMode
+   @objc open func setFlashMode(flashMode: AVCaptureDevice.FlashMode){//AVCaptureDevice.FlashMode
       self.flashMode = flashMode
    }
    /**
     * - TODO: ⚠️️ Could be moved to static method
-    * Ref: https://stackoverflow.com/a/50450425/5389500
+    * - Reference: https://stackoverflow.com/a/50450425/5389500
     */
-   @objc open func focusWithMode(focusMode:AVCaptureDevice.FocusMode, exposureMode:AVCaptureDevice.ExposureMode, point:CGPoint, monitorSubjectAreaChange:Bool){
+   @objc open func focusWithMode(focusMode: AVCaptureDevice.FocusMode, exposureMode: AVCaptureDevice.ExposureMode, point: CGPoint, monitorSubjectAreaChange: Bool){
       guard let device:AVCaptureDevice = self.deviceInput?.device else { Swift.print("device unavailable 🚫");return }
       do {
          try device.lockForConfiguration()
@@ -45,8 +45,8 @@ extension CamView{
     * - TODO: ⚠️️ Could be moved to static method
     * - TODO: ⚠️️ Rename to setZoomFactor
     */
-   @objc open func setZoom(zoomFactor:CGFloat){
-      guard let device/*:AVCaptureDevice*/ = self.deviceInput?.device else { Swift.print("device not available"); return }
+   @objc open func setZoom(zoomFactor: CGFloat){
+      guard let device = self.deviceInput?.device else { Swift.print("setZoom() - device not available"); return }
       let maxZoomFactor = device.activeFormat.videoMaxZoomFactor
       do {
          try device.lockForConfiguration()

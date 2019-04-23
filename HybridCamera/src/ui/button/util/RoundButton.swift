@@ -11,7 +11,7 @@ open class RoundButton: UIButton{
          $0.setTitleColor(.black, for: .normal)
          $0.titleLabel?.font =  .systemFont(ofSize: 12)
          $0.layer.cornerRadius = frame.width/2
-         $0.addTarget($0, action: #selector(buttonTouched), for: .touchUpInside)
+         $0.addTarget($0, action: #selector(self.buttonTouched), for: .touchUpInside)
       }
    }
    /**
@@ -25,7 +25,7 @@ open class RoundButton: UIButton{
 /**
  * Interaction
  */
-extension ClickButton{
+extension RoundButton{
    /**
     * This is fired then the user presses the button
     */

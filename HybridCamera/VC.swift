@@ -1,5 +1,6 @@
 import UIKit
 import HybridCamLib
+import With
 
 /**
  * Main view controller
@@ -40,11 +41,13 @@ extension VC{
     * When camera onCapture is called
     */
    private func onCapture(_ image:UIImage?,_ url:URL?,_ error:Error?) {
-      let processMediaView = with(CustomProcessView.init(frame: UIScreen.main.bounds)) {
-         $0.onExit = { processMediaView.deInitiate() }
-         $0.onShare = { (url:URL?) in if let url = url { CustomProcessView.promptSaveFileDialog(vc: self, url: url, onComplete: {processMediaView.deInitiate()})} }
-         self.view.addSubview($0)
-      }
+      let processMediaView:CustomProcessView = {
+         let processMediaView = CustomProcessView.init(frame: UIScreen.main.bounds)
+         processMediaView.onExit = { processMediaView.deInitiate() }
+         processMediaView.onShare = { (url:URL?) in if let url = url { CustomProcessView.promptSaveFileDialog(vc: self, url: url, onComplete: {processMediaView.deInitiate()})} }
+         self.view.addSubview(processMediaView)
+         return processMediaView
+      }()
       if let error = error {
          CustomProcessView.promptErrorDialog(vc: self, error: error, onComplete: { processMediaView.deInitiate() }); return
       }else {

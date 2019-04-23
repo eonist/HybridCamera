@@ -39,6 +39,8 @@
 		F1AA757D226B4E9200D4C272 /* CamUtil+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757A226B4E9100D4C272 /* CamUtil+File.swift */; };
 		F1AA757E226B4E9200D4C272 /* CamUtil+Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757B226B4E9100D4C272 /* CamUtil+Signature.swift */; };
 		F1AA757F226B4E9200D4C272 /* CamUtil+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757C226B4E9100D4C272 /* CamUtil+Helper.swift */; };
+		F1AA7580226C6D2200D4C272 /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
+		F1AA7581226C6D2200D4C272 /* With.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */; };
 		F1ABBED620D07A12008B13B5 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEA920D07A11008B13B5 /* VC.swift */; };
 		F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB620D07A11008B13B5 /* RecordButton+Anim.swift */; };
@@ -82,6 +84,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F1AA7581226C6D2200D4C272 /* With.framework in Embed Frameworks */,
 				F114ADAE21A1C27F00942A28 /* HybridCamLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -165,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1AA7580226C6D2200D4C272 /* With.framework in Frameworks */,
 				F114ADAD21A1C27F00942A28 /* HybridCamLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -853,6 +857,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B5CC9TD7P7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HybridCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -875,6 +883,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B5CC9TD7P7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HybridCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,7 +1,7 @@
 import UIKit
 /**
  * The purpose of this protocol is to be able to customize the HybridCamera with different UI systems
- * - Remark: This is sort of the minimal UI needed
+ * - Remark: This is sort of the minimal UI needed for TopBar to work
  */
 @objc public protocol TopBarKind:class {
    var exitButton:ClickButtonKind {get}

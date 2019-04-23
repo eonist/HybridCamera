@@ -19,7 +19,7 @@ open class ShareButton:UIButton,ClickButtonKind{
 /**
  * Interaction
  */
-extension ClickButton{
+extension ShareButton{
    /**
     * Called from touchUpInside
     */
@@ -36,7 +36,7 @@ extension ShareButton{
     * Config the button
     */
    @objc open func configButton(){
-      with($0){
+      with(self){
          $0.backgroundColor = .white
          $0.setTitleColor(.black, for: .normal)
          $0.titleLabel?.font =  .systemFont(ofSize: 14)

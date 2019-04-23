@@ -36,7 +36,7 @@ extension CamPreviewView{
     * Initialize the captureSession object
     */
    @objc open func createCaptureSession() -> AVCaptureSession {
-      return with(AVCaptureSession.init()) {
+      return with(.init()) {
          $0.sessionPreset = .high
       }
    }

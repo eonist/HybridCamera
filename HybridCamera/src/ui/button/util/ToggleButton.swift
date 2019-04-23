@@ -10,15 +10,15 @@ open class ToggleButton: RoundButton, ToggleButtonKind{
    /**
     * Boilerplate
     */
-   @available(*, unavailable)
-   required public init?(coder aDecoder: NSCoder) {
-      fatalError("init(coder:) has not been implemented")
-   }
+//   @available(*, unavailable)
+//   required public init?(coder aDecoder: NSCoder) {
+//      fatalError("init(coder:) has not been implemented")
+//   }
 }
 /**
  * Interaction
  */
-extension ClickButton{
+extension ToggleButton{
    /**
     * This is fired then the user presses the button
     */

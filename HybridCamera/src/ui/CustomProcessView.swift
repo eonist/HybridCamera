@@ -24,7 +24,7 @@ extension CustomProcessView{
       let margin:CGFloat = 40
       let p:CGPoint = .init(x: UIScreen.main.bounds.width/2 - s.width/2, y: UIScreen.main.bounds.height - margin - s.height)
       return with(ShareButton.init(frame: CGRect.init(origin: p, size: s))) {
-         self.addSubview(btn)
+         self.addSubview($0)
       }
    }
 }

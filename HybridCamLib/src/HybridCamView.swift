@@ -14,7 +14,7 @@ open class HybridCamView:UIView {//TODO: ⚠️️ Rename to HybridCamView
     */
    override public init(frame:CGRect){
       super.init(frame: frame)
-      self.backgroundColor = .green/*👈 Debug color*/
+      // self.backgroundColor = .green/*👈 Debug color*/
       _ = camView
       _ = topBar
       _ = recordButton
