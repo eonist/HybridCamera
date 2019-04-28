@@ -35,42 +35,42 @@ extension CamView{
     * Starts recording video
     */
    @objc open func startRecording() {
-      guard videoOutput.isRecording == false else { onVideoCaptureComplete(nil,CaptureError.alreadyRecording); return}
-      guard let connection = videoOutput.connection(with: .video) else {onVideoCaptureComplete(nil,CaptureError.noVideoConnection);return}
+      guard videoOutput.isRecording == false else { onVideoCaptureComplete(nil, CaptureError.alreadyRecording); return }
+      guard let connection: AVCaptureConnection = videoOutput.connection(with: .video) else { onVideoCaptureComplete(nil, CaptureError.noVideoConnection); return }
       if connection.isVideoOrientationSupported {
          connection.videoOrientation = CamView.currentVideoOrientation
       }
-      guard let device:AVCaptureDevice = deviceInput?.device else {onVideoCaptureComplete(nil,CaptureError.noInputDevice);return}
+      guard let device: AVCaptureDevice = deviceInput?.device else { onVideoCaptureComplete(nil, CaptureError.noInputDevice); return }
       if device.isSmoothAutoFocusSupported {
          do {
             try device.lockForConfiguration()
             device.isSmoothAutoFocusEnabled = false
             device.unlockForConfiguration()
          } catch {
-            onVideoCaptureComplete(nil,error)
+            onVideoCaptureComplete(nil, error)
          }
       }
-      guard let outputURL: URL = CamUtil.tempURL() else {  onVideoCaptureComplete(nil,CaptureError.noTempFolderAccess);return}
+      guard let outputURL: URL = CamUtil.tempURL() else { onVideoCaptureComplete(nil, CaptureError.noTempFolderAccess); return }
       videoOutput.startRecording(to: outputURL, recordingDelegate: self)
    }
    /**
     * Stops recording video
     */
    @objc open func stopRecording() {
-      guard videoOutput.isRecording else { onVideoCaptureComplete(nil,CaptureError.alreadyStoppedRecording);return}
+      guard videoOutput.isRecording else { onVideoCaptureComplete(nil, CaptureError.alreadyStoppedRecording); return }
       videoOutput.stopRecording()
    }
 }
 /**
  * PhotoCamera
  */
-extension CamView{
+extension CamView {
    /**
     * Initiates capturing a photo, eventually calls: photoOutput() in the AVCapturePhotoCaptureDelegate class
     * - Note: it's also possible to use: stillImageOutput.captureStillImageAsynchronously to take a picture
     */
    @objc open func takePhoto() {
-      with(AVCapturePhotoSettings()){/*Get an instance of AVCapturePhotoSettings class*/
+      with(AVCapturePhotoSettings()) {/*Get an instance of AVCapturePhotoSettings class*/
          $0.isAutoStillImageStabilizationEnabled = true/*Set photo settings for our need*/
          $0.isHighResolutionPhotoEnabled = true
          $0.flashMode = self.flashMode

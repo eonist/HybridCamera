@@ -12,10 +12,10 @@ extension CamUtil {
     * - Note: The nsuuidstring automagically creates a random unique filename every time it's called
     */
    public static func tempURL(suffix: String =  ".mp4") -> URL? {
-      let directory:String = NSTemporaryDirectory()
+      let directory: String = NSTemporaryDirectory()
       guard directory != "" else { return nil }
-      let url:URL = .init(fileURLWithPath: directory)
-      let videoURL:URL = url.appendingPathComponent(NSUUID().uuidString + suffix)
+      let url: URL = .init(fileURLWithPath: directory)
+      let videoURL: URL = url.appendingPathComponent(NSUUID().uuidString + suffix)
       return videoURL
    }
    /**
@@ -23,11 +23,11 @@ extension CamUtil {
 	 * write(path:"~/Desktop/del.txt".tildePath, data:data)//returns true or false depending on if something was written or not
     */
 	@discardableResult
-   public static func write(path: String, data: Data) -> Bool{
+   public static func write(path: String, data: Data) -> Bool {
       do {
          try data.write(to: URL(fileURLWithPath: path), options: [.atomic])
          return true
-      } catch let error{
+      } catch let error {
          Swift.print("failed to write file – bad permissions, bad filename, missing permissions, or something else error: \(error.localizedDescription)")
          return false
       }

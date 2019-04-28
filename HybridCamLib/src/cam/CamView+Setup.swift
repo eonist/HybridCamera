@@ -3,10 +3,10 @@ import AVFoundation
 /**
  * Setup
  */
-extension CamView{
+extension CamView {
    /**
     * NOTE: Setting device.focusMode = .continuousAutoFocus, device.exposureMode = .continuousAutoExposure could make the app better
-    * - TODO: ⚠️️ create a callback you can attach in init, to popup a alertdialog etc.
+    * - Fixme: ⚠️️ create a callback you can attach in init, to popup a alertdialog etc.
     */
    @objc open func setupDevice(){
       do {
@@ -22,8 +22,8 @@ extension CamView{
    /**
     * Setup camera
     * - Import: setCamera(cameraType) calls this method, so it can't be private
-    * - TODO: ⚠️️ pass session as a var, and make it static
-    * - TODO: ⚠️️ pass cameraType as var, avides additional global vars in class
+    * - Fixme: ⚠️️ pass session as a var, and make it static
+    * - Fixme: ⚠️️ pass cameraType as var, avides additional global vars in class
     */
    @objc open func setupCaptureDeviceInput(cameraType: AVCaptureDevice.Position) throws {
       guard let captureDevice:AVCaptureDevice = CamUtil.camera(type: cameraType) else {/*Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.*/
@@ -56,7 +56,7 @@ extension CamView{
             connection.preferredVideoStabilizationMode = .auto
          }
       }else {
-         throw SetupError.unableToAddVideoOutput
+          throw SetupError.unableToAddVideoOutput
       }
    }
    /**
@@ -66,7 +66,7 @@ extension CamView{
       photoOutput.isHighResolutionCaptureEnabled = true
       if captureSession.canAddOutput(photoOutput) {
          captureSession.addOutput(photoOutput) /*Set the output on the capture session*/
-      }else {
+      } else {
          throw SetupError.unableToAddPhotoOutput
       }
    }
@@ -74,7 +74,7 @@ extension CamView{
     * Adds microphone
     */
    func setupMicrophone() throws {
-      guard let microphone = AVCaptureDevice.default(for:.audio) else {
+      guard let microphone: AVCaptureDevice = .default(for: .audio) else {
          throw SetupError.unableToGetAudioCaptureDevice
       }
       do {
@@ -88,10 +88,10 @@ extension CamView{
    }
    /**
     * Adds support for background audio from other applications
-    * - TODO: ⚠️️ forward the error mesage from the try clause
+    * - Fixme: ⚠️️ forward the error mesage from the try clause
     */
-   private func setupBackgroundAudioSupport(allowBackgroundAudio:Bool = true) throws{
-      do{
+   private func setupBackgroundAudioSupport(allowBackgroundAudio: Bool = true) throws{
+      do {
          try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default)//try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
          try AVAudioSession.sharedInstance().setActive(true)/*👈 ref: https://stackoverflow.com/questions/51010390/avaudiosession-setcategory-swift-4-2-ios-12-play-sound-on-silent*/
          captureSession.automaticallyConfiguresApplicationAudioSession = false

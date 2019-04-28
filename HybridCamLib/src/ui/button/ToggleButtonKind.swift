@@ -1,8 +1,8 @@
 import UIKit
 
 @objc public protocol ToggleButtonKind:class {
-   var toggle:Bool {get}
-   var onToggle:OnToggle {get set}
+   var toggle:Bool { get }
+   var onToggle:OnToggle { get set }
 }
 /**
  * CallBack related

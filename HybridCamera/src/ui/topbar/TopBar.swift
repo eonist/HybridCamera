@@ -2,10 +2,10 @@ import UIKit
 import HybridCamLib
 
 open class TopBar:UIView, TopBarKind{
-   open lazy var exitButton:ClickButtonKind = createExitButton()
-   open lazy var flipButton:ToggleButtonKind = createFlipButton()
-   open lazy var flashButton:ToggleButtonKind = createFlashButton()
-   override public init(frame:CGRect){
+   open lazy var exitButton: ClickButtonKind = createExitButton()
+   open lazy var flipButton: ToggleButtonKind = createFlipButton()
+   open lazy var flashButton: ToggleButtonKind = createFlashButton()
+   override public init(frame:CGRect) {
       super.init(frame: frame)
       _ = exitButton
       _ = flipButton
@@ -15,25 +15,25 @@ open class TopBar:UIView, TopBarKind{
     * Boilerplate
     */
    @available(*, unavailable)
-   required public init?(coder aDecoder: NSCoder) {
+   public required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
 }
 /**
  * Create
  */
-extension TopBar{
-   open func createExitButton() -> ClickButtonKind{
+extension TopBar {
+   open func createExitButton() -> ClickButtonKind {
       let btn = ExitButton()
       self.addSubview(btn)
       return btn
    }
-   open func createFlashButton() -> ToggleButtonKind{
+   open func createFlashButton() -> ToggleButtonKind {
       let btn = FlashButton()
       self.addSubview(btn)
       return btn
    }
-   open func createFlipButton() -> ToggleButtonKind{
+   open func createFlipButton() -> ToggleButtonKind {
       let btn = FlipButton()
       self.addSubview(btn)
       return btn

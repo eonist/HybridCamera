@@ -37,11 +37,11 @@ extension ProcessView{
 /**
  * Event
  */
-extension ProcessView{
+extension ProcessView {
    /**
     * AttachCallBacks
     */
-   @objc open func addEventListeners(){
+   @objc open func addEventListeners() {
       exitButton.onClick = {
          self.onExit()
       }
@@ -66,12 +66,12 @@ extension ProcessView{
 /**
  * Action
  */
-extension ProcessView{
+extension ProcessView {
    /**
     * Presents either image or video
     */
-   @objc open func present(image: UIImage?, url: URL?){
-      if let image = image, let url = url{
+   @objc open func present(image: UIImage?, url: URL?) {
+      if let image = image, let url = url {
          imageView.setImage(url: url, image: image)
       } else if let url = url {
          videoPlayerView.play(videoURL: url)
@@ -81,24 +81,24 @@ extension ProcessView{
 /**
  * Util
  */
-extension ProcessView{
+extension ProcessView {
    /**
     * Prompts the save file dialog
     */
-   @objc open class func promptSaveFileDialog(vc: UIViewController, url: URL, onComplete:@escaping OnSaveDialogComplete){
+   @objc open class func promptSaveFileDialog(vc: UIViewController, url: URL, onComplete:@escaping OnSaveDialogComplete) {
       with(UIActivityViewController(activityItems: [url], applicationActivities: nil)) {
          $0.excludedActivityTypes = [UIActivity.ActivityType.airDrop]
          $0.popoverPresentationController?.sourceView = vc.view
-         $0.completionWithItemsHandler = { (_ type:UIActivity.ActivityType?, _ flag:Bool, _ vals:[Any]?, _ error:Error?) in onComplete() }
+         $0.completionWithItemsHandler = { (_ type: UIActivity.ActivityType?, _ flag: Bool, _ vals: [Any]?, _ error: Error?) in onComplete() }
          vc.present($0, animated: true, completion: nil)
       }
    }
    /**
     * Prompts the error dilog
     */
-   @objc open class func promptErrorDialog(vc:UIViewController, error:Swift.Error, onComplete:@escaping OnErrorDialogComplete){
-      with(UIAlertController(title: "Error",message: error.localizedDescription ,preferredStyle: .alert)){
-         let action: UIAlertAction = .init(title: "OK", style: .default) { _ in onComplete()}
+   @objc open class func promptErrorDialog(vc: UIViewController, error: Swift.Error, onComplete:@escaping OnErrorDialogComplete) {
+      with(UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)) {
+         let action: UIAlertAction = .init(title: "OK", style: .default) { _ in onComplete() }
          $0.addAction(action)
          vc.present($0, animated: true, completion: nil)
       }
@@ -117,8 +117,8 @@ extension ProcessView{
 extension ProcessView {
    public typealias OnErrorDialogComplete = () -> Void
    public typealias OnSaveDialogComplete = () -> Void
-   public typealias OnShare = (_ url:URL?) -> Void
+   public typealias OnShare = (_ url: URL?) -> Void
    public typealias OnExit = () -> Void
-   public static let defaultOnShare:OnShare = { url in Swift.print("default onShare url:\(String(describing: url))")}
-   public static let defaultOnExit:OnExit = { Swift.print("default onExit") }
+   public static let defaultOnShare: OnShare = { url in Swift.print("default onShare url:\(String(describing: url))") }
+   public static let defaultOnExit: OnExit = { Swift.print("default onExit") }
 }

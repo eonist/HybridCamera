@@ -12,18 +12,18 @@ open class ShareButton:UIButton,ClickButtonKind{
     * Boilerplate
     */
    @available(*, unavailable)
-   required public init?(coder aDecoder: NSCoder) {
+   public required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
 }
 /**
  * Interaction
  */
-extension ShareButton{
+extension ShareButton {
    /**
     * Called from touchUpInside
     */
-   @objc open func buttonTouched(sender:UIButton) {
+   @objc open func buttonTouched(sender: UIButton) {
       onClick()
    }
 }
@@ -35,8 +35,8 @@ extension ShareButton{
    /**
     * Config the button
     */
-   @objc open func configButton(){
-      with(self){
+   @objc open func configButton() {
+      with(self) {
          $0.backgroundColor = .white
          $0.setTitleColor(.black, for: .normal)
          $0.titleLabel?.font =  .systemFont(ofSize: 14)

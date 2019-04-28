@@ -10,7 +10,7 @@ open class FlipButton:ToggleButton{
     * Boilerplate
     */
    @available(*, unavailable)
-   required public init?(coder aDecoder: NSCoder) {
+   public required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
 }
@@ -21,12 +21,12 @@ extension FlipButton{
    /**
     * Size and position
     */
-   static var rect:CGRect {
-      let btnWidth:CGFloat = 30
-      let topCenter:CGPoint = {
+   static var rect: CGRect {
+      let btnWidth: CGFloat = 30
+      let topCenter: CGPoint = {
          let rect = UIScreen.main.bounds
-         let margin:CGFloat = 40
-         return .init(x: (rect.width/2)-(btnWidth/2), y: 0 + margin)
+         let margin: CGFloat = 40
+         return .init(x: (rect.width/2) - (btnWidth/2), y: 0 + margin)
       }()
       return .init(x:topCenter.x, y:topCenter.y, width:btnWidth, height:btnWidth)
    }

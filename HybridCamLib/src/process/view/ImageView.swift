@@ -1,7 +1,7 @@
 import UIKit
 
-open class ImageView:UIImageView {
-   open var url:URL?
+open class ImageView: UIImageView {
+   open var url: URL?
    override init(frame: CGRect) {
       super.init(frame: frame)
       self.backgroundColor = .clear
@@ -10,7 +10,7 @@ open class ImageView:UIImageView {
     * Boilerplate
     */
    @available(*, unavailable)
-   required public init?(coder aDecoder: NSCoder) {
+   public required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
 }
@@ -19,9 +19,9 @@ open class ImageView:UIImageView {
  */
 extension ImageView {
    /**
-    * TODO: ⚠️️ override image with didSet instead ? it's more swifty?
+    * Fixme: ⚠️️ override image with didSet instead ? it's more swifty?
     */
-   @objc open func setImage(url:URL,image:UIImage){
+   @objc open func setImage(url: URL, image: UIImage) {
       self.url = url
       self.image = image
    }

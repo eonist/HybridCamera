@@ -7,13 +7,13 @@ import AVFoundation
  * camView.startRecording()//start capturing
  * camView.stopRecording()//stop capturing
  */
-open class CamView:UIView {
+open class CamView: UIView {
    /*UI*/
    public lazy var previewView: CamPreviewView = createPreviewView()/*Has the view Finder Preview*/
    /*AV*/
    public var deviceInput: AVCaptureDeviceInput?
    public let videoOutput = AVCaptureMovieFileOutput()
-   public let photoOutput: AVCapturePhotoOutput = AVCapturePhotoOutput()
+   public let photoOutput: AVCapturePhotoOutput = .init()
    /*State*/
    public var flashMode: AVCaptureDevice.FlashMode = .off
    /*Callbacks*/
@@ -30,7 +30,7 @@ open class CamView:UIView {
     * Boilerplate
     */
    @available(*, unavailable)
-   required public init?(coder aDecoder: NSCoder) {
+   public required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
 }

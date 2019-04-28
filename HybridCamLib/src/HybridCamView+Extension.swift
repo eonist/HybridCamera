@@ -13,9 +13,9 @@ extension HybridCamView{
          $0.onLongPressBegan = { self.camView.startRecording() }
          $0.onLongPressRelease = { self.camView.stopRecording() }
       }
-      with( topBar ){
+      with( topBar) {
          $0.flipButton.onToggle = { toggle in self.camView.setCamera(cameraType: toggle ? .front : .back) }
-         $0.flashButton.onToggle = { toggle in self.camView.setFlashMode(flashMode:  toggle ? .on : .off) }
+         $0.flashButton.onToggle = { toggle in self.camView.setFlashMode(flashMode: toggle ? .on : .off) }
          $0.exitButton.onClick = { self.onCameraExit() }
       }
    }
@@ -27,8 +27,8 @@ extension HybridCamView{
    /**
     * Creates camView
     */
-   @objc open func createCamView() -> CamView{
-      let rect:CGRect = .init(origin: .zero, size: UIScreen.main.bounds.size)
+   @objc open func createCamView() -> CamView {
+      let rect: CGRect = .init(origin: .zero, size: UIScreen.main.bounds.size)
       return with(.init(frame: rect)) {
          self.addSubview($0)
       }
@@ -42,7 +42,7 @@ extension HybridCamView{
    /**
     * Creates Record button
     */
-   @objc open func createRecordButton() -> RecordButtonViewKind{
+   @objc open func createRecordButton() -> RecordButtonViewKind {
       fatalError("must be overriden in subclass")
    }
 }
@@ -51,5 +51,5 @@ extension HybridCamView{
  */
 extension HybridCamView {
    public typealias OnCameraExit = () -> Void
-   public static var defaultOnCameraExit:OnCameraExit { return {Swift.print("default onCameraExit")} }
+   public static var defaultOnCameraExit: OnCameraExit { return { Swift.print("default onCameraExit") } }
 }

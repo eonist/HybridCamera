@@ -4,7 +4,7 @@ import AVFoundation
 /**
  * Accessor
  */
-extension CamView{
+extension CamView {
     /**
      * Accessor to get captureSession
      */

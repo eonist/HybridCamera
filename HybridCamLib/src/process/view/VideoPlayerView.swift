@@ -15,19 +15,19 @@ open class VideoPlayerView:UIView{
     * Boilerplate
     */
    @available(*, unavailable)
-   required public init?(coder aDecoder: NSCoder) {
+   public required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
    }
 }
 /**
  * Extension
  */
-extension VideoPlayerView{
+extension VideoPlayerView {
    /**
     * Creates the video player layer
     */
    @objc open func createAvPlayerLayer() -> AVPlayerLayer {
-      return with(AVPlayerLayer(player: avPlayer)){
+      return with(AVPlayerLayer(player: avPlayer)) {
          $0.frame = frame
          $0.videoGravity = .resizeAspectFill
          self.layer.insertSublayer($0, at: 0)
@@ -36,8 +36,8 @@ extension VideoPlayerView{
    /**
     * Play video
     */
-   @objc open func play(videoURL:URL){
-      with(AVPlayerItem(url: videoURL as URL)){
+   @objc open func play(videoURL: URL) {
+      with(AVPlayerItem(url: videoURL as URL)) {
          avPlayer.replaceCurrentItem(with: $0)
          avPlayer.play()
       }
@@ -45,14 +45,14 @@ extension VideoPlayerView{
    /**
     * Callback when video finish playing
     */
-   @objc open func onVideoFinished(){
+   @objc open func onVideoFinished() {
       avPlayer.seek(to: CMTime.zero)/*Go to the absolute begining*/
       avPlayer.play()
    }
    /**
     * Setting object to nil makes the observer work on the
     */
-   @objc open func deInitiate(){
+   @objc open func deInitiate() {
       NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
    }
 }

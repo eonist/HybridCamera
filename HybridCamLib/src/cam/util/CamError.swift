@@ -2,7 +2,7 @@ import Foundation
 
 /**
  * Capture
- * TODO: ⚠️️ Possibly scope to CamView
+ * Fixme: ⚠️️ Possibly scope to CamView
  */
 public enum CaptureError: Swift.Error {
     case noTempFolderAccess
@@ -12,7 +12,7 @@ public enum CaptureError: Swift.Error {
     case alreadyRecording
     case alreadyStoppedRecording
 }
-extension CaptureError:CustomStringConvertible{
+extension CaptureError:CustomStringConvertible {
    public var description: String {
       switch self {
       case .noTempFolderAccess: return "couldn't access temp folder on device"
@@ -35,7 +35,7 @@ public enum SetupError: Swift.Error {
     case unableToCreateVideoConnection
     case unableToActivateBackgroundAudio
 }
-extension SetupError:CustomStringConvertible {
+extension SetupError: CustomStringConvertible {
    public var description: String {
       switch self {
       case .unableToAddPhotoOutput: return "unable to add output: capturePhotoOutput"
