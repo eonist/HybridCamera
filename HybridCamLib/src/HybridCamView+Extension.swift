@@ -3,12 +3,12 @@ import With
 /**
  * Events
  */
-extension HybridCamView{
+extension HybridCamView {
    /**
     * Attach CallBacks
     */
    @objc public func addEventHandlers() {
-      with( recordButton ){
+      with(recordButton) {
          $0.onShortPressRelease = { self.camView.takePhoto() }
          $0.onLongPressBegan = { self.camView.startRecording() }
          $0.onLongPressRelease = { self.camView.stopRecording() }
@@ -23,7 +23,7 @@ extension HybridCamView{
 /**
  * Create
  */
-extension HybridCamView{
+extension HybridCamView {
    /**
     * Creates camView
     */

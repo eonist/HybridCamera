@@ -1,6 +1,6 @@
 import UIKit
 
-open class FlashButton:ToggleButton{
+open class FlashButton: ToggleButton {
    override public init(frame: CGRect) {
       super.init(frame: FlashButton.rect)
       backgroundColor = .clear
@@ -10,7 +10,7 @@ open class FlashButton:ToggleButton{
 /**
  * Constants (Size and position)
  */
-extension FlashButton{
+extension FlashButton {
    public static var rect: CGRect {
       let btnWidth: CGFloat = 30
       let topRight: CGPoint = {

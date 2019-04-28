@@ -1,11 +1,11 @@
 import UIKit
 import HybridCamLib
 
-open class TopBar:UIView, TopBarKind{
+open class TopBar: UIView, TopBarKind {
    open lazy var exitButton: ClickButtonKind = createExitButton()
    open lazy var flipButton: ToggleButtonKind = createFlipButton()
    open lazy var flashButton: ToggleButtonKind = createFlashButton()
-   override public init(frame:CGRect) {
+   override public init(frame: CGRect) {
       super.init(frame: frame)
       _ = exitButton
       _ = flipButton

@@ -1,6 +1,6 @@
 import UIKit
 
-open class FlipButton:ToggleButton{
+open class FlipButton: ToggleButton {
    override public init(frame: CGRect) {
       super.init(frame: FlipButton.rect)
       backgroundColor = .clear
@@ -17,7 +17,7 @@ open class FlipButton:ToggleButton{
 /**
  * Constants
  */
-extension FlipButton{
+extension FlipButton {
    /**
     * Size and position
     */
@@ -26,8 +26,8 @@ extension FlipButton{
       let topCenter: CGPoint = {
          let rect = UIScreen.main.bounds
          let margin: CGFloat = 40
-         return .init(x: (rect.width/2) - (btnWidth/2), y: 0 + margin)
+         return .init(x: (rect.width / 2) - (btnWidth / 2), y: 0 + margin)
       }()
-      return .init(x:topCenter.x, y:topCenter.y, width:btnWidth, height:btnWidth)
+      return .init(x: topCenter.x, y: topCenter.y, width: btnWidth, height: btnWidth)
    }
 }

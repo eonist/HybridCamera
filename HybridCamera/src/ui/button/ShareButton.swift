@@ -1,8 +1,8 @@
 import UIKit
 import HybridCamLib
 import With
-open class ShareButton:UIButton,ClickButtonKind{
-   open var onClick:OnClick = ShareButton.defaultOnClick
+open class ShareButton: UIButton, ClickButtonKind {
+   open var onClick: OnClick = ShareButton.defaultOnClick
    override public init(frame: CGRect) {
       super.init(frame: frame)
       configButton()
@@ -31,7 +31,7 @@ extension ShareButton {
 /**
  * Style
  */
-extension ShareButton{
+extension ShareButton {
    /**
     * Config the button
     */
@@ -41,7 +41,7 @@ extension ShareButton{
          $0.setTitleColor(.black, for: .normal)
          $0.titleLabel?.font =  .systemFont(ofSize: 14)
          $0.setTitle("Share", for: .normal)
-         $0.layer.cornerRadius = frame.height/2
+         $0.layer.cornerRadius = frame.height / 2
       }
    }
 }

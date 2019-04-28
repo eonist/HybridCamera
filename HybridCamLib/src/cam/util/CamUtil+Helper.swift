@@ -4,11 +4,11 @@ import With
 /**
  * Private utility methods
  */
-extension CamUtil{
+extension CamUtil {
    /**
     * Asserts video access
     */
-   internal static func assertVideoAccess(vc:UIViewController, onComplete:@escaping AssertComplete){
+   internal static func assertVideoAccess(vc: UIViewController, onComplete:@escaping AssertComplete){
       AVCaptureDevice.requestAccess(for: AVMediaType.video) { (granted: Bool) in
          if granted {
             onComplete(true)

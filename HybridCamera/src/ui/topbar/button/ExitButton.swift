@@ -1,6 +1,6 @@
 import UIKit
 
-open class ExitButton:ClickButton {
+open class ExitButton: ClickButton {
    override public init(frame: CGRect) {
       let rect = ExitButton.rect
       super.init(frame: rect)
@@ -18,7 +18,7 @@ open class ExitButton:ClickButton {
 /**
  * Constants
  */
-extension ExitButton{
+extension ExitButton {
    /**
     * Metrics of Exit button (Not using AutoLayout)
     */

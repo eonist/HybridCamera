@@ -12,7 +12,7 @@ public enum CaptureError: Swift.Error {
     case alreadyRecording
     case alreadyStoppedRecording
 }
-extension CaptureError:CustomStringConvertible {
+extension CaptureError: CustomStringConvertible {
    public var description: String {
       switch self {
       case .noTempFolderAccess: return "couldn't access temp folder on device"

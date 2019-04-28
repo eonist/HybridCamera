@@ -13,7 +13,7 @@ extension CamUtil {
     */
    public static func tempURL(suffix: String =  ".mp4") -> URL? {
       let directory: String = NSTemporaryDirectory()
-      guard directory != "" else { return nil }
+      guard !directory.isEmpty else { return nil }
       let url: URL = .init(fileURLWithPath: directory)
       let videoURL: URL = url.appendingPathComponent(NSUUID().uuidString + suffix)
       return videoURL

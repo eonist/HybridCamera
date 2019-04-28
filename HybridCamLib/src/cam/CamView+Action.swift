@@ -16,7 +16,7 @@ extension CamView{
     * - Fixme: ⚠️️ Rename to toggleFlashMode?
     * - Options: .on, .off, .auto
     */
-   @objc open func setFlashMode(flashMode: AVCaptureDevice.FlashMode){//AVCaptureDevice.FlashMode
+   @objc open func setFlashMode(flashMode: AVCaptureDevice.FlashMode) {//AVCaptureDevice.FlashMode
       self.flashMode = flashMode
    }
    /**

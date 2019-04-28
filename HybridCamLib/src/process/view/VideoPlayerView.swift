@@ -2,8 +2,8 @@ import UIKit
 import AVFoundation
 import With
 
-open class VideoPlayerView:UIView{
-   open var avPlayer = AVPlayer()
+open class VideoPlayerView: UIView {
+   open var avPlayer:AVPlayer = .init()
    public lazy var avPlayerLayer: AVPlayerLayer = createAvPlayerLayer()
    /*Init*/
    override public init(frame: CGRect) {

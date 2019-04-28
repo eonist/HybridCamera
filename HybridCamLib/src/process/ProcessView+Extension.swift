@@ -8,7 +8,7 @@ extension ProcessView{
    /**
     * Creates video view
     */
-   @objc open func createVideoView() -> VideoPlayerView{
+   @objc open func createVideoView() -> VideoPlayerView {
       return with(.init(frame: UIScreen.main.bounds)) {
          addSubview($0)
       }
@@ -16,7 +16,7 @@ extension ProcessView{
    /**
     * Creates Image view
     */
-   @objc open func createImageView() -> ImageView{
+   @objc open func createImageView() -> ImageView {
       return with(.init(frame: UIScreen.main.bounds)) {
          addSubview($0)
       }
@@ -24,13 +24,13 @@ extension ProcessView{
    /**
     * Creates exit button
     */
-   @objc open func createExitButton() -> ClickButtonKind{
+   @objc open func createExitButton() -> ClickButtonKind {
       fatalError("must be overriden in subclass")
    }
    /**
     * Creates share button
     */
-   @objc open func createShareButton() -> ClickButtonKind{
+   @objc open func createShareButton() -> ClickButtonKind {
       fatalError("must be overriden in subclass")
    }
 }

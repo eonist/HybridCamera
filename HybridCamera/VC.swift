@@ -5,13 +5,13 @@ import With
 /**
  * Main view controller
  */
-class VC:UIViewController {
+class VC: UIViewController {
    /**
     * We add the Camera view in the viewDidAppear so that its tricggered again after user changes the app prefs to allow video use
     */
    override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
-      CamUtil.assertVideoAndMicAccess(vc: self){ (success: Bool) in /*Goes through camera access wizard*/
+      CamUtil.assertVideoAndMicAccess(vc: self) { (success: Bool) in /*Goes through camera access wizard*/
          guard success else { return }
          DispatchQueue.main.async {
             self.initiate()/*If accesses was granted proced to initiate the camera*/
@@ -40,16 +40,16 @@ extension VC {
    /**
     * When camera onCapture is called
     */
-   private func onCapture(_ image: UIImage?, _ url: URL?,_ error: Error?) {
+   private func onCapture(_ image: UIImage?, _ url: URL?, _ error: Error?) {
       let processMediaView: CustomProcessView = {
          let processMediaView: CustomProcessView = .init(frame: UIScreen.main.bounds)
          processMediaView.onExit = { processMediaView.deInitiate() }
-         processMediaView.onShare = { (url: URL?) in if let url = url { CustomProcessView.promptSaveFileDialog(vc: self, url: url, onComplete: { processMediaView.deInitiate() }) } }
+         processMediaView.onShare = { (url: URL?) in if let url = url { CustomProcessView.promptSaveFileDialog(vc: self, url: url) { processMediaView.deInitiate() } } }
          self.view.addSubview(processMediaView)
          return processMediaView
       }()
       if let error = error {
-         CustomProcessView.promptErrorDialog(vc: self, error: error, onComplete: { processMediaView.deInitiate() }); return
+         CustomProcessView.promptErrorDialog(vc: self, error: error ) { processMediaView.deInitiate() }; return
       } else {
          processMediaView.present(image: image, url: url)
       }

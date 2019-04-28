@@ -3,7 +3,7 @@ import AVFoundation
 import HybridCamLib
 import With
 
-open class CustomProcessView: ProcessView {}//TODO: ⚠️️ Rename to CustomProcessMediaView
+open class CustomProcessView: ProcessView {} //Fixme: ⚠️️ Rename to CustomProcessMediaView
 /**
  * Extension
  */
@@ -23,7 +23,7 @@ extension CustomProcessView {
       let size: CGSize = .init(width: 180, height: 40)
       let margin: CGFloat = 40
       let point: CGPoint = .init(x: UIScreen.main.bounds.width / 2 - size.width / 2, y: UIScreen.main.bounds.height - margin - size.height)
-      return with(ShareButton.init(frame: .init(origin: point, size: size))) {
+      return with(ShareButton(frame: .init(origin: point, size: size))) {
          self.addSubview($0)
       }
    }

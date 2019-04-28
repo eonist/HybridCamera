@@ -4,14 +4,14 @@ import With
 /**
  * ViewFinder actions
  */
-extension CamView{
+extension CamView {
    /**
     * Stops the camera preview
     */
-   @objc open func stopPreview(){
+   @objc open func stopPreview() {
       if captureSession.isRunning {
          captureSession.stopRunning()
-      }else {
+      } else {
          Swift.print("capture session was already running 🚫")
       }
    }
@@ -19,10 +19,10 @@ extension CamView{
     * Starts the camera preview
     * - Note: You might want to call this on a background thread if You have UI that animates after/before it's called
     */
-   @objc open func startPreview(){
+   @objc open func startPreview() {
       if !captureSession.isRunning {
          captureSession.startRunning()
-      }else {
+      } else {
          Swift.print("capture session wasn't running 🚫")
       }
    }
@@ -30,7 +30,7 @@ extension CamView{
 /**
  * VideoCamera actions
  */
-extension CamView{
+extension CamView {
    /**
     * Starts recording video
     */

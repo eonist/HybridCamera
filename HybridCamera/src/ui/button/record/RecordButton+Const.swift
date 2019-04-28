@@ -7,7 +7,7 @@ extension RecordButton {
    /**
     * Adds shadow to PARAM view
     */
-   public static func addShadowToView(_ view: UIView){
+   public static func addShadowToView(_ view: UIView) {
       with(view.layer) {
          $0.shadowColor = UIColor.black.cgColor
          $0.shadowOffset = .zero

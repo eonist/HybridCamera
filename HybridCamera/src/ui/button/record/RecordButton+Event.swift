@@ -17,7 +17,7 @@ extension RecordButton: UIGestureRecognizerDelegate {
     * Adds gesture listeners to button
     */
    @objc open func addGestureRecognizer() {
-      let tap:UITapGestureRecognizer = .init(target: self, action: #selector(handleTap))
+      let tap: UITapGestureRecognizer = .init(target: self, action: #selector(handleTap))
       self.addGestureRecognizer(tap)
       with(UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))) {//holdGesture.delegate = self
          $0.cancelsTouchesInView = false
@@ -30,8 +30,8 @@ extension RecordButton: UIGestureRecognizerDelegate {
    /**
     * Long press
     */
-   @objc open func handleLongPress(sender : UITapGestureRecognizer) {
-      if [.ended, .cancelled, .failed].contains(sender.state)  {/*long tap release*/
+   @objc open func handleLongPress(sender: UITapGestureRecognizer) {
+      if [.ended, .cancelled, .failed].contains(sender.state) {/*long tap release*/
          handleLongPressRelease()
       } else if case .began = sender.state {/*long tap just began*/
          handleLongPressBegan()

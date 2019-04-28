@@ -3,7 +3,7 @@ import With
 /**
  * Button that is rounded
  */
-open class RoundButton: UIButton{
+open class RoundButton: UIButton {
    override public init(frame: CGRect) {
       super.init(frame: frame)
       with(self) {

@@ -1,16 +1,16 @@
 import UIKit
 import With
 /*
- * - TODO: ⚠️️ move Circle out of RecordButton scope
+ * - Fixme: ⚠️️ move Circle out of RecordButton scope
  */
-extension RecordButton{
+extension RecordButton {
    /**
     * Circle class (Creates RecordButton)
-    * - TODO: ⚠️️ Do this on didLayout instead, as you dont have frame when using AutoLayout
+    * - Fixme: ⚠️️ Do this on didLayout instead, as you dont have frame when using AutoLayout
     */
-   open class Circle: UIView{
-      open lazy var inner:UIView = self.createInnerCircle()
-      open lazy var outer:UIView = self.createOuterCircle()
+   open class Circle: UIView {
+      open lazy var inner: UIView = self.createInnerCircle()
+      open lazy var outer: UIView = self.createOuterCircle()
       override init(frame: CGRect) {
          super.init(frame: frame)
          _ = inner
@@ -20,7 +20,7 @@ extension RecordButton{
        * Boilerplate
        */
       @available(*, unavailable)
-      required public init?(coder aDecoder: NSCoder) {
+      public required init?(coder aDecoder: NSCoder) {
          fatalError("init(coder:) has not been implemented")
       }
    }
@@ -32,8 +32,8 @@ extension RecordButton.Circle {
    /**
     * Creates inner circle
     */
-   @objc open func createInnerCircle() -> UIView{
-      let (frame,length): (CGRect,CGFloat) = {
+   @objc open func createInnerCircle() -> UIView {
+      let (frame, length): (CGRect, CGFloat) = {
          let padding = self.frame.width / 12
          let length = self.frame.width - (padding * 2)
          let rect: CGRect = .init(origin: .init(x: padding, y: padding), size: .init(width: length, height: length))
