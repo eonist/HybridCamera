@@ -28,7 +28,7 @@ extension CamView: AVCapturePhotoCaptureDelegate {
     */
    @objc open func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
       guard let imageData = photo.fileDataRepresentation() else { onPhotoCaptureComplete(nil, nil, CaptureError.malformedImageData); return }// Convert photo same buffer to a jpeg image data by using AVCapturePhotoOutput
-      let capturedImage: UIImage? = UIImage.init(data: imageData, scale: 1.0)/*Initialise an UIImage with our image data*/
+      let capturedImage: UIImage? = UIImage(data: imageData, scale: 1.0)/*Initialise an UIImage with our image data*/
       if let image = capturedImage {/*Save our captured image to photos album*/
          let fileURL: URL? = CamUtil.tempURL(suffix: ".jpeg")
          guard let localFilePath: String = fileURL?.path, FileManager().fileExists(atPath: localFilePath) == false else { Swift.print("file already exists 🎉"); return }/*This will never happen because it uses a very random file name*/

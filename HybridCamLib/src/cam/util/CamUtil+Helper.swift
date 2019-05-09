@@ -8,7 +8,7 @@ extension CamUtil {
    /**
     * Asserts video access
     */
-   internal static func assertVideoAccess(vc: UIViewController, onComplete:@escaping AssertComplete){
+   internal static func assertVideoAccess(vc: UIViewController, onComplete:@escaping AssertComplete) {
       AVCaptureDevice.requestAccess(for: AVMediaType.video) { (granted: Bool) in
          if granted {
             onComplete(true)
@@ -32,7 +32,7 @@ extension CamUtil {
       case .authorized:/* Got access */ onComplete(true)
       case .denied, .restricted: onComplete(false)/*Microphone disabled in settings, No access granted*/
       case .notDetermined:/*Didn't request access yet*/
-         AVAudioSession.sharedInstance().requestRecordPermission{ (granted: Bool) in
+         AVAudioSession.sharedInstance().requestRecordPermission { (granted: Bool) in
             onComplete(granted)
          }
       @unknown default: fatalError("Unknown case") }

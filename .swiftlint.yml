@@ -1,7 +1,7 @@
 whitelist_rules:
   - anyobject_protocol
   - array_init
-  - attributes
+  #- attributes
   - block_based_kvo
   - class_delegate_protocol
   - closing_brace
@@ -12,7 +12,7 @@ whitelist_rules:
   - colon
   - comma
   - compiler_protocol_init
-  - conditional_returns_on_newline
+#  - conditional_returns_on_newline
   - contains_over_first_not_nil
   - control_statement
   - deployment_target
@@ -20,7 +20,7 @@ whitelist_rules:
   - discouraged_direct_init
   - discouraged_object_literal
   - discouraged_optional_boolean
-  - discouraged_optional_collection
+#  - discouraged_optional_collection
   - duplicate_imports
   - dynamic_inline
   - empty_count
@@ -72,7 +72,7 @@ whitelist_rules:
   - overridden_super_call
   - pattern_matching_keywords
   - private_action
-  - private_outlet
+#  - private_outlet
   - private_unit_test
   - prohibited_super_call
   - protocol_property_accessors_order
@@ -88,12 +88,12 @@ whitelist_rules:
   - return_arrow_whitespace
   - shorthand_operator
   - sorted_first_last
-  - statement_position
+#  - statement_position
   - static_operator
-  - strong_iboutlet
+#  - strong_iboutlet
   - superfluous_disable_command
   - switch_case_alignment
-  - switch_case_on_newline
+#  - switch_case_on_newline
   - syntactic_sugar
   - todo
   - toggle_bool
@@ -103,10 +103,10 @@ whitelist_rules:
   - trailing_semicolon
   - trailing_whitespace
   - type_name
-  - unavailable_function
+#  - unavailable_function
   - unneeded_break_in_switch
   - unneeded_parentheses_in_closure_argument
-  - untyped_error_in_catch
+  #- untyped_error_in_catch
   - unused_closure_parameter
   - unused_control_flow_label
   - unused_enumerated
@@ -139,8 +139,8 @@ identifier_name:
     warning: 100
     error: 100
   min_length:
-    warning: 2
-    error: 2
+    warning: 1
+    error: 1
   validates_start_with_lowercase: false
   allowed_symbols:
     - '_'

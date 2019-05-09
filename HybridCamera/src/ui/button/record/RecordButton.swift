@@ -1,7 +1,7 @@
 import UIKit
 import HybridCamLib
 
-open class RecordButton: UIView, RecordButtonKind{
+open class RecordButton: UIView, RecordButtonKind {
    /**
     * Interaction call-back variables
     */

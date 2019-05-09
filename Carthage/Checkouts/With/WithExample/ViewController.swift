@@ -16,7 +16,7 @@ class ViewController: UIViewController {
       }
       Swift.print(color.cgColor.alpha)//0.2
       /*EXAMPLE 3:*/
-      var size:CGSize = CGSize(width: 50, height: 40)
+      var size: CGSize = .init(width: 50, height: 40)
       size = with(size) {
          $0.width = 100
          $0.height = 50

@@ -4,7 +4,7 @@ import With
 /**
  * Create
  */
-extension ProcessView{
+extension ProcessView {
    /**
     * Creates video view
     */

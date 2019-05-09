@@ -11,7 +11,7 @@ extension CustomProcessView {
    /**
     * Creates exit button
     */
-   @objc open override func createExitButton() -> ClickButtonKind {
+   @objc override open func createExitButton() -> ClickButtonKind {
       let btn = ExitButton()
       self.addSubview(btn)
       return btn
@@ -19,7 +19,7 @@ extension CustomProcessView {
    /**
     * Creates share button
     */
-   @objc open override func createShareButton() -> ClickButtonKind {
+   @objc override open func createShareButton() -> ClickButtonKind {
       let size: CGSize = .init(width: 180, height: 40)
       let margin: CGFloat = 40
       let point: CGPoint = .init(x: UIScreen.main.bounds.width / 2 - size.width / 2, y: UIScreen.main.bounds.height - margin - size.height)

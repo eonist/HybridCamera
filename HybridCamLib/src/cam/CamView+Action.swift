@@ -3,13 +3,13 @@ import AVFoundation
 /**
  * Extra
  */
-extension CamView{
+extension CamView {
    /**
     * Switches between front and back cam
     * - Fixme: ⚠️️ Possibly rename to setCameraPosition, or toggleCamera?
     */
-   @objc open func setCamera(cameraType: AVCaptureDevice.Position){
-      try? setupCaptureDeviceInput(cameraType:cameraType)
+   @objc open func setCamera(cameraType: AVCaptureDevice.Position) {
+      try? setupCaptureDeviceInput(cameraType: cameraType)
       try? setupMicrophone()
    }
    /**
@@ -23,7 +23,7 @@ extension CamView{
     * - Fixme: ⚠️️ Could be moved to static method
     * - Reference: https://stackoverflow.com/a/50450425/5389500
     */
-   @objc open func focusWithMode(focusMode: AVCaptureDevice.FocusMode, exposureMode: AVCaptureDevice.ExposureMode, point: CGPoint, monitorSubjectAreaChange: Bool){
+   @objc open func focusWithMode(focusMode: AVCaptureDevice.FocusMode, exposureMode: AVCaptureDevice.ExposureMode, point: CGPoint, monitorSubjectAreaChange: Bool) {
       guard let device: AVCaptureDevice = self.deviceInput?.device else { Swift.print("device unavailable 🚫"); return }
       do {
          try device.lockForConfiguration()

@@ -6,7 +6,7 @@ extension CamView: UIGestureRecognizerDelegate {
     * Adds gesture event
     */
    @objc open func addGestureRecognizer() {
-      with(UITapGestureRecognizer(target: self, action: #selector(onPreviewViewTap))){
+      with(UITapGestureRecognizer(target: self, action: #selector(onPreviewViewTap))) {
          self.previewView.addGestureRecognizer( $0 )
       }
       with(UIPinchGestureRecognizer(target: self, action: #selector(onPreviewViewPinch))) {
