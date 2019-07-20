@@ -37,7 +37,7 @@
 - In order to keep things simple, The UI is CGRect based. Use your own Autolayout distro like SnapKit etc when adding additional UI
 
 ### Install:
-- Carthage: `github "eonist/HybridCam" "master"`
+- Carthage: `github "eonist/HybridCamera" "master"`
 - Manual: Open `HybridCamera.xcodeproj`
 - CocoaPod (Coming soon)  
 
