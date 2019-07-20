@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6533531521B671E80056BB34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6533531421B671E80056BB34 /* AppDelegate.swift */; };
 		6533531721B671E80056BB34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6533531621B671E80056BB34 /* ViewController.swift */; };
-		6533531A21B671E90056BB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6533531821B671E90056BB34 /* Main.storyboard */; };
 		6533531C21B671E90056BB34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6533531B21B671E90056BB34 /* Assets.xcassets */; };
 		6533531F21B671E90056BB34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6533531D21B671E90056BB34 /* LaunchScreen.storyboard */; };
 		6533532F21B6723B0056BB34 /* With.h in Headers */ = {isa = PBXBuildFile; fileRef = 6533532D21B6723B0056BB34 /* With.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,7 +47,6 @@
 		6533531121B671E80056BB34 /* WithExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WithExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6533531421B671E80056BB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6533531621B671E80056BB34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6533531921B671E90056BB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6533531B21B671E90056BB34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6533531E21B671E90056BB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6533532021B671E90056BB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 			children = (
 				6533531421B671E80056BB34 /* AppDelegate.swift */,
 				6533531621B671E80056BB34 /* ViewController.swift */,
-				6533531821B671E90056BB34 /* Main.storyboard */,
 				6533531B21B671E90056BB34 /* Assets.xcassets */,
 				6533531D21B671E90056BB34 /* LaunchScreen.storyboard */,
 				6533532021B671E90056BB34 /* Info.plist */,
@@ -177,6 +174,7 @@
 				6533530E21B671E80056BB34 /* Frameworks */,
 				6533530F21B671E80056BB34 /* Resources */,
 				6533533721B6723B0056BB34 /* Embed Frameworks */,
+				F1CE26682281DC1200441836 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -196,6 +194,7 @@
 				6533532721B6723B0056BB34 /* Sources */,
 				6533532821B6723B0056BB34 /* Frameworks */,
 				6533532921B6723B0056BB34 /* Resources */,
+				F1CE26692281DC1A00441836 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -214,6 +213,7 @@
 				F16213E221FB6238005297DE /* Sources */,
 				F16213E321FB6238005297DE /* Frameworks */,
 				F16213E421FB6238005297DE /* Resources */,
+				F1CE266A2281DC2300441836 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -273,7 +273,6 @@
 			files = (
 				6533531F21B671E90056BB34 /* LaunchScreen.storyboard in Resources */,
 				6533531C21B671E90056BB34 /* Assets.xcassets in Resources */,
-				6533531A21B671E90056BB34 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +291,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F1CE26682281DC1200441836 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		F1CE26692281DC1A00441836 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		F1CE266A2281DC2300441836 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6533530D21B671E80056BB34 /* Sources */ = {
@@ -330,14 +383,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6533531821B671E90056BB34 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6533531921B671E90056BB34 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6533531D21B671E90056BB34 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -400,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -455,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -472,6 +517,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WithExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,6 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WithExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
