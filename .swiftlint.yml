@@ -18,7 +18,7 @@ whitelist_rules:
   - deployment_target
   - discarded_notification_center_observer
   - discouraged_direct_init
-  - discouraged_object_literal
+ # - discouraged_object_literal
   - discouraged_optional_boolean
 #  - discouraged_optional_collection
   - duplicate_imports
@@ -102,7 +102,7 @@ whitelist_rules:
   - trailing_newline
   - trailing_semicolon
   - trailing_whitespace
-  - type_name
+#  - type_name
 #  - unavailable_function
   - unneeded_break_in_switch
   - unneeded_parentheses_in_closure_argument
