@@ -10,7 +10,7 @@ extension CamView {
     */
    @objc open func setupDevice() {
       do {
-         try setupCaptureDeviceInput(cameraType: .back)
+         try setupCaptureDeviceInput(cameraType: .front) //used to be .back
          try setupVideoCamera()
          try setupMicrophone()
          try setupPhotoCamera()
