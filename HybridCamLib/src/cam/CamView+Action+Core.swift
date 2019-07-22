@@ -50,7 +50,7 @@ extension CamView {
             onVideoCaptureComplete(nil, error)
          }
       }
-      connection.isVideoMirrored = (connection.isVideoMirroringSupported && device.position == .front)
+      connection.isVideoMirrored = (connection.isVideoMirroringSupported && device.position == .front && mirrorFrontCamera)
       guard let outputURL: URL = CamUtil.tempURL() else { onVideoCaptureComplete(nil, CaptureError.noTempFolderAccess); return }
       videoOutput.startRecording(to: outputURL, recordingDelegate: self)
    }
