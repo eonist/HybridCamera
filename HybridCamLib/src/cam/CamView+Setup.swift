@@ -55,11 +55,6 @@ extension CamView {
          if connection.isVideoStabilizationSupported {/*Causes a glitch on enabled*/
             connection.preferredVideoStabilizationMode = .auto
          }
-        connection.isVideoMirroringSupported {
-            if deviceInput?.device.position == .front {
-                connection.isVideoMirrored = true
-            }
-        }
       } else {
           throw SetupError.unableToAddVideoOutput
       }
