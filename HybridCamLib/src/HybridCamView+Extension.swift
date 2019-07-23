@@ -13,7 +13,7 @@ extension HybridCamView {
          $0.onLongPressBegan = { self.camView.startRecording() }
          $0.onLongPressRelease = { self.camView.stopRecording() }
       }
-      with( topBar) {
+      with(topBar) {
          $0.flipButton.onToggle = { toggle in self.camView.setCamera(cameraType: toggle ? .front : .back) }
          $0.flashButton.onToggle = { toggle in self.camView.setFlashMode(flashMode: toggle ? .on : .off) }
          $0.exitButton.onClick = { self.onCameraExit() }

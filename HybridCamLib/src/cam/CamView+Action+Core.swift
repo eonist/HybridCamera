@@ -35,12 +35,6 @@ extension CamView {
     * Starts recording video
     */
    @objc open func startRecording() {
-      guard videoOutput.isRecording == false else { onVideoCaptureComplete(nil, CaptureError.alreadyRecording); return }
-      guard let connection: AVCaptureConnection = videoOutput.connection(with: .video) else { onVideoCaptureComplete(nil, CaptureError.noVideoConnection); return }
-      if connection.isVideoOrientationSupported {
-         connection.videoOrientation = CamView.currentVideoOrientation
-         
-      }
       guard let device: AVCaptureDevice = deviceInput?.device else { onVideoCaptureComplete(nil, CaptureError.noInputDevice); return }
       if device.isSmoothAutoFocusSupported {
          do {
@@ -51,7 +45,13 @@ extension CamView {
             onVideoCaptureComplete(nil, error)
          }
       }
+      guard videoOutput.isRecording == false else { onVideoCaptureComplete(nil, CaptureError.alreadyRecording); return }
+      guard let connection: AVCaptureConnection = videoOutput.connection(with: .video) else { onVideoCaptureComplete(nil, CaptureError.noVideoConnection); return }
+      if connection.isVideoOrientationSupported {
+         connection.videoOrientation = CamView.currentVideoOrientation
+      }
       connection.isVideoMirrored = connection.isVideoMirroringSupported && device.position == .front // mirror front camera, Fixme: ⚠️️ Possibly move the connection bellow the device creation. to keep connection related code together, this requires testing
+      //related code together ✅
       guard let outputURL: URL = CamUtil.tempURL() else { onVideoCaptureComplete(nil, CaptureError.noTempFolderAccess); return }
       videoOutput.startRecording(to: outputURL, recordingDelegate: self)
    }
