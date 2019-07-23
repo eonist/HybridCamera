@@ -7,17 +7,15 @@ extension CamView: UIGestureRecognizerDelegate {
     */
    @objc open func addGestureRecognizer() {
       //set up tap gesture recognizers
-      let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onPreviewViewTap))
-      let doubleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onPreviewViewDoubleTap))
-      doubleTapGestureRecognizer.numberOfTapsRequired = 2
-      singleTapGestureRecognizer.require(toFail: doubleTapGestureRecognizer)
-    
-      with(singleTapGestureRecognizer) {
-         self.previewView.addGestureRecognizer( $0 )
+      let singleTapGestureRecognizer = {
+         let gesture = UITapGestureRecognizer(target: self, action: #selector(onPreviewViewTap))
+         self.previewView.addGestureRecognizer(gesture)
       }
-      with(doubleTapGestureRecognizer) {
-         self.previewView.addGestureRecognizer( $0 )
-      }
+      with(UITapGestureRecognizer(target: self, action: #selector(onPreviewViewDoubleTap))) { 
+         $0.numberOfTapsRequired = 2
+         $0.require(toFail: $0)
+         self.previewView.addGestureRecognizer($0)
+      }()
       with(UIPinchGestureRecognizer(target: self, action: #selector(onPreviewViewPinch))) {
          $0.delegate = self
          self.previewView.addGestureRecognizer( $0 )
