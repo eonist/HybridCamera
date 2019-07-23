@@ -16,10 +16,7 @@ open class CamView: UIView {
    public let photoOutput: AVCapturePhotoOutput = .init()
    /*State*/
    public var flashMode: AVCaptureDevice.FlashMode = .off
-   
-   //public var currentCamera blurtime: needed, right?
-   public var startingX: CGFloat = 0
-   public var startingZoomFactor: CGFloat = 1
+   public var startingZoomFactorForLongPress: CGFloat = 1
    /*Callbacks*/
    public var onVideoCaptureComplete: VideoCaptureComplete = defaultVideoCaptureComplete
    public var onPhotoCaptureComplete: PhotoCaptureComplete = defaultPhotoCaptureComplete
