@@ -2,12 +2,15 @@ import UIKit
 import HybridCamLib
 
 open class RecordButton: UIView, RecordButtonKind {
+   //starting point for long-press to zoom
+   open var startingPoint: CGPoint = .zero
    /**
     * Interaction call-back variables
     */
    open var onShortPressRelease: ShortPressReleased = defaultShortPressReleased
    open var onLongPressBegan: LongPressBegan = defaultLongPressBegan
    open var onLongPressRelease: LongPressReleased = defaultLongPressReleased
+   open var onLongPressChanged: LongPressChanged = defaultLongPressChanged
    /*UI*/
    open lazy var circle: RecordButton.Circle = createCircle()
    override init(frame: CGRect) {
