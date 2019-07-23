@@ -22,9 +22,6 @@ extension CamView: UIGestureRecognizerDelegate {
          $0.delegate = self
          self.previewView.addGestureRecognizer( $0 )
       }
-      with(UILongPressGestureRecognizer(target: self, action: #selector(onPreviewViewLongPress))) {
-         self.previewView.addGestureRecognizer( $0 )
-      }
    }
    /**
     * Normal tap
@@ -52,33 +49,7 @@ extension CamView: UIGestureRecognizerDelegate {
         let pinchVelocityDividerFactor: CGFloat = 24 /*was 5.0, which was a bit too fast*/ /*blurtime: the higher the number, the slower... previous one still too fast */
          let desiredZoomFactor: CGFloat = device.videoZoomFactor + atan2(sender.velocity, pinchVelocityDividerFactor)
          setZoom(zoomFactor: desiredZoomFactor)
+         startingZoomFactorForLongPress = desiredZoomFactor
       }
    }
-   
-    /**
-     * blurtime: Longpress and moving finger up while pressing --> zoom in
-     * actuallly meant to be for recordButton
-     * Why are x and y swapped??? Tried it with y but it seems like their swapped... --> are the preview and camView rotated?
-     */
-    @objc open func onPreviewViewLongPress(_ sender: UILongPressGestureRecognizer) {
-        guard let device = self.deviceInput?.device else { Swift.print("device not available"); return }
-        switch sender.state {
-        case .began:
-            startingX = (self.previewView.previewLayer).captureDevicePointConverted(fromLayerPoint: sender.location(in: sender.view)).x - 0.05 //blurtime: some offset so "background noise" filtered
-            startingZoomFactor = device.videoZoomFactor
-            break
-        case .changed:
-            let newX = (self.previewView.previewLayer).captureDevicePointConverted(fromLayerPoint: sender.location(in: sender.view)).x
-            if newX <= startingX {
-                let newZoom = startingZoomFactor * startingX / newX
-                let desiredZoomFactor: CGFloat = newZoom
-                setZoom(zoomFactor: desiredZoomFactor)
-            }
-            break
-        case .failed, .ended, .cancelled:
-            fallthrough
-        default:
-            break
-        }
-    }
 }
