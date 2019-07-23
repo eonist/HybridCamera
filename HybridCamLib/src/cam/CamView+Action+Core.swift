@@ -50,8 +50,7 @@ extension CamView {
       if connection.isVideoOrientationSupported {
          connection.videoOrientation = CamView.currentVideoOrientation
       }
-      connection.isVideoMirrored = connection.isVideoMirroringSupported && device.position == .front // mirror front camera, Fixme: ⚠️️ Possibly move the connection bellow the device creation. to keep connection related code together, this requires testing
-      //related code together ✅
+      connection.isVideoMirrored = connection.isVideoMirroringSupported && device.position == .front
       guard let outputURL: URL = CamUtil.tempURL() else { onVideoCaptureComplete(nil, CaptureError.noTempFolderAccess); return }
       videoOutput.startRecording(to: outputURL, recordingDelegate: self)
    }
@@ -61,6 +60,13 @@ extension CamView {
    @objc open func stopRecording() {
       guard videoOutput.isRecording else { onVideoCaptureComplete(nil, CaptureError.alreadyStoppedRecording); return }
       videoOutput.stopRecording()
+   }
+   /**
+    * Zoom in when
+    */
+   @objc open func zoomViaRecord(addZoom: CGFloat) {
+      guard videoOutput.isRecording else { onVideoCaptureComplete(nil, CaptureError.alreadyStoppedRecording); return } //Fixme: New error needed?
+      setZoom(zoomFactor: startingZoomFactorForLongPress + addZoom) // Fixme: After going back to camView after seeing recorded video, reset zoom: setZoom(zoomFactor: 1) needs to be called and startingZoomFactorForLongPress = 1
    }
 }
 /**
