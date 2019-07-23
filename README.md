@@ -62,10 +62,10 @@ Privacy - Photo Library Additions Usage Description
 ### Example code:   
 ```swift
 self.view = HybridCamView()
-view.camView.onPhotoCaptureComplete = { (image:UIImage?,url:URL?,error:Error?) in
+view.camView.onPhotoCaptureComplete = { (image: UIImage?, url: URL?, error: Error?) in
    Swift.print("On photo capture complete \(url)")
 }
-hybridCamView.camView.onVideoCaptureComplete = { (url:URL?,error:Error?) in
+hybridCamView.camView.onVideoCaptureComplete = { (url: URL?, error: Error?) in
    Swift.print("On Video capture complete \(url)")
 }
 ```
