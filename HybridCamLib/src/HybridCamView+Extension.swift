@@ -12,6 +12,7 @@ extension HybridCamView {
          $0.onShortPressRelease = { self.camView.takePhoto() }
          $0.onLongPressBegan = { self.camView.startRecording() }
          $0.onLongPressRelease = { self.camView.stopRecording() }
+         $0.onLongPressChanged = { addZoom in self.camView.zoomViaRecord(addZoom: addZoom) }
       }
       with(topBar) {
          $0.flipButton.onToggle = { toggle in self.camView.setCamera(cameraType: toggle ? .front : .back) }
