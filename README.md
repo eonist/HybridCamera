@@ -12,7 +12,7 @@
 | takes photos  | 📷  |
 | Flash on/off  | ⚡  |
 | Front / Back camera | ↕️  |
-| Hold to record video | ✋ |
+| Hold to record video | ✊ |
 | Tap to take photo |  👇 |
 | Tap to focus / set exposure  | 🔎  |
 | Pinch to zoom  | 👌  |
