@@ -29,7 +29,7 @@ extension CamView: UIGestureRecognizerDelegate {
    @objc open func onPreviewViewTap(sender: UIGestureRecognizer) {
       guard [.ended, .cancelled, .failed].contains(sender.state) else { return }/*ensures that the tap isnt a swipe tap etc*/
       let devicePoint: CGPoint = (self.previewView.previewLayer).captureDevicePointConverted(fromLayerPoint: sender.location(in: sender.view))
-      print("HybridCamera / CamView+Gesture / devicePoint:", devicePoint)
+      print("devicePoint: \(devicePoint)")
       self.focusWithMode(focusMode: .continuousAutoFocus, exposureMode: .continuousAutoExposure, point: devicePoint, monitorSubjectAreaChange: true)
    }
     /**
