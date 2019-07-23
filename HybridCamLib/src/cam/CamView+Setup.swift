@@ -10,7 +10,7 @@ extension CamView {
     */
    @objc open func setupDevice() {
       do {
-         try setupCaptureDeviceInput(cameraType: .front)
+         try setupCaptureDeviceInput(cameraType: .back)
          try setupVideoCamera()
          try setupMicrophone()
          try setupPhotoCamera()
@@ -53,7 +53,7 @@ extension CamView {
          captureSession.addOutput(videoOutput)
          guard let connection = videoOutput.connection(with: .video) else { throw SetupError.unableToCreateVideoConnection }
          if connection.isVideoStabilizationSupported {/*Causes a glitch on enabled*/
-            connection.preferredVideoStabilizationMode = .auto
+            connection.preferredVideoStabilizationMode = .standard //some videos look quite shaky to me sometimes with .auto
          }
       } else {
           throw SetupError.unableToAddVideoOutput
