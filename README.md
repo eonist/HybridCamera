@@ -4,22 +4,29 @@
 
 <img width="192" alt="img" src="https://rawgit.com/stylekit/img/master/vid_edited_2_2mb.gif">
 
-### Features
-- Records video and takes photos
-- Flash on/off
-- Front / Back camera
-- Hold to recordVideo
-- Tap to take photo
-- Tap to focus / set exposure
-- Pinch to zoom
-- Looping video/photo preview with share button
-- [Callback based (Great for RX)](https://medium.cobeisfresh.com/why-you-shouldn-t-use-delegates-in-swift-7ef808a7f16b)
-- View based (Great for animation rich UI/UX)
-- Supports background music (Doesn't pause Spotify etc)
-- Stores photo/video in temp dir
-- Throw oriented code (allows external handling of errors)
-- Persistent app authorization
-- Animated record button (white to red transition)
+### Features:
+
+| Description  |  |
+| ------------- | ------------- |
+| Records video  | 🎥  |
+| takes photos  | 📷  |
+| Flash on/off  | ⚡  |
+| Front / Back camera | ↕️  |
+| Hold to record video | ✋ |
+| Tap to take photo |  👇 |
+| Tap to focus / set exposure  | 🔎  |
+| Pinch to zoom  | 👌  |
+| Looping video/photo preview  | 🔁  |
+| Share button  | 🔗  |
+| Programatic UI  | 🤖  |
+| Doesn't stop Spotify | 🎶  |
+| Stores files in temporary | 💾   |
+| Throw oriented code  | 💣 |
+| Persistent app authorisation  | 🚫  |
+| Animated record button  | 🔴 |
+| [Callback based](https://medium.cobeisfresh.com/why-you-shouldn-t-use-delegates-in-swift-7ef808a7f16b)  | 📞 |
+
+
 
 ### Why use this camera framework
 - High [codebeat GPA](https://codebeat.co/projects/github-com-eonist-hybridcamera-master)
@@ -31,7 +38,7 @@
 - No third-party libraries or Sugar
 - Entirely programatic (No storyboard)
 - Thoroughly documented (Artifacts and sideEffects etc)
-- Uses [Linkdin style guide](https://github.com/linkedin/swift-style-guide)
+- Uses [Sindre-lint style guide](https://github.com/sindresorhus/swiftlint-sindre)
 
 ### Notes:
 - In order to keep things simple, The UI is CGRect based. Use your own Autolayout distro like SnapKit etc when adding additional UI
