@@ -42,9 +42,7 @@ extension ProcessView {
     * AttachCallBacks
     */
    @objc open func addEventListeners() {
-      exitButton.onClick = {
-         self.onExit()
-      }
+      exitButton.onClick = self.onExit
       shareButton.onClick = {/*launch share AlertDialog*/
          if let imageURL = self.imageView.url {
             self.onShare( imageURL )

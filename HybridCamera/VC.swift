@@ -41,10 +41,15 @@ extension VC {
    /**
     * When camera onCapture is called
     */
+//   guard self = self else { return }
    private func onCapture(_ image: UIImage?, _ url: URL?, _ error: Error?) {
+      weak var _self = self // temp fix for possible mem leak
+      guard let self = _self else { Swift.print("⚠️️ possible retian cycle ⚠️️"); return }
       let processMediaView: CustomProcessView = {
          let processMediaView: CustomProcessView = .init(frame: UIScreen.main.bounds)
-         processMediaView.onExit = { processMediaView.deInitiate() }
+         processMediaView.onExit = {
+             processMediaView.deInitiate()
+         }
          processMediaView.onShare = { (url: URL?) in if let url = url { CustomProcessView.promptSaveFileDialog(vc: self, url: url) { processMediaView.deInitiate() } } }
          self.view.addSubview(processMediaView)
          return processMediaView
