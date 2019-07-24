@@ -16,6 +16,7 @@ open class CamView: UIView {
    public let photoOutput: AVCapturePhotoOutput = .init()
    /*State*/
    public var flashMode: AVCaptureDevice.FlashMode = .off
+   public var startingZoomFactorForLongPress: CGFloat = 1
    /*Callbacks*/
    public var onVideoCaptureComplete: VideoCaptureComplete = defaultVideoCaptureComplete
    public var onPhotoCaptureComplete: PhotoCaptureComplete = defaultPhotoCaptureComplete
