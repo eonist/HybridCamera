@@ -78,3 +78,7 @@ hybridCamView.camView.onVideoCaptureComplete = { (url: URL?, error: Error?) in
 - Fix FontCamera bug w/ IphoneX ✅
 - Add Spatial, Chaplin as an option to HybridCam 👈
 - Add CI-Travis 👈
+
+### Contributors:
+- [eonist](https://gitHub.com/eonist)  
+- [blurtime](https://gitHub.com/blurtime)
