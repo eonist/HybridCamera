@@ -32,6 +32,7 @@ extension ProcessView {
     */
    @objc open func deInitiate() {
       videoPlayerView.deInitiate()/* Removes observer */
+      imageView.deInitiate()
       self.removeFromSuperview()/* Removes it self from the view hierarchy */
    }
 }

@@ -21,11 +21,4 @@ extension ProcessView {
          }
       }
    }
-   /**
-    * Reset callbacks
-    */
-   //   @objc open func clearEventListeners(){
-   //      exitButton.onClick = {ClickButtonKind.defaultOnClick}
-   //      shareButton.onClick = {ClickButtonKind.defaultOnClick}
-   //   }
 }

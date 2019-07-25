@@ -25,4 +25,10 @@ extension ImageView {
       self.url = url
       self.image = image
    }
+   /**
+    * Setting object to nil makes the observer work on the
+    */
+   @objc open func deInitiate() {
+      self.image = nil
+   }
 }

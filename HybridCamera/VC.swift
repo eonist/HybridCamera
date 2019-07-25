@@ -35,8 +35,14 @@ extension VC {
    func initiate() {
       let hybridCamView: CustomCamView = .init()
       self.view = hybridCamView /*Add HybridCamView as the main view*/
-      hybridCamView.camView.onPhotoCaptureComplete = onCapture
-      hybridCamView.camView.onVideoCaptureComplete = { (url: URL?, error: Error?) in self.onCapture(nil, url, error) }
+      hybridCamView.camView.onPhotoCaptureComplete = { [weak self] (image: UIImage?, url: URL?, error: Error?) in
+         guard let self = self else { Swift.print("mem leak"); return }
+         self.onCapture(image, url, error)
+      }
+      hybridCamView.camView.onVideoCaptureComplete = { [weak self] (url: URL?, error: Error?) in
+         guard let self = self else { Swift.print("mem leak"); return }
+         self.onCapture(nil, url, error)
+      }
    }
    /**
     * When camera onCapture is called
