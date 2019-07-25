@@ -33,7 +33,7 @@
 		F114ADD221A1CDA000942A28 /* CustomCamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB120D07A11008B13B5 /* CustomCamView.swift */; };
 		F114ADDA21A1D56300942A28 /* CustomProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBED020D07A11008B13B5 /* CustomProcessView.swift */; };
 		F114ADDB21A1D57A00942A28 /* ProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD621A1D35A00942A28 /* ProcessView.swift */; };
-		F114ADDC21A1D57A00942A28 /* ProcessView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD821A1D40300942A28 /* ProcessView+Extension.swift */; };
+		F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD821A1D40300942A28 /* ProcessView+Action.swift */; };
 		F114ADE521A1EF0A00942A28 /* HybridCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */; };
 		F1AA7579226B4E5000D4C272 /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
 		F1AA757D226B4E9200D4C272 /* CamUtil+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757A226B4E9100D4C272 /* CamUtil+File.swift */; };
@@ -58,6 +58,11 @@
 		F1ABBEE920D07A12008B13B5 /* FlashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC520D07A11008B13B5 /* FlashButton.swift */; };
 		F1ABBEF620D07A12008B13B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBED420D07A11008B13B5 /* AppDelegate.swift */; };
 		F1ABBEF720D07A12008B13B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBED520D07A12008B13B5 /* Assets.xcassets */; };
+		F1CB286622E9C61A00C2A8CF /* ProcessView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286522E9C61A00C2A8CF /* ProcessView+Create.swift */; };
+		F1CB286822E9C64B00C2A8CF /* ProcessView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */; };
+		F1CB286A22E9C67900C2A8CF /* ProcessView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */; };
+		F1CB286C22E9C6A300C2A8CF /* ProcessView+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286B22E9C6A300C2A8CF /* ProcessView+Type.swift */; };
+		F1CB286E22E9C6B400C2A8CF /* ProcessView+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286D22E9C6B400C2A8CF /* ProcessView+Default.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +108,7 @@
 		F114ADC921A1C73E00942A28 /* HybridCamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridCamView.swift; sourceTree = "<group>"; };
 		F114ADCC21A1CA3F00942A28 /* HybridCamView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Extension.swift"; sourceTree = "<group>"; };
 		F114ADD621A1D35A00942A28 /* ProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessView.swift; sourceTree = "<group>"; };
-		F114ADD821A1D40300942A28 /* ProcessView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Extension.swift"; sourceTree = "<group>"; };
+		F114ADD821A1D40300942A28 /* ProcessView+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Action.swift"; sourceTree = "<group>"; };
 		F114ADE221A1EF0A00942A28 /* HybridCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HybridCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridCameraTests.swift; sourceTree = "<group>"; };
 		F114ADE621A1EF0A00942A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,6 +151,11 @@
 		F1ABBED220D07A11008B13B5 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		F1ABBED420D07A11008B13B5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1ABBED520D07A12008B13B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1CB286522E9C61A00C2A8CF /* ProcessView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Create.swift"; sourceTree = "<group>"; };
+		F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Event.swift"; sourceTree = "<group>"; };
+		F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Util.swift"; sourceTree = "<group>"; };
+		F1CB286B22E9C6A300C2A8CF /* ProcessView+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Type.swift"; sourceTree = "<group>"; };
+		F1CB286D22E9C6B400C2A8CF /* ProcessView+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Default.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,7 +399,12 @@
 			isa = PBXGroup;
 			children = (
 				F114ADD621A1D35A00942A28 /* ProcessView.swift */,
-				F114ADD821A1D40300942A28 /* ProcessView+Extension.swift */,
+				F114ADD821A1D40300942A28 /* ProcessView+Action.swift */,
+				F1CB286B22E9C6A300C2A8CF /* ProcessView+Type.swift */,
+				F1CB286D22E9C6B400C2A8CF /* ProcessView+Default.swift */,
+				F1CB286522E9C61A00C2A8CF /* ProcessView+Create.swift */,
+				F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */,
+				F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */,
 				F114AD9321A074D200942A28 /* view */,
 			);
 			path = process;
@@ -577,10 +592,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1CB286A22E9C67900C2A8CF /* ProcessView+Util.swift in Sources */,
 				F114ADD121A1CB3300942A28 /* HybridCamView+Extension.swift in Sources */,
 				F114ADBD21A1C2E500942A28 /* CamView.swift in Sources */,
 				F114ADB721A1C2E500942A28 /* ToggleButtonKind.swift in Sources */,
 				F114ADC821A1C2E500942A28 /* VideoPlayerView.swift in Sources */,
+				F1CB286622E9C61A00C2A8CF /* ProcessView+Create.swift in Sources */,
 				F114ADBC21A1C2E500942A28 /* CamPreviewView.swift in Sources */,
 				F1AA757F226B4E9200D4C272 /* CamUtil+Helper.swift in Sources */,
 				F114ADC321A1C2E500942A28 /* CamView+Action+Core.swift in Sources */,
@@ -589,16 +606,19 @@
 				F114ADBB21A1C2E500942A28 /* CamUtil.swift in Sources */,
 				F114ADDB21A1D57A00942A28 /* ProcessView.swift in Sources */,
 				F114ADC221A1C2E500942A28 /* CamView+Setup.swift in Sources */,
-				F114ADDC21A1D57A00942A28 /* ProcessView+Extension.swift in Sources */,
+				F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */,
 				F114ADB621A1C2E500942A28 /* TopBarKind.swift in Sources */,
 				F114ADB521A1C2E500942A28 /* RecordButtonKind.swift in Sources */,
 				F114ADC021A1C2E500942A28 /* CamView+Accessor.swift in Sources */,
 				F114ADC721A1C2E500942A28 /* ImageView.swift in Sources */,
 				F114ADBA21A1C2E500942A28 /* CamError.swift in Sources */,
+				F1CB286E22E9C6B400C2A8CF /* ProcessView+Default.swift in Sources */,
 				F114ADBF21A1C2E500942A28 /* CamView+Delegate.swift in Sources */,
 				F114ADBE21A1C2E500942A28 /* CamView+Action.swift in Sources */,
 				F114ADC421A1C2E500942A28 /* CamView+Gesture.swift in Sources */,
+				F1CB286C22E9C6A300C2A8CF /* ProcessView+Type.swift in Sources */,
 				F114ADB821A1C2E500942A28 /* ClickButtonKind.swift in Sources */,
+				F1CB286822E9C64B00C2A8CF /* ProcessView+Event.swift in Sources */,
 				F114ADCB21A1C9C200942A28 /* HybridCamView.swift in Sources */,
 				F1AA757E226B4E9200D4C272 /* CamUtil+Signature.swift in Sources */,
 				F114ADB921A1C2E500942A28 /* CamBlocks.swift in Sources */,
