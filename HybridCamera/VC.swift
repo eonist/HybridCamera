@@ -43,6 +43,7 @@ extension VC {
          guard let self = self else { Swift.print("mem leak"); return }
          self.onCapture(nil, url, error)
       }
+      self.resetZoom()
    }
    /**
     * When camera onCapture is called
@@ -58,12 +59,28 @@ extension VC {
          }
          processMediaView.onShare = { (url: URL?) in if let url = url { CustomProcessView.promptSaveFileDialog(vc: self, url: url) { processMediaView.deInitiate() } } }
          self.view.addSubview(processMediaView)
+         self.resetZoom() //Fixme: Placement may be a little awkward here
          return processMediaView
       }()
       if let error = error {
-         CustomProcessView.promptErrorDialog(vc: self, error: error ) { processMediaView.deInitiate() }; return
+         CustomProcessView.promptErrorDialog(vc: self, error: error ) {
+            processMediaView.deInitiate()
+            self.resetZoom()
+         }
+         return
       } else {
          processMediaView.present(image: image, url: url)
       }
+   }
+   /**
+    * Reset zoom with processMediaView
+    */
+   private func resetZoom() {
+      guard let hybridCamView = self.view as? HybridCamView else {
+         print("HybridCamera: Could not reset zoom")
+         return
+      }
+      hybridCamView.camView.setZoom(zoomFactor: 1)
+      hybridCamView.camView.startingZoomFactorForLongPress = 1
    }
 }
