@@ -3,7 +3,7 @@ import AVFoundation
 import With
 
 open class VideoPlayerView: UIView {
-   open var avPlayer: AVPlayer = .init()
+   open var avPlayer: AVPlayer? = .init()
    public lazy var avPlayerLayer: AVPlayerLayer = createAvPlayerLayer()
    /*Init*/
    override public init(frame: CGRect) {
@@ -38,21 +38,23 @@ extension VideoPlayerView {
     */
    @objc open func play(videoURL: URL) {
       with(AVPlayerItem(url: videoURL as URL)) {
-         avPlayer.replaceCurrentItem(with: $0)
-         avPlayer.play()
+         avPlayer?.replaceCurrentItem(with: $0)
+         avPlayer?.play()
       }
    }
    /**
     * Callback when video finish playing
     */
    @objc open func onVideoFinished() {
-      avPlayer.seek(to: CMTime.zero)/*Go to the absolute begining*/
-      avPlayer.play()
+      avPlayer?.seek(to: CMTime.zero)/*Go to the absolute begining*/
+      avPlayer?.play()
    }
    /**
     * Setting object to nil makes the observer work on the
     */
    @objc open func deInitiate() {
       NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
+      avPlayer = nil
+      avPlayerLayer.removeFromSuperlayer()
    }
 }
