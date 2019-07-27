@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1059EE222EC36C6004A8346 /* VC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1059EE122EC36C6004A8346 /* VC+Extension.swift */; };
 		F114ADAA21A1C27F00942A28 /* HybridCamLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F114ADA821A1C27F00942A28 /* HybridCamLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F114ADAD21A1C27F00942A28 /* HybridCamLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F114ADA621A1C27E00942A28 /* HybridCamLib.framework */; };
 		F114ADAE21A1C27F00942A28 /* HybridCamLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F114ADA621A1C27E00942A28 /* HybridCamLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -98,6 +99,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F1059EE122EC36C6004A8346 /* VC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Extension.swift"; sourceTree = "<group>"; };
 		F114AD9721A1A4DE00942A28 /* TopBarKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarKind.swift; sourceTree = "<group>"; };
 		F114AD9921A1A5D000942A28 /* RecordButtonKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonKind.swift; sourceTree = "<group>"; };
 		F114AD9D21A1B94000942A28 /* ToggleButtonKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonKind.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */,
 				F1ABBED420D07A11008B13B5 /* AppDelegate.swift */,
 				F1ABBEA920D07A11008B13B5 /* VC.swift */,
+				F1059EE122EC36C6004A8346 /* VC+Extension.swift */,
 				F1ABBED520D07A12008B13B5 /* Assets.xcassets */,
 				F1ABBEAB20D07A11008B13B5 /* src */,
 				F1ABBEAA20D07A11008B13B5 /* Info.plist */,
@@ -637,6 +640,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1059EE222EC36C6004A8346 /* VC+Extension.swift in Sources */,
 				F1ABBEE220D07A12008B13B5 /* RoundButton.swift in Sources */,
 				F1ABBEE420D07A12008B13B5 /* ClickButton.swift in Sources */,
 				F1ABBEF620D07A12008B13B5 /* AppDelegate.swift in Sources */,
