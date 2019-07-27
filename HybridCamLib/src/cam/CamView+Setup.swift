@@ -14,7 +14,7 @@ extension CamView {
          try setupVideoCamera()
          try setupMicrophone()
          try setupPhotoCamera()
-         try setupBackgroundAudioSupport()
+         try setupBackgroundAudioSupport(category: .playAndRecord)
       } catch {
          Swift.print("setupDevice error:  \((error as? SetupError)?.description ?? error.localizedDescription)")
       }
@@ -90,9 +90,9 @@ extension CamView {
     * Adds support for background audio from other applications
     * - Fixme: ⚠️️ forward the error mesage from the try clause
     */
-   private func setupBackgroundAudioSupport(allowBackgroundAudio: Bool = true) throws {
+   open func setupBackgroundAudioSupport(category: AVAudioSession.Category) throws {
       do {
-         try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default)//try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
+         try AVAudioSession.sharedInstance().setCategory(category, mode: .default)//try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
          try AVAudioSession.sharedInstance().setActive(true)/*👈 ref: https://stackoverflow.com/questions/51010390/avaudiosession-setcategory-swift-4-2-ios-12-play-sound-on-silent*/
          captureSession.automaticallyConfiguresApplicationAudioSession = false
       }
