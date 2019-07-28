@@ -22,8 +22,8 @@ open class CamView: UIView {
    public var onPhotoCaptureComplete: PhotoCaptureComplete = defaultPhotoCaptureComplete
    override init(frame: CGRect) {
       super.init(frame: frame)
-      self.backgroundColor = .black
-      _ = previewView/*Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer*/
+      self.backgroundColor = .black // Sets the background color of the view
+      _ = previewView // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer
       setupDevice()
       addGestureRecognizer()
    }

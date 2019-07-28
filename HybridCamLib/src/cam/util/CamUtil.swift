@@ -4,6 +4,7 @@ import AVFoundation
 public class CamUtil {
    /**
     * Returns camera (.front .back)
+    * Fixme: ⚠️️ make this try error based with meaningful error message
     */
    public static func camera(type: AVCaptureDevice.Position) -> AVCaptureDevice? {
       let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
@@ -13,7 +14,7 @@ public class CamUtil {
    }
    /**
     * Asserts video and mic access
-    * - NOTE: https://stackoverflow.com/a/47688969/5389500
+    * - Note: https://stackoverflow.com/a/47688969/5389500
     */
    public static func assertVideoAndMicAccess(vc: UIViewController, onComplete:@escaping AssertComplete ) {
       assertVideoAccess(vc: vc) { success in

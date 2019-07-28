@@ -71,7 +71,8 @@ extension CamView {
       }
    }
    /**
-    * Adds microphone
+    * Adds microphone capabilities
+    * Remark: This is also called from CamView.setCamera
     */
    func setupMicrophone() throws {
       guard let microphone: AVCaptureDevice = .default(for: .audio) else {
@@ -92,8 +93,8 @@ extension CamView {
     */
    open func setupBackgroundAudioSupport(category: AVAudioSession.Category) throws {
       do {
-         try AVAudioSession.sharedInstance().setCategory(category, mode: .default)//try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
-         try AVAudioSession.sharedInstance().setActive(true)/*👈 ref: https://stackoverflow.com/questions/51010390/avaudiosession-setcategory-swift-4-2-ios-12-play-sound-on-silent*/
+         try AVAudioSession.sharedInstance().setCategory(category, mode: .default)// try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
+         try AVAudioSession.sharedInstance().setActive(true) //👈 ref: https://stackoverflow.com/questions/51010390/avaudiosession-setcategory-swift-4-2-ios-12-play-sound-on-silent
          captureSession.automaticallyConfiguresApplicationAudioSession = false
       }
       catch {

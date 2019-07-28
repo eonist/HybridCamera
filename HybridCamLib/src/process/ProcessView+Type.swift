@@ -9,5 +9,4 @@ extension ProcessView {
    public typealias OnSaveDialogComplete = () -> Void
    public typealias OnShare = (_ url: URL?) -> Void
    public typealias OnExit = () -> Void
-  
 }

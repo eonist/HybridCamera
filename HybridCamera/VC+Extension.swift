@@ -11,13 +11,13 @@ extension VC {
     */
    func initiate() {
       let hybridCamView: CustomCamView = .init()
-      self.view = hybridCamView /*Add HybridCamView as the main view*/
+      self.view = hybridCamView // Add HybridCamView as the main view
       hybridCamView.camView.onPhotoCaptureComplete = { [weak self] (image: UIImage?, url: URL?, error: Error?) in
-         guard let self = self else { Swift.print("mem leak"); return }
+         guard let self = self else { Swift.print("🚫"); return }
          self.onCapture(image, url, error)
       }
       hybridCamView.camView.onVideoCaptureComplete = { [weak self] (url: URL?, error: Error?) in
-         guard let self = self else { Swift.print("mem leak"); return }
+         guard let self = self else { Swift.print("🚫"); return }
          self.onCapture(nil, url, error)
       }
       self.resetZoom()
@@ -45,7 +45,7 @@ extension VC {
       }()
       if let error = error {
          CustomProcessView.promptErrorDialog(vc: self, error: error ) {
-            Swift.print("error:  \(error)");
+            Swift.print("error:  \(error)")
             self.processMediaView?.deInitiate()
             self.processMediaView = nil
             self.resetZoom()
@@ -59,25 +59,17 @@ extension VC {
     * Reset zoom with processMediaView
     */
    private func resetZoom() {
-      guard let hybridCamView = self.view as? HybridCamView else {
-         print("HybridCamera: Could not reset zoom")
-         return
-      }
+      guard let hybridCamView = self.view as? HybridCamView else { print("⚠️️ Could not reset zoom"); return }
       hybridCamView.camView.setZoom(zoomFactor: 1)
       hybridCamView.camView.startingZoomFactorForLongPress = 1
    }
    /**
-    * Switch between audio session; Fixme: continue playing audio when going back to camera after preview
+    * Switch between audio session;
+    * Fixme: continue playing audio when going back to camera after preview
     */
-    private func switchAudioSession(to: AVAudioSession.Category) {
-       guard let hybridCamView = self.view as? HybridCamView else {
-          print("HybridCamera: Could not reset zoom")
-          return
-       }
-       do {
-          try hybridCamView.camView.setupBackgroundAudioSupport(category: to)
-       } catch {
-          Swift.print("setupDevice error:  \((error as? SetupError)?.description ?? error.localizedDescription)")
-       }
-    }
+   private func switchAudioSession(to: AVAudioSession.Category) {
+      guard let hybridCamView = self.view as? HybridCamView else { print("⚠️️ Could not reset zoom"); return }
+      do { try hybridCamView.camView.setupBackgroundAudioSupport(category: to) }
+      catch { Swift.print("🚫 setupDevice error 🚫:  \((error as? SetupError)?.description ?? error.localizedDescription)") }
+   }
 }

@@ -64,6 +64,12 @@
 		F1CB286A22E9C67900C2A8CF /* ProcessView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */; };
 		F1CB286C22E9C6A300C2A8CF /* ProcessView+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286B22E9C6A300C2A8CF /* ProcessView+Type.swift */; };
 		F1CB286E22E9C6B400C2A8CF /* ProcessView+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286D22E9C6B400C2A8CF /* ProcessView+Default.swift */; };
+		F1E786B222EE4F29002007EE /* VideoPlayerView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B122EE4F29002007EE /* VideoPlayerView+Create.swift */; };
+		F1E786B422EE4F42002007EE /* VideoPlayerView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B322EE4F42002007EE /* VideoPlayerView+Action.swift */; };
+		F1E786B622EE4F9C002007EE /* VideoPlayerView +Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B522EE4F9C002007EE /* VideoPlayerView +Event.swift */; };
+		F1E786B822EE50D7002007EE /* VideoPlayerView+Close.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B722EE50D7002007EE /* VideoPlayerView+Close.swift */; };
+		F1E786BA22EE51D6002007EE /* ImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B922EE51D6002007EE /* ImageView+Extension.swift */; };
+		F1E786BC22EE52C4002007EE /* CamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786BB22EE52C4002007EE /* CamView+Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +164,12 @@
 		F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Util.swift"; sourceTree = "<group>"; };
 		F1CB286B22E9C6A300C2A8CF /* ProcessView+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Type.swift"; sourceTree = "<group>"; };
 		F1CB286D22E9C6B400C2A8CF /* ProcessView+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Default.swift"; sourceTree = "<group>"; };
+		F1E786B122EE4F29002007EE /* VideoPlayerView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoPlayerView+Create.swift"; sourceTree = "<group>"; };
+		F1E786B322EE4F42002007EE /* VideoPlayerView+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoPlayerView+Action.swift"; sourceTree = "<group>"; };
+		F1E786B522EE4F9C002007EE /* VideoPlayerView +Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoPlayerView +Event.swift"; sourceTree = "<group>"; };
+		F1E786B722EE50D7002007EE /* VideoPlayerView+Close.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoPlayerView+Close.swift"; sourceTree = "<group>"; };
+		F1E786B922EE51D6002007EE /* ImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extension.swift"; sourceTree = "<group>"; };
+		F1E786BB22EE52C4002007EE /* CamView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamView+Event.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +203,8 @@
 		F114AD9321A074D200942A28 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABBED220D07A11008B13B5 /* ImageView.swift */,
-				F1ABBED120D07A11008B13B5 /* VideoPlayerView.swift */,
+				F1E786B022EE4F0A002007EE /* image */,
+				F1E786AF22EE4EFB002007EE /* video */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -394,6 +406,7 @@
 				F1ABBECC20D07A11008B13B5 /* CamView+Setup.swift */,
 				F1ABBECD20D07A11008B13B5 /* CamView+Action+Core.swift */,
 				F1ABBECE20D07A11008B13B5 /* CamView+Gesture.swift */,
+				F1E786BB22EE52C4002007EE /* CamView+Event.swift */,
 			);
 			path = cam;
 			sourceTree = "<group>";
@@ -411,6 +424,27 @@
 				F114AD9321A074D200942A28 /* view */,
 			);
 			path = process;
+			sourceTree = "<group>";
+		};
+		F1E786AF22EE4EFB002007EE /* video */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBED120D07A11008B13B5 /* VideoPlayerView.swift */,
+				F1E786B322EE4F42002007EE /* VideoPlayerView+Action.swift */,
+				F1E786B122EE4F29002007EE /* VideoPlayerView+Create.swift */,
+				F1E786B722EE50D7002007EE /* VideoPlayerView+Close.swift */,
+				F1E786B522EE4F9C002007EE /* VideoPlayerView +Event.swift */,
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
+		F1E786B022EE4F0A002007EE /* image */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBED220D07A11008B13B5 /* ImageView.swift */,
+				F1E786B922EE51D6002007EE /* ImageView+Extension.swift */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,20 +634,24 @@
 				F114ADBD21A1C2E500942A28 /* CamView.swift in Sources */,
 				F114ADB721A1C2E500942A28 /* ToggleButtonKind.swift in Sources */,
 				F114ADC821A1C2E500942A28 /* VideoPlayerView.swift in Sources */,
+				F1E786BA22EE51D6002007EE /* ImageView+Extension.swift in Sources */,
 				F1CB286622E9C61A00C2A8CF /* ProcessView+Create.swift in Sources */,
 				F114ADBC21A1C2E500942A28 /* CamPreviewView.swift in Sources */,
 				F1AA757F226B4E9200D4C272 /* CamUtil+Helper.swift in Sources */,
 				F114ADC321A1C2E500942A28 /* CamView+Action+Core.swift in Sources */,
 				F1AA757D226B4E9200D4C272 /* CamUtil+File.swift in Sources */,
 				F114ADC121A1C2E500942A28 /* CamView+Create.swift in Sources */,
+				F1E786B222EE4F29002007EE /* VideoPlayerView+Create.swift in Sources */,
 				F114ADBB21A1C2E500942A28 /* CamUtil.swift in Sources */,
 				F114ADDB21A1D57A00942A28 /* ProcessView.swift in Sources */,
+				F1E786BC22EE52C4002007EE /* CamView+Event.swift in Sources */,
 				F114ADC221A1C2E500942A28 /* CamView+Setup.swift in Sources */,
 				F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */,
 				F114ADB621A1C2E500942A28 /* TopBarKind.swift in Sources */,
 				F114ADB521A1C2E500942A28 /* RecordButtonKind.swift in Sources */,
 				F114ADC021A1C2E500942A28 /* CamView+Accessor.swift in Sources */,
 				F114ADC721A1C2E500942A28 /* ImageView.swift in Sources */,
+				F1E786B622EE4F9C002007EE /* VideoPlayerView +Event.swift in Sources */,
 				F114ADBA21A1C2E500942A28 /* CamError.swift in Sources */,
 				F1CB286E22E9C6B400C2A8CF /* ProcessView+Default.swift in Sources */,
 				F114ADBF21A1C2E500942A28 /* CamView+Delegate.swift in Sources */,
@@ -625,6 +663,8 @@
 				F114ADCB21A1C9C200942A28 /* HybridCamView.swift in Sources */,
 				F1AA757E226B4E9200D4C272 /* CamUtil+Signature.swift in Sources */,
 				F114ADB921A1C2E500942A28 /* CamBlocks.swift in Sources */,
+				F1E786B822EE50D7002007EE /* VideoPlayerView+Close.swift in Sources */,
+				F1E786B422EE4F42002007EE /* VideoPlayerView+Action.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

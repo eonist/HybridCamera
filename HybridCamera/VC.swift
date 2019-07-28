@@ -15,7 +15,7 @@ class VC: UIViewController {
       CamUtil.assertVideoAndMicAccess(vc: self) { (success: Bool) in /*Goes through camera access wizard*/
          guard success else { return }
          DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
+            guard let self = self else { print("🚫"); return }
             self.initiate()/*If accesses was granted proced to initiate the camera*/
          }
       }

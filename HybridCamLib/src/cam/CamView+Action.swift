@@ -6,14 +6,14 @@ import AVFoundation
 extension CamView {
    /**
     * Switches between front and back cam
-    * - Fixme: ⚠️️ Possibly rename to setCameraPosition, or toggleCamera?
+    * - Fixme: ⚠️️ Possibly rename to setCameraPosition, or toggleCamera?, possibly use didSet? does that work with @objc overring?
     */
    @objc open func setCamera(cameraType: AVCaptureDevice.Position) {
       try? setupCaptureDeviceInput(cameraType: cameraType)
       try? setupMicrophone()
    }
    /**
-    * - Fixme: ⚠️️ Rename to toggleFlashMode?
+    * - Fixme: ⚠️️ Rename to toggleFlashMode?, possibly use didSet? does that work with @objc overring?
     * - Options: .on, .off, .auto
     */
    @objc open func setFlashMode(flashMode: AVCaptureDevice.FlashMode) {//AVCaptureDevice.FlashMode
@@ -42,7 +42,7 @@ extension CamView {
       }
    }
    /**
-    * - Fixme: ⚠️️ Could be moved to static method
+    * - Fixme: ⚠️️ Could be moved to static method maybe?
     * - Fixme: ⚠️️ Rename to setZoomFactor
     */
    @objc open func setZoom(zoomFactor: CGFloat) {
