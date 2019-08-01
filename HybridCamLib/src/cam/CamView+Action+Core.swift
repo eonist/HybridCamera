@@ -78,11 +78,11 @@ extension CamView {
     * - Note: it's also possible to use: stillImageOutput.captureStillImageAsynchronously to take a picture
     */
    @objc open func takePhoto() {
-      with(AVCapturePhotoSettings()) {/*Get an instance of AVCapturePhotoSettings class*/
-         $0.isAutoStillImageStabilizationEnabled = true/*Set photo settings for our need*/
+      with(AVCapturePhotoSettings()) { // Get an instance of AVCapturePhotoSettings class
+         $0.isAutoStillImageStabilizationEnabled = true // Set photo settings for our need
          $0.isHighResolutionPhotoEnabled = true
          $0.flashMode = self.flashMode
-         photoOutput.capturePhoto(with: $0, delegate: self)/*Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate*/
+         photoOutput.capturePhoto(with: $0, delegate: self) // Call capturePhoto method by passing our photo settings and a delegate implementing AVCapturePhotoCaptureDelegate
       }
    }
 }

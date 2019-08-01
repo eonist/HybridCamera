@@ -3,6 +3,7 @@ import Foundation
 /**
  * Capture
  * Fixme: ⚠️️ Possibly scope to CamView
+ * Fixme: nest the error messages into similar groups etc
  */
 public enum CaptureError: Swift.Error {
     case noTempFolderAccess

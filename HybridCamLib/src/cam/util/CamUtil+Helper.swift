@@ -9,7 +9,7 @@ extension CamUtil {
     * Asserts video access
     */
    internal static func assertVideoAccess(vc: UIViewController, onComplete:@escaping AssertComplete) {
-      AVCaptureDevice.requestAccess(for: AVMediaType.video) { (granted: Bool) in
+      AVCaptureDevice.requestAccess(for: .video) { (granted: Bool) in
          if granted {
             onComplete(true)
          } else {
@@ -27,11 +27,11 @@ extension CamUtil {
     * Asserts microphone access
     */
    internal static func assertMicrophoneAccess(vc: UIViewController, onComplete:@escaping AssertComplete) {
-      let micStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.audio)
+      let micStatus = AVCaptureDevice.authorizationStatus(for: .audio)
       switch micStatus {
-      case .authorized:/* Got access */ onComplete(true)
-      case .denied, .restricted: onComplete(false)/*Microphone disabled in settings, No access granted*/
-      case .notDetermined:/*Didn't request access yet*/
+      case .authorized: onComplete(true) // Got access
+      case .denied, .restricted: onComplete(false) // Microphone disabled in settings, No access granted
+      case .notDetermined: // Didn't request access yet
          AVAudioSession.sharedInstance().requestRecordPermission { (granted: Bool) in
             onComplete(granted)
          }

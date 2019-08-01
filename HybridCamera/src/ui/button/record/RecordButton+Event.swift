@@ -12,7 +12,7 @@ extension RecordButton: UIGestureRecognizerDelegate {
       onShortPressRelease = RecordButton.defaultShortPressReleased
       onLongPressBegan = RecordButton.defaultLongPressBegan
       onLongPressRelease = RecordButton.defaultLongPressReleased
-      onLongPressChanged  = RecordButton.defaultLongPressChanged
+      onLongPressChanged = RecordButton.defaultLongPressChanged
    }
    /**
     * Adds gesture listeners to button
