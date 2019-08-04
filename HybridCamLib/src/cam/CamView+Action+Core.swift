@@ -65,7 +65,6 @@ extension CamView {
     * Zoom in when
     */
    @objc open func zoomViaRecord(addZoom: CGFloat) {
-      guard videoOutput.isRecording else { onVideoCaptureComplete(nil, CaptureError.alreadyStoppedRecording); return } //Fixme: New error needed?
       setZoom(zoomFactor: startingZoomFactorForLongPress + addZoom) // Fixme: After going back to camView after seeing recorded video, reset zoom: setZoom(zoomFactor: 1) needs to be called and startingZoomFactorForLongPress = 1
    }
 }
