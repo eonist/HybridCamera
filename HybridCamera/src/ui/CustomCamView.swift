@@ -1,5 +1,6 @@
 import UIKit
 import HybridCamLib
+import With
 
 open class CustomCamView: HybridCamView {}
 /**
@@ -8,7 +9,7 @@ open class CustomCamView: HybridCamView {}
 extension CustomCamView {
    /**
     * Creates topbar
-    * - Remark: Basically overrides the default design
+    * - Note: Basically overrides the default design
     */
    @objc override open func createTopBar() -> TopBarViewKind {
       let rect: CGRect = .init(origin: .init(), size: .init(width: UIScreen.main.bounds.size.width, height: 120))
@@ -20,9 +21,9 @@ extension CustomCamView {
     * Creates Record button
     */
    @objc override open func createRecordButton() -> RecordButtonViewKind {
-      let btn = RecordButton()
-      self.addSubview(btn)
-      btn.setPosition()
-      return btn
+      return with(RecordButton()) {
+         self.addSubview($0)
+         $0.setPosition()
+      }
    }
 }

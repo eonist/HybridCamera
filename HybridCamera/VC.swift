@@ -12,17 +12,17 @@ class VC: UIViewController {
     */
    override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
-      CamUtil.assertVideoAndMicAccess(vc: self) { (success: Bool) in /*Goes through camera access wizard*/
+      CamUtil.assertVideoAndMicAccess(vc: self) { (success: Bool) in // Goes through camera access wizard
          guard success else { return }
          DispatchQueue.main.async { [weak self] in
             guard let self = self else { print("🚫"); return }
-            self.initiate()/*If accesses was granted proced to initiate the camera*/
+            self.initiate() // If accesses was granted proced to initiate the camera
          }
       }
    }
    /**
     * Fixme: ⚠️️ add support for orientaion later
     */
-   override var shouldAutorotate: Bool { return false }/*Locks autorotate*/
+   override var shouldAutorotate: Bool { return false } // Locks autorotate
    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 }
