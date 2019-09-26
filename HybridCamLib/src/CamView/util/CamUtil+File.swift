@@ -1,8 +1,8 @@
 import UIKit
 import AVFoundation
-
 /**
  * File utilities
+ * - Fixme: ⚠️️ Move this to FileUtil
  */
 extension CamUtil {
    /**
@@ -10,6 +10,7 @@ extension CamUtil {
     * - NOte: Use NSDocumentDirectory for long term storage
     * - Note: the TempDir wil get wiped automatically when the device run out of memory
     * - Note: The nsuuidstring automagically creates a random unique filename every time it's called
+    * - Fixme: ⚠️️ Use Result here with sucess or failure with meaningful err msg etc
     */
    public static func tempURL(suffix: String =  ".mp4") -> URL? {
       let directory: String = NSTemporaryDirectory()
@@ -21,6 +22,7 @@ extension CamUtil {
    /**
     * ## Examples:
 	 * write(path:"~/Desktop/del.txt".tildePath, data:data)//returns true or false depending on if something was written or not
+    * - Fixme: ⚠️️ Use Result here with sucess or failure with meaningful err msg etc
     */
 	@discardableResult
    public static func write(path: String, data: Data) -> Bool {

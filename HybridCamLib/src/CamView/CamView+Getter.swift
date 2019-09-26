@@ -2,7 +2,7 @@ import UIKit
 import AVFoundation
 
 /**
- * Accessor
+ * Getters
  */
 extension CamView {
     /**
@@ -13,6 +13,9 @@ extension CamView {
      * - NOTE: ⚠️️ for now HybridCamerea only supports .portrait
      */
     static var currentVideoOrientation: AVCaptureVideoOrientation {
+        return .portrait
+    }
+}
 //        let  orientation:AVCaptureVideoOrientation = {
 //            switch UIDevice.current.orientation {
 //            case .portrait:
@@ -26,6 +29,3 @@ extension CamView {
 //            }
 //        }()
 //        _ = orientation
-        return .portrait
-    }
-}

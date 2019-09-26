@@ -7,15 +7,15 @@ import With
 extension CamUtil {
    /**
     * Asserts video access
+    * - Abstract: Prompts user if access is needed
     */
    internal static func assertVideoAccess(vc: UIViewController, onComplete:@escaping AssertComplete) {
-      AVCaptureDevice.requestAccess(for: .video) { (granted: Bool) in
-         if granted {
-            onComplete(true)
-         } else {
+      AVCaptureDevice.requestAccess(for: .video) { isGranted in
+         if isGranted { onComplete(true) }
+         else {
             DispatchQueue.main.async {
                with(UIAlertController(title: "Camera", message: "This app does not have permission to access camera", preferredStyle: .alert)) {
-                  let action = UIAlertAction(title: "OK", style: .default) { _ in Swift.print("Do nothing") }
+                  let action = UIAlertAction(title: "OK", style: .default) { _ in Swift.print("Do nothing, user needs to grant access from settings") }
                   $0.addAction(action)
                   vc.present($0, animated: true) { onComplete(false) }
                }
@@ -25,6 +25,7 @@ extension CamUtil {
    }
    /**
     * Asserts microphone access
+    * - Fixme: ⚠️️ Use Result here with sucess or failure with meaningful err msg etc
     */
    internal static func assertMicrophoneAccess(vc: UIViewController, onComplete:@escaping AssertComplete) {
       let micStatus = AVCaptureDevice.authorizationStatus(for: .audio)

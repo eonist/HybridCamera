@@ -8,16 +8,16 @@ import AVFoundation
  * camView.stopRecording()//stop capturing
  */
 open class CamView: UIView {
-   /*UI*/
+   // UI
    public lazy var previewView: CamPreviewView = createPreviewView()/*Has the view Finder Preview*/
-   /*AV*/
+   // AV
    public var deviceInput: AVCaptureDeviceInput?
    public let videoOutput = AVCaptureMovieFileOutput()
    public let photoOutput: AVCapturePhotoOutput = .init()
-   /*State*/
+   // State
    public var flashMode: AVCaptureDevice.FlashMode = .off
    public var startingZoomFactorForLongPress: CGFloat = 1
-   /*Callbacks*/
+   // Callbacks
    public var onVideoCaptureComplete: VideoCaptureComplete = defaultVideoCaptureComplete
    public var onPhotoCaptureComplete: PhotoCaptureComplete = defaultPhotoCaptureComplete
    override init(frame: CGRect) {

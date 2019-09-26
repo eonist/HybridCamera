@@ -6,21 +6,22 @@ import AVFoundation
 extension CamView {
    /**
     * Switches between front and back cam
-    * - Fixme: ⚠️️ Possibly rename to setCameraPosition, or toggleCamera?, possibly use didSet? does that work with @objc overring?
+    * - Fixme: ⚠️️ Possibly rename to toggleCameraPosition, possibly use didSet? does that work with @objc overring?
     */
-   @objc open func setCamera(cameraType: AVCaptureDevice.Position) {
+   @objc open func toggleCamera(for cameraType: AVCaptureDevice.Position) {
       try? setupCaptureDeviceInput(cameraType: cameraType)
       try? setupMicrophone()
    }
    /**
-    * - Fixme: ⚠️️ Rename to toggleFlashMode?, possibly use didSet? does that work with @objc overring?
+    * - Fixme: ⚠️️ possibly use didSet? does that work with @objc overring?
     * - Options: .on, .off, .auto
     */
-   @objc open func setFlashMode(flashMode: AVCaptureDevice.FlashMode) {//AVCaptureDevice.FlashMode
+   @objc open func toggleFlashMode(for flashMode: AVCaptureDevice.FlashMode) {//AVCaptureDevice.FlashMode
       self.flashMode = flashMode
    }
    /**
-    * - Fixme: ⚠️️ Could be moved to static method
+    * - Fixme: ⚠️️ Could be moved to static method, maybe not since then we need to provide deviceInput as a param, and it already has alot of params
+    * - Fixme: ⚠️️ Use Result to gain better error reporting
     * - Reference: https://stackoverflow.com/a/50450425/5389500
     */
    @objc open func focusWithMode(focusMode: AVCaptureDevice.FocusMode, exposureMode: AVCaptureDevice.ExposureMode, point: CGPoint, monitorSubjectAreaChange: Bool) {
@@ -42,16 +43,16 @@ extension CamView {
       }
    }
    /**
-    * - Fixme: ⚠️️ Could be moved to static method maybe?
-    * - Fixme: ⚠️️ Rename to setZoomFactor
+    * - Fixme: ⚠️️ Could be moved to static method maybe? maybe not since then we need to provide deviceInput as a param
+    * - Fixme: Use Result? or?
     */
-   @objc open func setZoom(zoomFactor: CGFloat) {
+   @objc open func setZoomFactor(to factor: CGFloat) {
       guard let device = self.deviceInput?.device else { Swift.print("setZoom() - device not available"); return }
       let maxZoomFactor = device.activeFormat.videoMaxZoomFactor
       do {
          try device.lockForConfiguration()
          defer { device.unlockForConfiguration() }
-         device.videoZoomFactor = max(1.0, min(zoomFactor, maxZoomFactor))
+         device.videoZoomFactor = max(1.0, min(factor, maxZoomFactor))
       } catch {
          print(error)
       }

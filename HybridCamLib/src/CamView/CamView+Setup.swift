@@ -5,8 +5,9 @@ import AVFoundation
  */
 extension CamView {
    /**
-    * NOTE: Setting device.focusMode = .continuousAutoFocus, device.exposureMode = .continuousAutoExposure could make the app better
-    * - Fixme: ⚠️️ create a callback you can attach in init, to popup a alertdialog etc.
+    * - Note: Setting device.focusMode = .continuousAutoFocus, device.exposureMode = .continuousAutoExposure could make the app better
+    * - Fixme: ⚠️️ create a callback you can attach in init, to popup a alert-dialog etc.
+    * - Fixmr: ⚠️️ Use Result
     */
    @objc open func setupDevice() {
       do {
@@ -24,16 +25,17 @@ extension CamView {
     * - Import: setCamera(cameraType) calls this method, so it can't be private
     * - Fixme: ⚠️️ pass session as a var, and make it static
     * - Fixme: ⚠️️ pass cameraType as var, avides additional global vars in class
+    * - Fixme: ⚠️️ Use Result here
     */
    @objc open func setupCaptureDeviceInput(cameraType: AVCaptureDevice.Position) throws {
-      guard let captureDevice: AVCaptureDevice = CamUtil.camera(type: cameraType) else {/*Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.*/
+      guard let captureDevice: AVCaptureDevice = CamUtil.camera(type: cameraType) else { // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
          throw SetupError.unableToGetVideoCaptureDevice
       }
       do {
-         captureSession.inputs.forEach { captureSession.removeInput($0) }/*Removes previous inputs*/
-         let input = try AVCaptureDeviceInput(device: captureDevice)/*Get an instance of the AVCaptureDeviceInput class using the previous device object.*/
+         captureSession.inputs.forEach { captureSession.removeInput($0) } // Removes previous inputs
+         let input: AVCaptureDeviceInput = try AVCaptureDeviceInput(device: captureDevice) // Get an instance of the AVCaptureDeviceInput class using the previous device object.
          if captureSession.canAddInput(input) {
-            captureSession.addInput(input)/*attatch the input device to the capture session.*/
+            captureSession.addInput(input) // Attatch the input device to the capture session.
             self.deviceInput = input
          }
       } catch {
@@ -42,7 +44,7 @@ extension CamView {
    }
 }
 /**
- * Helper methods (Private)
+ * Helper methods for setting up (Private)
  */
 extension CamView {
    /**

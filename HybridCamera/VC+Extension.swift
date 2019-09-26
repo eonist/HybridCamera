@@ -60,7 +60,7 @@ extension VC {
     */
    private func resetZoom() {
       guard let hybridCamView = self.view as? HybridCamView else { print("⚠️️ Could not reset zoom"); return }
-      hybridCamView.camView.setZoom(zoomFactor: 1)
+      hybridCamView.camView.setZoomFactor(zoomFactor: 1)
       hybridCamView.camView.startingZoomFactorForLongPress = 1
    }
    /**

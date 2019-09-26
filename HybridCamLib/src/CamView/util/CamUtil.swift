@@ -3,8 +3,8 @@ import AVFoundation
 
 public class CamUtil {
    /**
-    * Returns camera (.front .back)
-    * Fixme: ⚠️️ make this try error based with meaningful error message
+    * Returns camera (.front or .back)
+    * - Fixme: ⚠️️ make this try error based with meaningful error message
     */
    public static func camera(type: AVCaptureDevice.Position) -> AVCaptureDevice? {
       let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)

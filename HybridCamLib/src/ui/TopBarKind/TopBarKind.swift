@@ -8,4 +8,3 @@ import UIKit
    var flipButton: ToggleButtonKind { get }
    var flashButton: ToggleButtonKind { get }
 }
-public typealias TopBarViewKind = TopBarKind & UIView

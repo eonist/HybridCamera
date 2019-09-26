@@ -15,17 +15,15 @@
 		F114ADB621A1C2E500942A28 /* TopBarKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114AD9721A1A4DE00942A28 /* TopBarKind.swift */; };
 		F114ADB721A1C2E500942A28 /* ToggleButtonKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114AD9D21A1B94000942A28 /* ToggleButtonKind.swift */; };
 		F114ADB821A1C2E500942A28 /* ClickButtonKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114AD9F21A1BF5600942A28 /* ClickButtonKind.swift */; };
-		F114ADB921A1C2E500942A28 /* CamBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAE20D07A11008B13B5 /* CamBlocks.swift */; };
-		F114ADBA21A1C2E500942A28 /* CamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAF20D07A11008B13B5 /* CamError.swift */; };
 		F114ADBB21A1C2E500942A28 /* CamUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB020D07A11008B13B5 /* CamUtil.swift */; };
 		F114ADBC21A1C2E500942A28 /* CamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */; };
 		F114ADBD21A1C2E500942A28 /* CamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECB20D07A11008B13B5 /* CamView.swift */; };
-		F114ADBE21A1C2E500942A28 /* CamView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC720D07A11008B13B5 /* CamView+Action.swift */; };
-		F114ADBF21A1C2E500942A28 /* CamView+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC820D07A11008B13B5 /* CamView+Delegate.swift */; };
-		F114ADC021A1C2E500942A28 /* CamView+Accessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC920D07A11008B13B5 /* CamView+Accessor.swift */; };
+		F114ADBE21A1C2E500942A28 /* CamView+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC720D07A11008B13B5 /* CamView+Feature.swift */; };
+		F114ADBF21A1C2E500942A28 /* CamView+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC820D07A11008B13B5 /* CamView+Photo.swift */; };
+		F114ADC021A1C2E500942A28 /* CamView+Getter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEC920D07A11008B13B5 /* CamView+Getter.swift */; };
 		F114ADC121A1C2E500942A28 /* CamView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECA20D07A11008B13B5 /* CamView+Create.swift */; };
 		F114ADC221A1C2E500942A28 /* CamView+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECC20D07A11008B13B5 /* CamView+Setup.swift */; };
-		F114ADC321A1C2E500942A28 /* CamView+Action+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECD20D07A11008B13B5 /* CamView+Action+Core.swift */; };
+		F114ADC321A1C2E500942A28 /* CamView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECD20D07A11008B13B5 /* CamView+Action.swift */; };
 		F114ADC421A1C2E500942A28 /* CamView+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBECE20D07A11008B13B5 /* CamView+Gesture.swift */; };
 		F114ADC721A1C2E500942A28 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBED220D07A11008B13B5 /* ImageView.swift */; };
 		F114ADC821A1C2E500942A28 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBED120D07A11008B13B5 /* VideoPlayerView.swift */; };
@@ -44,6 +42,15 @@
 		F1972E7D233D0B8200CE772C /* ToggleButtonKind+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E7C233D0B8200CE772C /* ToggleButtonKind+Const.swift */; };
 		F1972E80233D0BEE00CE772C /* ClickButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E7F233D0BEE00CE772C /* ClickButtonKind+TypeAlias.swift */; };
 		F1972E82233D0BF800CE772C /* ClickButtonKind+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E81233D0BF800CE772C /* ClickButtonKind+Const.swift */; };
+		F1972E84233D0CA600CE772C /* TopBarViewKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E83233D0CA600CE772C /* TopBarViewKind.swift */; };
+		F1972E86233D0CF100CE772C /* RecordButtonViewKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E85233D0CF100CE772C /* RecordButtonViewKind.swift */; };
+		F1972E89233D0D4800CE772C /* SetupError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E88233D0D4800CE772C /* SetupError.swift */; };
+		F1972E8B233D0D5500CE772C /* CaptureError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E8A233D0D5500CE772C /* CaptureError.swift */; };
+		F1972E8D233D0DBB00CE772C /* CamView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E8C233D0DBB00CE772C /* CamView+TypeAlias.swift */; };
+		F1972E8F233D0DC300CE772C /* CamView+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E8E233D0DC300CE772C /* CamView+Const.swift */; };
+		F1972E91233D103100CE772C /* CamPreviewView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E90233D103100CE772C /* CamPreviewView+Create.swift */; };
+		F1972E93233D16A800CE772C /* CamView+ViewFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E92233D16A800CE772C /* CamView+ViewFinder.swift */; };
+		F1972E95233D172300CE772C /* CamView+Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E94233D172300CE772C /* CamView+Video.swift */; };
 		F1AA7579226B4E5000D4C272 /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
 		F1AA757D226B4E9200D4C272 /* CamUtil+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757A226B4E9100D4C272 /* CamUtil+File.swift */; };
 		F1AA757E226B4E9200D4C272 /* CamUtil+Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757B226B4E9100D4C272 /* CamUtil+Signature.swift */; };
@@ -136,6 +143,15 @@
 		F1972E7C233D0B8200CE772C /* ToggleButtonKind+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToggleButtonKind+Const.swift"; sourceTree = "<group>"; };
 		F1972E7F233D0BEE00CE772C /* ClickButtonKind+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClickButtonKind+TypeAlias.swift"; path = "HybridCamLib/src/ui/button/ToggleButtonKind/ClickButtonKind+TypeAlias.swift"; sourceTree = SOURCE_ROOT; };
 		F1972E81233D0BF800CE772C /* ClickButtonKind+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClickButtonKind+Const.swift"; path = "HybridCamLib/src/ui/button/ToggleButtonKind/ClickButtonKind+Const.swift"; sourceTree = SOURCE_ROOT; };
+		F1972E83233D0CA600CE772C /* TopBarViewKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarViewKind.swift; sourceTree = "<group>"; };
+		F1972E85233D0CF100CE772C /* RecordButtonViewKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordButtonViewKind.swift; path = HybridCamLib/src/ui/TopBarKind/RecordButtonViewKind.swift; sourceTree = SOURCE_ROOT; };
+		F1972E88233D0D4800CE772C /* SetupError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupError.swift; sourceTree = "<group>"; };
+		F1972E8A233D0D5500CE772C /* CaptureError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureError.swift; sourceTree = "<group>"; };
+		F1972E8C233D0DBB00CE772C /* CamView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamView+TypeAlias.swift"; sourceTree = "<group>"; };
+		F1972E8E233D0DC300CE772C /* CamView+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamView+Const.swift"; sourceTree = "<group>"; };
+		F1972E90233D103100CE772C /* CamPreviewView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamPreviewView+Create.swift"; sourceTree = "<group>"; };
+		F1972E92233D16A800CE772C /* CamView+ViewFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamView+ViewFinder.swift"; sourceTree = "<group>"; };
+		F1972E94233D172300CE772C /* CamView+Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamView+Video.swift"; sourceTree = "<group>"; };
 		F1AA7578226B4E5000D4C272 /* With.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = With.framework; path = Carthage/Build/iOS/With.framework; sourceTree = "<group>"; };
 		F1AA757A226B4E9100D4C272 /* CamUtil+File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamUtil+File.swift"; sourceTree = "<group>"; };
 		F1AA757B226B4E9100D4C272 /* CamUtil+Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamUtil+Signature.swift"; sourceTree = "<group>"; };
@@ -145,8 +161,6 @@
 		F1ABBEA920D07A11008B13B5 /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		F1ABBEAA20D07A11008B13B5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamPreviewView.swift; sourceTree = "<group>"; };
-		F1ABBEAE20D07A11008B13B5 /* CamBlocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamBlocks.swift; sourceTree = "<group>"; };
-		F1ABBEAF20D07A11008B13B5 /* CamError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamError.swift; sourceTree = "<group>"; };
 		F1ABBEB020D07A11008B13B5 /* CamUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamUtil.swift; sourceTree = "<group>"; };
 		F1ABBEB120D07A11008B13B5 /* CustomCamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCamView.swift; sourceTree = "<group>"; };
 		F1ABBEB620D07A11008B13B5 /* RecordButton+Anim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Anim.swift"; sourceTree = "<group>"; };
@@ -162,13 +176,13 @@
 		F1ABBEC320D07A11008B13B5 /* ExitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitButton.swift; sourceTree = "<group>"; };
 		F1ABBEC420D07A11008B13B5 /* FlipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipButton.swift; sourceTree = "<group>"; };
 		F1ABBEC520D07A11008B13B5 /* FlashButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashButton.swift; sourceTree = "<group>"; };
-		F1ABBEC720D07A11008B13B5 /* CamView+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Action.swift"; sourceTree = "<group>"; };
-		F1ABBEC820D07A11008B13B5 /* CamView+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Delegate.swift"; sourceTree = "<group>"; };
-		F1ABBEC920D07A11008B13B5 /* CamView+Accessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Accessor.swift"; sourceTree = "<group>"; };
+		F1ABBEC720D07A11008B13B5 /* CamView+Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Feature.swift"; sourceTree = "<group>"; };
+		F1ABBEC820D07A11008B13B5 /* CamView+Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Photo.swift"; sourceTree = "<group>"; };
+		F1ABBEC920D07A11008B13B5 /* CamView+Getter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Getter.swift"; sourceTree = "<group>"; };
 		F1ABBECA20D07A11008B13B5 /* CamView+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Create.swift"; sourceTree = "<group>"; };
 		F1ABBECB20D07A11008B13B5 /* CamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamView.swift; sourceTree = "<group>"; };
 		F1ABBECC20D07A11008B13B5 /* CamView+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Setup.swift"; sourceTree = "<group>"; };
-		F1ABBECD20D07A11008B13B5 /* CamView+Action+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Action+Core.swift"; sourceTree = "<group>"; };
+		F1ABBECD20D07A11008B13B5 /* CamView+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Action.swift"; sourceTree = "<group>"; };
 		F1ABBECE20D07A11008B13B5 /* CamView+Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamView+Gesture.swift"; sourceTree = "<group>"; };
 		F1ABBED020D07A11008B13B5 /* CustomProcessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProcessView.swift; sourceTree = "<group>"; };
 		F1ABBED120D07A11008B13B5 /* VideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
@@ -249,8 +263,8 @@
 			children = (
 				F1972E76233D0B1000CE772C /* HybridCamView */,
 				F114AD9B21A1B7C600942A28 /* ui */,
-				F1ABBEC620D07A11008B13B5 /* cam */,
-				F1ABBECF20D07A11008B13B5 /* process */,
+				F1ABBEC620D07A11008B13B5 /* CamView */,
+				F1ABBECF20D07A11008B13B5 /* ProcessView */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -264,12 +278,13 @@
 			path = HybridCameraTests;
 			sourceTree = "<group>";
 		};
-		F1151D2620D2B1E400860CD9 /* preview */ = {
+		F1151D2620D2B1E400860CD9 /* CamPreviewView */ = {
 			isa = PBXGroup;
 			children = (
 				F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */,
+				F1972E90233D103100CE772C /* CamPreviewView+Create.swift */,
 			);
-			path = preview;
+			path = CamPreviewView;
 			sourceTree = "<group>";
 		};
 		F1972E71233D09F600CE772C /* RecordButtonKind */ = {
@@ -277,6 +292,7 @@
 			children = (
 				F114AD9921A1A5D000942A28 /* RecordButtonKind.swift */,
 				F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */,
+				F1972E85233D0CF100CE772C /* RecordButtonViewKind.swift */,
 				F1972E74233D0A6B00CE772C /* RecordButtonKind+Const.swift */,
 			);
 			path = RecordButtonKind;
@@ -297,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				F114AD9721A1A4DE00942A28 /* TopBarKind.swift */,
+				F1972E83233D0CA600CE772C /* TopBarViewKind.swift */,
 			);
 			path = TopBarKind;
 			sourceTree = "<group>";
@@ -329,6 +346,15 @@
 				F1972E71233D09F600CE772C /* RecordButtonKind */,
 			);
 			path = button;
+			sourceTree = "<group>";
+		};
+		F1972E87233D0D3A00CE772C /* error */ = {
+			isa = PBXGroup;
+			children = (
+				F1972E8A233D0D5500CE772C /* CaptureError.swift */,
+				F1972E88233D0D4800CE772C /* SetupError.swift */,
+			);
+			path = error;
 			sourceTree = "<group>";
 		};
 		F1AA7577226B4E5000D4C272 /* Frameworks */ = {
@@ -385,8 +411,6 @@
 		F1ABBEAC20D07A11008B13B5 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABBEAE20D07A11008B13B5 /* CamBlocks.swift */,
-				F1ABBEAF20D07A11008B13B5 /* CamError.swift */,
 				F1ABBEB020D07A11008B13B5 /* CamUtil.swift */,
 				F1AA757A226B4E9100D4C272 /* CamUtil+File.swift */,
 				F1AA757C226B4E9100D4C272 /* CamUtil+Helper.swift */,
@@ -457,25 +481,30 @@
 			path = button;
 			sourceTree = "<group>";
 		};
-		F1ABBEC620D07A11008B13B5 /* cam */ = {
+		F1ABBEC620D07A11008B13B5 /* CamView */ = {
 			isa = PBXGroup;
 			children = (
+				F1972E87233D0D3A00CE772C /* error */,
 				F1ABBEAC20D07A11008B13B5 /* util */,
-				F1151D2620D2B1E400860CD9 /* preview */,
+				F1151D2620D2B1E400860CD9 /* CamPreviewView */,
 				F1ABBECB20D07A11008B13B5 /* CamView.swift */,
-				F1ABBEC720D07A11008B13B5 /* CamView+Action.swift */,
-				F1ABBEC820D07A11008B13B5 /* CamView+Delegate.swift */,
-				F1ABBEC920D07A11008B13B5 /* CamView+Accessor.swift */,
+				F1972E8C233D0DBB00CE772C /* CamView+TypeAlias.swift */,
+				F1972E8E233D0DC300CE772C /* CamView+Const.swift */,
+				F1ABBEC720D07A11008B13B5 /* CamView+Feature.swift */,
+				F1ABBEC820D07A11008B13B5 /* CamView+Photo.swift */,
+				F1972E94233D172300CE772C /* CamView+Video.swift */,
+				F1ABBEC920D07A11008B13B5 /* CamView+Getter.swift */,
 				F1ABBECA20D07A11008B13B5 /* CamView+Create.swift */,
 				F1ABBECC20D07A11008B13B5 /* CamView+Setup.swift */,
-				F1ABBECD20D07A11008B13B5 /* CamView+Action+Core.swift */,
+				F1ABBECD20D07A11008B13B5 /* CamView+Action.swift */,
+				F1972E92233D16A800CE772C /* CamView+ViewFinder.swift */,
 				F1ABBECE20D07A11008B13B5 /* CamView+Gesture.swift */,
 				F1E786BB22EE52C4002007EE /* CamView+Event.swift */,
 			);
-			path = cam;
+			path = CamView;
 			sourceTree = "<group>";
 		};
-		F1ABBECF20D07A11008B13B5 /* process */ = {
+		F1ABBECF20D07A11008B13B5 /* ProcessView */ = {
 			isa = PBXGroup;
 			children = (
 				F114ADD621A1D35A00942A28 /* ProcessView.swift */,
@@ -487,7 +516,7 @@
 				F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */,
 				F114AD9321A074D200942A28 /* view */,
 			);
-			path = process;
+			path = ProcessView;
 			sourceTree = "<group>";
 		};
 		F1E786AF22EE4EFB002007EE /* video */ = {
@@ -698,35 +727,43 @@
 				F114ADBD21A1C2E500942A28 /* CamView.swift in Sources */,
 				F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */,
 				F114ADB721A1C2E500942A28 /* ToggleButtonKind.swift in Sources */,
+				F1972E8D233D0DBB00CE772C /* CamView+TypeAlias.swift in Sources */,
 				F114ADC821A1C2E500942A28 /* VideoPlayerView.swift in Sources */,
 				F1E786BA22EE51D6002007EE /* ImageView+Extension.swift in Sources */,
 				F1CB286622E9C61A00C2A8CF /* ProcessView+Create.swift in Sources */,
 				F1972E75233D0A6B00CE772C /* RecordButtonKind+Const.swift in Sources */,
 				F114ADBC21A1C2E500942A28 /* CamPreviewView.swift in Sources */,
 				F1AA757F226B4E9200D4C272 /* CamUtil+Helper.swift in Sources */,
+				F1972E8B233D0D5500CE772C /* CaptureError.swift in Sources */,
+				F1972E91233D103100CE772C /* CamPreviewView+Create.swift in Sources */,
 				F1972E7D233D0B8200CE772C /* ToggleButtonKind+Const.swift in Sources */,
-				F114ADC321A1C2E500942A28 /* CamView+Action+Core.swift in Sources */,
+				F114ADC321A1C2E500942A28 /* CamView+Action.swift in Sources */,
 				F1AA757D226B4E9200D4C272 /* CamUtil+File.swift in Sources */,
 				F114ADC121A1C2E500942A28 /* CamView+Create.swift in Sources */,
 				F1E786B222EE4F29002007EE /* VideoPlayerView+Create.swift in Sources */,
+				F1972E84233D0CA600CE772C /* TopBarViewKind.swift in Sources */,
 				F114ADBB21A1C2E500942A28 /* CamUtil.swift in Sources */,
+				F1972E89233D0D4800CE772C /* SetupError.swift in Sources */,
 				F114ADDB21A1D57A00942A28 /* ProcessView.swift in Sources */,
+				F1972E95233D172300CE772C /* CamView+Video.swift in Sources */,
+				F1972E8F233D0DC300CE772C /* CamView+Const.swift in Sources */,
 				F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */,
 				F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */,
+				F1972E86233D0CF100CE772C /* RecordButtonViewKind.swift in Sources */,
 				F1E786BC22EE52C4002007EE /* CamView+Event.swift in Sources */,
 				F114ADC221A1C2E500942A28 /* CamView+Setup.swift in Sources */,
 				F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */,
 				F114ADB621A1C2E500942A28 /* TopBarKind.swift in Sources */,
+				F1972E93233D16A800CE772C /* CamView+ViewFinder.swift in Sources */,
 				F114ADB521A1C2E500942A28 /* RecordButtonKind.swift in Sources */,
-				F114ADC021A1C2E500942A28 /* CamView+Accessor.swift in Sources */,
+				F114ADC021A1C2E500942A28 /* CamView+Getter.swift in Sources */,
 				F114ADC721A1C2E500942A28 /* ImageView.swift in Sources */,
 				F1E786B622EE4F9C002007EE /* VideoPlayerView +Event.swift in Sources */,
-				F114ADBA21A1C2E500942A28 /* CamError.swift in Sources */,
 				F1972E7B233D0B6F00CE772C /* ToggleButtonKind+TypeAlias.swift in Sources */,
 				F1CB286E22E9C6B400C2A8CF /* ProcessView+Default.swift in Sources */,
-				F114ADBF21A1C2E500942A28 /* CamView+Delegate.swift in Sources */,
+				F114ADBF21A1C2E500942A28 /* CamView+Photo.swift in Sources */,
 				F1972E82233D0BF800CE772C /* ClickButtonKind+Const.swift in Sources */,
-				F114ADBE21A1C2E500942A28 /* CamView+Action.swift in Sources */,
+				F114ADBE21A1C2E500942A28 /* CamView+Feature.swift in Sources */,
 				F114ADC421A1C2E500942A28 /* CamView+Gesture.swift in Sources */,
 				F1CB286C22E9C6A300C2A8CF /* ProcessView+Type.swift in Sources */,
 				F114ADB821A1C2E500942A28 /* ClickButtonKind.swift in Sources */,
@@ -734,7 +771,6 @@
 				F114ADCB21A1C9C200942A28 /* HybridCamView.swift in Sources */,
 				F1972E80233D0BEE00CE772C /* ClickButtonKind+TypeAlias.swift in Sources */,
 				F1AA757E226B4E9200D4C272 /* CamUtil+Signature.swift in Sources */,
-				F114ADB921A1C2E500942A28 /* CamBlocks.swift in Sources */,
 				F1E786B822EE50D7002007EE /* VideoPlayerView+Close.swift in Sources */,
 				F1E786B422EE4F42002007EE /* VideoPlayerView+Action.swift in Sources */,
 			);
