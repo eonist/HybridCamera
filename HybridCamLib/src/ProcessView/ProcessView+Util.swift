@@ -1,12 +1,13 @@
 import UIKit
 import AVFoundation
 import With
+
 /**
  * Util
  */
 extension ProcessView {
    /**
-    * Prompts the save file dialog
+    * Prompts the save file dialog (Bottom-sheet)
     */
    @objc open class func promptSaveFileDialog(vc: UIViewController, url: URL, onComplete:@escaping OnSaveDialogComplete) {
       with(UIActivityViewController(activityItems: [url], applicationActivities: nil)) {
@@ -30,8 +31,8 @@ extension ProcessView {
     * deInitiate
     */
    @objc open func deInitiate() {
-      videoPlayerView.deInitiate() // Removes observer
+      videoPlayerView.deInitiate()/* Removes observer */
       imageView.deInitiate()
-      self.removeFromSuperview() // Removes it self from the view hierarchy
+      self.removeFromSuperview()/* Removes it self from the view hierarchy */
    }
 }
