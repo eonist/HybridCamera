@@ -39,7 +39,7 @@
 - Entirely programatic (No storyboard)
 - Thoroughly documented (Artifacts and sideEffects etc)
 - Uses [Sindre-lint style guide](https://github.com/sindresorhus/swiftlint-sindre)
-
+- Small footprint, only ~750 LOC (Lines of code)
 ### Notes:
 - In order to keep things simple, The UI is CGRect based. Use your own Autolayout distro like SnapKit etc when adding additional UI
 
