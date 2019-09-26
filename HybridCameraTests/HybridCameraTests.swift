@@ -16,10 +16,4 @@ class HybridCameraTests: XCTestCase {
       XCTAssertFalse(FileManager().fileExists(atPath: fileURL!.path))
       //      XCTAssertEqual("Hello, World!", "Hello, World!")
    }
-   func testPerformanceExample() {
-      // This is an example of a performance test case.
-      self.measure {
-         // Put the code you want to measure the time of here.
-      }
-   }
 }
