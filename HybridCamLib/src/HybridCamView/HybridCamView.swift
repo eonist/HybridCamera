@@ -1,8 +1,8 @@
 import UIKit
 /**
  * Main view of HybridCam
- * NOTE: To support merging video segments: https://www.raywenderlich.com/188034/how-to-play-record-and-merge-videos-in-ios-and-swift
- * NOTE: To support overlays on videos: https://www.lynda.com/Swift-tutorials/AVFoundation-Essentials-iOS-Swift/504183-2.html
+ * - Note: To support merging video segments: https://www.raywenderlich.com/188034/how-to-play-record-and-merge-videos-in-ios-and-swift
+ * - Note: To support overlays on videos: https://www.lynda.com/Swift-tutorials/AVFoundation-Essentials-iOS-Swift/504183-2.html
  */
 open class HybridCamView: UIView { // Fixme: ⚠️️ Rename to HybridCamView
    public lazy var camView: CamView = createCamView()
@@ -14,12 +14,11 @@ open class HybridCamView: UIView { // Fixme: ⚠️️ Rename to HybridCamView
     */
    override public init(frame: CGRect) {
       super.init(frame: frame)
-      // self.backgroundColor = .green/*👈 Debug color*/
       _ = camView
       _ = topBar
       _ = recordButton
       addEventHandlers()
-      camView.startPreview() /* Starts preview session */
+      camView.startPreview() // Starts preview session
    }
    /**
     * Boilerplate
