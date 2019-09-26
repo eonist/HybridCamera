@@ -26,7 +26,6 @@ extension VC {
    /**
     * When camera onCapture is called
     */
-   //   guard self = self else { return }
    private func onCapture(_ image: UIImage?, _ url: URL?, _ error: Error?) {
       weak var _self = self // temp fix for possible mem leak
       guard let self = _self else { Swift.print("⚠️️ possible retian cycle ⚠️️"); return }
@@ -60,12 +59,12 @@ extension VC {
     */
    private func resetZoom() {
       guard let hybridCamView = self.view as? HybridCamView else { print("⚠️️ Could not reset zoom"); return }
-      hybridCamView.camView.setZoomFactor(zoomFactor: 1)
+      hybridCamView.camView.setZoomFactor(to: 1)
       hybridCamView.camView.startingZoomFactorForLongPress = 1
    }
    /**
     * Switch between audio session;
-    * Fixme: continue playing audio when going back to camera after preview
+    * - Fixme: ⚠️️ Continue playing audio when going back to camera after preview
     */
    private func switchAudioSession(to: AVAudioSession.Category) {
       guard let hybridCamView = self.view as? HybridCamView else { print("⚠️️ Could not reset zoom"); return }

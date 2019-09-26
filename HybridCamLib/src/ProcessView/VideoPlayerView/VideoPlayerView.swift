@@ -3,12 +3,12 @@ import AVFoundation
 import With
 /**
  * This view is used to show a looping video
- * Fixme: ⚠️️ Maybe rename to VideoReviewView?
+ * - Fixme: ⚠️️ Maybe rename to VideoReviewView?
  */
 open class VideoPlayerView: UIView {
    open var avPlayer: AVPlayer? = .init()
    public lazy var avPlayerLayer: AVPlayerLayer = createAvPlayerLayer()
-   /*Init*/
+   // Init
    override public init(frame: CGRect) {
       super.init(frame: frame)
       _ = avPlayerLayer

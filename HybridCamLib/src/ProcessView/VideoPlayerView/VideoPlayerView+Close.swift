@@ -1,6 +1,6 @@
 import Foundation
 /**
- * Extension
+ * Close / deInitiate
  */
 extension VideoPlayerView {
    /**

@@ -1,7 +1,6 @@
 import UIKit
 import AVFoundation
 import With
-
 /**
  * Util
  */
@@ -31,8 +30,8 @@ extension ProcessView {
     * deInitiate
     */
    @objc open func deInitiate() {
-      videoPlayerView.deInitiate()/* Removes observer */
+      videoPlayerView.deInitiate() // Removes observer
       imageView.deInitiate()
-      self.removeFromSuperview()/* Removes it self from the view hierarchy */
+      self.removeFromSuperview() // Removes it self from the view hierarchy
    }
 }

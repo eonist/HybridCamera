@@ -51,6 +51,15 @@
 		F1972E91233D103100CE772C /* CamPreviewView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E90233D103100CE772C /* CamPreviewView+Create.swift */; };
 		F1972E93233D16A800CE772C /* CamView+ViewFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E92233D16A800CE772C /* CamView+ViewFinder.swift */; };
 		F1972E95233D172300CE772C /* CamView+Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E94233D172300CE772C /* CamView+Video.swift */; };
+		F1972E97233D1CE600CE772C /* TopBar+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E96233D1CE600CE772C /* TopBar+Create.swift */; };
+		F1972E9A233D20AA00CE772C /* RoundButton+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E99233D20AA00CE772C /* RoundButton+Event.swift */; };
+		F1972E9D233D20D400CE772C /* ToggleButton+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E9C233D20D400CE772C /* ToggleButton+Event.swift */; };
+		F1972EA0233D211900CE772C /* ClickButton+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E9F233D211900CE772C /* ClickButton+Event.swift */; };
+		F1972EA3233D214100CE772C /* ShareButton+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EA2233D214100CE772C /* ShareButton+Event.swift */; };
+		F1972EA5233D215200CE772C /* ShareButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EA4233D215200CE772C /* ShareButton+Style.swift */; };
+		F1972EA8233D219C00CE772C /* ExitButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EA7233D219C00CE772C /* ExitButton+Const.swift */; };
+		F1972EAB233D21BE00CE772C /* FlipButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EAA233D21BE00CE772C /* FlipButton+Const.swift */; };
+		F1972EAE233D226800CE772C /* FlashButton+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EAD233D226800CE772C /* FlashButton+Event.swift */; };
 		F1AA7579226B4E5000D4C272 /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
 		F1AA757D226B4E9200D4C272 /* CamUtil+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757A226B4E9100D4C272 /* CamUtil+File.swift */; };
 		F1AA757E226B4E9200D4C272 /* CamUtil+Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757B226B4E9100D4C272 /* CamUtil+Signature.swift */; };
@@ -77,8 +86,8 @@
 		F1CB286622E9C61A00C2A8CF /* ProcessView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286522E9C61A00C2A8CF /* ProcessView+Create.swift */; };
 		F1CB286822E9C64B00C2A8CF /* ProcessView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */; };
 		F1CB286A22E9C67900C2A8CF /* ProcessView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */; };
-		F1CB286C22E9C6A300C2A8CF /* ProcessView+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286B22E9C6A300C2A8CF /* ProcessView+Type.swift */; };
-		F1CB286E22E9C6B400C2A8CF /* ProcessView+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286D22E9C6B400C2A8CF /* ProcessView+Default.swift */; };
+		F1CB286C22E9C6A300C2A8CF /* ProcessView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286B22E9C6A300C2A8CF /* ProcessView+TypeAlias.swift */; };
+		F1CB286E22E9C6B400C2A8CF /* ProcessView+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286D22E9C6B400C2A8CF /* ProcessView+Const.swift */; };
 		F1E786B222EE4F29002007EE /* VideoPlayerView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B122EE4F29002007EE /* VideoPlayerView+Create.swift */; };
 		F1E786B422EE4F42002007EE /* VideoPlayerView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B322EE4F42002007EE /* VideoPlayerView+Action.swift */; };
 		F1E786B622EE4F9C002007EE /* VideoPlayerView +Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B522EE4F9C002007EE /* VideoPlayerView +Event.swift */; };
@@ -152,6 +161,15 @@
 		F1972E90233D103100CE772C /* CamPreviewView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamPreviewView+Create.swift"; sourceTree = "<group>"; };
 		F1972E92233D16A800CE772C /* CamView+ViewFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamView+ViewFinder.swift"; sourceTree = "<group>"; };
 		F1972E94233D172300CE772C /* CamView+Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamView+Video.swift"; sourceTree = "<group>"; };
+		F1972E96233D1CE600CE772C /* TopBar+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopBar+Create.swift"; sourceTree = "<group>"; };
+		F1972E99233D20AA00CE772C /* RoundButton+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoundButton+Event.swift"; sourceTree = "<group>"; };
+		F1972E9C233D20D400CE772C /* ToggleButton+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToggleButton+Event.swift"; sourceTree = "<group>"; };
+		F1972E9F233D211900CE772C /* ClickButton+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClickButton+Event.swift"; sourceTree = "<group>"; };
+		F1972EA2233D214100CE772C /* ShareButton+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShareButton+Event.swift"; sourceTree = "<group>"; };
+		F1972EA4233D215200CE772C /* ShareButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShareButton+Style.swift"; sourceTree = "<group>"; };
+		F1972EA7233D219C00CE772C /* ExitButton+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExitButton+Const.swift"; sourceTree = "<group>"; };
+		F1972EAA233D21BE00CE772C /* FlipButton+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlipButton+Const.swift"; sourceTree = "<group>"; };
+		F1972EAD233D226800CE772C /* FlashButton+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlashButton+Event.swift"; sourceTree = "<group>"; };
 		F1AA7578226B4E5000D4C272 /* With.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = With.framework; path = Carthage/Build/iOS/With.framework; sourceTree = "<group>"; };
 		F1AA757A226B4E9100D4C272 /* CamUtil+File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamUtil+File.swift"; sourceTree = "<group>"; };
 		F1AA757B226B4E9100D4C272 /* CamUtil+Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamUtil+Signature.swift"; sourceTree = "<group>"; };
@@ -192,8 +210,8 @@
 		F1CB286522E9C61A00C2A8CF /* ProcessView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Create.swift"; sourceTree = "<group>"; };
 		F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Event.swift"; sourceTree = "<group>"; };
 		F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Util.swift"; sourceTree = "<group>"; };
-		F1CB286B22E9C6A300C2A8CF /* ProcessView+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Type.swift"; sourceTree = "<group>"; };
-		F1CB286D22E9C6B400C2A8CF /* ProcessView+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Default.swift"; sourceTree = "<group>"; };
+		F1CB286B22E9C6A300C2A8CF /* ProcessView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+TypeAlias.swift"; sourceTree = "<group>"; };
+		F1CB286D22E9C6B400C2A8CF /* ProcessView+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Const.swift"; sourceTree = "<group>"; };
 		F1E786B122EE4F29002007EE /* VideoPlayerView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoPlayerView+Create.swift"; sourceTree = "<group>"; };
 		F1E786B322EE4F42002007EE /* VideoPlayerView+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoPlayerView+Action.swift"; sourceTree = "<group>"; };
 		F1E786B522EE4F9C002007EE /* VideoPlayerView +Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoPlayerView +Event.swift"; sourceTree = "<group>"; };
@@ -230,13 +248,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F114AD9321A074D200942A28 /* view */ = {
+		F114AD9321A074D200942A28 /* ImageView */ = {
 			isa = PBXGroup;
 			children = (
-				F1E786B022EE4F0A002007EE /* image */,
-				F1E786AF22EE4EFB002007EE /* video */,
+				F1ABBED220D07A11008B13B5 /* ImageView.swift */,
+				F1E786B922EE51D6002007EE /* ImageView+Extension.swift */,
 			);
-			path = view;
+			path = ImageView;
 			sourceTree = "<group>";
 		};
 		F114AD9B21A1B7C600942A28 /* ui */ = {
@@ -357,6 +375,70 @@
 			path = error;
 			sourceTree = "<group>";
 		};
+		F1972E98233D209A00CE772C /* RoundButton */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEBC20D07A11008B13B5 /* RoundButton.swift */,
+				F1972E99233D20AA00CE772C /* RoundButton+Event.swift */,
+			);
+			path = RoundButton;
+			sourceTree = "<group>";
+		};
+		F1972E9B233D20C500CE772C /* ToggleButton */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEBD20D07A11008B13B5 /* ToggleButton.swift */,
+				F1972E9C233D20D400CE772C /* ToggleButton+Event.swift */,
+			);
+			path = ToggleButton;
+			sourceTree = "<group>";
+		};
+		F1972E9E233D210900CE772C /* ClickButton */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEBE20D07A11008B13B5 /* ClickButton.swift */,
+				F1972E9F233D211900CE772C /* ClickButton+Event.swift */,
+			);
+			path = ClickButton;
+			sourceTree = "<group>";
+		};
+		F1972EA1233D212C00CE772C /* ShareButton */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEBF20D07A11008B13B5 /* ShareButton.swift */,
+				F1972EA2233D214100CE772C /* ShareButton+Event.swift */,
+				F1972EA4233D215200CE772C /* ShareButton+Style.swift */,
+			);
+			path = ShareButton;
+			sourceTree = "<group>";
+		};
+		F1972EA6233D218B00CE772C /* ExitButton */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEC320D07A11008B13B5 /* ExitButton.swift */,
+				F1972EA7233D219C00CE772C /* ExitButton+Const.swift */,
+			);
+			path = ExitButton;
+			sourceTree = "<group>";
+		};
+		F1972EA9233D21B200CE772C /* FlipButton */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEC420D07A11008B13B5 /* FlipButton.swift */,
+				F1972EAA233D21BE00CE772C /* FlipButton+Const.swift */,
+			);
+			path = FlipButton;
+			sourceTree = "<group>";
+		};
+		F1972EAC233D222B00CE772C /* FlashButton */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEC520D07A11008B13B5 /* FlashButton.swift */,
+				F1972EAD233D226800CE772C /* FlashButton+Event.swift */,
+			);
+			path = FlashButton;
+			sourceTree = "<group>";
+		};
 		F1AA7577226B4E5000D4C272 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,7 +507,7 @@
 				F1ABBEB120D07A11008B13B5 /* CustomCamView.swift */,
 				F1ABBED020D07A11008B13B5 /* CustomProcessView.swift */,
 				F1ABBEB420D07A11008B13B5 /* button */,
-				F1ABBEC020D07A11008B13B5 /* topbar */,
+				F1ABBEC020D07A11008B13B5 /* TopBar */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -433,14 +515,14 @@
 		F1ABBEB420D07A11008B13B5 /* button */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABBEB520D07A11008B13B5 /* record */,
 				F1ABBEBB20D07A11008B13B5 /* util */,
-				F1ABBEBF20D07A11008B13B5 /* ShareButton.swift */,
+				F1ABBEB520D07A11008B13B5 /* RecordButton */,
+				F1972EA1233D212C00CE772C /* ShareButton */,
 			);
 			path = button;
 			sourceTree = "<group>";
 		};
-		F1ABBEB520D07A11008B13B5 /* record */ = {
+		F1ABBEB520D07A11008B13B5 /* RecordButton */ = {
 			isa = PBXGroup;
 			children = (
 				F1ABBEBA20D07A11008B13B5 /* RecordButton.swift */,
@@ -449,34 +531,35 @@
 				F1ABBEB820D07A11008B13B5 /* RecordButton+Const.swift */,
 				F1ABBEB920D07A11008B13B5 /* RecordButton+Event.swift */,
 			);
-			path = record;
+			path = RecordButton;
 			sourceTree = "<group>";
 		};
 		F1ABBEBB20D07A11008B13B5 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABBEBC20D07A11008B13B5 /* RoundButton.swift */,
-				F1ABBEBD20D07A11008B13B5 /* ToggleButton.swift */,
-				F1ABBEBE20D07A11008B13B5 /* ClickButton.swift */,
+				F1972E98233D209A00CE772C /* RoundButton */,
+				F1972E9B233D20C500CE772C /* ToggleButton */,
+				F1972E9E233D210900CE772C /* ClickButton */,
 			);
 			path = util;
 			sourceTree = "<group>";
 		};
-		F1ABBEC020D07A11008B13B5 /* topbar */ = {
+		F1ABBEC020D07A11008B13B5 /* TopBar */ = {
 			isa = PBXGroup;
 			children = (
 				F1ABBEC120D07A11008B13B5 /* TopBar.swift */,
+				F1972E96233D1CE600CE772C /* TopBar+Create.swift */,
 				F1ABBEC220D07A11008B13B5 /* button */,
 			);
-			path = topbar;
+			path = TopBar;
 			sourceTree = "<group>";
 		};
 		F1ABBEC220D07A11008B13B5 /* button */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABBEC320D07A11008B13B5 /* ExitButton.swift */,
-				F1ABBEC420D07A11008B13B5 /* FlipButton.swift */,
-				F1ABBEC520D07A11008B13B5 /* FlashButton.swift */,
+				F1972EA6233D218B00CE772C /* ExitButton */,
+				F1972EA9233D21B200CE772C /* FlipButton */,
+				F1972EAC233D222B00CE772C /* FlashButton */,
 			);
 			path = button;
 			sourceTree = "<group>";
@@ -509,17 +592,18 @@
 			children = (
 				F114ADD621A1D35A00942A28 /* ProcessView.swift */,
 				F114ADD821A1D40300942A28 /* ProcessView+Action.swift */,
-				F1CB286B22E9C6A300C2A8CF /* ProcessView+Type.swift */,
-				F1CB286D22E9C6B400C2A8CF /* ProcessView+Default.swift */,
+				F1CB286B22E9C6A300C2A8CF /* ProcessView+TypeAlias.swift */,
+				F1CB286D22E9C6B400C2A8CF /* ProcessView+Const.swift */,
+				F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */,
 				F1CB286522E9C61A00C2A8CF /* ProcessView+Create.swift */,
 				F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */,
-				F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */,
-				F114AD9321A074D200942A28 /* view */,
+				F1E786AF22EE4EFB002007EE /* VideoPlayerView */,
+				F114AD9321A074D200942A28 /* ImageView */,
 			);
 			path = ProcessView;
 			sourceTree = "<group>";
 		};
-		F1E786AF22EE4EFB002007EE /* video */ = {
+		F1E786AF22EE4EFB002007EE /* VideoPlayerView */ = {
 			isa = PBXGroup;
 			children = (
 				F1ABBED120D07A11008B13B5 /* VideoPlayerView.swift */,
@@ -528,16 +612,7 @@
 				F1E786B722EE50D7002007EE /* VideoPlayerView+Close.swift */,
 				F1E786B522EE4F9C002007EE /* VideoPlayerView +Event.swift */,
 			);
-			path = video;
-			sourceTree = "<group>";
-		};
-		F1E786B022EE4F0A002007EE /* image */ = {
-			isa = PBXGroup;
-			children = (
-				F1ABBED220D07A11008B13B5 /* ImageView.swift */,
-				F1E786B922EE51D6002007EE /* ImageView+Extension.swift */,
-			);
-			path = image;
+			path = VideoPlayerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -760,12 +835,12 @@
 				F114ADC721A1C2E500942A28 /* ImageView.swift in Sources */,
 				F1E786B622EE4F9C002007EE /* VideoPlayerView +Event.swift in Sources */,
 				F1972E7B233D0B6F00CE772C /* ToggleButtonKind+TypeAlias.swift in Sources */,
-				F1CB286E22E9C6B400C2A8CF /* ProcessView+Default.swift in Sources */,
+				F1CB286E22E9C6B400C2A8CF /* ProcessView+Const.swift in Sources */,
 				F114ADBF21A1C2E500942A28 /* CamView+Photo.swift in Sources */,
 				F1972E82233D0BF800CE772C /* ClickButtonKind+Const.swift in Sources */,
 				F114ADBE21A1C2E500942A28 /* CamView+Feature.swift in Sources */,
 				F114ADC421A1C2E500942A28 /* CamView+Gesture.swift in Sources */,
-				F1CB286C22E9C6A300C2A8CF /* ProcessView+Type.swift in Sources */,
+				F1CB286C22E9C6A300C2A8CF /* ProcessView+TypeAlias.swift in Sources */,
 				F114ADB821A1C2E500942A28 /* ClickButtonKind.swift in Sources */,
 				F1CB286822E9C64B00C2A8CF /* ProcessView+Event.swift in Sources */,
 				F114ADCB21A1C9C200942A28 /* HybridCamView.swift in Sources */,
@@ -789,14 +864,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1059EE222EC36C6004A8346 /* VC+Extension.swift in Sources */,
+				F1972E9D233D20D400CE772C /* ToggleButton+Event.swift in Sources */,
 				F1ABBEE220D07A12008B13B5 /* RoundButton.swift in Sources */,
+				F1972EA0233D211900CE772C /* ClickButton+Event.swift in Sources */,
 				F1ABBEE420D07A12008B13B5 /* ClickButton.swift in Sources */,
+				F1972EA5233D215200CE772C /* ShareButton+Style.swift in Sources */,
 				F1ABBEF620D07A12008B13B5 /* AppDelegate.swift in Sources */,
 				F1ABBEE320D07A12008B13B5 /* ToggleButton.swift in Sources */,
+				F1972EA3233D214100CE772C /* ShareButton+Event.swift in Sources */,
 				F1ABBEE820D07A12008B13B5 /* FlipButton.swift in Sources */,
+				F1972E97233D1CE600CE772C /* TopBar+Create.swift in Sources */,
+				F1972E9A233D20AA00CE772C /* RoundButton+Event.swift in Sources */,
 				F1ABBED620D07A12008B13B5 /* VC.swift in Sources */,
 				F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */,
 				F1ABBEDF20D07A12008B13B5 /* RecordButton+Const.swift in Sources */,
+				F1972EA8233D219C00CE772C /* ExitButton+Const.swift in Sources */,
+				F1972EAE233D226800CE772C /* FlashButton+Event.swift in Sources */,
+				F1972EAB233D21BE00CE772C /* FlipButton+Const.swift in Sources */,
 				F1ABBEE920D07A12008B13B5 /* FlashButton.swift in Sources */,
 				F1ABBEE520D07A12008B13B5 /* ShareButton.swift in Sources */,
 				F1ABBEE120D07A12008B13B5 /* RecordButton.swift in Sources */,

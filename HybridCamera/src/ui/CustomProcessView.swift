@@ -3,9 +3,9 @@ import AVFoundation
 import HybridCamLib
 import With
 
-open class CustomProcessView: ProcessView {} //Fixme: ⚠️️ Rename to CustomProcessMediaView
+open class CustomProcessView: ProcessView {} //Fixme: ⚠️️ Rename to CustomProcessMediaView?
 /**
- * Extension
+ * Create
  */
 extension CustomProcessView {
    /**
@@ -28,10 +28,3 @@ extension CustomProcessView {
       }
    }
 }
-
-///**
-// * Create
-// */
-//extension ProcessMediaView {
-//
-//}

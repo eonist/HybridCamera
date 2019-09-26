@@ -19,23 +19,3 @@ open class TopBar: UIView, TopBarKind {
       fatalError("init(coder:) has not been implemented")
    }
 }
-/**
- * Create
- */
-extension TopBar {
-   open func createExitButton() -> ClickButtonKind {
-      let btn = ExitButton()
-      self.addSubview(btn)
-      return btn
-   }
-   open func createFlashButton() -> ToggleButtonKind {
-      let btn = FlashButton()
-      self.addSubview(btn)
-      return btn
-   }
-   open func createFlipButton() -> ToggleButtonKind {
-      let btn = FlipButton()
-      self.addSubview(btn)
-      return btn
-   }
-}

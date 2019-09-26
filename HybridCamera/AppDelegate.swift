@@ -8,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          let window = UIWindow(frame: UIScreen.main.bounds)
          let vc = VC()
          window.rootViewController = vc
-         window.makeKeyAndVisible()/*since we have no Main storyboard*/
+         window.makeKeyAndVisible() // since we have no Main storyboard
          return window
       }()
       return true

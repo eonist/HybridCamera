@@ -6,7 +6,8 @@ import With
 extension RecordButton {
    /**
     * Circle class (Creates RecordButton)
-    * - Fixme: ⚠️️ Do this on didLayout instead, as you dont have frame when using AutoLayout
+    * - Fixme: ⚠️️ Do this on didLayout instead, as you don't have frame when using AutoLayout
+    * - Fixme: ⚠️️ move out of RecordButton scope
     */
    open class Circle: UIView {
       open lazy var inner: UIView = self.createInnerCircle()
@@ -72,5 +73,5 @@ extension RecordButton {
  * Extension
  */
 extension RecordButton.Circle {
-   open class var rect: CGRect { return .init(origin: .init(x: 0, y: 0), size: .init(width: RecordButton.size.width, height: RecordButton.size.height)) }
+   open class var rect: CGRect { return .init(origin: .init(x: 0, y: 0), size: RecordButton.size) }
 }
