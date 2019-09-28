@@ -34,6 +34,7 @@
 		F114ADDB21A1D57A00942A28 /* ProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD621A1D35A00942A28 /* ProcessView.swift */; };
 		F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD821A1D40300942A28 /* ProcessView+Action.swift */; };
 		F114ADE521A1EF0A00942A28 /* HybridCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */; };
+		F123AD74233F54480009F189 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123AD73233F54480009F189 /* Result+Extension.swift */; };
 		F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */; };
 		F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */; };
 		F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */; };
@@ -60,10 +61,10 @@
 		F1972EA8233D219C00CE772C /* ExitButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EA7233D219C00CE772C /* ExitButton+Const.swift */; };
 		F1972EAB233D21BE00CE772C /* FlipButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EAA233D21BE00CE772C /* FlipButton+Const.swift */; };
 		F1972EAE233D226800CE772C /* FlashButton+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EAD233D226800CE772C /* FlashButton+Event.swift */; };
+		F1972EB1233F3B8400CE772C /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EB0233F3B8400CE772C /* FileUtil.swift */; };
+		F1972EB3233F416100CE772C /* CamUtil+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EB2233F416100CE772C /* CamUtil+Error.swift */; };
 		F1AA7579226B4E5000D4C272 /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
-		F1AA757D226B4E9200D4C272 /* CamUtil+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757A226B4E9100D4C272 /* CamUtil+File.swift */; };
-		F1AA757E226B4E9200D4C272 /* CamUtil+Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757B226B4E9100D4C272 /* CamUtil+Signature.swift */; };
-		F1AA757F226B4E9200D4C272 /* CamUtil+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757C226B4E9100D4C272 /* CamUtil+Helper.swift */; };
+		F1AA757E226B4E9200D4C272 /* CamUtil+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA757B226B4E9100D4C272 /* CamUtil+TypeAlias.swift */; };
 		F1AA7580226C6D2200D4C272 /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
 		F1AA7581226C6D2200D4C272 /* With.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */; };
@@ -144,6 +145,7 @@
 		F114ADE221A1EF0A00942A28 /* HybridCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HybridCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridCameraTests.swift; sourceTree = "<group>"; };
 		F114ADE621A1EF0A00942A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F123AD73233F54480009F189 /* Result+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extension.swift"; sourceTree = "<group>"; };
 		F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Event.swift"; sourceTree = "<group>"; };
 		F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButtonKind+TypeAlias.swift"; sourceTree = "<group>"; };
@@ -170,10 +172,10 @@
 		F1972EA7233D219C00CE772C /* ExitButton+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExitButton+Const.swift"; sourceTree = "<group>"; };
 		F1972EAA233D21BE00CE772C /* FlipButton+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlipButton+Const.swift"; sourceTree = "<group>"; };
 		F1972EAD233D226800CE772C /* FlashButton+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlashButton+Event.swift"; sourceTree = "<group>"; };
+		F1972EB0233F3B8400CE772C /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
+		F1972EB2233F416100CE772C /* CamUtil+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamUtil+Error.swift"; sourceTree = "<group>"; };
 		F1AA7578226B4E5000D4C272 /* With.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = With.framework; path = Carthage/Build/iOS/With.framework; sourceTree = "<group>"; };
-		F1AA757A226B4E9100D4C272 /* CamUtil+File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamUtil+File.swift"; sourceTree = "<group>"; };
-		F1AA757B226B4E9100D4C272 /* CamUtil+Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamUtil+Signature.swift"; sourceTree = "<group>"; };
-		F1AA757C226B4E9100D4C272 /* CamUtil+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamUtil+Helper.swift"; sourceTree = "<group>"; };
+		F1AA757B226B4E9100D4C272 /* CamUtil+TypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamUtil+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1ABBE9420D0798A008B13B5 /* HybridCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1ABBEA120D0798B008B13B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1ABBEA920D07A11008B13B5 /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 		F114ADDD21A1E31C00942A28 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F1972EAF233F3AF600CE772C /* common */,
 				F1972E76233D0B1000CE772C /* HybridCamView */,
 				F114AD9B21A1B7C600942A28 /* ui */,
 				F1ABBEC620D07A11008B13B5 /* CamView */,
@@ -439,6 +442,15 @@
 			path = FlashButton;
 			sourceTree = "<group>";
 		};
+		F1972EAF233F3AF600CE772C /* common */ = {
+			isa = PBXGroup;
+			children = (
+				F1972EB0233F3B8400CE772C /* FileUtil.swift */,
+				F123AD73233F54480009F189 /* Result+Extension.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		F1AA7577226B4E5000D4C272 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,9 +506,8 @@
 			isa = PBXGroup;
 			children = (
 				F1ABBEB020D07A11008B13B5 /* CamUtil.swift */,
-				F1AA757A226B4E9100D4C272 /* CamUtil+File.swift */,
-				F1AA757C226B4E9100D4C272 /* CamUtil+Helper.swift */,
-				F1AA757B226B4E9100D4C272 /* CamUtil+Signature.swift */,
+				F1AA757B226B4E9100D4C272 /* CamUtil+TypeAlias.swift */,
+				F1972EB2233F416100CE772C /* CamUtil+Error.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -567,9 +578,9 @@
 		F1ABBEC620D07A11008B13B5 /* CamView */ = {
 			isa = PBXGroup;
 			children = (
+				F1151D2620D2B1E400860CD9 /* CamPreviewView */,
 				F1972E87233D0D3A00CE772C /* error */,
 				F1ABBEAC20D07A11008B13B5 /* util */,
-				F1151D2620D2B1E400860CD9 /* CamPreviewView */,
 				F1ABBECB20D07A11008B13B5 /* CamView.swift */,
 				F1972E8C233D0DBB00CE772C /* CamView+TypeAlias.swift */,
 				F1972E8E233D0DC300CE772C /* CamView+Const.swift */,
@@ -799,6 +810,7 @@
 			files = (
 				F1CB286A22E9C67900C2A8CF /* ProcessView+Util.swift in Sources */,
 				F114ADD121A1CB3300942A28 /* HybridCamView+Create.swift in Sources */,
+				F1972EB3233F416100CE772C /* CamUtil+Error.swift in Sources */,
 				F114ADBD21A1C2E500942A28 /* CamView.swift in Sources */,
 				F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */,
 				F114ADB721A1C2E500942A28 /* ToggleButtonKind.swift in Sources */,
@@ -808,18 +820,18 @@
 				F1CB286622E9C61A00C2A8CF /* ProcessView+Create.swift in Sources */,
 				F1972E75233D0A6B00CE772C /* RecordButtonKind+Const.swift in Sources */,
 				F114ADBC21A1C2E500942A28 /* CamPreviewView.swift in Sources */,
-				F1AA757F226B4E9200D4C272 /* CamUtil+Helper.swift in Sources */,
 				F1972E8B233D0D5500CE772C /* CaptureError.swift in Sources */,
 				F1972E91233D103100CE772C /* CamPreviewView+Create.swift in Sources */,
 				F1972E7D233D0B8200CE772C /* ToggleButtonKind+Const.swift in Sources */,
 				F114ADC321A1C2E500942A28 /* CamView+Action.swift in Sources */,
-				F1AA757D226B4E9200D4C272 /* CamUtil+File.swift in Sources */,
 				F114ADC121A1C2E500942A28 /* CamView+Create.swift in Sources */,
 				F1E786B222EE4F29002007EE /* VideoPlayerView+Create.swift in Sources */,
+				F123AD74233F54480009F189 /* Result+Extension.swift in Sources */,
 				F1972E84233D0CA600CE772C /* TopBarViewKind.swift in Sources */,
 				F114ADBB21A1C2E500942A28 /* CamUtil.swift in Sources */,
 				F1972E89233D0D4800CE772C /* SetupError.swift in Sources */,
 				F114ADDB21A1D57A00942A28 /* ProcessView.swift in Sources */,
+				F1972EB1233F3B8400CE772C /* FileUtil.swift in Sources */,
 				F1972E95233D172300CE772C /* CamView+Video.swift in Sources */,
 				F1972E8F233D0DC300CE772C /* CamView+Const.swift in Sources */,
 				F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */,
@@ -845,7 +857,7 @@
 				F1CB286822E9C64B00C2A8CF /* ProcessView+Event.swift in Sources */,
 				F114ADCB21A1C9C200942A28 /* HybridCamView.swift in Sources */,
 				F1972E80233D0BEE00CE772C /* ClickButtonKind+TypeAlias.swift in Sources */,
-				F1AA757E226B4E9200D4C272 /* CamUtil+Signature.swift in Sources */,
+				F1AA757E226B4E9200D4C272 /* CamUtil+TypeAlias.swift in Sources */,
 				F1E786B822EE50D7002007EE /* VideoPlayerView+Close.swift in Sources */,
 				F1E786B422EE4F42002007EE /* VideoPlayerView+Action.swift in Sources */,
 			);
