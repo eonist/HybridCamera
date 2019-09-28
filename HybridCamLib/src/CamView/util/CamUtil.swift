@@ -7,12 +7,13 @@ public class CamUtil {
     * Returns camera (.front or .back)
     * - Fixme: ⚠️️ make this try error based with meaningful error message
     */
-   
-   
-   
    public static func camera(type: AVCaptureDevice.Position) -> AVCaptureDevice? {
+      // 🏀 continue here
+      // document the discoverry session better,
+      // and maybe add support for the different cameras types, like wide, tele, normal, consider iphone 11
       let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
       let cameras: [AVCaptureDevice] = session.devices.compactMap { $0 }
+      // .failure(.noCameraOfTypeAvailable(type, availableCameras: cameras))
       guard !cameras.isEmpty else { Swift.print("noCamerasAvailable"); return nil }
       return cameras.first { $0.position == type }
    }

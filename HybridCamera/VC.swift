@@ -5,7 +5,7 @@ import With
 /**
  * Main view controller
  */
-class VC: UIViewController {
+class ViewController: UIViewController {
    var processMediaView: CustomProcessView?
    /**
     * We add the Camera view in the viewDidAppear so that its tricggered again after user changes the app prefs to allow video use

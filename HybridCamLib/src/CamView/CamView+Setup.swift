@@ -29,8 +29,8 @@ extension CamView {
     */
    
    // Continue here:
-   // Test the new Result extenion code in playground to make sure its legit
-   // add guard with result for the CamUtil.camera method
+      // Test the new Result extenion code in playground to make sure its legit
+      // add guard with result for the CamUtil.camera method
    
    
    @objc open func setupCaptureDeviceInput(cameraType: AVCaptureDevice.Position) throws {

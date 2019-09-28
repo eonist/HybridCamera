@@ -5,7 +5,7 @@ import AVFoundation
 /**
  * Extension
  */
-extension VC {
+extension ViewController {
    /**
     * When camera accesses is granted proced to initiate the camera
     */

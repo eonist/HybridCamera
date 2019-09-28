@@ -8,15 +8,19 @@ extension Result where Success == Void {
       return .success(())
    }
 }
-/**
- * - Note: Sometimes you just want to do print($0.error)
- */
 extension Result {
-   public var error: String {
-      if case .failure(let error) = self {
-         return error.localizedDescription
-      } else {
-         return "success"
-      }
+   /**
+    * - Note: Sometimes you just want to do print($0.errorStr)
+    */
+   public var errorStr: String {
+      guard let error = self.error else { return "success" }
+      return error.localizedDescription
+   }
+   /**
+    * - Note: Sometimes you just want to do print($0.error)
+    */
+   public var error: Error? {
+      guard case .failure(let error) = self else { return nil }
+      return error
    }
 }
