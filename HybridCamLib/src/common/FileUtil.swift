@@ -4,7 +4,7 @@ import AVFoundation
  * File utilities
  * - Fixme: ⚠️️ Move this to FileUtil in /common
  */
-class FileUtil {
+public class FileUtil {
    /**
     * Returns a file-path to temporary storage
     * - Note: file path becomes similar to: file:///private/var/mobile/Containers/Data/Application/7A735556D-364C-4D11-9E8A-6676BF11A1E1/tmp/F3888C7E-B1C6-49AC-9DV0-E4F92749204E.mp4
