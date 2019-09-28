@@ -13,14 +13,18 @@ extension Result {
     * - Note: Sometimes you just want to do print($0.errorStr)
     */
    public var errorStr: String {
-      guard let error = self.error else { return "success" }
+      guard let error: Error = self.error() else { return "success" }
       return error.localizedDescription
    }
    /**
     * - Note: Sometimes you just want to do print($0.error)
     */
-   public var error: Error? {
+//   public var error: Error? {
+//      guard case .failure(let error) = self else { return nil }
+//      return error
+//   }
+   public func error<T>() -> T? where T: Error {
       guard case .failure(let error) = self else { return nil }
-      return error
+      return error as? T
    }
 }

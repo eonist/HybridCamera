@@ -6,7 +6,7 @@ public enum SetupError: Swift.Error {
    case unableToAddPhotoOutput
    case unableToAddVideoOutput
    case unableToGetAudioCaptureDevice
-   case unableToGetVideoCaptureDevice
+   case unableToGetVideoCaptureDevice(CamUtil.CaptureDeviceError?)
    case unableToCreateVideoConnection
    case unableToActivateBackgroundAudio
 }
@@ -19,7 +19,7 @@ extension SetupError: CustomStringConvertible {
       case .unableToAddPhotoOutput: return "unable to add output: capturePhotoOutput"
       case .unableToAddVideoOutput: return "unable to add output: captureVideoOutput"
       case .unableToGetAudioCaptureDevice: return " could not get audio capture device"
-      case .unableToGetVideoCaptureDevice: return "could not get video capture device"
+      case .unableToGetVideoCaptureDevice(let error): return "could not get video capture device reason: \(String(describing: error?.localizedDescription))"
       case .unableToCreateVideoConnection: return "unable to create video connection"
       case .unableToActivateBackgroundAudio: return "unable to set background audio"
       }

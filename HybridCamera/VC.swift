@@ -13,7 +13,7 @@ class ViewController: UIViewController {
    override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
       CamUtil.assertVideoAndMicAccess(vc: self) { // Sends user through camera access wizard
-         guard case .success = $0 else { print($0.error); return }
+         guard case .success = $0 else { print($0.errorStr); return }
          DispatchQueue.main.async { [weak self] in
             self?.initiate() // If accesses was granted proced to initiate the camera
          }

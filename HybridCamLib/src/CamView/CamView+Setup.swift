@@ -27,15 +27,10 @@ extension CamView {
     * - Fixme: ⚠️️ pass cameraType as var, avides additional global vars in class
     * - Fixme: ⚠️️ Use Result here
     */
-   
-   // Continue here:
-      // Test the new Result extenion code in playground to make sure its legit
-      // add guard with result for the CamUtil.camera method
-   
-   
    @objc open func setupCaptureDeviceInput(cameraType: AVCaptureDevice.Position) throws {
-      guard let captureDevice: AVCaptureDevice = CamUtil.camera(type: cameraType) else { // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
-         throw SetupError.unableToGetVideoCaptureDevice
+      let camera: CamUtil.CameraResult = CamUtil.camera(devicePosition: cameraType)
+      guard case .success(let captureDevice) = camera else { // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
+         throw SetupError.unableToGetVideoCaptureDevice(camera.error())
       }
       do {
          captureSession.inputs.forEach { captureSession.removeInput($0) } // Removes previous inputs
