@@ -12,11 +12,10 @@ class VC: UIViewController {
     */
    override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
-      CamUtil.assertVideoAndMicAccess(vc: self) { (success: Bool) in // Goes through camera access wizard
-         guard success else { return }
+      CamUtil.assertVideoAndMicAccess(vc: self) { // Sends user through camera access wizard
+         guard case .success = $0 else { print($0.error); return }
          DispatchQueue.main.async { [weak self] in
-            guard let self = self else { print("🚫"); return }
-            self.initiate() // If accesses was granted proced to initiate the camera
+            self?.initiate() // If accesses was granted proced to initiate the camera
          }
       }
    }
