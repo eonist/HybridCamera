@@ -1,7 +1,6 @@
 import UIKit
 import AVFoundation
 import With
-
 /**
  * VideoCamera actions
  */
@@ -35,13 +34,6 @@ extension CamView {
    @objc open func stopRecording() {
       guard videoOutput.isRecording else { onVideoCaptureComplete(nil, CaptureError.alreadyStoppedRecording); return }
       videoOutput.stopRecording()
-   }
-   /**
-    * - Fixme: ⚠️️ After going back to camView after seeing recorded video, reset zoom: setZoom(zoomFactor: 1) needs to be called and startingZoomFactorForLongPress = 1
-    * - Fixme: Explain what this method does
-    */
-   @objc open func zoomViaRecord(addZoom: CGFloat) {
-      try? deviceInput?.setZoomFactor(to: startingZoomFactorForLongPress + addZoom)
    }
 }
 /**
