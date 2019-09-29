@@ -38,6 +38,8 @@
 		F16F61AC2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */; };
 		F16F61AE2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */; };
 		F16F61DD23410ACC00574EBE /* ResultSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DC23410ACB00574EBE /* ResultSugariOS.framework */; };
+		F16F61DF234111C500574EBE /* ResultSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DE234111C500574EBE /* ResultSugariOS.framework */; };
+		F16F61E0234111C500574EBE /* ResultSugariOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DE234111C500574EBE /* ResultSugariOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */; };
 		F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */; };
 		F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */; };
@@ -124,6 +126,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F16F61E0234111C500574EBE /* ResultSugariOS.framework in Embed Frameworks */,
 				F1AA7581226C6D2200D4C272 /* With.framework in Embed Frameworks */,
 				F114ADAE21A1C27F00942A28 /* HybridCamLib.framework in Embed Frameworks */,
 			);
@@ -152,6 +155,7 @@
 		F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Feature.swift"; sourceTree = "<group>"; };
 		F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCapturePhotoOutput+Feature.swift"; sourceTree = "<group>"; };
 		F16F61DC23410ACB00574EBE /* ResultSugariOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResultSugariOS.framework; path = Carthage/Build/iOS/ResultSugariOS.framework; sourceTree = "<group>"; };
+		F16F61DE234111C500574EBE /* ResultSugariOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResultSugariOS.framework; path = Carthage/Build/iOS/ResultSugariOS.framework; sourceTree = "<group>"; };
 		F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Event.swift"; sourceTree = "<group>"; };
 		F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButtonKind+TypeAlias.swift"; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16F61DF234111C500574EBE /* ResultSugariOS.framework in Frameworks */,
 				F1AA7580226C6D2200D4C272 /* With.framework in Frameworks */,
 				F114ADAD21A1C27F00942A28 /* HybridCamLib.framework in Frameworks */,
 			);
@@ -479,6 +484,7 @@
 		F1ABBE8B20D0798A008B13B5 = {
 			isa = PBXGroup;
 			children = (
+				F16F61DE234111C500574EBE /* ResultSugariOS.framework */,
 				F1ABBE9620D0798A008B13B5 /* HybridCamera */,
 				F114ADA721A1C27F00942A28 /* HybridCamLib */,
 				F114ADE321A1EF0A00942A28 /* HybridCameraTests */,
