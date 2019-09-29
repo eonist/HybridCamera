@@ -6,6 +6,7 @@ import With
 extension HybridCamView {
    /**
     * Attach CallBacks
+    * - Fixme: add support for auto flashmode?
     */
    @objc public func addEventHandlers() {
       with(recordButton) { // Attach callbacks to recordButton
@@ -15,8 +16,8 @@ extension HybridCamView {
          $0.onLongPressChanged = { addZoom in self.camView.zoomViaRecord(addZoom: addZoom) }
       }
       with(topBar) { // Attach callbacks to topBar
-         $0.flipButton.onToggle = { toggle in self.camView.toggleCamera(for: toggle ? .front : .back) }
-         $0.flashButton.onToggle = { toggle in self.camView.toggleFlashMode(for: toggle ? .on : .off) }
+         $0.flipButton.onToggle = { toggle in try? self.camView.toggleCameraPosition(for: toggle ? .front : .back) }
+         $0.flashButton.onToggle = { toggle in self.camView.flashMode = toggle ? .on : .off }
          $0.exitButton.onClick = { self.onCameraExit() }
       }
    }

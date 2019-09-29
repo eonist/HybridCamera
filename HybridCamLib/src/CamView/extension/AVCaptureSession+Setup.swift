@@ -43,7 +43,7 @@ extension AVCaptureSession {
     */
    @objc open func setupPhotoCamera(output: AVCapturePhotoOutput) throws {
       output.isHighResolutionCaptureEnabled = true // Indicates whether the photo render pipeline should be configured to deliver high resolution still images.
-      guard self.canAddOutput(output) else { throw SetupError.unableToAddPhotoOutput } //  YES if the proposed output can be added to the receiver, NO otherwise.
+      guard self.canAddOutput(output) else { throw SetupError.unableToAddPhotoOutput } // YES if the proposed output can be added to the receiver, NO otherwise.
       self.addOutput(output) // Set the output on the capture session
    }
    /**

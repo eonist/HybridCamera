@@ -1,5 +1,7 @@
 import UIKit
-
+/**
+ * Callback signatures
+ */
 extension CamView {
    /**
     * Default callback for photo capture

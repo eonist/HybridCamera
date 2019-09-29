@@ -4,19 +4,19 @@ import AVFoundation
  * ## Examples:
  * let camView = CamView(frame: UISCreen.bounds)
  * addSubView(camView)
- * camView.startRecording()//start capturing
- * camView.stopRecording()//stop capturing
+ * camView.startRecording() // start capturing
+ * camView.stopRecording() // stop capturing
  * - Fixme: ⚠️️ Maybe Add CamViewController (CamVC) and CamModel?
  */
 open class CamView: UIView {
    // UI
-   public lazy var previewView: CamPreviewView = createPreviewView()/*Has the view Finder Preview*/
+   public lazy var previewView: CamPreviewView = createPreviewView() // Has the view Finder Preview
    // AV
    public var deviceInput: AVCaptureDeviceInput?
-   public let videoOutput = AVCaptureMovieFileOutput()
+   public let videoOutput: AVCaptureMovieFileOutput = .init()
    public let photoOutput: AVCapturePhotoOutput = .init()
    // State
-   public var flashMode: AVCaptureDevice.FlashMode = .off
+   public var flashMode: AVCaptureDevice.FlashMode = .off  // - Options: .on, .off, .auto
    public var startingZoomFactorForLongPress: CGFloat = 1
    // Callbacks
    public var onVideoCaptureComplete: VideoCaptureComplete = defaultVideoCaptureComplete

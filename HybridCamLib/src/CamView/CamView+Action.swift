@@ -41,7 +41,7 @@ extension CamView {
     * - Fixme: Explain what this method does
     */
    @objc open func zoomViaRecord(addZoom: CGFloat) {
-      setZoomFactor(to: startingZoomFactorForLongPress + addZoom)
+      try? deviceInput?.setZoomFactor(to: startingZoomFactorForLongPress + addZoom)
    }
 }
 /**

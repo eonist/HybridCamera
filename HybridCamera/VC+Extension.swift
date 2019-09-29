@@ -59,7 +59,7 @@ extension ViewController {
     */
    private func resetZoom() {
       guard let hybridCamView = self.view as? HybridCamView else { print("⚠️️ Could not reset zoom"); return }
-      hybridCamView.camView.setZoomFactor(to: 1)
+      try? hybridCamView.camView.deviceInput?.setZoomFactor(to: 1)
       hybridCamView.camView.startingZoomFactorForLongPress = 1
    }
    /**
