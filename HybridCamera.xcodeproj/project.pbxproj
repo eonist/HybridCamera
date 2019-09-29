@@ -38,6 +38,7 @@
 		F16F61A82340C6BC00574EBE /* AVCaptureSession+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61A72340C6BC00574EBE /* AVCaptureSession+Setup.swift */; };
 		F16F61AC2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */; };
 		F16F61AE2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */; };
+		F16F61DD23410ACC00574EBE /* ResultSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DC23410ACB00574EBE /* ResultSugariOS.framework */; };
 		F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */; };
 		F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */; };
 		F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */; };
@@ -152,6 +153,7 @@
 		F16F61A72340C6BC00574EBE /* AVCaptureSession+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Setup.swift"; sourceTree = "<group>"; };
 		F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Feature.swift"; sourceTree = "<group>"; };
 		F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCapturePhotoOutput+Feature.swift"; sourceTree = "<group>"; };
+		F16F61DC23410ACB00574EBE /* ResultSugariOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResultSugariOS.framework; path = Carthage/Build/iOS/ResultSugariOS.framework; sourceTree = "<group>"; };
 		F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Event.swift"; sourceTree = "<group>"; };
 		F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButtonKind+TypeAlias.swift"; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1AA7579226B4E5000D4C272 /* With.framework in Frameworks */,
+				F16F61DD23410ACC00574EBE /* ResultSugariOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +473,7 @@
 		F1AA7577226B4E5000D4C272 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F16F61DC23410ACB00574EBE /* ResultSugariOS.framework */,
 				F1AA7578226B4E5000D4C272 /* With.framework */,
 			);
 			name = Frameworks;
@@ -969,7 +973,7 @@
 				);
 				INFOPLIST_FILE = HybridCamLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1004,7 +1008,7 @@
 				);
 				INFOPLIST_FILE = HybridCamLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1189,7 +1193,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = HybridCamera/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1215,7 +1219,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = HybridCamera/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

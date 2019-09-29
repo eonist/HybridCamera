@@ -1,0 +1,11 @@
+framework module ResultSugariOS {
+  umbrella header "ResultSugariOS.h"
+
+  export *
+  module * { export * }
+}
+
+module ResultSugariOS.Swift {
+    header "ResultSugariOS-Swift.h"
+    requires objc
+}

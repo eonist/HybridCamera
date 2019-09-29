@@ -6,6 +6,7 @@ import AVFoundation
 extension CamView: AVCapturePhotoCaptureDelegate {
    /**
     * Called after a takePhoto action has occured (Delegate method)
+    * - Fixme: ⚠️️ Explain the process this method performs
     */
    @objc open func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
       guard let imageData = photo.fileDataRepresentation() else { onPhotoCaptureComplete(.failure(CaptureError.malformedImageData)); return }// Convert photo same buffer to a jpeg image data by using AVCapturePhotoOutput

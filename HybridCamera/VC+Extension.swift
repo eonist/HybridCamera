@@ -17,9 +17,9 @@ extension ViewController {
          guard let value: (image: UIImage, url: URL) = $0.value() else { return }
          self.onCapture(value.image, value.url, $0.error())
       }
-      hybridCamView.camView.onVideoCaptureComplete = { [weak self] (url: URL?, error: Error?) in
+      hybridCamView.camView.onVideoCaptureComplete = { [weak self] in //(url: URL?, error: Error?) in
          guard let self = self else { Swift.print("🚫"); return }
-         self.onCapture(nil, url, error)
+         self.onCapture(nil, $0.value(), $0.error())
       }
       self.resetZoom()
       self.switchAudioSession(to: .playAndRecord)

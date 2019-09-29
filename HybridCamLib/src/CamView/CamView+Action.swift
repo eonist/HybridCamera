@@ -7,39 +7,34 @@ import With
 extension CamView {
    /**
     * Starts recording video
+    * - Fixme: add Result here
     */
-   
-   // add Result here
-   
    @objc open func startRecording() {
-      guard let device: AVCaptureDevice = deviceInput?.device else { onVideoCaptureComplete(nil, CaptureError.noInputDevice); return }
+      guard let device: AVCaptureDevice = deviceInput?.device else { onVideoCaptureComplete(.failure(.noInputDevice)); return }
       if device.isSmoothAutoFocusSupported {
          do {
             try device.lockForConfiguration()
             device.isSmoothAutoFocusEnabled = false
             device.unlockForConfiguration()
          } catch {
-            onVideoCaptureComplete(nil, error)
+            onVideoCaptureComplete(.failure(.unableToLockForConfiguration))
          }
       }
-      guard videoOutput.isRecording == false else { onVideoCaptureComplete(nil, CaptureError.alreadyRecording); return }
-      guard let connection: AVCaptureConnection = videoOutput.connection(with: .video) else { onVideoCaptureComplete(nil, CaptureError.noVideoConnection); return }
+      guard videoOutput.isRecording == false else { onVideoCaptureComplete(.failure(.alreadyRecording)); return }
+      guard let connection: AVCaptureConnection = videoOutput.connection(with: .video) else { onVideoCaptureComplete(.failure(.noVideoConnection)); return }
       if connection.isVideoOrientationSupported {
          connection.videoOrientation = CamView.currentVideoOrientation
       }
       connection.isVideoMirrored = connection.isVideoMirroringSupported && device.position == .front
-      guard let outputURL: URL = FileUtil.tempURL() else { onVideoCaptureComplete(nil, CaptureError.noTempFolderAccess); return }
+      guard let outputURL: URL = FileUtil.tempURL() else { onVideoCaptureComplete(.failure(.noTempFolderAccess)); return }
       videoOutput.startRecording(to: outputURL, recordingDelegate: self)
    }
    /**
     * Stops recording video
+    * - Fixme: add Result here
     */
-   
-    // add Result here
-   
-   
-   @objc open func stopRecording() {
-      guard videoOutput.isRecording else { onVideoCaptureComplete(nil, CaptureError.alreadyStoppedRecording); return }
+    @objc open func stopRecording() {
+      guard videoOutput.isRecording else { onVideoCaptureComplete(.failure(.alreadyStoppedRecording)); return }
       videoOutput.stopRecording()
    }
 }

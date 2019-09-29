@@ -19,7 +19,7 @@ open class CamView: UIView {
    public var flashMode: AVCaptureDevice.FlashMode = .off  // - Options: .on, .off, .auto
    public var startingZoomFactorForLongPress: CGFloat = 1
    // Callbacks
-   public var onVideoCaptureComplete: VideoCaptureComplete = defaultVideoCaptureComplete
+   public var onVideoCaptureComplete: VideoCaptureCompleted = defaultVideoCaptureCompleted
    public var onPhotoCaptureComplete: PhotoCaptureCompleted = defaultPhotoCaptureCompleted
    override init(frame: CGRect) {
       super.init(frame: frame)

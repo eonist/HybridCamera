@@ -15,6 +15,6 @@ extension CamView: AVCaptureFileOutputRecordingDelegate {
     * - Note: When the video has stopped recording, you get an output file URL
     */
    @objc open func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
-      onVideoCaptureComplete(outputFileURL, nil)
+      onVideoCaptureComplete(.success(outputFileURL))
    }
 }

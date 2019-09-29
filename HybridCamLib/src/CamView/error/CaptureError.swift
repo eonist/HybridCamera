@@ -2,7 +2,7 @@ import Foundation
 /**
  * Capture
  * Fixme: ⚠️️ Possibly scope to CamView
- * Fixme: nest the error messages into similar groups maybe?
+ * Fixme: nest the error messages into similar groups maybe? on for photo one for video?
  */
 public enum CaptureError: Swift.Error {
    case noTempFolderAccess
@@ -12,6 +12,7 @@ public enum CaptureError: Swift.Error {
    case failedToWriteFile(Error)
    case noVideoConnection
    case noInputDevice
+   case unableToLockForConfiguration
    case alreadyRecording
    case alreadyStoppedRecording
 }
@@ -26,6 +27,7 @@ extension CaptureError: CustomStringConvertible {
       case .filePathAlreadyExists: return "File path already exists"
       case .noVideoConnection: return "Unable to create video connection"
       case .noInputDevice: return "Unabel to access input device"
+      case .unableToLockForConfiguration: return "unable To Lock For Configuration"
       case .alreadyStoppedRecording: return "Already stopped recording"
       case .alreadyRecording: return "Already recording"
       }

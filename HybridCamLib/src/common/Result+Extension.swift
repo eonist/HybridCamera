@@ -19,10 +19,6 @@ extension Result {
    /**
     * - Note: Sometimes you just want to do print($0.error)
     */
-//   public var error: Error? {
-//      guard case .failure(let error) = self else { return nil }
-//      return error
-//   }
    public func error<T>() -> T? where T: Error {
       guard case .failure(let error) = self else { return nil }
       return error as? T
@@ -37,3 +33,7 @@ extension Result {
       return try? self.get() as? T
    }
 }
+//   public var error: Error? {
+//      guard case .failure(let error) = self else { return nil }
+//      return error
+//   }
