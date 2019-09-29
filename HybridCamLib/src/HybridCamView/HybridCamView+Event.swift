@@ -10,7 +10,7 @@ extension HybridCamView {
     */
    @objc public func addEventHandlers() {
       with(recordButton) { // Attach callbacks to recordButton
-         $0.onShortPressRelease = { self.camView.takePhoto() }
+         $0.onShortPressRelease = { self.camView.photoOutput.takePhoto(self.camView, flashMode: self.camView.flashMode) }
          $0.onLongPressBegan = { self.camView.startRecording() }
          $0.onLongPressRelease = { self.camView.stopRecording() }
          $0.onLongPressChanged = { addZoom in self.camView.zoomViaRecord(addZoom: addZoom) }

@@ -12,9 +12,10 @@ extension ViewController {
    func initiate() {
       let hybridCamView: CustomCamView = .init()
       self.view = hybridCamView // Add HybridCamView as the main view
-      hybridCamView.camView.onPhotoCaptureComplete = { [weak self] (image: UIImage?, url: URL?, error: Error?) in
+      hybridCamView.camView.onPhotoCaptureComplete = { [weak self] in
          guard let self = self else { Swift.print("🚫"); return }
-         self.onCapture(image, url, error)
+         guard let value: (image: UIImage, url: URL) = $0.value() else { return }
+         self.onCapture(value.image, value.url, $0.error())
       }
       hybridCamView.camView.onVideoCaptureComplete = { [weak self] (url: URL?, error: Error?) in
          guard let self = self else { Swift.print("🚫"); return }

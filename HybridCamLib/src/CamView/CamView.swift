@@ -20,7 +20,7 @@ open class CamView: UIView {
    public var startingZoomFactorForLongPress: CGFloat = 1
    // Callbacks
    public var onVideoCaptureComplete: VideoCaptureComplete = defaultVideoCaptureComplete
-   public var onPhotoCaptureComplete: PhotoCaptureComplete = defaultPhotoCaptureComplete
+   public var onPhotoCaptureComplete: PhotoCaptureCompleted = defaultPhotoCaptureCompleted
    override init(frame: CGRect) {
       super.init(frame: frame)
       self.backgroundColor = .black // Sets the background color of the view

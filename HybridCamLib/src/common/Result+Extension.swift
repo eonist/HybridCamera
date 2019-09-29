@@ -27,4 +27,13 @@ extension Result {
       guard case .failure(let error) = self else { return nil }
       return error as? T
    }
+   /**
+    * ## Examples
+    * guard let imageAndURL: (UIImage, URL) = $0.value else { return }
+    * imageAndURL.image // UIImage
+    * imageAndURL.url // URL
+    */
+   public func value<T>() -> T? {
+      return try? self.get() as? T
+   }
 }
