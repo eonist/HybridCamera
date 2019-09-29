@@ -1,0 +1,10 @@
+{
+  "commitish" : "c2f72f89d1553026e75183cabda4a0883354c420",
+  "iOS" : [
+    {
+      "name" : "ResultSugariOS",
+      "hash" : "79835922215d644bf18cce5cd0c88cd806bdb3e3a40daf7b5a51fe5e4754032c",
+      "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+    }
+  ]
+}

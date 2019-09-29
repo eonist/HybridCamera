@@ -5,20 +5,21 @@ import AVFoundation
 /**
  * Extension
  */
-extension VC {
+extension ViewController {
    /**
     * When camera accesses is granted proced to initiate the camera
     */
    func initiate() {
       let hybridCamView: CustomCamView = .init()
       self.view = hybridCamView // Add HybridCamView as the main view
-      hybridCamView.camView.onPhotoCaptureComplete = { [weak self] (image: UIImage?, url: URL?, error: Error?) in
+      hybridCamView.camView.onPhotoCaptureComplete = { [weak self] in
          guard let self = self else { Swift.print("🚫"); return }
-         self.onCapture(image, url, error)
+         guard let value: (image: UIImage, url: URL) = $0.value() else { return }
+         self.onCapture(value.image, value.url, $0.error())
       }
-      hybridCamView.camView.onVideoCaptureComplete = { [weak self] (url: URL?, error: Error?) in
+      hybridCamView.camView.onVideoCaptureComplete = { [weak self] in //(url: URL?, error: Error?) in
          guard let self = self else { Swift.print("🚫"); return }
-         self.onCapture(nil, url, error)
+         self.onCapture(nil, $0.value(), $0.error())
       }
       self.resetZoom()
       self.switchAudioSession(to: .playAndRecord)
@@ -59,16 +60,19 @@ extension VC {
     */
    private func resetZoom() {
       guard let hybridCamView = self.view as? HybridCamView else { print("⚠️️ Could not reset zoom"); return }
-      hybridCamView.camView.setZoomFactor(to: 1)
+      try? hybridCamView.camView.deviceInput?.setZoomFactor(to: 1)
       hybridCamView.camView.startingZoomFactorForLongPress = 1
    }
    /**
     * Switch between audio session;
     * - Fixme: ⚠️️ Continue playing audio when going back to camera after preview
+    * - Fixme: make this throw
     */
    private func switchAudioSession(to: AVAudioSession.Category) {
       guard let hybridCamView = self.view as? HybridCamView else { print("⚠️️ Could not reset zoom"); return }
-      do { try hybridCamView.camView.setupBackgroundAudioSupport(category: to) }
+      do {
+         try hybridCamView.camView.captureSession.setupBackgroundAudioSupport(category: to)
+      }
       catch { Swift.print("🚫 setupDevice error 🚫:  \((error as? SetupError)?.description ?? error.localizedDescription)") }
    }
 }

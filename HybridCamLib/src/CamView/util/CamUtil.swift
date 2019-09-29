@@ -1,20 +1,21 @@
 import UIKit
 import AVFoundation
 import With
+import ResultSugariOS
 
 public class CamUtil {
    /**
     * Returns camera (.front or .back)
     * - Fixme: ⚠️️ make this try error based with meaningful error message
+    * - Fixme: ⚠️️ maybe add support for the different cameras types, like wide, tele, normal, consider iphone 11
+    * - Fixme: ⚠️️ Seems we only support wideAngleCamera for now?
     */
-   
-   
-   
-   public static func camera(type: AVCaptureDevice.Position) -> AVCaptureDevice? {
-      let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
+   public static func camera(devicePosition: AVCaptureDevice.Position, deviceType: AVCaptureDevice.DeviceType = .builtInWideAngleCamera) -> CameraResult {
+      let session: AVCaptureDevice.DiscoverySession = .init(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
       let cameras: [AVCaptureDevice] = session.devices.compactMap { $0 }
-      guard !cameras.isEmpty else { Swift.print("noCamerasAvailable"); return nil }
-      return cameras.first { $0.position == type }
+      guard !cameras.isEmpty else { return .failure(.noCameraOfTypeAvailable(deviceType, cameras)) }
+      guard let camera = cameras.first(where: { $0.position == devicePosition }) else { return .failure(.noPositionAvailableForDeviceType(devicePosition, deviceType)) }
+      return .success(camera)
    }
    /**
     * Asserts video and mic access

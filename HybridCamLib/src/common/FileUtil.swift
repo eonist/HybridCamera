@@ -29,14 +29,8 @@ public class FileUtil {
     *   - path: path to file
     *   - data: data to save
     */
-   @discardableResult
-   public static func write(path: String, data: Data) -> Bool {
-      do {
-         try data.write(to: URL(fileURLWithPath: path), options: [.atomic])
-         return true
-      } catch let error {
-         Swift.print("failed to write file – bad permissions, bad filename, missing permissions, or something else error: \(error.localizedDescription)")
-         return false
-      }
+//   @discardableResult
+   public static func write(path: String, data: Data) throws {
+      try data.write(to: URL(fileURLWithPath: path), options: [.atomic])
    }
 }

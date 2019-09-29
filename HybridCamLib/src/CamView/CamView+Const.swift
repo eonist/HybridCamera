@@ -1,16 +1,21 @@
 import UIKit
-
+import ResultSugariOS
+/**
+ * Callback signatures
+ */
 extension CamView {
    /**
     * Default callback for photo capture
     */
-   public static let defaultPhotoCaptureComplete: PhotoCaptureComplete = { (_ image: UIImage?, _ url: URL?, _ error: Error?) in
-      Swift.print("CamView.defaultPhotoCaptureComplete image: \(String(describing: image)) path:\(String(describing: url)) error:\(String(describing: error))")
+   public static let defaultPhotoCaptureCompleted: PhotoCaptureCompleted = {
+      let imageAndURL: (image: UIImage, url: URL)? = $0.value()
+      Swift.print("CamView.defaultPhotoCaptureComplete image: \(String(describing: imageAndURL?.image)) path:\(String(describing: imageAndURL?.url))  error: \($0.errorStr)")
    }
    /**
     * Default callback for video capture
     */
-   public static let defaultVideoCaptureComplete: VideoCaptureComplete = { (_ url: URL?, _ error: Error?) in
-      Swift.print("CamView.defaultVideoCaptureComplete path:\(String(describing: url)) error:\(String(describing: error))")
+   public static let defaultVideoCaptureCompleted: VideoCaptureCompleted = {
+      let url: URL? = $0.value()
+      Swift.print("CamView.defaultVideoCaptureComplete path:\(String(describing: url)) error: \($0.errorStr)")
    }
 }

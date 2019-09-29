@@ -6,7 +6,7 @@ import With
  */
 extension ProcessView {
    /**
-    * Presents either image or video (Video only has URL etc)
+    * Presents either image or video (Video only has URL, so we diffrerentiate on that)
     */
    @objc open func present(image: UIImage?, url: URL?) {
       if let image = image, let url = url {
