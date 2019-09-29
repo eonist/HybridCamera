@@ -65,11 +65,12 @@ extension ViewController {
    /**
     * Switch between audio session;
     * - Fixme: ⚠️️ Continue playing audio when going back to camera after preview
+    * - Fixme: make this throw
     */
    private func switchAudioSession(to: AVAudioSession.Category) {
       guard let hybridCamView = self.view as? HybridCamView else { print("⚠️️ Could not reset zoom"); return }
       do {
-         try CamView.setupBackgroundAudioSupport(hybridCamView.camView.captureSession, category: to)
+         try hybridCamView.camView.captureSession.setupBackgroundAudioSupport(category: to)
       }
       catch { Swift.print("🚫 setupDevice error 🚫:  \((error as? SetupError)?.description ?? error.localizedDescription)") }
    }

@@ -10,8 +10,8 @@ extension CamView {
     */
    @objc open func toggleCamera(for cameraPosition: AVCaptureDevice.Position) {
       do {
-         self.deviceInput = try CamView.setupCaptureDeviceInput(captureSession, cameraPosition: cameraPosition)
-         try CamView.setupMicrophone(captureSession)
+         self.deviceInput = try captureSession.setupCaptureDeviceInput(cameraPosition: cameraPosition)
+         try captureSession.setupMicrophone()
       } catch {
          Swift.print("toggleCamera error:  \(error.localizedDescription)")
       }
