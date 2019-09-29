@@ -8,15 +8,19 @@ extension CamView {
     * Switches between front and back cam
     * - Fixme: ⚠️️ Possibly rename to toggleCameraPosition, possibly use didSet? does that work with @objc overring?
     */
-   @objc open func toggleCamera(for cameraType: AVCaptureDevice.Position) {
-      try? setupCaptureDeviceInput(cameraType: cameraType)
-      try? setupMicrophone()
+   @objc open func toggleCamera(for cameraPosition: AVCaptureDevice.Position) {
+      do {
+         self.deviceInput = try CamView.setupCaptureDeviceInput(captureSession, cameraPosition: cameraPosition)
+         try CamView.setupMicrophone(captureSession)
+      } catch {
+         Swift.print("toggleCamera error:  \(error.localizedDescription)")
+      }
    }
    /**
     * - Fixme: ⚠️️ possibly use didSet? does that work with @objc overring?
     * - Options: .on, .off, .auto
     */
-   @objc open func toggleFlashMode(for flashMode: AVCaptureDevice.FlashMode) {//AVCaptureDevice.FlashMode
+   @objc open func toggleFlashMode(for flashMode: AVCaptureDevice.FlashMode) { // AVCaptureDevice.FlashMode
       self.flashMode = flashMode
    }
    /**

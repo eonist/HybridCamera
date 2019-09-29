@@ -8,7 +8,7 @@ extension CamView {
     /**
      * Accessor to get captureSession
      */
-    var captureSession: AVCaptureSession { return previewView.captureSession }
+    public var captureSession: AVCaptureSession { return previewView.captureSession }
     /**
      * - NOTE: ⚠️️ for now HybridCamerea only supports .portrait
      */

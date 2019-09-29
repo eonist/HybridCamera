@@ -6,6 +6,7 @@ import AVFoundation
  * addSubView(camView)
  * camView.startRecording()//start capturing
  * camView.stopRecording()//stop capturing
+ * - Fixme: ⚠️️ Maybe Add CamViewController (CamVC) and CamModel?
  */
 open class CamView: UIView {
    // UI
@@ -24,7 +25,11 @@ open class CamView: UIView {
       super.init(frame: frame)
       self.backgroundColor = .black // Sets the background color of the view
       _ = previewView // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer
-      setupDevice()
+      do {
+         try setupDevice()
+      } catch {
+         Swift.print("setupDevice error:  \((error as? SetupError)?.description ?? error.localizedDescription)")
+      }
       addGestureRecognizer()
    }
    /**

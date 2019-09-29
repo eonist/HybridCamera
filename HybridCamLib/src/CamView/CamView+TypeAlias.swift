@@ -1,5 +1,7 @@
 import UIKit
-
+/**
+ * Call-back types
+ */
 extension CamView {
    /**
     * Called after image has been taken and stored in storage
@@ -9,4 +11,10 @@ extension CamView {
     * Called after recording video and has completed processing video and has stored video in storage
     */
    public typealias VideoCaptureComplete = (_ url: URL?, _ error: Error?) -> Void
+}
+/**
+ * Result type
+ */
+extension CamView {
+   public typealias SetupCaptureDeviceInputResult = Result<Void, SetupError>
 }
