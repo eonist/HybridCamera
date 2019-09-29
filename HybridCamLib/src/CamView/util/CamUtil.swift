@@ -1,6 +1,7 @@
 import UIKit
 import AVFoundation
 import With
+import ResultSugariOS
 
 public class CamUtil {
    /**

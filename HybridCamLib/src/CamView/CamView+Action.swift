@@ -7,13 +7,12 @@ import With
 extension CamView {
    /**
     * Starts recording video
-    * - Fixme: add Result here
     */
-   @objc open func startRecording() {
+   @objc open func startRecordingVideo() {
       guard let device: AVCaptureDevice = deviceInput?.device else { onVideoCaptureComplete(.failure(.noInputDevice)); return }
       if device.isSmoothAutoFocusSupported {
          do {
-            try device.lockForConfiguration()
+            try device.lockForConfiguration() // Fixme: ⚠️️ explain what this code block does
             device.isSmoothAutoFocusEnabled = false
             device.unlockForConfiguration()
          } catch {
@@ -31,9 +30,8 @@ extension CamView {
    }
    /**
     * Stops recording video
-    * - Fixme: add Result here
     */
-    @objc open func stopRecording() {
+    @objc open func stopRecordingVideo() {
       guard videoOutput.isRecording else { onVideoCaptureComplete(.failure(.alreadyStoppedRecording)); return }
       videoOutput.stopRecording()
    }

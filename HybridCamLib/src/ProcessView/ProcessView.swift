@@ -1,6 +1,8 @@
 import UIKit
 import AVFoundation
-
+/**
+ * Fixme: ⚠️️ rename to PresentationView? and make model, ViewController
+ */
 open class ProcessView: UIView {
    // UI
    public lazy var imageView: ImageView = createImageView()

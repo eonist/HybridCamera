@@ -34,7 +34,6 @@
 		F114ADDB21A1D57A00942A28 /* ProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD621A1D35A00942A28 /* ProcessView.swift */; };
 		F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD821A1D40300942A28 /* ProcessView+Action.swift */; };
 		F114ADE521A1EF0A00942A28 /* HybridCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */; };
-		F123AD74233F54480009F189 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123AD73233F54480009F189 /* Result+Extension.swift */; };
 		F16F61A82340C6BC00574EBE /* AVCaptureSession+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61A72340C6BC00574EBE /* AVCaptureSession+Setup.swift */; };
 		F16F61AC2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */; };
 		F16F61AE2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */; };
@@ -98,7 +97,7 @@
 		F1E786B622EE4F9C002007EE /* VideoPlayerView +Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B522EE4F9C002007EE /* VideoPlayerView +Event.swift */; };
 		F1E786B822EE50D7002007EE /* VideoPlayerView+Close.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B722EE50D7002007EE /* VideoPlayerView+Close.swift */; };
 		F1E786BA22EE51D6002007EE /* ImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B922EE51D6002007EE /* ImageView+Extension.swift */; };
-		F1E786BC22EE52C4002007EE /* CamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786BB22EE52C4002007EE /* CamView+Event.swift */; };
+		F1E786BC22EE52C4002007EE /* CamView+GestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786BB22EE52C4002007EE /* CamView+GestureHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,7 +148,6 @@
 		F114ADE221A1EF0A00942A28 /* HybridCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HybridCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridCameraTests.swift; sourceTree = "<group>"; };
 		F114ADE621A1EF0A00942A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F123AD73233F54480009F189 /* Result+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extension.swift"; sourceTree = "<group>"; };
 		F16F61A72340C6BC00574EBE /* AVCaptureSession+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Setup.swift"; sourceTree = "<group>"; };
 		F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Feature.swift"; sourceTree = "<group>"; };
 		F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCapturePhotoOutput+Feature.swift"; sourceTree = "<group>"; };
@@ -227,7 +225,7 @@
 		F1E786B522EE4F9C002007EE /* VideoPlayerView +Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoPlayerView +Event.swift"; sourceTree = "<group>"; };
 		F1E786B722EE50D7002007EE /* VideoPlayerView+Close.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoPlayerView+Close.swift"; sourceTree = "<group>"; };
 		F1E786B922EE51D6002007EE /* ImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extension.swift"; sourceTree = "<group>"; };
-		F1E786BB22EE52C4002007EE /* CamView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamView+Event.swift"; sourceTree = "<group>"; };
+		F1E786BB22EE52C4002007EE /* CamView+GestureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamView+GestureHandler.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -465,7 +463,6 @@
 			isa = PBXGroup;
 			children = (
 				F1972EB0233F3B8400CE772C /* FileUtil.swift */,
-				F123AD73233F54480009F189 /* Result+Extension.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -614,7 +611,7 @@
 				F1ABBECD20D07A11008B13B5 /* CamView+Action.swift */,
 				F1972E92233D16A800CE772C /* CamView+ViewFinder.swift */,
 				F1ABBECE20D07A11008B13B5 /* CamView+Gesture.swift */,
-				F1E786BB22EE52C4002007EE /* CamView+Event.swift */,
+				F1E786BB22EE52C4002007EE /* CamView+GestureHandler.swift */,
 			);
 			path = CamView;
 			sourceTree = "<group>";
@@ -847,7 +844,6 @@
 				F114ADC321A1C2E500942A28 /* CamView+Action.swift in Sources */,
 				F114ADC121A1C2E500942A28 /* CamView+Create.swift in Sources */,
 				F1E786B222EE4F29002007EE /* VideoPlayerView+Create.swift in Sources */,
-				F123AD74233F54480009F189 /* Result+Extension.swift in Sources */,
 				F1972E84233D0CA600CE772C /* TopBarViewKind.swift in Sources */,
 				F114ADBB21A1C2E500942A28 /* CamUtil.swift in Sources */,
 				F16F61AC2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift in Sources */,
@@ -860,7 +856,7 @@
 				F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */,
 				F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */,
 				F1972E86233D0CF100CE772C /* RecordButtonViewKind.swift in Sources */,
-				F1E786BC22EE52C4002007EE /* CamView+Event.swift in Sources */,
+				F1E786BC22EE52C4002007EE /* CamView+GestureHandler.swift in Sources */,
 				F114ADC221A1C2E500942A28 /* CamView+Setup.swift in Sources */,
 				F16F61A82340C6BC00574EBE /* AVCaptureSession+Setup.swift in Sources */,
 				F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */,

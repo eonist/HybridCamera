@@ -10,6 +10,9 @@ extension CamView: UIGestureRecognizerDelegate {
       setupPinchGesture()
    }
 }
+/**
+ * Private helper methods
+ */
 extension CamView {
    /**
     * setupTapGestureRecognizers
