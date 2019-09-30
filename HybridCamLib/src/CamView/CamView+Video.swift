@@ -9,6 +9,7 @@ extension CamView: AVCaptureFileOutputRecordingDelegate {
     */
    @objc open func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
       /* FixMe: ⚠️️ for some reason this isn't called*/
+      Swift.print("CamView.fileOutput() didStartRecordingTo")
    }
    /**
     * This is called when the video has finished recording. (Called whenever the output is recording to a file and successfully pauses the recording at the request of the client.)

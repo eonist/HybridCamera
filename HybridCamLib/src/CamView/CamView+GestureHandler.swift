@@ -20,7 +20,7 @@ extension CamView {
    }
    /**
     * Pinch event
-    * - Note: it's tempting to move this to a AVCaptureDeviceInput extension, but its called from a selector so a bit tricky
+    * - Note: it's tempting to move this to a AVCaptureDeviceInput extension, but it's called from a selector so a bit tricky
     */
    @objc open func onPreviewViewPinch(_ sender: UIPinchGestureRecognizer) {
       guard let device = self.deviceInput?.device else { Swift.print("device not available"); return }

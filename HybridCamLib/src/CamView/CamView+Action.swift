@@ -19,7 +19,7 @@ extension CamView {
             onVideoCaptureComplete(.failure(.unableToLockForConfiguration))
          }
       }
-      guard videoOutput.isRecording == false else { onVideoCaptureComplete(.failure(.alreadyRecording)); return }
+      guard !videoOutput.isRecording else { onVideoCaptureComplete(.failure(.alreadyRecording)); return }
       guard let connection: AVCaptureConnection = videoOutput.connection(with: .video) else { onVideoCaptureComplete(.failure(.noVideoConnection)); return }
       if connection.isVideoOrientationSupported {
          connection.videoOrientation = CamView.currentVideoOrientation

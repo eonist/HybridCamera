@@ -11,9 +11,9 @@ extension AVCaptureSession {
     * - Fixme: ⚠️️ pass session as a var, and make it static
     */
    @objc open func setupCaptureDeviceInput(cameraPosition: AVCaptureDevice.Position) throws -> AVCaptureDeviceInput {
-      let camera: CamUtil.CameraResult = CamUtil.camera(devicePosition: cameraPosition)
-      guard case .success(let captureDevice) = camera else { // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
-         throw SetupError.unableToGetVideoCaptureDevice(camera.error())
+      let cameraResult: CamUtil.CameraResult = CamUtil.camera(devicePosition: cameraPosition)
+      guard case .success(let captureDevice) = cameraResult else { // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
+         throw SetupError.unableToGetVideoCaptureDevice(cameraResult.error())
       }
       do {
          self.inputs.forEach { self.removeInput($0) } // Removes previous inputs
