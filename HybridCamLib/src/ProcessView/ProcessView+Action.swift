@@ -8,10 +8,10 @@ extension ProcessView {
    /**
     * Presents either image or video (Video only has URL, so we diffrerentiate on that)
     */
-   @objc open func present(image: UIImage?, url: URL?) {
-      if let image = image, let url = url {
+   @objc open func present(image: UIImage?, url: URL) {
+      if let image = image {
          imageView.setImage(url: url, image: image)
-      } else if let url = url {
+      } else {
          videoPlayerView.play(videoURL: url)
       }
    }

@@ -9,17 +9,13 @@ extension ProcessView {
     * Creates video view
     */
    @objc open func createVideoView() -> VideoPlayerView {
-      return with(.init(frame: UIScreen.main.bounds)) {
-         addSubview($0)
-      }
+      return with(.init(frame: UIScreen.main.bounds)) { addSubview($0) }
    }
    /**
     * Creates Image view
     */
    @objc open func createImageView() -> ImageView {
-      return with(.init(frame: UIScreen.main.bounds)) {
-         addSubview($0)
-      }
+      return with(.init(frame: UIScreen.main.bounds)) { addSubview($0) }
    }
    /**
     * Creates exit button

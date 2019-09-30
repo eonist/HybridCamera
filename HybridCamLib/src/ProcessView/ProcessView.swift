@@ -1,7 +1,8 @@
 import UIKit
 import AVFoundation
 /**
- * Fixme: ⚠️️ rename to PresentationView? and make model, ViewController
+ * Fixme: ⚠️️ rename to PresentationView? Or keep processView, its short!
+ * Fixme: ⚠️️ and make model, ViewController
  */
 open class ProcessView: UIView {
    // UI
