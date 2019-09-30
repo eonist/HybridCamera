@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1059EE222EC36C6004A8346 /* VC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1059EE122EC36C6004A8346 /* VC+Extension.swift */; };
+		F1059EE222EC36C6004A8346 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1059EE122EC36C6004A8346 /* ViewController+Extension.swift */; };
 		F114ADAA21A1C27F00942A28 /* HybridCamLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F114ADA821A1C27F00942A28 /* HybridCamLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F114ADAD21A1C27F00942A28 /* HybridCamLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F114ADA621A1C27E00942A28 /* HybridCamLib.framework */; };
 		F114ADAE21A1C27F00942A28 /* HybridCamLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F114ADA621A1C27E00942A28 /* HybridCamLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -40,6 +40,8 @@
 		F16F61DD23410ACC00574EBE /* ResultSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DC23410ACB00574EBE /* ResultSugariOS.framework */; };
 		F16F61DF234111C500574EBE /* ResultSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DE234111C500574EBE /* ResultSugariOS.framework */; };
 		F16F61E0234111C500574EBE /* ResultSugariOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DE234111C500574EBE /* ResultSugariOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F16F61E22342786E00574EBE /* ViewController+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61E12342786E00574EBE /* ViewController+Const.swift */; };
+		F16F61E423427FC100574EBE /* ViewController+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61E323427FC100574EBE /* ViewController+Create.swift */; };
 		F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */; };
 		F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */; };
 		F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */; };
@@ -73,7 +75,7 @@
 		F1AA7580226C6D2200D4C272 /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
 		F1AA7581226C6D2200D4C272 /* With.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */; };
-		F1ABBED620D07A12008B13B5 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEA920D07A11008B13B5 /* VC.swift */; };
+		F1ABBED620D07A12008B13B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEA920D07A11008B13B5 /* ViewController.swift */; };
 		F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB620D07A11008B13B5 /* RecordButton+Anim.swift */; };
 		F1ABBEDE20D07A12008B13B5 /* RecordButton+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB720D07A11008B13B5 /* RecordButton+Circle.swift */; };
 		F1ABBEDF20D07A12008B13B5 /* RecordButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB820D07A11008B13B5 /* RecordButton+Const.swift */; };
@@ -91,7 +93,7 @@
 		F1ABBEF720D07A12008B13B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBED520D07A12008B13B5 /* Assets.xcassets */; };
 		F1CB286622E9C61A00C2A8CF /* ProcessView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286522E9C61A00C2A8CF /* ProcessView+Create.swift */; };
 		F1CB286822E9C64B00C2A8CF /* ProcessView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */; };
-		F1CB286A22E9C67900C2A8CF /* ProcessView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */; };
+		F1CB286A22E9C67900C2A8CF /* ProcessView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286922E9C67900C2A8CF /* ProcessView+Helper.swift */; };
 		F1CB286C22E9C6A300C2A8CF /* ProcessView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286B22E9C6A300C2A8CF /* ProcessView+TypeAlias.swift */; };
 		F1CB286E22E9C6B400C2A8CF /* ProcessView+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CB286D22E9C6B400C2A8CF /* ProcessView+Const.swift */; };
 		F1E786B222EE4F29002007EE /* VideoPlayerView+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E786B122EE4F29002007EE /* VideoPlayerView+Create.swift */; };
@@ -136,7 +138,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F1059EE122EC36C6004A8346 /* VC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Extension.swift"; sourceTree = "<group>"; };
+		F1059EE122EC36C6004A8346 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		F114AD9721A1A4DE00942A28 /* TopBarKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarKind.swift; sourceTree = "<group>"; };
 		F114AD9921A1A5D000942A28 /* RecordButtonKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonKind.swift; sourceTree = "<group>"; };
 		F114AD9D21A1B94000942A28 /* ToggleButtonKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButtonKind.swift; sourceTree = "<group>"; };
@@ -156,6 +158,8 @@
 		F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCapturePhotoOutput+Feature.swift"; sourceTree = "<group>"; };
 		F16F61DC23410ACB00574EBE /* ResultSugariOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResultSugariOS.framework; path = Carthage/Build/iOS/ResultSugariOS.framework; sourceTree = "<group>"; };
 		F16F61DE234111C500574EBE /* ResultSugariOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResultSugariOS.framework; path = Carthage/Build/iOS/ResultSugariOS.framework; sourceTree = "<group>"; };
+		F16F61E12342786E00574EBE /* ViewController+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Const.swift"; sourceTree = "<group>"; };
+		F16F61E323427FC100574EBE /* ViewController+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Create.swift"; sourceTree = "<group>"; };
 		F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Event.swift"; sourceTree = "<group>"; };
 		F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButtonKind+TypeAlias.swift"; sourceTree = "<group>"; };
@@ -188,7 +192,7 @@
 		F1AA757B226B4E9100D4C272 /* CamUtil+TypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CamUtil+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1ABBE9420D0798A008B13B5 /* HybridCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1ABBEA120D0798B008B13B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F1ABBEA920D07A11008B13B5 /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
+		F1ABBEA920D07A11008B13B5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1ABBEAA20D07A11008B13B5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1ABBEAD20D07A11008B13B5 /* CamPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamPreviewView.swift; sourceTree = "<group>"; };
 		F1ABBEB020D07A11008B13B5 /* CamUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamUtil.swift; sourceTree = "<group>"; };
@@ -221,7 +225,7 @@
 		F1ABBED520D07A12008B13B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1CB286522E9C61A00C2A8CF /* ProcessView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Create.swift"; sourceTree = "<group>"; };
 		F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Event.swift"; sourceTree = "<group>"; };
-		F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Util.swift"; sourceTree = "<group>"; };
+		F1CB286922E9C67900C2A8CF /* ProcessView+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Helper.swift"; sourceTree = "<group>"; };
 		F1CB286B22E9C6A300C2A8CF /* ProcessView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1CB286D22E9C6B400C2A8CF /* ProcessView+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessView+Const.swift"; sourceTree = "<group>"; };
 		F1E786B122EE4F29002007EE /* VideoPlayerView+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VideoPlayerView+Create.swift"; sourceTree = "<group>"; };
@@ -328,6 +332,17 @@
 				F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		F16F61E52342804600574EBE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1ABBEA920D07A11008B13B5 /* ViewController.swift */,
+				F1059EE122EC36C6004A8346 /* ViewController+Extension.swift */,
+				F16F61E12342786E00574EBE /* ViewController+Const.swift */,
+				F16F61E323427FC100574EBE /* ViewController+Create.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F1972E71233D09F600CE772C /* RecordButtonKind */ = {
@@ -508,8 +523,7 @@
 			children = (
 				F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */,
 				F1ABBED420D07A11008B13B5 /* AppDelegate.swift */,
-				F1ABBEA920D07A11008B13B5 /* VC.swift */,
-				F1059EE122EC36C6004A8346 /* VC+Extension.swift */,
+				F16F61E52342804600574EBE /* ViewController */,
 				F1ABBED520D07A12008B13B5 /* Assets.xcassets */,
 				F1ABBEAB20D07A11008B13B5 /* src */,
 				F1ABBEAA20D07A11008B13B5 /* Info.plist */,
@@ -631,7 +645,7 @@
 				F1CB286D22E9C6B400C2A8CF /* ProcessView+Const.swift */,
 				F1CB286722E9C64B00C2A8CF /* ProcessView+Event.swift */,
 				F1CB286522E9C61A00C2A8CF /* ProcessView+Create.swift */,
-				F1CB286922E9C67900C2A8CF /* ProcessView+Util.swift */,
+				F1CB286922E9C67900C2A8CF /* ProcessView+Helper.swift */,
 				F1E786AF22EE4EFB002007EE /* VideoPlayerView */,
 				F114AD9321A074D200942A28 /* ImageView */,
 			);
@@ -832,7 +846,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1CB286A22E9C67900C2A8CF /* ProcessView+Util.swift in Sources */,
+				F1CB286A22E9C67900C2A8CF /* ProcessView+Helper.swift in Sources */,
 				F114ADD121A1CB3300942A28 /* HybridCamView+Create.swift in Sources */,
 				F1972EB3233F416100CE772C /* CamUtil+Error.swift in Sources */,
 				F114ADBD21A1C2E500942A28 /* CamView.swift in Sources */,
@@ -901,7 +915,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1059EE222EC36C6004A8346 /* VC+Extension.swift in Sources */,
+				F1059EE222EC36C6004A8346 /* ViewController+Extension.swift in Sources */,
 				F1972E9D233D20D400CE772C /* ToggleButton+Event.swift in Sources */,
 				F1ABBEE220D07A12008B13B5 /* RoundButton.swift in Sources */,
 				F1972EA0233D211900CE772C /* ClickButton+Event.swift in Sources */,
@@ -909,11 +923,13 @@
 				F1972EA5233D215200CE772C /* ShareButton+Style.swift in Sources */,
 				F1ABBEF620D07A12008B13B5 /* AppDelegate.swift in Sources */,
 				F1ABBEE320D07A12008B13B5 /* ToggleButton.swift in Sources */,
+				F16F61E22342786E00574EBE /* ViewController+Const.swift in Sources */,
+				F16F61E423427FC100574EBE /* ViewController+Create.swift in Sources */,
 				F1972EA3233D214100CE772C /* ShareButton+Event.swift in Sources */,
 				F1ABBEE820D07A12008B13B5 /* FlipButton.swift in Sources */,
 				F1972E97233D1CE600CE772C /* TopBar+Create.swift in Sources */,
 				F1972E9A233D20AA00CE772C /* RoundButton+Event.swift in Sources */,
-				F1ABBED620D07A12008B13B5 /* VC.swift in Sources */,
+				F1ABBED620D07A12008B13B5 /* ViewController.swift in Sources */,
 				F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */,
 				F1ABBEDF20D07A12008B13B5 /* RecordButton+Const.swift in Sources */,
 				F1972EA8233D219C00CE772C /* ExitButton+Const.swift in Sources */,

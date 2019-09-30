@@ -8,6 +8,7 @@ import With
 extension ProcessView {
    /**
     * AttachCallBacks
+    * - Fixme: ⚠️️ move these closures into const var
     */
    @objc open func addEventListeners() {
       exitButton.onClick = { [weak self] in

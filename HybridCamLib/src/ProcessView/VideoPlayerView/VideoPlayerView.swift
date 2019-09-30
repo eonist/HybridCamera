@@ -3,7 +3,7 @@ import AVFoundation
 import With
 /**
  * This view is used to show a looping video
- * - Fixme: ⚠️️ Maybe rename to VideoReviewView?
+ * - Fixme: ⚠️️ Maybe rename to VideoReviewView, VideoPresentationView?
  */
 open class VideoPlayerView: UIView {
    open var avPlayer: AVPlayer? = .init()
@@ -12,7 +12,10 @@ open class VideoPlayerView: UIView {
    override public init(frame: CGRect) {
       super.init(frame: frame)
       _ = avPlayerLayer
-      NotificationCenter.default.addObserver(self, selector: #selector(onVideoFinished), name: .AVPlayerItemDidPlayToEndTime, object: nil) // This is used as a callback to notify when the video is finished playing, we remove this listner in the deInitiate method
+      NotificationCenter.default.addObserver(self,  // This is used as a callback to notify when the video is finished playing, we remove this listner in the deInitiate method
+                                             selector: #selector(onVideoFinished),
+                                             name: .AVPlayerItemDidPlayToEndTime,
+                                             object: nil)
    }
    /**
     * Boilerplate

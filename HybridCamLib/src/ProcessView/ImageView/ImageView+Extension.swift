@@ -4,7 +4,7 @@ import Foundation
  */
 extension ImageView {
    /**
-    * - Fixme: ⚠️️ override image with didSet instead ? it's more swifty?
+    * - Fixme: ⚠️️ override image with didSet instead ? it's more swifty? but maybe doesnt work well with extension method overriding
     */
    @objc open func setImage(url: URL, image: UIImage) {
       self.url = url

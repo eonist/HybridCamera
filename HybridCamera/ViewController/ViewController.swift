@@ -1,7 +1,6 @@
 import UIKit
 import HybridCamLib
 import With
-
 /**
  * Main view controller
  */
@@ -13,9 +12,12 @@ class ViewController: UIViewController {
    override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
       CamUtil.assertVideoAndMicAccess(vc: self) { // Sends user through camera access wizard
-         guard case .success = $0 else { print($0.errorStr); return }
-         DispatchQueue.main.async { [weak self] in
-            self?.initiate() // If accesses was granted proced to initiate the camera
+         if case .success = $0 {
+            DispatchQueue.main.async { [weak self] in // - Fixme: ⚠️️ this main call may not be needed
+               self?.initiate() // If accesses was granted proced to initiate the camera
+            }
+         } else if case .failure(let error) = $0 {
+            CustomProcessView.promptErrorDialog(vc: self, error: error, onComplete: { /*Do nothing*/ })
          }
       }
    }
