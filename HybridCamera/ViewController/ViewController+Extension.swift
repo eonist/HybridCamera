@@ -9,13 +9,13 @@ extension ViewController {
    /**
     * When camera accesses is granted proced to initiate the camera
     */
-   func initiate() {
+   func initiate() throws {
       let hybridCamView: CustomCamView = .init()
       self.view = hybridCamView // Add HybridCamView as the main view
       hybridCamView.camView.onPhotoCaptureComplete = defaultPhotoCaptureCompleted
       hybridCamView.camView.onVideoCaptureComplete = defaultVideoCaptureCompleted
-      self.resetZoom()
-      try? self.switchAudioSession(to: .playAndRecord)
+      try self.resetZoom()
+      try self.switchAudioSession(to: .playAndRecord)
    }
    /**
     * When camera onCapture is called
@@ -33,8 +33,8 @@ extension ViewController {
    /**
     * Reset zoom with processMediaView
     */
-   internal func resetZoom() {
-      try? (view as? HybridCamView)?.camView.deviceInput?.setZoomFactor(to: 1)
+   internal func resetZoom() throws {
+      try (view as? HybridCamView)?.camView.deviceInput?.setZoomFactor(to: 1)
       (view as? HybridCamView)?.camView.startingZoomFactorForLongPress = 1
    }
    /**

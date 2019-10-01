@@ -1,5 +1,6 @@
 import UIKit
 import HybridCamLib
+import With
 /**
  * Create
  */
@@ -8,24 +9,18 @@ extension TopBar {
     * Create exit button
     */
    open func createExitButton() -> ClickButtonKind {
-      let btn = ExitButton()
-      self.addSubview(btn)
-      return btn
+      return with(ExitButton()) { self.addSubview(btn) }
    }
    /**
     * Create flash button
     */
    open func createFlashButton() -> ToggleButtonKind {
-      let btn = FlashButton()
-      self.addSubview(btn)
-      return btn
+      return with(FlashButton()) { self.addSubview(btn) }
    }
    /**
     * Create flip button
     */
    open func createFlipButton() -> ToggleButtonKind {
-      let btn = FlipButton()
-      self.addSubview(btn)
-      return btn
+      return with(FlipButton()) { self.addSubview(btn) }
    }
 }

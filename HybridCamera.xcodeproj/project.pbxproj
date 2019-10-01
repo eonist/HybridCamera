@@ -49,6 +49,8 @@
 		F16F61F42343A57D00574EBE /* AVCaptureDevice+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61F32343A57D00574EBE /* AVCaptureDevice+Feature.swift */; };
 		F16F61F52343B27A00574EBE /* ResultSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DE234111C500574EBE /* ResultSugariOS.framework */; };
 		F16F61F62343B28900574EBE /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
+		F16F61F82343C90E00574EBE /* Circle+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61F72343C90E00574EBE /* Circle+Helper.swift */; };
+		F16F61FA2343CACD00574EBE /* RecordButton+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61F92343CACD00574EBE /* RecordButton+Handler.swift */; };
 		F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */; };
 		F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */; };
 		F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */; };
@@ -171,6 +173,8 @@
 		F16F61ED23439ED300574EBE /* Circle+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle+Create.swift"; sourceTree = "<group>"; };
 		F16F61EF23439F1300574EBE /* Circle+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle+Const.swift"; sourceTree = "<group>"; };
 		F16F61F32343A57D00574EBE /* AVCaptureDevice+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Feature.swift"; sourceTree = "<group>"; };
+		F16F61F72343C90E00574EBE /* Circle+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle+Helper.swift"; sourceTree = "<group>"; };
+		F16F61F92343CACD00574EBE /* RecordButton+Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButton+Handler.swift"; sourceTree = "<group>"; };
 		F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Event.swift"; sourceTree = "<group>"; };
 		F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButtonKind+TypeAlias.swift"; sourceTree = "<group>"; };
@@ -364,6 +368,7 @@
 				F16F61E823439E8900574EBE /* Circle.swift */,
 				F16F61EF23439F1300574EBE /* Circle+Const.swift */,
 				F16F61ED23439ED300574EBE /* Circle+Create.swift */,
+				F16F61F72343C90E00574EBE /* Circle+Helper.swift */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -602,6 +607,7 @@
 				F16F61E623439E6700574EBE /* RecordButton+Create.swift */,
 				F1ABBEB820D07A11008B13B5 /* RecordButton+Const.swift */,
 				F1ABBEB920D07A11008B13B5 /* RecordButton+Event.swift */,
+				F16F61F92343CACD00574EBE /* RecordButton+Handler.swift */,
 			);
 			path = RecordButton;
 			sourceTree = "<group>";
@@ -962,10 +968,12 @@
 				F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */,
 				F1ABBEDF20D07A12008B13B5 /* RecordButton+Const.swift in Sources */,
 				F1972EA8233D219C00CE772C /* ExitButton+Const.swift in Sources */,
+				F16F61F82343C90E00574EBE /* Circle+Helper.swift in Sources */,
 				F1972EAE233D226800CE772C /* FlashButton+Event.swift in Sources */,
 				F1972EAB233D21BE00CE772C /* FlipButton+Const.swift in Sources */,
 				F1ABBEE920D07A12008B13B5 /* FlashButton.swift in Sources */,
 				F1ABBEE520D07A12008B13B5 /* ShareButton.swift in Sources */,
+				F16F61FA2343CACD00574EBE /* RecordButton+Handler.swift in Sources */,
 				F1ABBEE120D07A12008B13B5 /* RecordButton.swift in Sources */,
 				F114ADD221A1CDA000942A28 /* CustomCamView.swift in Sources */,
 				F114ADDA21A1D56300942A28 /* CustomProcessView.swift in Sources */,

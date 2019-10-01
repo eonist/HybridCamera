@@ -9,12 +9,8 @@ extension AVCaptureDeviceInput {
     */
    @objc open func setZoomFactor(to factor: CGFloat) throws {
       let maxZoomFactor = self.device.activeFormat.videoMaxZoomFactor
-      do {
-         try self.device.lockForConfiguration()
-         defer { self.device.unlockForConfiguration() }
-         self.device.videoZoomFactor = max(1.0, min(factor, maxZoomFactor))
-      } catch {
-         throw error
-      }
+      try self.device.lockForConfiguration()
+      defer { self.device.unlockForConfiguration() }
+      self.device.videoZoomFactor = max(1.0, min(factor, maxZoomFactor))
    }
 }

@@ -19,11 +19,11 @@ extension ProcessView {
    /**
     * Prompts the error dilog
     */
-   @objc open class func promptErrorDialog(vc: UIViewController, error: Swift.Error, onComplete:@escaping OnErrorDialogComplete) {
+   @objc open class func promptErrorDialog(vc: UIViewController?, error: Swift.Error, onComplete:@escaping OnErrorDialogComplete) {
       with(UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)) {
          let action: UIAlertAction = .init(title: "OK", style: .default) { _ in onComplete() }
          $0.addAction(action)
-         vc.present($0, animated: true, completion: nil)
+         vc?.present($0, animated: true, completion: nil)
       }
    }
    /**
