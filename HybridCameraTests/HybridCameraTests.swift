@@ -11,7 +11,7 @@ class HybridCameraTests: XCTestCase {
       // Put teardown code here. This method is called after the invocation of each test method in the class.
    }
    func testExample() {
-      let fileURL: URL? = FileUtil.tempURL(suffix: ".jpeg")
+      let fileURL: URL? = FileUtil.tempURL(suffix: ".jpeg").value()
       XCTAssertNotNil(fileURL)
       XCTAssertFalse(FileManager().fileExists(atPath: fileURL!.path))
       //      XCTAssertEqual("Hello, World!", "Hello, World!")
