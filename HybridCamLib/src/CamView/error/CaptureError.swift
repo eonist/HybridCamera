@@ -1,15 +1,14 @@
 import Foundation
 /**
  * Capture
- * Fixme: ⚠️️ Possibly scope to CamView
- * Fixme: nest the error messages into similar groups maybe? on for photo one for video?
+ * Fixme: ⚠️️ nest the error messages into similar groups maybe? one for photo one for video?
  */
 public enum CaptureError: Swift.Error {
    case noTempFolderAccess
-   case malformedImageData
    case unableToCreateTempFilePath
    case filePathAlreadyExists
    case failedToWriteFile(Error)
+   case malformedImageData
    case noVideoConnection
    case noInputDevice
    case unableToLockForConfiguration

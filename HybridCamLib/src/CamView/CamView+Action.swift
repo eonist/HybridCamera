@@ -25,7 +25,7 @@ extension CamView {
          connection.videoOrientation = CamView.currentVideoOrientation
       }
       connection.isVideoMirrored = connection.isVideoMirroringSupported && device.position == .front
-      guard let outputURL: URL = FileUtil.tempURL() else { onVideoCaptureComplete(.failure(.noTempFolderAccess)); return }
+      guard let outputURL: URL = FileUtil.tempURL().value() else { onVideoCaptureComplete(.failure(.noTempFolderAccess)); return }
       videoOutput.startRecording(to: outputURL, recordingDelegate: self)
    }
    /**

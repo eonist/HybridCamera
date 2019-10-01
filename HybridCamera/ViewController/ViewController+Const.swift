@@ -10,7 +10,7 @@ extension ViewController {
          self.processMediaView?.deInitiate()
          self.processMediaView = nil
          self.resetZoom()
-         self.switchAudioSession(to: .playAndRecord)
+         try? self.switchAudioSession(to: .playAndRecord)
       }
    }
    /**
@@ -45,7 +45,7 @@ extension ViewController {
       return { [weak self] in
          self?.processMediaView?.deInitiate()
          self?.processMediaView = nil
-         self?.switchAudioSession(to: .playAndRecord)
+         try? self?.switchAudioSession(to: .playAndRecord)
       }
    }
    var defaultOnShare: ProcessView.OnShare {

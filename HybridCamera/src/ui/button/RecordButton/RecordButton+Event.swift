@@ -30,7 +30,7 @@ extension RecordButton: UIGestureRecognizerDelegate {
    }
    /**
     * Long press
-    * - Fixme: ⚠️️ Use switch instead of if else here, its more readable
+    * - Note: We don't us a switch here because it will not be exhaustive
     */
    @objc open func handleLongPress(sender: UILongPressGestureRecognizer) {
       if [.ended, .cancelled, .failed].contains(sender.state) {/*long tap release*/
@@ -48,6 +48,7 @@ extension RecordButton: UIGestureRecognizerDelegate {
    }
    /**
     * Normal tap
+    * - Note: We dont us a switch here because it will not be exhaustive
     */
    @objc open func handleTap(sender: UITapGestureRecognizer) {
       if [.ended, .cancelled, .failed].contains(sender.state) {/*short tap release*/

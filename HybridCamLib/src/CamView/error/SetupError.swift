@@ -21,7 +21,7 @@ extension SetupError: CustomStringConvertible {
    public var localizedDescription: String {
       return description
    }
-   public var description: String { // Fixme: remove this and put everything i localizedesc...
+   public var description: String { //  needed to fulfill CustomStringConvertible
       switch self {
       case .unableToAddPhotoOutput: return "unable to add output: capturePhotoOutput"
       case .unableToAddVideoOutput: return "unable to add output: captureVideoOutput"

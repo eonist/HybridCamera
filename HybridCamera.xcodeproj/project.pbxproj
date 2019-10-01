@@ -42,6 +42,13 @@
 		F16F61E0234111C500574EBE /* ResultSugariOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DE234111C500574EBE /* ResultSugariOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F16F61E22342786E00574EBE /* ViewController+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61E12342786E00574EBE /* ViewController+Const.swift */; };
 		F16F61E423427FC100574EBE /* ViewController+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61E323427FC100574EBE /* ViewController+Create.swift */; };
+		F16F61E723439E6700574EBE /* RecordButton+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61E623439E6700574EBE /* RecordButton+Create.swift */; };
+		F16F61E923439E8900574EBE /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61E823439E8900574EBE /* Circle.swift */; };
+		F16F61EE23439ED300574EBE /* Circle+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61ED23439ED300574EBE /* Circle+Create.swift */; };
+		F16F61F023439F1300574EBE /* Circle+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61EF23439F1300574EBE /* Circle+Const.swift */; };
+		F16F61F42343A57D00574EBE /* AVCaptureDevice+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61F32343A57D00574EBE /* AVCaptureDevice+Feature.swift */; };
+		F16F61F52343B27A00574EBE /* ResultSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DE234111C500574EBE /* ResultSugariOS.framework */; };
+		F16F61F62343B28900574EBE /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
 		F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */; };
 		F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */; };
 		F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */; };
@@ -77,7 +84,6 @@
 		F1ABBEA220D0798B008B13B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1ABBEA020D0798B008B13B5 /* LaunchScreen.storyboard */; };
 		F1ABBED620D07A12008B13B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEA920D07A11008B13B5 /* ViewController.swift */; };
 		F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB620D07A11008B13B5 /* RecordButton+Anim.swift */; };
-		F1ABBEDE20D07A12008B13B5 /* RecordButton+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB720D07A11008B13B5 /* RecordButton+Circle.swift */; };
 		F1ABBEDF20D07A12008B13B5 /* RecordButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB820D07A11008B13B5 /* RecordButton+Const.swift */; };
 		F1ABBEE020D07A12008B13B5 /* RecordButton+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEB920D07A11008B13B5 /* RecordButton+Event.swift */; };
 		F1ABBEE120D07A12008B13B5 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABBEBA20D07A11008B13B5 /* RecordButton.swift */; };
@@ -160,6 +166,11 @@
 		F16F61DE234111C500574EBE /* ResultSugariOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResultSugariOS.framework; path = Carthage/Build/iOS/ResultSugariOS.framework; sourceTree = "<group>"; };
 		F16F61E12342786E00574EBE /* ViewController+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Const.swift"; sourceTree = "<group>"; };
 		F16F61E323427FC100574EBE /* ViewController+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Create.swift"; sourceTree = "<group>"; };
+		F16F61E623439E6700574EBE /* RecordButton+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButton+Create.swift"; sourceTree = "<group>"; };
+		F16F61E823439E8900574EBE /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Circle.swift; path = HybridCamera/src/ui/button/RecordButton/Circle.swift; sourceTree = SOURCE_ROOT; };
+		F16F61ED23439ED300574EBE /* Circle+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle+Create.swift"; sourceTree = "<group>"; };
+		F16F61EF23439F1300574EBE /* Circle+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle+Const.swift"; sourceTree = "<group>"; };
+		F16F61F32343A57D00574EBE /* AVCaptureDevice+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Feature.swift"; sourceTree = "<group>"; };
 		F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Event.swift"; sourceTree = "<group>"; };
 		F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButtonKind+TypeAlias.swift"; sourceTree = "<group>"; };
@@ -198,7 +209,6 @@
 		F1ABBEB020D07A11008B13B5 /* CamUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamUtil.swift; sourceTree = "<group>"; };
 		F1ABBEB120D07A11008B13B5 /* CustomCamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCamView.swift; sourceTree = "<group>"; };
 		F1ABBEB620D07A11008B13B5 /* RecordButton+Anim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Anim.swift"; sourceTree = "<group>"; };
-		F1ABBEB720D07A11008B13B5 /* RecordButton+Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Circle.swift"; sourceTree = "<group>"; };
 		F1ABBEB820D07A11008B13B5 /* RecordButton+Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Const.swift"; sourceTree = "<group>"; };
 		F1ABBEB920D07A11008B13B5 /* RecordButton+Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RecordButton+Event.swift"; sourceTree = "<group>"; };
 		F1ABBEBA20D07A11008B13B5 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
@@ -250,6 +260,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16F61F52343B27A00574EBE /* ResultSugariOS.framework in Frameworks */,
+				F16F61F62343B28900574EBE /* With.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +342,7 @@
 				F16F61A72340C6BC00574EBE /* AVCaptureSession+Setup.swift */,
 				F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */,
 				F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */,
+				F16F61F32343A57D00574EBE /* AVCaptureDevice+Feature.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -343,6 +356,16 @@
 				F16F61E323427FC100574EBE /* ViewController+Create.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F16F61EC23439EB500574EBE /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				F16F61E823439E8900574EBE /* Circle.swift */,
+				F16F61EF23439F1300574EBE /* Circle+Const.swift */,
+				F16F61ED23439ED300574EBE /* Circle+Create.swift */,
+			);
+			path = Circle;
 			sourceTree = "<group>";
 		};
 		F1972E71233D09F600CE772C /* RecordButtonKind */ = {
@@ -575,7 +598,8 @@
 			children = (
 				F1ABBEBA20D07A11008B13B5 /* RecordButton.swift */,
 				F1ABBEB620D07A11008B13B5 /* RecordButton+Anim.swift */,
-				F1ABBEB720D07A11008B13B5 /* RecordButton+Circle.swift */,
+				F16F61EC23439EB500574EBE /* Circle */,
+				F16F61E623439E6700574EBE /* RecordButton+Create.swift */,
 				F1ABBEB820D07A11008B13B5 /* RecordButton+Const.swift */,
 				F1ABBEB920D07A11008B13B5 /* RecordButton+Event.swift */,
 			);
@@ -847,6 +871,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1CB286A22E9C67900C2A8CF /* ProcessView+Helper.swift in Sources */,
+				F16F61F42343A57D00574EBE /* AVCaptureDevice+Feature.swift in Sources */,
 				F114ADD121A1CB3300942A28 /* HybridCamView+Create.swift in Sources */,
 				F1972EB3233F416100CE772C /* CamUtil+Error.swift in Sources */,
 				F114ADBD21A1C2E500942A28 /* CamView.swift in Sources */,
@@ -920,7 +945,10 @@
 				F1ABBEE220D07A12008B13B5 /* RoundButton.swift in Sources */,
 				F1972EA0233D211900CE772C /* ClickButton+Event.swift in Sources */,
 				F1ABBEE420D07A12008B13B5 /* ClickButton.swift in Sources */,
+				F16F61E923439E8900574EBE /* Circle.swift in Sources */,
 				F1972EA5233D215200CE772C /* ShareButton+Style.swift in Sources */,
+				F16F61E723439E6700574EBE /* RecordButton+Create.swift in Sources */,
+				F16F61EE23439ED300574EBE /* Circle+Create.swift in Sources */,
 				F1ABBEF620D07A12008B13B5 /* AppDelegate.swift in Sources */,
 				F1ABBEE320D07A12008B13B5 /* ToggleButton.swift in Sources */,
 				F16F61E22342786E00574EBE /* ViewController+Const.swift in Sources */,
@@ -929,6 +957,7 @@
 				F1ABBEE820D07A12008B13B5 /* FlipButton.swift in Sources */,
 				F1972E97233D1CE600CE772C /* TopBar+Create.swift in Sources */,
 				F1972E9A233D20AA00CE772C /* RoundButton+Event.swift in Sources */,
+				F16F61F023439F1300574EBE /* Circle+Const.swift in Sources */,
 				F1ABBED620D07A12008B13B5 /* ViewController.swift in Sources */,
 				F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */,
 				F1ABBEDF20D07A12008B13B5 /* RecordButton+Const.swift in Sources */,
@@ -938,7 +967,6 @@
 				F1ABBEE920D07A12008B13B5 /* FlashButton.swift in Sources */,
 				F1ABBEE520D07A12008B13B5 /* ShareButton.swift in Sources */,
 				F1ABBEE120D07A12008B13B5 /* RecordButton.swift in Sources */,
-				F1ABBEDE20D07A12008B13B5 /* RecordButton+Circle.swift in Sources */,
 				F114ADD221A1CDA000942A28 /* CustomCamView.swift in Sources */,
 				F114ADDA21A1D56300942A28 /* CustomProcessView.swift in Sources */,
 				F1ABBEE020D07A12008B13B5 /* RecordButton+Event.swift in Sources */,
@@ -1048,6 +1076,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HybridCameraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1069,6 +1101,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HybridCameraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

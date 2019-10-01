@@ -12,7 +12,8 @@ open class VideoPlayerView: UIView {
    override public init(frame: CGRect) {
       super.init(frame: frame)
       _ = avPlayerLayer
-      NotificationCenter.default.addObserver(self,  // This is used as a callback to notify when the video is finished playing, we remove this listner in the deInitiate method
+      // This is used as a callback to notify when the video is finished playing, we remove this listner in the deInitiate method
+      NotificationCenter.default.addObserver(self,
                                              selector: #selector(onVideoFinished),
                                              name: .AVPlayerItemDidPlayToEndTime,
                                              object: nil)

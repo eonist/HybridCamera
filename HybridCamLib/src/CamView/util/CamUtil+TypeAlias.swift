@@ -7,6 +7,7 @@ extension CamUtil {
    /**
     * - Fixme: ⚠️️ Use Result
     */
-   public typealias AssertMicAndVideoAccessComplete = (Result<Void, MicAndVideoAccessError>) -> Void
+   public typealias AssertMicAndVideoAccessComplete = (MicResult) -> Void
+   public typealias MicResult = Result<Void, MicAndVideoAccessError>
    public typealias CameraResult = Result<AVCaptureDevice, CaptureDeviceError>
 }

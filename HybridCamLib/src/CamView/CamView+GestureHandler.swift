@@ -8,7 +8,7 @@ extension CamView {
    @objc open func onPreviewViewTap(sender: UIGestureRecognizer) throws {
       guard [.ended, .cancelled, .failed].contains(sender.state) else { return } // Ensures that the tap isnt a swipe tap etc
       let devicePoint: CGPoint = (self.previewView.previewLayer).captureDevicePointConverted(fromLayerPoint: sender.location(in: sender.view))
-      try deviceInput?.focusWithMode(focusMode: .continuousAutoFocus, exposureMode: .continuousAutoExposure, point: devicePoint, monitorSubjectAreaChange: true)
+      try deviceInput?.device.focusWithMode(focusMode: .continuousAutoFocus, exposureMode: .continuousAutoExposure, point: devicePoint, monitorSubjectAreaChange: true)
    }
    /**
     * Double tap -> Flip camera

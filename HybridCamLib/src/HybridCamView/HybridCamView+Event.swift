@@ -6,7 +6,7 @@ import With
 extension HybridCamView {
    /**
     * Attach CallBacks
-    * - Fixme: add support for auto flashmode?
+    * - Fixme: ⚠️️ add support for .auto flashmode?
     */
    @objc public func addEventHandlers() {
       with(recordButton) { // Attach callbacks to recordButton
