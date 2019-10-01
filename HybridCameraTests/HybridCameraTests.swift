@@ -1,5 +1,6 @@
 import XCTest
 import HybridCamLib
+import ResultSugariOS
 
 class HybridCameraTests: XCTestCase {
    override func setUp() {

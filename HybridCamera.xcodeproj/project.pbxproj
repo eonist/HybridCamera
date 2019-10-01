@@ -47,6 +47,8 @@
 		F16F61EE23439ED300574EBE /* Circle+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61ED23439ED300574EBE /* Circle+Create.swift */; };
 		F16F61F023439F1300574EBE /* Circle+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61EF23439F1300574EBE /* Circle+Const.swift */; };
 		F16F61F42343A57D00574EBE /* AVCaptureDevice+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61F32343A57D00574EBE /* AVCaptureDevice+Feature.swift */; };
+		F16F61F52343B27A00574EBE /* ResultSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16F61DE234111C500574EBE /* ResultSugariOS.framework */; };
+		F16F61F62343B28900574EBE /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
 		F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */; };
 		F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */; };
 		F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */; };
@@ -258,6 +260,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16F61F52343B27A00574EBE /* ResultSugariOS.framework in Frameworks */,
+				F16F61F62343B28900574EBE /* With.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1072,6 +1076,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HybridCameraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1093,6 +1101,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HybridCameraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
