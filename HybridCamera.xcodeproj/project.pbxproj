@@ -46,6 +46,7 @@
 		F16F61E923439E8900574EBE /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61E823439E8900574EBE /* Circle.swift */; };
 		F16F61EE23439ED300574EBE /* Circle+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61ED23439ED300574EBE /* Circle+Create.swift */; };
 		F16F61F023439F1300574EBE /* Circle+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61EF23439F1300574EBE /* Circle+Const.swift */; };
+		F16F61F42343A57D00574EBE /* AVCaptureDevice+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61F32343A57D00574EBE /* AVCaptureDevice+Feature.swift */; };
 		F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */; };
 		F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */; };
 		F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */; };
@@ -167,6 +168,7 @@
 		F16F61E823439E8900574EBE /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Circle.swift; path = HybridCamera/src/ui/button/RecordButton/Circle.swift; sourceTree = SOURCE_ROOT; };
 		F16F61ED23439ED300574EBE /* Circle+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle+Create.swift"; sourceTree = "<group>"; };
 		F16F61EF23439F1300574EBE /* Circle+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle+Const.swift"; sourceTree = "<group>"; };
+		F16F61F32343A57D00574EBE /* AVCaptureDevice+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Feature.swift"; sourceTree = "<group>"; };
 		F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Event.swift"; sourceTree = "<group>"; };
 		F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButtonKind+TypeAlias.swift"; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				F16F61A72340C6BC00574EBE /* AVCaptureSession+Setup.swift */,
 				F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */,
 				F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */,
+				F16F61F32343A57D00574EBE /* AVCaptureDevice+Feature.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -864,6 +867,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1CB286A22E9C67900C2A8CF /* ProcessView+Helper.swift in Sources */,
+				F16F61F42343A57D00574EBE /* AVCaptureDevice+Feature.swift in Sources */,
 				F114ADD121A1CB3300942A28 /* HybridCamView+Create.swift in Sources */,
 				F1972EB3233F416100CE772C /* CamUtil+Error.swift in Sources */,
 				F114ADBD21A1C2E500942A28 /* CamView.swift in Sources */,

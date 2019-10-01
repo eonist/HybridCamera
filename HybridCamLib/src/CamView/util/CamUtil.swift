@@ -13,8 +13,12 @@ public class CamUtil {
    public static func camera(devicePosition: AVCaptureDevice.Position, deviceType: AVCaptureDevice.DeviceType = .builtInWideAngleCamera) -> CameraResult {
       let session: AVCaptureDevice.DiscoverySession = .init(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
       let cameras: [AVCaptureDevice] = session.devices.compactMap { $0 }
-      guard !cameras.isEmpty else { return .failure(.noCameraOfTypeAvailable(deviceType, cameras)) }
-      guard let camera = cameras.first(where: { $0.position == devicePosition }) else { return .failure(.noPositionAvailableForDeviceType(devicePosition, deviceType)) }
+      guard !cameras.isEmpty else {
+         return .failure(.noCameraOfTypeAvailable(deviceType, cameras))
+      }
+      guard let camera = cameras.first(where: { $0.position == devicePosition }) else {
+         return .failure(.noPositionAvailableForDeviceType(devicePosition, deviceType))
+      }
       return .success(camera)
    }
    /**

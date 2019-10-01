@@ -15,7 +15,7 @@ extension ViewController {
       hybridCamView.camView.onPhotoCaptureComplete = defaultPhotoCaptureCompleted
       hybridCamView.camView.onVideoCaptureComplete = defaultVideoCaptureCompleted
       self.resetZoom()
-      self.switchAudioSession(to: .playAndRecord)
+      try? self.switchAudioSession(to: .playAndRecord)
    }
    /**
     * When camera onCapture is called
@@ -39,12 +39,10 @@ extension ViewController {
    }
    /**
     * Switch between audio session;
-    * - Fixme: ⚠️️ Continue playing audio when going back to camera after preview
+    * - Fixme: ⚠️️ may instead of throwing, we should return Result<Void,SetupError>
     * - Fixme: make this throw
     */
-   internal func switchAudioSession(to: AVAudioSession.Category) {
-      do {
-         try (view as? HybridCamView)?.camView.captureSession.setupBackgroundAudioSupport(category: to)
-      } catch { Swift.print("🚫 setupDevice error 🚫:  \((error as? SetupError)?.description ?? error.localizedDescription)") }
+   internal func switchAudioSession(to category: AVAudioSession.Category) throws {
+      try (view as? HybridCamView)?.camView.captureSession.setupBackgroundAudioSupport(category: category)
    }
 }

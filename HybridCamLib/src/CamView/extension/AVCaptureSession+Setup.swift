@@ -8,7 +8,6 @@ extension AVCaptureSession {
    /**
     * Setup camera
     * - Note: setCamera(cameraType) calls this method, so it can't be private
-    * - Fixme: ⚠️️ pass session as a var, and make it static
     */
    @objc open func setupCaptureDeviceInput(cameraPosition: AVCaptureDevice.Position) throws -> AVCaptureDeviceInput {
       let cameraResult: CamUtil.CameraResult = CamUtil.camera(devicePosition: cameraPosition)

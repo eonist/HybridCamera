@@ -4,7 +4,7 @@ import UIKit
  * - Note: To support merging video segments: https://www.raywenderlich.com/188034/how-to-play-record-and-merge-videos-in-ios-and-swift
  * - Note: To support overlays on videos: https://www.lynda.com/Swift-tutorials/AVFoundation-Essentials-iOS-Swift/504183-2.html
  */
-open class HybridCamView: UIView { // Fixme: ⚠️️ Rename to HybridCamView
+open class HybridCamView: UIView {
    public lazy var camView: CamView = createCamView()
    public lazy var topBar: TopBarViewKind = createTopBar()
    public lazy var recordButton: RecordButtonViewKind = createRecordButton()

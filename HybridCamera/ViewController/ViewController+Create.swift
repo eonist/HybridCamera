@@ -13,7 +13,7 @@ extension ViewController {
          $0.onShare = defaultOnShare
          self.view.addSubview($0)
          self.resetZoom()
-         self.switchAudioSession(to: .playback)
+         try? self.switchAudioSession(to: .playback)
       }
    }
 }
