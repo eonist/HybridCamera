@@ -11,6 +11,7 @@ open class Circle: UIView {
       super.init(frame: frame)
       _ = inner
       _ = outer
+      Circle.addShadowToView(self)
    }
    /**
     * Boilerplate

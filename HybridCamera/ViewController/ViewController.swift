@@ -14,7 +14,8 @@ class ViewController: UIViewController {
       CamUtil.assertVideoAndMicAccess(vc: self) { // Sends user through camera access wizard
          if case .success = $0 {
             DispatchQueue.main.async { [weak self] in // we have to jump on the main que again since requestAccess in onan arbitrary que
-               self?.initiate() // If accesses was granted proced to initiate the camera
+               do { try self?.initiate() } // If accesses was granted proced to initiate the camera
+               catch { CustomProcessView.promptErrorDialog(vc: self, error: error) {} }
             }
          } else if case .failure(let error) = $0 {
             CustomProcessView.promptErrorDialog(vc: self, error: error, onComplete: { /*Do nothing*/ })

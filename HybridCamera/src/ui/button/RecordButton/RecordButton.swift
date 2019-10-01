@@ -1,9 +1,10 @@
 import UIKit
 import HybridCamLib
-
+/**
+ * - Note: The idea is that we can override or attach call-backs to gesture events
+ */
 open class RecordButton: UIView, RecordButtonKind {
-   // Starting point for long-press to zoom
-   open var startingPoint: CGPoint = .zero
+   open var startingPoint: CGPoint = .zero // Starting point for long-press to zoom
    // Interaction call-back variables
    open var onShortPressRelease: ShortPressReleased = defaultShortPressReleased
    open var onLongPressBegan: LongPressBegan = defaultLongPressBegan

@@ -12,6 +12,6 @@ extension ExitButton {
          let margin: CGFloat = 40
          return .init(x: margin, y: margin)
       }()
-      return .init(x:topLeft.x, y:topLeft.y, width:btnWidth, height:btnWidth)
+      return .init(x: topLeft.x, y: topLeft.y, width: btnWidth, height: btnWidth)
    }
 }

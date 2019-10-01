@@ -45,7 +45,7 @@ extension CamUtil {
       AVCaptureDevice.requestAccess(for: .video) { isGranted in // prompts the user for cam access
          guard !isGranted else { onComplete(.success(())); return }
          DispatchQueue.main.async { // we have to jump on the main que again since requestAccess in onan arbitrary que
-            // Fixme: ⚠️️ use the dialog maker method on the bellow
+            // Fixme: ⚠️️ put the bellow dialog into a static method. along with the other AlertControllers in this lib
             with(UIAlertController(title: "Camera", message: "This app does not have permission to access camera", preferredStyle: .alert)) {
                let action = UIAlertAction(title: "OK", style: .default) { _ in Swift.print("Do nothing, user needs to grant access from settings") }
                $0.addAction(action)

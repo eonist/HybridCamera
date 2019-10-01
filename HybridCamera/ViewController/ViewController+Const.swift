@@ -5,11 +5,11 @@ extension ViewController {
    /**
     * Default callback for error dialog
     */
-   var defaultOnErrorDialogComplete: ProcessView.OnErrorDialogComplete {
+   var defaultOnErrorDialogComplete: ProcessView.OnErrorDialogComplete { // add throwing
       return {
          self.processMediaView?.deInitiate()
          self.processMediaView = nil
-         self.resetZoom()
+         try? self.resetZoom()
          try? self.switchAudioSession(to: .playAndRecord)
       }
    }

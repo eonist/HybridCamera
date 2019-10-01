@@ -1,46 +1,24 @@
 import UIKit
 import With
+import CoreGraphics
 /**
- * Gesture recognizer
+ * Gesture events
  */
 extension RecordButton: UIGestureRecognizerDelegate {
-   /**
-    * Used to reset previously attached callbacks
-    * - Note: should be called when views are animating between states, where all interaction should be disabled
-    */
-   @objc open func clearCallBacks() {
-      onShortPressRelease = RecordButton.defaultShortPressReleased
-      onLongPressBegan = RecordButton.defaultLongPressBegan
-      onLongPressRelease = RecordButton.defaultLongPressReleased
-      onLongPressChanged = RecordButton.defaultLongPressChanged
-   }
-   /**
-    * Adds gesture listeners to button
-    */
-   @objc open func addGestureRecognizer() {
-      let tap: UITapGestureRecognizer = .init(target: self, action: #selector(handleTap))
-      self.addGestureRecognizer(tap)
-      with(UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))) {//holdGesture.delegate = self
-         $0.cancelsTouchesInView = false
-         $0.minimumPressDuration = 0.25
-         $0.allowableMovement = 500
-         self.addGestureRecognizer($0)
-         tap.require(toFail: $0)/*cancels the shortTap from ever firing*/
-      }
-   }
    /**
     * Long press
     * - Note: We don't us a switch here because it will not be exhaustive
     */
    @objc open func handleLongPress(sender: UILongPressGestureRecognizer) {
-      if [.ended, .cancelled, .failed].contains(sender.state) {/*long tap release*/
+      if [.ended, .cancelled, .failed].contains(sender.state) { // long tap release
          handleLongPressRelease()
-      } else if case .began = sender.state {/*long tap just began*/
+      } else if case .began = sender.state { // long tap just began
          startingPoint = sender.location(in: sender.view)
          handleLongPressBegan()
       } else if case .changed = sender.state {
-         let newPoint = sender.location(in: sender.view)
-         let additionalZoom = distance(from: startingPoint, to: newPoint) / 60 - 1
+         let newP = sender.location(in: sender.view)
+         let dist: CGFloat = hypot(startingPoint.x - newP.x, startingPoint.y - newP.y) // Needed to calculate distance from two CGPoints
+         let additionalZoom: CGFloat = dist / 60 - 1
          if additionalZoom >= 0 && additionalZoom <= 6 {
             handleLongPressChanged(addZoom: additionalZoom)
          }
@@ -51,7 +29,7 @@ extension RecordButton: UIGestureRecognizerDelegate {
     * - Note: We dont us a switch here because it will not be exhaustive
     */
    @objc open func handleTap(sender: UITapGestureRecognizer) {
-      if [.ended, .cancelled, .failed].contains(sender.state) {/*short tap release*/
+      if [.ended, .cancelled, .failed].contains(sender.state) { // short tap release
          handleShorPressRelease()
       }
    }
@@ -65,14 +43,14 @@ extension RecordButton: UIGestureRecognizerDelegate {
     * Note: this method is justified because its called from multiple places in this class etc
     */
    @objc open func handleLongPressBegan() {
-      grow()
+      RecordButton.grow(view: self.circle.inner)
       onLongPressBegan()
    }
    /**
     * When the user releases a long press of the button
     */
    @objc open func handleLongPressRelease() {
-      shrink()
+      RecordButton.shrink(view: self.circle.inner)
       onLongPressRelease()
    }
    /**
@@ -80,16 +58,5 @@ extension RecordButton: UIGestureRecognizerDelegate {
     */
    @objc open func handleLongPressChanged(addZoom: CGFloat) {
       onLongPressChanged(addZoom)
-   }
-}
-/**
- * Private helper extension
- */
-extension RecordButton {
-   /**
-    * Needed to calculate distance from two CGPoints
-    */
-   fileprivate func distance(from lhs: CGPoint, to rhs: CGPoint) -> CGFloat {
-      return (pow(lhs.x - rhs.x, 2) + pow(lhs.y - rhs.y, 2)).squareRoot()
    }
 }
