@@ -10,7 +10,7 @@ open class RecordButton: UIView, RecordButtonKind {
    open var onLongPressRelease: LongPressReleased = defaultLongPressReleased
    open var onLongPressChanged: LongPressChanged = defaultLongPressChanged
    // UI
-   open lazy var circle: RecordButton.Circle = createCircle()
+   open lazy var circle: Circle = createCircle()
    override init(frame: CGRect) {
       super.init(frame: RecordButton.rect)
       _ = circle // Create the circle designs

@@ -13,7 +13,7 @@ class ViewController: UIViewController {
       super.viewDidAppear(animated)
       CamUtil.assertVideoAndMicAccess(vc: self) { // Sends user through camera access wizard
          if case .success = $0 {
-            DispatchQueue.main.async { [weak self] in // - Fixme: ⚠️️ this main call may not be needed
+            DispatchQueue.main.async { [weak self] in // we have to jump on the main que again since requestAccess in onan arbitrary que
                self?.initiate() // If accesses was granted proced to initiate the camera
             }
          } else if case .failure(let error) = $0 {
