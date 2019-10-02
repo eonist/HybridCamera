@@ -20,5 +20,6 @@ extension HybridCamView {
          $0.flashButton.onToggle = { self.camView.flashMode = $0 ? .on : .off }
          $0.exitButton.onClick = { self.onCameraExit() }
       }
+      zoomSwitcher.onToggle = { try? self.camView.toggleCameraPosition(for: self.topBar.flipButton.toggle ? .front : .back, deviceType: $0 ? .builtInWideAngleCamera : .builtInTelephotoCamera) }
    }
 }

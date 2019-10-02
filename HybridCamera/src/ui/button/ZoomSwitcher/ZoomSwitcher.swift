@@ -1,13 +1,14 @@
 import UIKit
 import HybridCamLib
 import With
-
-open class ZoomSwitcher: UIButton, ZoomSwitcherKind {
-   open var onClick: OnClick = ShareButton.defaultOnClick
+/**
+ * - Fixme: add support for ultrawide angel aka 0.5x
+ * - Fixme: Add support for detecting which angels are available
+ */
+open class ZoomSwitcher: ToggleButton, ZoomSwitcherKind {
    override init(frame: CGRect) {
       super.init(frame: frame)
       configButton()
-      self.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)/*Attach button action*/
    }
    /**
     * Boilerplate

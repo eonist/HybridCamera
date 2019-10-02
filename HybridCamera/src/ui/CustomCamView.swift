@@ -27,7 +27,7 @@ extension CustomCamView {
    /**
     * Creates zoom switcher
     */
-   func createZoomSwitcher() -> ZoomSwitcherKind {
+   @objc override open func createZoomSwitcher() -> ZoomSwitcherKind {
       return with(ZoomSwitcher(frame: ZoomSwitcher.rect)) {
          self.addSubview($0)
       }

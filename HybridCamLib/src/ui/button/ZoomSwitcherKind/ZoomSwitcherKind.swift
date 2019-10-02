@@ -1,4 +1,4 @@
 import Foundation
 
-@objc public protocol ZoomSwitcherKind: ClickButtonKind {
+@objc public protocol ZoomSwitcherKind: ToggleButtonKind {
 }
