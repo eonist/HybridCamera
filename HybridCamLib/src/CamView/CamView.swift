@@ -21,6 +21,8 @@ open class CamView: UIView {
    // Callbacks
    public var onVideoCaptureComplete: VideoCaptureCompleted = defaultVideoCaptureCompleted
    public var onPhotoCaptureComplete: PhotoCaptureCompleted = defaultPhotoCaptureCompleted
+   // Const
+   let test: String = "test" // temp check to test if codebeat treats let as instance var
    override init(frame: CGRect) {
       super.init(frame: frame)
       self.backgroundColor = .black // Sets the background color of the view
