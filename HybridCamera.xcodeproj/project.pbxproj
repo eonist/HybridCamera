@@ -34,6 +34,14 @@
 		F114ADDB21A1D57A00942A28 /* ProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD621A1D35A00942A28 /* ProcessView.swift */; };
 		F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD821A1D40300942A28 /* ProcessView+Action.swift */; };
 		F114ADE521A1EF0A00942A28 /* HybridCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */; };
+		F12D0E0E2344DF7B004582FA /* ZoomSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E0D2344DF7B004582FA /* ZoomSwitcher.swift */; };
+		F12D0E102344E00D004582FA /* ZoomSwitcher+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E0F2344E00D004582FA /* ZoomSwitcher+Create.swift */; };
+		F12D0E122344E07C004582FA /* ZoomSwitcher+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E112344E07C004582FA /* ZoomSwitcher+Style.swift */; };
+		F12D0E142344E0BC004582FA /* ZoomSwitcher+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E132344E0BC004582FA /* ZoomSwitcher+Event.swift */; };
+		F12D0E162344E416004582FA /* ShareButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E152344E416004582FA /* ShareButton+Const.swift */; };
+		F12D0E182344E4A6004582FA /* ZoomSwitcher+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E172344E4A6004582FA /* ZoomSwitcher+Const.swift */; };
+		F12D0E1A2344E692004582FA /* TopBar+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E192344E692004582FA /* TopBar+Const.swift */; };
+		F12D0E1D2344EA00004582FA /* ZoomSwitcherKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E1C2344EA00004582FA /* ZoomSwitcherKind.swift */; };
 		F16F61A82340C6BC00574EBE /* AVCaptureSession+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61A72340C6BC00574EBE /* AVCaptureSession+Setup.swift */; };
 		F16F61AC2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */; };
 		F16F61AE2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */; };
@@ -76,7 +84,7 @@
 		F1972EA5233D215200CE772C /* ShareButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EA4233D215200CE772C /* ShareButton+Style.swift */; };
 		F1972EA8233D219C00CE772C /* ExitButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EA7233D219C00CE772C /* ExitButton+Const.swift */; };
 		F1972EAB233D21BE00CE772C /* FlipButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EAA233D21BE00CE772C /* FlipButton+Const.swift */; };
-		F1972EAE233D226800CE772C /* FlashButton+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EAD233D226800CE772C /* FlashButton+Event.swift */; };
+		F1972EAE233D226800CE772C /* FlashButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EAD233D226800CE772C /* FlashButton+Const.swift */; };
 		F1972EB1233F3B8400CE772C /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EB0233F3B8400CE772C /* FileUtil.swift */; };
 		F1972EB3233F416100CE772C /* CamUtil+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972EB2233F416100CE772C /* CamUtil+Error.swift */; };
 		F1AA7579226B4E5000D4C272 /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
@@ -161,6 +169,14 @@
 		F114ADE221A1EF0A00942A28 /* HybridCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HybridCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridCameraTests.swift; sourceTree = "<group>"; };
 		F114ADE621A1EF0A00942A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12D0E0D2344DF7B004582FA /* ZoomSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomSwitcher.swift; sourceTree = "<group>"; };
+		F12D0E0F2344E00D004582FA /* ZoomSwitcher+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcher+Create.swift"; sourceTree = "<group>"; };
+		F12D0E112344E07C004582FA /* ZoomSwitcher+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcher+Style.swift"; sourceTree = "<group>"; };
+		F12D0E132344E0BC004582FA /* ZoomSwitcher+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcher+Event.swift"; sourceTree = "<group>"; };
+		F12D0E152344E416004582FA /* ShareButton+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShareButton+Const.swift"; sourceTree = "<group>"; };
+		F12D0E172344E4A6004582FA /* ZoomSwitcher+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcher+Const.swift"; sourceTree = "<group>"; };
+		F12D0E192344E692004582FA /* TopBar+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TopBar+Const.swift"; path = "HybridCamera/src/ui/topbar/TopBar+Const.swift"; sourceTree = SOURCE_ROOT; };
+		F12D0E1C2344EA00004582FA /* ZoomSwitcherKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomSwitcherKind.swift; sourceTree = "<group>"; };
 		F16F61A72340C6BC00574EBE /* AVCaptureSession+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Setup.swift"; sourceTree = "<group>"; };
 		F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Feature.swift"; sourceTree = "<group>"; };
 		F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCapturePhotoOutput+Feature.swift"; sourceTree = "<group>"; };
@@ -200,7 +216,7 @@
 		F1972EA4233D215200CE772C /* ShareButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShareButton+Style.swift"; sourceTree = "<group>"; };
 		F1972EA7233D219C00CE772C /* ExitButton+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExitButton+Const.swift"; sourceTree = "<group>"; };
 		F1972EAA233D21BE00CE772C /* FlipButton+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlipButton+Const.swift"; sourceTree = "<group>"; };
-		F1972EAD233D226800CE772C /* FlashButton+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlashButton+Event.swift"; sourceTree = "<group>"; };
+		F1972EAD233D226800CE772C /* FlashButton+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlashButton+Const.swift"; sourceTree = "<group>"; };
 		F1972EB0233F3B8400CE772C /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		F1972EB2233F416100CE772C /* CamUtil+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CamUtil+Error.swift"; sourceTree = "<group>"; };
 		F1AA7578226B4E5000D4C272 /* With.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = With.framework; path = Carthage/Build/iOS/With.framework; sourceTree = "<group>"; };
@@ -340,6 +356,26 @@
 			path = CamPreviewView;
 			sourceTree = "<group>";
 		};
+		F12D0E0C2344DF52004582FA /* ZoomSwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				F12D0E0D2344DF7B004582FA /* ZoomSwitcher.swift */,
+				F12D0E0F2344E00D004582FA /* ZoomSwitcher+Create.swift */,
+				F12D0E132344E0BC004582FA /* ZoomSwitcher+Event.swift */,
+				F12D0E112344E07C004582FA /* ZoomSwitcher+Style.swift */,
+				F12D0E172344E4A6004582FA /* ZoomSwitcher+Const.swift */,
+			);
+			path = ZoomSwitcher;
+			sourceTree = "<group>";
+		};
+		F12D0E1B2344E9F2004582FA /* ZoomSwitcherKind */ = {
+			isa = PBXGroup;
+			children = (
+				F12D0E1C2344EA00004582FA /* ZoomSwitcherKind.swift */,
+			);
+			path = ZoomSwitcherKind;
+			sourceTree = "<group>";
+		};
 		F16F61A62340C69F00574EBE /* extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +463,7 @@
 		F1972E7E233D0BD800CE772C /* button */ = {
 			isa = PBXGroup;
 			children = (
+				F12D0E1B2344E9F2004582FA /* ZoomSwitcherKind */,
 				F1972E78233D0B3B00CE772C /* ToggleButtonKind */,
 				F1972E79233D0B4300CE772C /* ClickButtonKind */,
 				F1972E71233D09F600CE772C /* RecordButtonKind */,
@@ -474,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				F1ABBEBF20D07A11008B13B5 /* ShareButton.swift */,
+				F12D0E152344E416004582FA /* ShareButton+Const.swift */,
 				F1972EA2233D214100CE772C /* ShareButton+Event.swift */,
 				F1972EA4233D215200CE772C /* ShareButton+Style.swift */,
 			);
@@ -502,7 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				F1ABBEC520D07A11008B13B5 /* FlashButton.swift */,
-				F1972EAD233D226800CE772C /* FlashButton+Event.swift */,
+				F1972EAD233D226800CE772C /* FlashButton+Const.swift */,
 			);
 			path = FlashButton;
 			sourceTree = "<group>";
@@ -591,7 +629,8 @@
 		F1ABBEB420D07A11008B13B5 /* button */ = {
 			isa = PBXGroup;
 			children = (
-				F1ABBEBB20D07A11008B13B5 /* util */,
+				F12D0E0C2344DF52004582FA /* ZoomSwitcher */,
+				F1ABBEBB20D07A11008B13B5 /* helper */,
 				F1ABBEB520D07A11008B13B5 /* RecordButton */,
 				F1972EA1233D212C00CE772C /* ShareButton */,
 			);
@@ -612,20 +651,21 @@
 			path = RecordButton;
 			sourceTree = "<group>";
 		};
-		F1ABBEBB20D07A11008B13B5 /* util */ = {
+		F1ABBEBB20D07A11008B13B5 /* helper */ = {
 			isa = PBXGroup;
 			children = (
 				F1972E98233D209A00CE772C /* RoundButton */,
 				F1972E9B233D20C500CE772C /* ToggleButton */,
 				F1972E9E233D210900CE772C /* ClickButton */,
 			);
-			path = util;
+			path = helper;
 			sourceTree = "<group>";
 		};
 		F1ABBEC020D07A11008B13B5 /* TopBar */ = {
 			isa = PBXGroup;
 			children = (
 				F1ABBEC120D07A11008B13B5 /* TopBar.swift */,
+				F12D0E192344E692004582FA /* TopBar+Const.swift */,
 				F1972E96233D1CE600CE772C /* TopBar+Create.swift */,
 				F1ABBEC220D07A11008B13B5 /* button */,
 			);
@@ -913,6 +953,7 @@
 				F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */,
 				F114ADB621A1C2E500942A28 /* TopBarKind.swift in Sources */,
 				F1972E93233D16A800CE772C /* CamView+ViewFinder.swift in Sources */,
+				F12D0E1D2344EA00004582FA /* ZoomSwitcherKind.swift in Sources */,
 				F114ADB521A1C2E500942A28 /* RecordButtonKind.swift in Sources */,
 				F114ADC021A1C2E500942A28 /* CamView+Getter.swift in Sources */,
 				F114ADC721A1C2E500942A28 /* ImageView.swift in Sources */,
@@ -946,6 +987,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12D0E162344E416004582FA /* ShareButton+Const.swift in Sources */,
 				F1059EE222EC36C6004A8346 /* ViewController+Extension.swift in Sources */,
 				F1972E9D233D20D400CE772C /* ToggleButton+Event.swift in Sources */,
 				F1ABBEE220D07A12008B13B5 /* RoundButton.swift in Sources */,
@@ -954,22 +996,28 @@
 				F16F61E923439E8900574EBE /* Circle.swift in Sources */,
 				F1972EA5233D215200CE772C /* ShareButton+Style.swift in Sources */,
 				F16F61E723439E6700574EBE /* RecordButton+Create.swift in Sources */,
+				F12D0E122344E07C004582FA /* ZoomSwitcher+Style.swift in Sources */,
 				F16F61EE23439ED300574EBE /* Circle+Create.swift in Sources */,
+				F12D0E1A2344E692004582FA /* TopBar+Const.swift in Sources */,
 				F1ABBEF620D07A12008B13B5 /* AppDelegate.swift in Sources */,
 				F1ABBEE320D07A12008B13B5 /* ToggleButton.swift in Sources */,
 				F16F61E22342786E00574EBE /* ViewController+Const.swift in Sources */,
 				F16F61E423427FC100574EBE /* ViewController+Create.swift in Sources */,
+				F12D0E142344E0BC004582FA /* ZoomSwitcher+Event.swift in Sources */,
 				F1972EA3233D214100CE772C /* ShareButton+Event.swift in Sources */,
 				F1ABBEE820D07A12008B13B5 /* FlipButton.swift in Sources */,
 				F1972E97233D1CE600CE772C /* TopBar+Create.swift in Sources */,
 				F1972E9A233D20AA00CE772C /* RoundButton+Event.swift in Sources */,
 				F16F61F023439F1300574EBE /* Circle+Const.swift in Sources */,
 				F1ABBED620D07A12008B13B5 /* ViewController.swift in Sources */,
+				F12D0E0E2344DF7B004582FA /* ZoomSwitcher.swift in Sources */,
 				F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */,
+				F12D0E102344E00D004582FA /* ZoomSwitcher+Create.swift in Sources */,
 				F1ABBEDF20D07A12008B13B5 /* RecordButton+Const.swift in Sources */,
 				F1972EA8233D219C00CE772C /* ExitButton+Const.swift in Sources */,
+				F12D0E182344E4A6004582FA /* ZoomSwitcher+Const.swift in Sources */,
 				F16F61F82343C90E00574EBE /* Circle+Helper.swift in Sources */,
-				F1972EAE233D226800CE772C /* FlashButton+Event.swift in Sources */,
+				F1972EAE233D226800CE772C /* FlashButton+Const.swift in Sources */,
 				F1972EAB233D21BE00CE772C /* FlipButton+Const.swift in Sources */,
 				F1ABBEE920D07A12008B13B5 /* FlashButton.swift in Sources */,
 				F1ABBEE520D07A12008B13B5 /* ShareButton.swift in Sources */,

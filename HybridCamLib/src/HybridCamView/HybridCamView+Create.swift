@@ -25,4 +25,10 @@ extension HybridCamView {
    @objc open func createRecordButton() -> RecordButtonViewKind {
       fatalError("must be overriden in subclass")
    }
+   /**
+    * Creates zoom switcher
+    */
+   @objc open func createZoomSwitcher() -> ZoomSwitcherKind {
+      fatalError("must be overriden in subclass")
+   }
 }

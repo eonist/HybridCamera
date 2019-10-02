@@ -9,8 +9,8 @@ extension AVCaptureSession {
     * Setup camera
     * - Note: setCamera(cameraType) calls this method, so it can't be private
     */
-   @objc open func setupCaptureDeviceInput(cameraPosition: AVCaptureDevice.Position) throws -> AVCaptureDeviceInput {
-      let cameraResult: CamUtil.CameraResult = CamUtil.camera(devicePosition: cameraPosition)
+   @objc open func setupCaptureDeviceInput(cameraPosition: AVCaptureDevice.Position, deviceType: AVCaptureDevice.DeviceType = .builtInWideAngleCamera) throws -> AVCaptureDeviceInput {
+      let cameraResult: CamUtil.CameraResult = CamUtil.camera(devicePosition: cameraPosition, deviceType: deviceType)
       guard case .success(let captureDevice) = cameraResult else { // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
          throw SetupError.unableToGetVideoCaptureDevice(cameraResult.error())
       }

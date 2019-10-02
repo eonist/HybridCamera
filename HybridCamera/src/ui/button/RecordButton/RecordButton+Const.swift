@@ -4,24 +4,17 @@ import With
  * Size / Alignment
  */
 extension RecordButton {
-   open class var size: CGSize { return .init(width: 80, height: 80) }
-   open class var cornerRadius: CGFloat { return RecordButton.size.width / 2 }
-   /**
-    * Positions the RecordButton center bottom of the screen
-    */
-   @objc open func setPosition() {
-      self.frame = RecordButton.rect
-   }
+   open class var cornerRadius: CGFloat { return RecordButton.rect.width / 2 }
    /**
     * The position of the recordButton (Not using AutoLayout)
     */
    open class var rect: CGRect {
-      let btnWidth: CGFloat = RecordButton.size.width
+      let size: CGSize = .init(width: 80, height: 80)
       let bottomCenter: CGPoint = {
          let rect: CGRect = UIScreen.main.bounds
          let bottomMargin: CGFloat = 20
-         return .init(x: rect.midX - (btnWidth / 2), y: rect.height - btnWidth - bottomMargin)
+         return .init(x: rect.midX - (size.width / 2), y: rect.height - size.height - bottomMargin)
       }()
-      return .init(x: bottomCenter.x, y: bottomCenter.y, width: btnWidth, height: btnWidth)
+      return .init(x: bottomCenter.x, y: bottomCenter.y, width: size.width, height: size.height)
    }
 }
