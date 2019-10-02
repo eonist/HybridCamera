@@ -1,15 +1,19 @@
 import UIKit
-import With
-/**
- * Size / Alignment
- */
-extension RecordButton {
-   open class var cornerRadius: CGFloat { return RecordButton.rect.width / 2 }
+
+extension ZoomSwitcher {
    /**
     * The position of the recordButton (Not using AutoLayout)
     */
    open class var rect: CGRect {
-      let size: CGSize = .init(width: 80, height: 80)
+      let size: CGSize = .init(width: 40, height: 40)
+      let x: CGFloat = {
+         // similar to flash
+         0
+      }()
+      let y: CGFloat = {
+         //center of record button
+         0
+      }()
       let bottomCenter: CGPoint = {
          let rect: CGRect = UIScreen.main.bounds
          let bottomMargin: CGFloat = 20

@@ -12,18 +12,24 @@ extension CustomCamView {
     * - Note: Basically overrides the default design
     */
    @objc override open func createTopBar() -> TopBarViewKind {
-      let rect: CGRect = .init(origin: .init(), size: .init(width: UIScreen.main.bounds.size.width, height: 120))
-      let topBar: TopBar = .init(frame: rect)
-      self.addSubview(topBar)
-      return topBar
+      return with(TopBar(frame: TopBar.rect)) {
+         self.addSubview($0)
+      }
    }
    /**
     * Creates Record button
     */
    @objc override open func createRecordButton() -> RecordButtonViewKind {
-      return with(RecordButton()) {
+      return with(RecordButton(frame: RecordButton.rect)) {
          self.addSubview($0)
-         $0.setPosition()
+      }
+   }
+   /**
+    * Creates zoom switcher
+    */
+   func createZoomSwitcher() -> ZoomSwitcherKind {
+      return with(ZoomSwitcher(frame: ZoomSwitcher.rect)) {
+         self.addSubview($0)
       }
    }
 }
