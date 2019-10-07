@@ -4,8 +4,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![SwiftLint Sindre](https://img.shields.io/badge/SwiftLint-Sindre-hotpink.svg)](https://github.com/sindresorhus/swiftlint-sindre)
 [![codebeat badge](https://codebeat.co/badges/d8d0fcdb-096c-41c0-ac20-b063051b752b)](https://codebeat.co/projects/github-com-eonist-hybridcamera-master)
-[![Build Status](https://travis-ci.com/eonist/HybridCamera.svg?branch=master)](https://travis-ci.com/eonist/HybridCamera)
-[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
+[![Build Status](https://travis-ci.com/eonist/HybridCamera.svg?branch=master)](https://travis-ci.com/eonist/HybridCamera) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
 <img width="192" alt="img" src="https://rawgit.com/stylekit/img/master/vid_edited_2_2mb.gif">
 
