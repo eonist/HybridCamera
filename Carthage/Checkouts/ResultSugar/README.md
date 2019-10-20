@@ -15,4 +15,5 @@ Sugar for Result
 guard let imageAndURL: (UIImage, URL) = $0.value else { return }
 imageAndURL.image // UIImage
 imageAndURL.url // URL
+print($0.errorStr)
 ```

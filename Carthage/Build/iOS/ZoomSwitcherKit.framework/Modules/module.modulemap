@@ -1,0 +1,11 @@
+framework module ZoomSwitcherKit {
+  umbrella header "ZoomSwitcherKit.h"
+
+  export *
+  module * { export * }
+}
+
+module ZoomSwitcherKit.Swift {
+    header "ZoomSwitcherKit-Swift.h"
+    requires objc
+}
