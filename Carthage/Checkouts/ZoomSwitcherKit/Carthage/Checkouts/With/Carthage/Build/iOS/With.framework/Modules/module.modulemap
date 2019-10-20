@@ -1,0 +1,11 @@
+framework module With {
+  umbrella header "With.h"
+
+  export *
+  module * { export * }
+}
+
+module With.Swift {
+    header "With-Swift.h"
+    requires objc
+}

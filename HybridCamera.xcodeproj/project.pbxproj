@@ -34,14 +34,13 @@
 		F114ADDB21A1D57A00942A28 /* ProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD621A1D35A00942A28 /* ProcessView.swift */; };
 		F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADD821A1D40300942A28 /* ProcessView+Action.swift */; };
 		F114ADE521A1EF0A00942A28 /* HybridCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */; };
-		F12D0E0E2344DF7B004582FA /* ZoomSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E0D2344DF7B004582FA /* ZoomSwitcher.swift */; };
-		F12D0E102344E00D004582FA /* ZoomSwitcher+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E0F2344E00D004582FA /* ZoomSwitcher+Create.swift */; };
-		F12D0E122344E07C004582FA /* ZoomSwitcher+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E112344E07C004582FA /* ZoomSwitcher+Style.swift */; };
-		F12D0E142344E0BC004582FA /* ZoomSwitcher+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E132344E0BC004582FA /* ZoomSwitcher+Event.swift */; };
+		F12D0E0E2344DF7B004582FA /* ZoomSwitcerBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E0D2344DF7B004582FA /* ZoomSwitcerBtn.swift */; };
+		F12D0E122344E07C004582FA /* ZoomSwitcerBtn+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E112344E07C004582FA /* ZoomSwitcerBtn+Style.swift */; };
+		F12D0E142344E0BC004582FA /* ZoomSwitcerBtn+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E132344E0BC004582FA /* ZoomSwitcerBtn+Handler.swift */; };
 		F12D0E162344E416004582FA /* ShareButton+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E152344E416004582FA /* ShareButton+Const.swift */; };
-		F12D0E182344E4A6004582FA /* ZoomSwitcher+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E172344E4A6004582FA /* ZoomSwitcher+Const.swift */; };
+		F12D0E182344E4A6004582FA /* ZoomSwitcerBtn+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E172344E4A6004582FA /* ZoomSwitcerBtn+Const.swift */; };
 		F12D0E1A2344E692004582FA /* TopBar+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E192344E692004582FA /* TopBar+Const.swift */; };
-		F12D0E1D2344EA00004582FA /* ZoomSwitcherKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E1C2344EA00004582FA /* ZoomSwitcherKind.swift */; };
+		F12D0E1D2344EA00004582FA /* ZoomSwitchBtnKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D0E1C2344EA00004582FA /* ZoomSwitchBtnKind.swift */; };
 		F16F61A82340C6BC00574EBE /* AVCaptureSession+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61A72340C6BC00574EBE /* AVCaptureSession+Setup.swift */; };
 		F16F61AC2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */; };
 		F16F61AE2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */; };
@@ -59,8 +58,12 @@
 		F16F61F62343B28900574EBE /* With.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA7578226B4E5000D4C272 /* With.framework */; };
 		F16F61F82343C90E00574EBE /* Circle+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61F72343C90E00574EBE /* Circle+Helper.swift */; };
 		F16F61FA2343CACD00574EBE /* RecordButton+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16F61F92343CACD00574EBE /* RecordButton+Handler.swift */; };
+		F195D995235C8F5800C90136 /* ZoomSwitcherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F195D994235C8F5800C90136 /* ZoomSwitcherKit.framework */; };
+		F195D996235C8F5800C90136 /* ZoomSwitcherKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F195D994235C8F5800C90136 /* ZoomSwitcherKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F195D99B235C9D0400C90136 /* ZoomSwitcherKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = F195D99A235C9D0400C90136 /* ZoomSwitcherKind.swift */; };
+		F195D9A0235CAC3800C90136 /* ZoomSwitcherKind+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F195D99F235CAC3800C90136 /* ZoomSwitcherKind+Extension.swift */; };
 		F1972E6E233D09A300CE772C /* HybridCamView+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */; };
-		F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */; };
+		F1972E70233D09D300CE772C /* HybridCamView+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6F233D09D300CE772C /* HybridCamView+Handler.swift */; };
 		F1972E73233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */; };
 		F1972E75233D0A6B00CE772C /* RecordButtonKind+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E74233D0A6B00CE772C /* RecordButtonKind+Const.swift */; };
 		F1972E7B233D0B6F00CE772C /* ToggleButtonKind+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E7A233D0B6F00CE772C /* ToggleButtonKind+TypeAlias.swift */; };
@@ -147,6 +150,7 @@
 				F16F61E0234111C500574EBE /* ResultSugariOS.framework in Embed Frameworks */,
 				F1AA7581226C6D2200D4C272 /* With.framework in Embed Frameworks */,
 				F114ADAE21A1C27F00942A28 /* HybridCamLib.framework in Embed Frameworks */,
+				F195D996235C8F5800C90136 /* ZoomSwitcherKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,14 +173,13 @@
 		F114ADE221A1EF0A00942A28 /* HybridCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HybridCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F114ADE421A1EF0A00942A28 /* HybridCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridCameraTests.swift; sourceTree = "<group>"; };
 		F114ADE621A1EF0A00942A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F12D0E0D2344DF7B004582FA /* ZoomSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomSwitcher.swift; sourceTree = "<group>"; };
-		F12D0E0F2344E00D004582FA /* ZoomSwitcher+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcher+Create.swift"; sourceTree = "<group>"; };
-		F12D0E112344E07C004582FA /* ZoomSwitcher+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcher+Style.swift"; sourceTree = "<group>"; };
-		F12D0E132344E0BC004582FA /* ZoomSwitcher+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcher+Event.swift"; sourceTree = "<group>"; };
+		F12D0E0D2344DF7B004582FA /* ZoomSwitcerBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomSwitcerBtn.swift; sourceTree = "<group>"; };
+		F12D0E112344E07C004582FA /* ZoomSwitcerBtn+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcerBtn+Style.swift"; sourceTree = "<group>"; };
+		F12D0E132344E0BC004582FA /* ZoomSwitcerBtn+Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcerBtn+Handler.swift"; sourceTree = "<group>"; };
 		F12D0E152344E416004582FA /* ShareButton+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShareButton+Const.swift"; sourceTree = "<group>"; };
-		F12D0E172344E4A6004582FA /* ZoomSwitcher+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcher+Const.swift"; sourceTree = "<group>"; };
+		F12D0E172344E4A6004582FA /* ZoomSwitcerBtn+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcerBtn+Const.swift"; sourceTree = "<group>"; };
 		F12D0E192344E692004582FA /* TopBar+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TopBar+Const.swift"; path = "HybridCamera/src/ui/topbar/TopBar+Const.swift"; sourceTree = SOURCE_ROOT; };
-		F12D0E1C2344EA00004582FA /* ZoomSwitcherKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomSwitcherKind.swift; sourceTree = "<group>"; };
+		F12D0E1C2344EA00004582FA /* ZoomSwitchBtnKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomSwitchBtnKind.swift; sourceTree = "<group>"; };
 		F16F61A72340C6BC00574EBE /* AVCaptureSession+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Setup.swift"; sourceTree = "<group>"; };
 		F16F61AB2340D31A00574EBE /* AVCaptureDeviceInput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Feature.swift"; sourceTree = "<group>"; };
 		F16F61AD2340EB8000574EBE /* AVCapturePhotoOutput+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCapturePhotoOutput+Feature.swift"; sourceTree = "<group>"; };
@@ -191,8 +194,12 @@
 		F16F61F32343A57D00574EBE /* AVCaptureDevice+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Feature.swift"; sourceTree = "<group>"; };
 		F16F61F72343C90E00574EBE /* Circle+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Circle+Helper.swift"; sourceTree = "<group>"; };
 		F16F61F92343CACD00574EBE /* RecordButton+Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButton+Handler.swift"; sourceTree = "<group>"; };
+		F195D992235C8F4C00C90136 /* ZoomSwitcherKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomSwitcherKit.framework; path = Carthage/Build/iOS/ZoomSwitcherKit.framework; sourceTree = "<group>"; };
+		F195D994235C8F5800C90136 /* ZoomSwitcherKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomSwitcherKit.framework; path = Carthage/Build/iOS/ZoomSwitcherKit.framework; sourceTree = "<group>"; };
+		F195D99A235C9D0400C90136 /* ZoomSwitcherKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomSwitcherKind.swift; sourceTree = "<group>"; };
+		F195D99F235CAC3800C90136 /* ZoomSwitcherKind+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ZoomSwitcherKind+Extension.swift"; sourceTree = "<group>"; };
 		F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+TypeAlias.swift"; sourceTree = "<group>"; };
-		F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Event.swift"; sourceTree = "<group>"; };
+		F1972E6F233D09D300CE772C /* HybridCamView+Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HybridCamView+Handler.swift"; sourceTree = "<group>"; };
 		F1972E72233D0A1100CE772C /* RecordButtonKind+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButtonKind+TypeAlias.swift"; sourceTree = "<group>"; };
 		F1972E74233D0A6B00CE772C /* RecordButtonKind+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordButtonKind+Const.swift"; sourceTree = "<group>"; };
 		F1972E7A233D0B6F00CE772C /* ToggleButtonKind+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToggleButtonKind+TypeAlias.swift"; sourceTree = "<group>"; };
@@ -292,6 +299,7 @@
 				F16F61DF234111C500574EBE /* ResultSugariOS.framework in Frameworks */,
 				F1AA7580226C6D2200D4C272 /* With.framework in Frameworks */,
 				F114ADAD21A1C27F00942A28 /* HybridCamLib.framework in Frameworks */,
+				F195D995235C8F5800C90136 /* ZoomSwitcherKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +320,7 @@
 			children = (
 				F1972E7E233D0BD800CE772C /* button */,
 				F1972E77233D0B3000CE772C /* TopBarKind */,
+				F195D99A235C9D0400C90136 /* ZoomSwitcherKind.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -356,24 +365,23 @@
 			path = CamPreviewView;
 			sourceTree = "<group>";
 		};
-		F12D0E0C2344DF52004582FA /* ZoomSwitcher */ = {
+		F12D0E0C2344DF52004582FA /* DEPRECATED */ = {
 			isa = PBXGroup;
 			children = (
-				F12D0E0D2344DF7B004582FA /* ZoomSwitcher.swift */,
-				F12D0E0F2344E00D004582FA /* ZoomSwitcher+Create.swift */,
-				F12D0E132344E0BC004582FA /* ZoomSwitcher+Event.swift */,
-				F12D0E112344E07C004582FA /* ZoomSwitcher+Style.swift */,
-				F12D0E172344E4A6004582FA /* ZoomSwitcher+Const.swift */,
+				F12D0E0D2344DF7B004582FA /* ZoomSwitcerBtn.swift */,
+				F12D0E132344E0BC004582FA /* ZoomSwitcerBtn+Handler.swift */,
+				F12D0E112344E07C004582FA /* ZoomSwitcerBtn+Style.swift */,
+				F12D0E172344E4A6004582FA /* ZoomSwitcerBtn+Const.swift */,
 			);
-			path = ZoomSwitcher;
+			path = DEPRECATED;
 			sourceTree = "<group>";
 		};
-		F12D0E1B2344E9F2004582FA /* ZoomSwitcherKind */ = {
+		F12D0E1B2344E9F2004582FA /* DEPRECATED */ = {
 			isa = PBXGroup;
 			children = (
-				F12D0E1C2344EA00004582FA /* ZoomSwitcherKind.swift */,
+				F12D0E1C2344EA00004582FA /* ZoomSwitchBtnKind.swift */,
 			);
-			path = ZoomSwitcherKind;
+			path = DEPRECATED;
 			sourceTree = "<group>";
 		};
 		F16F61A62340C69F00574EBE /* extension */ = {
@@ -409,6 +417,14 @@
 			path = Circle;
 			sourceTree = "<group>";
 		};
+		F195D99E235CAC2C00C90136 /* BottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				F195D99F235CAC3800C90136 /* ZoomSwitcherKind+Extension.swift */,
+			);
+			path = BottomBar;
+			sourceTree = "<group>";
+		};
 		F1972E71233D09F600CE772C /* RecordButtonKind */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,7 +442,7 @@
 				F114ADC921A1C73E00942A28 /* HybridCamView.swift */,
 				F114ADCC21A1CA3F00942A28 /* HybridCamView+Create.swift */,
 				F1972E6D233D09A300CE772C /* HybridCamView+TypeAlias.swift */,
-				F1972E6F233D09D300CE772C /* HybridCamView+Event.swift */,
+				F1972E6F233D09D300CE772C /* HybridCamView+Handler.swift */,
 			);
 			path = HybridCamView;
 			sourceTree = "<group>";
@@ -463,7 +479,7 @@
 		F1972E7E233D0BD800CE772C /* button */ = {
 			isa = PBXGroup;
 			children = (
-				F12D0E1B2344E9F2004582FA /* ZoomSwitcherKind */,
+				F12D0E1B2344E9F2004582FA /* DEPRECATED */,
 				F1972E78233D0B3B00CE772C /* ToggleButtonKind */,
 				F1972E79233D0B4300CE772C /* ClickButtonKind */,
 				F1972E71233D09F600CE772C /* RecordButtonKind */,
@@ -556,6 +572,7 @@
 		F1AA7577226B4E5000D4C272 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F195D992235C8F4C00C90136 /* ZoomSwitcherKit.framework */,
 				F16F61DC23410ACB00574EBE /* ResultSugariOS.framework */,
 				F1AA7578226B4E5000D4C272 /* With.framework */,
 			);
@@ -565,6 +582,7 @@
 		F1ABBE8B20D0798A008B13B5 = {
 			isa = PBXGroup;
 			children = (
+				F195D994235C8F5800C90136 /* ZoomSwitcherKit.framework */,
 				F16F61DE234111C500574EBE /* ResultSugariOS.framework */,
 				F1ABBE9620D0798A008B13B5 /* HybridCamera */,
 				F114ADA721A1C27F00942A28 /* HybridCamLib */,
@@ -619,6 +637,7 @@
 			isa = PBXGroup;
 			children = (
 				F1ABBEB120D07A11008B13B5 /* CustomCamView.swift */,
+				F195D99E235CAC2C00C90136 /* BottomBar */,
 				F1ABBED020D07A11008B13B5 /* CustomProcessView.swift */,
 				F1ABBEB420D07A11008B13B5 /* button */,
 				F1ABBEC020D07A11008B13B5 /* TopBar */,
@@ -629,7 +648,7 @@
 		F1ABBEB420D07A11008B13B5 /* button */ = {
 			isa = PBXGroup;
 			children = (
-				F12D0E0C2344DF52004582FA /* ZoomSwitcher */,
+				F12D0E0C2344DF52004582FA /* DEPRECATED */,
 				F1ABBEBB20D07A11008B13B5 /* helper */,
 				F1ABBEB520D07A11008B13B5 /* RecordButton */,
 				F1972EA1233D212C00CE772C /* ShareButton */,
@@ -921,7 +940,7 @@
 				F114ADD121A1CB3300942A28 /* HybridCamView+Create.swift in Sources */,
 				F1972EB3233F416100CE772C /* CamUtil+Error.swift in Sources */,
 				F114ADBD21A1C2E500942A28 /* CamView.swift in Sources */,
-				F1972E70233D09D300CE772C /* HybridCamView+Event.swift in Sources */,
+				F1972E70233D09D300CE772C /* HybridCamView+Handler.swift in Sources */,
 				F114ADB721A1C2E500942A28 /* ToggleButtonKind.swift in Sources */,
 				F1972E8D233D0DBB00CE772C /* CamView+TypeAlias.swift in Sources */,
 				F114ADC821A1C2E500942A28 /* VideoPlayerView.swift in Sources */,
@@ -950,10 +969,11 @@
 				F1E786BC22EE52C4002007EE /* CamView+GestureHandler.swift in Sources */,
 				F114ADC221A1C2E500942A28 /* CamView+Setup.swift in Sources */,
 				F16F61A82340C6BC00574EBE /* AVCaptureSession+Setup.swift in Sources */,
+				F195D99B235C9D0400C90136 /* ZoomSwitcherKind.swift in Sources */,
 				F114ADDC21A1D57A00942A28 /* ProcessView+Action.swift in Sources */,
 				F114ADB621A1C2E500942A28 /* TopBarKind.swift in Sources */,
 				F1972E93233D16A800CE772C /* CamView+ViewFinder.swift in Sources */,
-				F12D0E1D2344EA00004582FA /* ZoomSwitcherKind.swift in Sources */,
+				F12D0E1D2344EA00004582FA /* ZoomSwitchBtnKind.swift in Sources */,
 				F114ADB521A1C2E500942A28 /* RecordButtonKind.swift in Sources */,
 				F114ADC021A1C2E500942A28 /* CamView+Getter.swift in Sources */,
 				F114ADC721A1C2E500942A28 /* ImageView.swift in Sources */,
@@ -996,26 +1016,26 @@
 				F16F61E923439E8900574EBE /* Circle.swift in Sources */,
 				F1972EA5233D215200CE772C /* ShareButton+Style.swift in Sources */,
 				F16F61E723439E6700574EBE /* RecordButton+Create.swift in Sources */,
-				F12D0E122344E07C004582FA /* ZoomSwitcher+Style.swift in Sources */,
+				F12D0E122344E07C004582FA /* ZoomSwitcerBtn+Style.swift in Sources */,
 				F16F61EE23439ED300574EBE /* Circle+Create.swift in Sources */,
 				F12D0E1A2344E692004582FA /* TopBar+Const.swift in Sources */,
 				F1ABBEF620D07A12008B13B5 /* AppDelegate.swift in Sources */,
 				F1ABBEE320D07A12008B13B5 /* ToggleButton.swift in Sources */,
 				F16F61E22342786E00574EBE /* ViewController+Const.swift in Sources */,
 				F16F61E423427FC100574EBE /* ViewController+Create.swift in Sources */,
-				F12D0E142344E0BC004582FA /* ZoomSwitcher+Event.swift in Sources */,
+				F12D0E142344E0BC004582FA /* ZoomSwitcerBtn+Handler.swift in Sources */,
 				F1972EA3233D214100CE772C /* ShareButton+Event.swift in Sources */,
 				F1ABBEE820D07A12008B13B5 /* FlipButton.swift in Sources */,
 				F1972E97233D1CE600CE772C /* TopBar+Create.swift in Sources */,
 				F1972E9A233D20AA00CE772C /* RoundButton+Event.swift in Sources */,
 				F16F61F023439F1300574EBE /* Circle+Const.swift in Sources */,
 				F1ABBED620D07A12008B13B5 /* ViewController.swift in Sources */,
-				F12D0E0E2344DF7B004582FA /* ZoomSwitcher.swift in Sources */,
+				F12D0E0E2344DF7B004582FA /* ZoomSwitcerBtn.swift in Sources */,
 				F1ABBEDD20D07A12008B13B5 /* RecordButton+Anim.swift in Sources */,
-				F12D0E102344E00D004582FA /* ZoomSwitcher+Create.swift in Sources */,
 				F1ABBEDF20D07A12008B13B5 /* RecordButton+Const.swift in Sources */,
 				F1972EA8233D219C00CE772C /* ExitButton+Const.swift in Sources */,
-				F12D0E182344E4A6004582FA /* ZoomSwitcher+Const.swift in Sources */,
+				F195D9A0235CAC3800C90136 /* ZoomSwitcherKind+Extension.swift in Sources */,
+				F12D0E182344E4A6004582FA /* ZoomSwitcerBtn+Const.swift in Sources */,
 				F16F61F82343C90E00574EBE /* Circle+Helper.swift in Sources */,
 				F1972EAE233D226800CE772C /* FlashButton+Const.swift in Sources */,
 				F1972EAB233D21BE00CE772C /* FlipButton+Const.swift in Sources */,

@@ -1,6 +1,9 @@
 import UIKit
 
 extension ShareButton {
+   /**
+    * Size and position of button
+    */
    static let rect: CGRect = {
       let size: CGSize = .init(width: 180, height: 40)
       let margin: CGFloat = 40
