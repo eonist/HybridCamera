@@ -1,10 +1,10 @@
 {
-  "commitish" : "7ada1229759d53883d74018bdaa79d12d6c89829",
+  "commitish" : "d7e8de7b54d8469e2edbd07496ad3ffccc67dc86",
   "iOS" : [
     {
       "name" : "ZoomSwitcherKit",
-      "hash" : "9c80346a779cc81fc75790d8934c30f3d79a7f0130f1b077f74898fb959a7f1d",
-      "swiftToolchainVersion" : "5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+      "hash" : "69a55f4ea5d6cea80d17a63dacc73de76c4563fe1c878a0914ec3730ae85473a",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
     }
   ]
 }
