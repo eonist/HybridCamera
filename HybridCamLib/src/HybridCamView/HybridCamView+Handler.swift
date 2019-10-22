@@ -30,7 +30,8 @@ extension HybridCamView {
             case .tele:
                return .builtInTelephotoCamera
             case .ultraWide:
-               return .builtInWideAngleCamera // fixme: ⚠️️ add ultrawide here
+               if #available(iOS 13.0, *) { return .builtInUltraWideCamera }
+               else { return .builtInWideAngleCamera }
             }
          }()
          try? self.camView.toggleCameraPosition(for: self.topBar.flipButton.toggle ? .front : .back, deviceType: deviceType)
