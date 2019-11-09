@@ -24,6 +24,13 @@ extension Result {
       return error as? T
    }
    /**
+    * - Note: When you need non-optional return
+    */
+    public func getError() -> Error {
+        guard case .failure(let error) = self else { return NSError.init(domain: "Generic error", code: 0) }
+        return error
+    }
+   /**
     * ## Examples
     * guard let imageAndURL: (UIImage, URL) = $0.value else { return }
     * imageAndURL.image // UIImage
