@@ -25,6 +25,6 @@ class ViewController: UIViewController {
    /**
     * Fixme: ⚠️️ add support for orientaion later
     */
-   override var shouldAutorotate: Bool { return false } // Locks autorotate
+   override var shouldAutorotate: Bool { return false } // Locks auto-rotate
    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent } // Looks better when the background is dark
 }
