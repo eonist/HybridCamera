@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ResultSugar",
+        "repositoryURL": "https://github.com/eonist/ResultSugar.git",
+        "state": {
+          "branch": "master",
+          "revision": "62da1bb61e937dd491cc9cea40f8785a2dc92a08",
+          "version": null
+        }
+      },
+      {
+        "package": "With",
+        "repositoryURL": "https://github.com/eonist/With.git",
+        "state": {
+          "branch": "master",
+          "revision": "140cd19586482e8f14a5ce971c675c69f1e4f916",
+          "version": null
+        }
+      },
+      {
+        "package": "ZoomSwitcherKit",
+        "repositoryURL": "https://github.com/eonist/ZoomSwitcherKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "3f994494939f3ccf63de58c9f3553aeee2bae001",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

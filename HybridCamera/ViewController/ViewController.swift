@@ -1,5 +1,4 @@
 import UIKit
-import HybridCamLib
 import With
 /**
  * Main view controller
@@ -23,8 +22,8 @@ class ViewController: UIViewController {
       }
    }
    /**
-    * Fixme: ⚠️️ add support for orientaion later
+    * - Fixme: ⚠️️ add support for orientaion later
     */
-   override var shouldAutorotate: Bool { return false } // Locks autorotate
-   override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent } // Looks better when the background is dark
+   override var shouldAutorotate: Bool { false } // Locks auto-rotate
+   override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent } // Looks better when the background is dark
 }

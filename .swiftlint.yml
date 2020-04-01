@@ -38,7 +38,7 @@ whitelist_rules:
   - identical_operands
   - identifier_name
   - implicit_getter
-  - implicit_return
+  #- implicit_return
   - inert_defer
   - is_disjoint
   - joined_default_parameter
