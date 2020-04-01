@@ -1,7 +1,7 @@
 [![version badge](https://img.shields.io/badge/Version-1.0-blue.svg?longCache=true)](https://img.shields.io/badge/SDK-0.1-blue.svg?longCache=true)
-![Lang](https://img.shields.io/badge/Language-Swift%205.0-orange.svg) 
+![Lang](https://img.shields.io/badge/Language-Swift%205.0-orange.svg)
 ![platform](https://img.shields.io/badge/Platform-iOS_12.0-blue.svg)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift)
 [![SwiftLint Sindre](https://img.shields.io/badge/SwiftLint-Sindre-hotpink.svg)](https://github.com/sindresorhus/swiftlint-sindre)
 [![codebeat badge](https://codebeat.co/badges/d8d0fcdb-096c-41c0-ac20-b063051b752b)](https://codebeat.co/projects/github-com-eonist-hybridcamera-master)
 [![Build Status](https://travis-ci.com/eonist/HybridCamera.svg?branch=master)](https://travis-ci.com/eonist/HybridCamera)
@@ -49,9 +49,8 @@
 - In order to keep things simple, The UI is CGRect based. Use your own Autolayout distro like SnapKit etc when adding additional UI
 
 ### Install:
-- Carthage: `github "eonist/HybridCamera" "master"`
+- SPM: `.package(url: "https://github.com/eonist/HybridCamera.git", .branch("master"))`
 - Manual: Open `HybridCamera.xcodeproj`
-- CocoaPod (Coming soon)  
 
 **IMPORTANT:** Make sure info.plist has these variables  
  ```
@@ -61,7 +60,7 @@ Privacy - Photo Library Additions Usage Description
 ```
 
 ### Example:
-<img width="320" alt="img" src="https://rawgit.com/stylekit/img/master/Image from iOS.jpg">
+<img width="300" alt="img" src="https://rawgit.com/stylekit/img/master/hybridcam.jpg">
 
 
 ### Example code:   

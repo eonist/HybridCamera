@@ -27,19 +27,11 @@ extension CustomCamView {
    /**
     * Creates zoom switcher
     */
-//   @objc override open func createZoomSwitchBtn() -> ZoomSwitchBtnKind {
-//      return with(ZoomSwitcerBtn(frame: ZoomSwitcerBtn.rect)) {
-//         self.addSubview($0)
-//      }
-//   }
-   /**
-    * Creates zoom switcher
-    */
    @objc override open func createZoomSwitcher() -> ZoomSwitcherKind {
       let backCamType: BackCameraType = .backCameraType
       let size = ZoomSwitcher.getSize(backCamType: backCamType)
       let rect = ZoomSwitcher.getRect(size: size) // .init(origin: .zero, size: size
-      return with(ZoomSwitcher(frame: rect, backCameraType: backCamType)) { // zoomSwitcher.anchorAndSize(to: self, size: size)) {
+      return with(ZoomSwitcher(frame: rect, backCameraType: backCamType)) {
          $0.buttons[backCamType.defaultLenseIndex].toggle = true // for tripple cam this needs to be .second,
 //         $0.onSwitch = { focalType in
 //            Swift.print("Switched to focalType:  \(focalType)")
@@ -48,3 +40,11 @@ extension CustomCamView {
       }
    }
 }
+/**
+ * Creates zoom switcher
+ */
+//   @objc override open func createZoomSwitchBtn() -> ZoomSwitchBtnKind {
+//      return with(ZoomSwitcerBtn(frame: ZoomSwitcerBtn.rect)) {
+//         self.addSubview($0)
+//      }
+//   }

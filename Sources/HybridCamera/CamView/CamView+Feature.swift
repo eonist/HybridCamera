@@ -9,7 +9,7 @@ extension CamView {
     * - Throws: SetupError
     */
    @objc open func toggleCameraPosition(for cameraPosition: AVCaptureDevice.Position, deviceType: AVCaptureDevice.DeviceType = .builtInWideAngleCamera) throws {
-      self.deviceInput = try captureSession.setupCaptureDeviceInput(cameraPosition: cameraPosition)
+      self.deviceInput = try captureSession.setupCaptureDeviceInput(cameraPosition: cameraPosition, deviceType: deviceType)
       try captureSession.setupMicrophone()
    }
    /**

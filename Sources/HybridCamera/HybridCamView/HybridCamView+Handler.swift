@@ -34,6 +34,7 @@ extension HybridCamView {
                else { return .builtInWideAngleCamera }
             }
          }()
+         Swift.print("zoomSwitcher.onSwitch: \(focalType.rawValue) deviceType: \(deviceType)")
          try? self.camView.toggleCameraPosition(for: self.topBar.flipButton.toggle ? .front : .back, deviceType: deviceType)
       }
    }

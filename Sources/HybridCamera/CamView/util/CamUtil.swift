@@ -10,8 +10,8 @@ public class CamUtil {
     * - Fixme: ⚠️️ maybe add support for the different cameras types, like wide, tele, normal, consider iphone 11
     * - Fixme: ⚠️️ Seems we only support wideAngleCamera for now?
     */
-   public static func camera(devicePosition: AVCaptureDevice.Position, deviceType: AVCaptureDevice.DeviceType = .builtInWideAngleCamera) -> CameraResult {
-      let session: AVCaptureDevice.DiscoverySession = .init(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .unspecified)
+   public static func camera(devicePosition: AVCaptureDevice.Position = .unspecified, deviceType: AVCaptureDevice.DeviceType = .builtInWideAngleCamera) -> CameraResult {
+      let session: AVCaptureDevice.DiscoverySession = .init(deviceTypes: [deviceType], mediaType: .video, position: devicePosition)
       let cameras: [AVCaptureDevice] = session.devices.compactMap { $0 }
       guard !cameras.isEmpty else {
          return .failure(.noCameraOfTypeAvailable(deviceType, cameras))
