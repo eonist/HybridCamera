@@ -1,12 +1,13 @@
 import UIKit
 import HybridCamLib
 import With
+
 open class ShareButton: UIButton, ClickButtonKind {
    open var onClick: OnClick = ShareButton.defaultOnClick
    override public init(frame: CGRect) {
       super.init(frame: frame)
       configButton()
-      self.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)/*Attach button action*/
+      self.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside) // Attach button action
    }
    /**
     * Boilerplate
