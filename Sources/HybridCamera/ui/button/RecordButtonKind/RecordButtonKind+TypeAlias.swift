@@ -1,4 +1,4 @@
-import Foundation
+import QuartzCore
 /**
  * Callback signatures
  */

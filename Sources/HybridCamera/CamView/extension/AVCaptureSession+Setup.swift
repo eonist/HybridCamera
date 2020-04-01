@@ -1,6 +1,6 @@
 import UIKit
 import AVFoundation
-import ResultSugariOS
+import ResultSugar
 /**
  * Helper methods for setting up
  */

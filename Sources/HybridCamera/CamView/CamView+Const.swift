@@ -1,5 +1,5 @@
 import UIKit
-import ResultSugariOS
+import ResultSugar
 /**
  * Callback signatures
  */
