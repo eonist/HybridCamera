@@ -1,6 +1,6 @@
 [![version badge](https://img.shields.io/badge/Version-1.0-blue.svg?longCache=true)](https://img.shields.io/badge/SDK-0.1-blue.svg?longCache=true)
 ![Lang](https://img.shields.io/badge/Language-Swift%205.0-orange.svg)
-![platform](https://img.shields.io/badge/Platform-iOS_12.0-blue.svg)
+![platform](https://img.shields.io/badge/Platform-iOS_13.0-blue.svg)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift)
 [![SwiftLint Sindre](https://img.shields.io/badge/SwiftLint-Sindre-hotpink.svg)](https://github.com/sindresorhus/swiftlint-sindre)
 [![codebeat badge](https://codebeat.co/badges/d4a25f27-7c22-4252-9a8e-79932624b22d)](https://codebeat.co/projects/github-com-eonist-hybridcamera-master)
