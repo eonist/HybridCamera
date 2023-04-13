@@ -1,9 +1,8 @@
-[![version badge](https://img.shields.io/badge/Version-1.0-blue.svg?longCache=true)](https://img.shields.io/badge/SDK-0.1-blue.svg?longCache=true)
 ![Lang](https://img.shields.io/badge/Language-Swift%205.0-orange.svg)
 ![platform](https://img.shields.io/badge/Platform-iOS_13.0-blue.svg)
-[![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift)
 [![codebeat badge](https://codebeat.co/badges/00d22967-459e-4687-91c8-9e51c39d76c8)](https://codebeat.co/projects/github-com-eonist-hybridcamera-master)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
+[![.github/workflows/swift.yml](https://github.com/eonist/HybridCamera/actions/workflows/swift.yml/badge.svg)](https://github.com/eonist/HybridCamera/actions/workflows/swift.yml)
 
 <img width="192" alt="img" src="https://rawgit.com/stylekit/img/master/vid_edited_2_2mb.gif">
 
